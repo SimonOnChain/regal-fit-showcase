@@ -7,12 +7,12 @@ const Navigation = () => {
 
   const services = [
     { name: "Le Concept", href: "#concept" },
-    { name: "Fitness", href: "#fitness" },
+    { name: "Fitness", href: "/fitness" },
     { name: "Aqua", href: "#aqua" },
     { name: "Spa", href: "#spa" },
     { name: "Kids", href: "#kids" },
     { name: "Mo'Snack", href: "#snack" },
-    { name: "Galerie Photos", href: "#gallery" },
+    { name: "Galerie Photos", href: "/gallery" },
     { name: "Plannings", href: "#planning" },
     { name: "Nos Tarifs", href: "#pricing" },
   ];
