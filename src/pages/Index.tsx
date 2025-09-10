@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import { ExpandingMenu } from "@/components/ExpandingMenu";
@@ -5,6 +6,17 @@ import ContactForm from "@/components/ContactForm";
 import { Sparkles, Dumbbell, Waves } from "lucide-react";
 
 const Index = () => {
+  useEffect(() => {
+    // Auto-scroll to concept section on page load
+    const timer = setTimeout(() => {
+      const conceptSection = document.getElementById('concept');
+      if (conceptSection) {
+        conceptSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div 
