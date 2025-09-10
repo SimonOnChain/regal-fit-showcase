@@ -11,9 +11,9 @@ const Index = () => {
       className="min-h-screen"
       style={{
         background: `
-          radial-gradient(ellipse at 30% 20%, rgba(65, 105, 225, 0.5) 0%, transparent 60%),
-          radial-gradient(circle at 80% 80%, rgba(30, 144, 255, 0.4) 0%, transparent 40%),
-          linear-gradient(225deg, rgba(25, 25, 112, 1), rgba(0, 0, 0, 1))
+          radial-gradient(ellipse at 30% 20%, rgba(80, 120, 255, 0.7) 0%, transparent 60%),
+          radial-gradient(circle at 80% 80%, rgba(50, 160, 255, 0.6) 0%, transparent 40%),
+          linear-gradient(225deg, rgba(40, 60, 180, 1), rgba(10, 10, 30, 1))
         `
       }}
     >
