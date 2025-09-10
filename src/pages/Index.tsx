@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
-import ParticleBackground from "@/components/ParticleBackground";
 import { ExpandingMenu } from "@/components/ExpandingMenu";
 import ContactForm from "@/components/ContactForm";
 import { Sparkles, Dumbbell, Waves } from "lucide-react";
@@ -8,8 +7,16 @@ import { Sparkles, Dumbbell, Waves } from "lucide-react";
 const Index = () => {
 
   return (
-    <div className="min-h-screen bg-background">
-      <ParticleBackground />
+    <div 
+      className="min-h-screen"
+      style={{
+        background: `
+          radial-gradient(ellipse at 30% 20%, rgba(65, 105, 225, 0.5) 0%, transparent 60%),
+          radial-gradient(circle at 80% 80%, rgba(30, 144, 255, 0.4) 0%, transparent 40%),
+          linear-gradient(225deg, rgba(25, 25, 112, 1), rgba(0, 0, 0, 1))
+        `
+      }}
+    >
       <Navigation />
       <HeroSection />
       
