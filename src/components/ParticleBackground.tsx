@@ -18,51 +18,100 @@ const ParticleBackground = () => {
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
-    const particles: Array<{
+    const nodes: Array<{
       x: number;
       y: number;
       vx: number;
       vy: number;
       size: number;
-      color: string;
       opacity: number;
+      connections: number[];
     }> = [];
 
-    const colors = ["#ffd700", "#c0c0c0", "#4169e1"];
-
-    // Create particles
-    for (let i = 0; i < 50; i++) {
-      particles.push({
+    // Create network nodes for a more serious, tech-inspired look
+    const nodeCount = 25;
+    for (let i = 0; i < nodeCount; i++) {
+      nodes.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        size: Math.random() * 3 + 1,
-        color: colors[Math.floor(Math.random() * colors.length)],
-        opacity: Math.random() * 0.8 + 0.2,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        size: Math.random() * 2 + 1,
+        opacity: Math.random() * 0.3 + 0.1,
+        connections: [],
       });
     }
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      particles.forEach((particle) => {
-        // Update position
-        particle.x += particle.vx;
-        particle.y += particle.vy;
+      // Update node positions
+      nodes.forEach((node, i) => {
+        node.x += node.vx;
+        node.y += node.vy;
 
-        // Wrap around edges
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
+        // Bounce off edges for more controlled movement
+        if (node.x < 0 || node.x > canvas.width) node.vx *= -1;
+        if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
 
-        // Draw particle
+        // Keep nodes within bounds
+        node.x = Math.max(0, Math.min(canvas.width, node.x));
+        node.y = Math.max(0, Math.min(canvas.height, node.y));
+
+        // Find connections to nearby nodes
+        node.connections = [];
+        nodes.forEach((otherNode, j) => {
+          if (i !== j) {
+            const dx = node.x - otherNode.x;
+            const dy = node.y - otherNode.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            
+            if (distance < 150) {
+              node.connections.push(j);
+            }
+          }
+        });
+      });
+
+      // Draw connections first (behind nodes)
+      nodes.forEach((node, i) => {
+        node.connections.forEach((connectionIndex) => {
+          const connectedNode = nodes[connectionIndex];
+          const dx = node.x - connectedNode.x;
+          const dy = node.y - connectedNode.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          // Create gradient line that fades with distance
+          const opacity = (1 - distance / 150) * 0.1;
+          
+          ctx.beginPath();
+          ctx.moveTo(node.x, node.y);
+          ctx.lineTo(connectedNode.x, connectedNode.y);
+          ctx.strokeStyle = `rgba(255, 215, 0, ${opacity})`; // Gold color
+          ctx.lineWidth = 0.5;
+          ctx.stroke();
+        });
+      });
+
+      // Draw nodes
+      nodes.forEach((node) => {
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color;
-        ctx.globalAlpha = particle.opacity;
+        ctx.arc(node.x, node.y, node.size, 0, Math.PI * 2);
+        
+        // Create subtle gradient for nodes
+        const gradient = ctx.createRadialGradient(node.x, node.y, 0, node.x, node.y, node.size);
+        gradient.addColorStop(0, `rgba(255, 215, 0, ${node.opacity + 0.3})`);
+        gradient.addColorStop(1, `rgba(255, 215, 0, ${node.opacity})`);
+        
+        ctx.fillStyle = gradient;
         ctx.fill();
+        
+        // Add subtle outer ring for premium feel
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, node.size + 1, 0, Math.PI * 2);
+        ctx.strokeStyle = `rgba(192, 192, 192, ${node.opacity * 0.5})`; // Silver accent
+        ctx.lineWidth = 0.5;
+        ctx.stroke();
       });
 
       requestAnimationFrame(animate);
