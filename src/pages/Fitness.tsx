@@ -1,6 +1,12 @@
 import Navigation from "@/components/Navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Crown, Dumbbell, Users, Heart, Target, Timer, Trophy } from "lucide-react";
+import cardioImage from "@/assets/cardio-zone.jpg";
+import musculationImage from "@/assets/musculation.jpg";
+import groupClassesImage from "@/assets/group-classes.jpg";
+import personalTrainingImage from "@/assets/personal-training.jpg";
+import hiitImage from "@/assets/hiit-sessions.jpg";
+import eliteImage from "@/assets/elite-programs.jpg";
 
 const Fitness = () => {
   const activities = [
@@ -8,37 +14,37 @@ const Fitness = () => {
       title: "Cardio Zone",
       description: "State-of-the-art treadmills, ellipticals, and bikes for optimal cardiovascular training",
       icon: Heart,
-      image: "/api/placeholder/400/300"
+      image: cardioImage
     },
     {
       title: "Musculation",
       description: "Professional-grade weight training equipment for strength and muscle development",
       icon: Dumbbell,
-      image: "/api/placeholder/400/300"
+      image: musculationImage
     },
     {
       title: "Group Classes",
       description: "Dynamic group fitness sessions led by certified instructors",
       icon: Users,
-      image: "/api/placeholder/400/300"
+      image: groupClassesImage
     },
     {
       title: "Personal Training",
       description: "One-on-one coaching tailored to your specific fitness goals",
       icon: Target,
-      image: "/api/placeholder/400/300"
+      image: personalTrainingImage
     },
     {
       title: "HIIT Sessions",
       description: "High-intensity interval training for maximum results in minimum time",
       icon: Timer,
-      image: "/api/placeholder/400/300"
+      image: hiitImage
     },
     {
       title: "Elite Programs",
       description: "Advanced training protocols for serious athletes and fitness enthusiasts",
       icon: Trophy,
-      image: "/api/placeholder/400/300"
+      image: eliteImage
     }
   ];
 
@@ -71,9 +77,17 @@ const Fitness = () => {
               return (
                 <Card 
                   key={activity.title}
-                  className="bg-royal-primary/20 border-gold-primary/30 backdrop-blur-sm hover:bg-royal-primary/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gold-primary/20 group animate-fade-in"
+                  className="bg-royal-primary/20 border-gold-primary/30 backdrop-blur-sm hover:bg-royal-primary/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gold-primary/20 group animate-fade-in overflow-hidden"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={activity.image} 
+                      alt={activity.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-royal-primary/80 to-transparent" />
+                  </div>
                   <CardHeader className="text-center">
                     <div className="mx-auto mb-4 p-3 rounded-full bg-gold-primary/20 w-fit group-hover:bg-gold-primary/30 transition-colors">
                       <IconComponent className="h-8 w-8 text-gold-primary" />
