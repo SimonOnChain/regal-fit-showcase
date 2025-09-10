@@ -6,7 +6,7 @@ const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const services = [
-    { name: "Le Concept", href: "#concept" },
+    { name: "Le Concept", href: "/" },
     { name: "Fitness", href: "/fitness" },
     { name: "Foot à 5", href: "/foot" },
     { name: "Aqua", href: "/aqua" },
