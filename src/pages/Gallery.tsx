@@ -1,271 +1,205 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Navigation from '@/components/Navigation';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState } from "react";
+import Navigation from "@/components/Navigation";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Camera, Eye, Image } from "lucide-react";
 
-// Sample gallery images - you can replace these with your actual images
-const galleryImages = [
-  {
-    id: 1,
-    src: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80',
-    category: 'Equipment',
-    alt: 'Modern fitness equipment'
-  },
-  {
-    id: 2,
-    src: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80',
-    category: 'Studios',
-    alt: 'Fitness studio'
-  },
-  {
-    id: 3,
-    src: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=800&q=80',
-    category: 'Pool',
-    alt: 'Swimming pool area'
-  },
-  {
-    id: 4,
-    src: 'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80',
-    category: 'Classes',
-    alt: 'Group fitness classes'
-  },
-  {
-    id: 5,
-    src: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=80',
-    category: 'Equipment',
-    alt: 'Weight training area'
-  },
-  {
-    id: 6,
-    src: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80',
-    category: 'Spa',
-    alt: 'Spa relaxation area'
-  },
-  {
-    id: 7,
-    src: 'https://images.unsplash.com/photo-1590487988256-9ed24133863e?auto=format&fit=crop&w=800&q=80',
-    category: 'Kids',
-    alt: 'Kids activity area'
-  },
-  {
-    id: 8,
-    src: 'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?auto=format&fit=crop&w=800&q=80',
-    category: 'Facilities',
-    alt: 'Reception and lounge area'
-  }
-];
-
-const categories = ['All', 'Equipment', 'Studios', 'Pool', 'Classes', 'Kids', 'Spa', 'Facilities'];
+// Import all gallery images
+import fitnessService from "@/assets/fitness-service.jpg";
+import musculation from "@/assets/musculation.jpg";
+import cardioZone from "@/assets/cardio-zone.jpg";
+import groupClasses from "@/assets/group-classes.jpg";
+import personalTraining from "@/assets/personal-training.jpg";
+import footballField1 from "@/assets/football-field-1.jpg";
+import footballField2 from "@/assets/football-field-2.jpg";
+import footballMatch from "@/assets/football-match.jpg";
+import aquaService from "@/assets/aqua-service.jpg";
+import spaService from "@/assets/spa-service.jpg";
+import spaHammam from "@/assets/spa-hammam.jpg";
+import spaMassage from "@/assets/spa-massage.jpg";
+import snackHero from "@/assets/snack-hero.jpg";
+import snackFood1 from "@/assets/snack-food-1.jpg";
+import kidsService from "@/assets/kids-service.jpg";
+import kidsGym from "@/assets/kids-gym.jpg";
+import kidsFootball from "@/assets/kids-football.jpg";
 
 const Gallery = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedImage, setSelectedImage] = useState<typeof galleryImages[0] | null>(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [showAllPhotos, setShowAllPhotos] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("all");
 
-  const filteredImages = selectedCategory === 'All' 
+  const galleryImages = [
+    { src: fitnessService, caption: "Espace Fitness", category: "fitness" },
+    { src: musculation, caption: "Salle de Musculation", category: "fitness" },
+    { src: cardioZone, caption: "Zone Cardio", category: "fitness" },
+    { src: groupClasses, caption: "Cours Collectifs", category: "fitness" },
+    { src: personalTraining, caption: "Coaching Personnel", category: "fitness" },
+    { src: footballField1, caption: "Terrain FIFA 1", category: "foot" },
+    { src: footballField2, caption: "Terrain FIFA 2", category: "foot" },
+    { src: footballMatch, caption: "Match en Action", category: "foot" },
+    { src: aquaService, caption: "Espace Aquatique", category: "aqua" },
+    { src: spaService, caption: "Royal Spa", category: "spa" },
+    { src: spaHammam, caption: "Hammam Traditionnel", category: "spa" },
+    { src: spaMassage, caption: "Salon de Massage", category: "spa" },
+    { src: snackHero, caption: "Mo'Snack", category: "snack" },
+    { src: snackFood1, caption: "Cuisine Healthy", category: "snack" },
+    { src: kidsService, caption: "Espace Kids", category: "kids" },
+    { src: kidsGym, caption: "Gym Enfants", category: "kids" },
+    { src: kidsFootball, caption: "Football Kids", category: "kids" },
+  ];
+
+  const categories = [
+    { id: "all", name: "Toutes", icon: <Image className="h-5 w-5" /> },
+    { id: "fitness", name: "Fitness", icon: <Camera className="h-5 w-5" /> },
+    { id: "foot", name: "Foot à 5", icon: <Camera className="h-5 w-5" /> },
+    { id: "aqua", name: "Aqua", icon: <Camera className="h-5 w-5" /> },
+    { id: "spa", name: "Spa", icon: <Camera className="h-5 w-5" /> },
+    { id: "snack", name: "Mo'Snack", icon: <Camera className="h-5 w-5" /> },
+    { id: "kids", name: "Kids", icon: <Camera className="h-5 w-5" /> },
+  ];
+
+  const filteredImages = selectedCategory === "all" 
     ? galleryImages 
-    : galleryImages.filter(image => image.category === selectedCategory);
+    : galleryImages.filter(img => img.category === selectedCategory);
 
-  const openLightbox = (image: typeof galleryImages[0]) => {
-    setSelectedImage(image);
-    setCurrentImageIndex(filteredImages.findIndex(img => img.id === image.id));
-  };
-
-  const closeLightbox = () => {
-    setSelectedImage(null);
-  };
-
-  const navigateImage = (direction: 'prev' | 'next') => {
-    if (!selectedImage) return;
-    
-    let newIndex;
-    if (direction === 'prev') {
-      newIndex = currentImageIndex > 0 ? currentImageIndex - 1 : filteredImages.length - 1;
-    } else {
-      newIndex = currentImageIndex < filteredImages.length - 1 ? currentImageIndex + 1 : 0;
-    }
-    
-    setCurrentImageIndex(newIndex);
-    setSelectedImage(filteredImages[newIndex]);
-  };
+  const displayedImages = showAllPhotos ? filteredImages : filteredImages.slice(0, 9);
 
   return (
-    <div 
-      className="min-h-screen"
-      style={{
-        background: `
-          radial-gradient(ellipse at 30% 20%, rgba(100, 140, 255, 0.8) 0%, transparent 60%),
-          radial-gradient(circle at 80% 80%, rgba(70, 180, 255, 0.7) 0%, transparent 40%),
-          linear-gradient(225deg, rgba(50, 80, 200, 1), rgba(20, 20, 40, 1))
-        `
-      }}
-    >
+    <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16">
-        <div className="container mx-auto px-6">
-          <div className="text-center">
-            <motion.h1 
-              className="text-5xl md:text-7xl font-serif font-bold text-foreground mb-6"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              Galerie Photos & Vidéos
-            </motion.h1>
-            <motion.p 
-              className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              Découvrez nos installations royales, notre atmosphère unique et chaque détail de Royal Fitness
-            </motion.p>
-          </div>
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${fitnessService})`,
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/60 to-accent/70" />
+        
+        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
+          <h1 className="text-6xl md:text-8xl font-serif font-bold mb-4 text-accent">
+            Galerie Photos
+          </h1>
+          <p className="text-2xl md:text-3xl font-light mb-8 italic">
+            Découvrez Royal Fitness
+          </p>
+          
+          <Card className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl leading-relaxed">
+              Explorez nos espaces premium à travers notre galerie photo complète.
+            </p>
+          </Card>
         </div>
       </section>
 
-      {/* Filter Chips */}
-      <section className="pb-8">
+      {/* Category Filter */}
+      <section className="py-8 bg-secondary/10">
         <div className="container mx-auto px-6">
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                  selectedCategory === category
-                    ? 'bg-accent text-accent-foreground shadow-lg shadow-accent/25'
-                    : 'bg-secondary/20 text-secondary-foreground hover:bg-secondary/30 border border-accent/20'
-                }`}
+              <Button
+                key={category.id}
+                variant={selectedCategory === category.id ? "default" : "outline"}
+                onClick={() => setSelectedCategory(category.id)}
+                className={selectedCategory === category.id ? "btn-gold" : "border-accent text-accent hover:bg-accent hover:text-white"}
               >
-                {category}
-              </button>
+                {category.icon}
+                <span className="ml-2">{category.name}</span>
+              </Button>
             ))}
           </div>
         </div>
       </section>
 
       {/* Gallery Grid */}
-      <section className="pb-20">
+      <section className="py-20 bg-secondary/10">
         <div className="container mx-auto px-6">
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-            layout
-          >
-            <AnimatePresence>
-              {filteredImages.map((image, index) => (
-                <motion.div
-                  key={image.id}
-                  layout
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group cursor-pointer"
-                  onClick={() => openLightbox(image)}
-                >
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-xl border-2 border-transparent group-hover:border-accent/50 transition-all duration-300">
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      loading="lazy"
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
+              Nos Espaces & Activités
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Une visite virtuelle de nos installations premium
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {displayedImages.map((image, index) => (
+              <Dialog key={index}>
+                <DialogTrigger asChild>
+                  <Card className="group overflow-hidden hover-scale cursor-pointer">
+                    <div className="relative">
+                      <img 
+                        src={image.src} 
+                        alt={image.caption}
+                        className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span className="text-accent font-semibold text-lg">
+                          {image.caption}
+                        </span>
+                        <div className="flex items-center mt-2">
+                          <Eye className="h-4 w-4 text-white mr-2" />
+                          <span className="text-white text-sm">Voir en grand</span>
+                        </div>
+                      </div>
+                    </div>
+                  </Card>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl max-h-[90vh] p-0 overflow-hidden">
+                  <div className="relative">
+                    <img 
+                      src={image.src} 
+                      alt={image.caption} 
+                      className="w-full h-auto"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <span className="text-sm font-medium bg-accent/20 px-2 py-1 rounded backdrop-blur-sm">
-                        {image.category}
-                      </span>
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                      <h3 className="text-white text-2xl font-serif font-bold">{image.caption}</h3>
                     </div>
                   </div>
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </motion.div>
+                </DialogContent>
+              </Dialog>
+            ))}
+          </div>
+          
+          {!showAllPhotos && filteredImages.length > 9 && (
+            <div className="text-center mt-12">
+              <Button 
+                variant="outline" 
+                onClick={() => setShowAllPhotos(true)}
+                className="border-accent text-accent hover:bg-accent hover:text-white"
+              >
+                Voir Plus ({filteredImages.length - 9} photos)
+              </Button>
+            </div>
+          )}
         </div>
       </section>
 
-      {/* Lightbox Modal */}
-      <AnimatePresence>
-        {selectedImage && (
-          <motion.div
-            className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={closeLightbox}
-          >
-            <motion.div
-              className="relative max-w-5xl max-h-full"
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.8 }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <img
-                src={selectedImage.src}
-                alt={selectedImage.alt}
-                className="max-w-full max-h-[80vh] object-contain rounded-lg"
-              />
-              
-              {/* Close Button */}
-              <button
-                onClick={closeLightbox}
-                className="absolute top-4 right-4 p-2 bg-black/50 text-white rounded-full hover:bg-black/70 transition-colors"
-              >
-                <X className="w-6 h-6" />
-              </button>
-              
-              {/* Navigation Arrows */}
-              <button
-                onClick={() => navigateImage('prev')}
-                className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 text-white rounded-full hover:bg-black/70 transition-colors"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-              
-              <button
-                onClick={() => navigateImage('next')}
-                className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 text-white rounded-full hover:bg-black/70 transition-colors"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
-              
-              {/* Image Info */}
-              <div className="absolute bottom-4 left-4 text-white">
-                <p className="text-lg font-medium mb-1">{selectedImage.alt}</p>
-                <p className="text-sm text-white/70">{selectedImage.category}</p>
-              </div>
-              
-              {/* Thumbnail Strip */}
-              <div className="absolute bottom-4 right-4">
-                <div className="flex gap-2 max-w-xs overflow-x-auto">
-                  {filteredImages.map((img, index) => (
-                    <button
-                      key={img.id}
-                      onClick={() => {
-                        setSelectedImage(img);
-                        setCurrentImageIndex(index);
-                      }}
-                      className={`w-12 h-12 rounded border-2 overflow-hidden ${
-                        img.id === selectedImage.id ? 'border-accent' : 'border-white/30'
-                      }`}
-                    >
-                      <img
-                        src={img.src}
-                        alt={img.alt}
-                        className="w-full h-full object-cover"
-                      />
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Call to Action */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-6 text-center">
+          <Card className="max-w-2xl mx-auto p-8 border border-accent/20">
+            <h3 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-4">
+              Venez Découvrir Royal Fitness
+            </h3>
+            <p className="text-lg text-muted-foreground mb-6">
+              Visitez nos installations premium et découvrez l'excellence Royal Fitness.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button className="btn-gold">
+                <a href="/contact">Planifier une visite</a>
+              </Button>
+              <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-white">
+                <a href="/tarifs">Voir nos offres</a>
+              </Button>
+            </div>
+          </Card>
+        </div>
+      </section>
     </div>
   );
 };

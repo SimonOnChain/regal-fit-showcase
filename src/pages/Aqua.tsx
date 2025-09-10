@@ -1,94 +1,122 @@
-import Navigation from "@/components/Navigation";
-import { Card, CardContent } from "@/components/ui/card";
-import aquaServiceImage from "@/assets/aqua-service.jpg";
+import RoyalPageTemplate from "@/components/RoyalPageTemplate";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Waves, Heart, Users, Clock, MapPin, Phone } from "lucide-react";
+import aquaService from "@/assets/aqua-service.jpg";
+import planningAqua from "@/assets/planning-aqua.jpg";
+import planningPiscineFemmes from "@/assets/planning-piscine-femmes.jpg";
+import planningPiscineHommes from "@/assets/planning-piscine-hommes.jpg";
 
 const Aqua = () => {
-  const aquaServices = [
+  const images = [
+    { src: aquaService, caption: "Piscines Semi-Olympiques", category: "facility" },
+    { src: planningAqua, caption: "Cours d'Aquagym", category: "classes" },
+    { src: planningPiscineFemmes, caption: "Sessions Femmes", category: "classes" },
+    { src: planningPiscineHommes, caption: "Sessions Hommes", category: "classes" },
+  ];
+
+  const detailCards = [
     {
+      icon: <Waves className="h-12 w-12" />,
       title: "Natation",
-      description: "Le MOTIV' CLUB met à votre disposition deux piscines semi-olympiques chauffées pour la pratique de la natation. Que vous soyez débutant ou nageur confirmé, nos bassins offrent un environnement idéal pour votre entraînement. L'eau maintenue à température optimale garantit un confort maximal pour vos séances, que ce soit pour l'amélioration de votre technique, l'endurance cardiovasculaire ou simplement pour un moment de détente et de bien-être réparateur.",
-      image: aquaServiceImage,
-      reverse: false
+      description: "Deux piscines semi-olympiques chauffées pour tous niveaux"
     },
     {
-      title: "Aqua gym",
-      description: "Le MOTIV' CLUB propose des cours collectifs d'aqua gym dans nos piscines semi-olympiques chauffées. Cette activité aquatique combine fitness et plaisir dans un environnement aquatique sécurisé. Nos séances d'aqua gym permettent de travailler l'ensemble du corps en douceur grâce à la résistance naturelle de l'eau, tout en préservant vos articulations. Une activité parfaite pour maintenir sa forme physique dans une atmosphère conviviale et confortable.",
-      image: aquaServiceImage,
-      reverse: true
+      icon: <Heart className="h-12 w-12" />,
+      title: "Aquagym",
+      description: "Cours collectifs aquatiques dans une atmosphère conviviale"
+    },
+    {
+      icon: <Users className="h-12 w-12" />,
+      title: "Bien-être",
+      description: "Détente et remise en forme dans un environnement aquatique optimal"
     }
   ];
 
+  const handlePrimaryAction = () => {
+    window.location.href = "/plannings";
+  };
+
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-royal via-royal-dark to-navy opacity-90"></div>
-        <div className="absolute inset-0 bg-gradient-overlay opacity-40"></div>
-        
-        {/* Particle Background */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-gold rounded-full animate-pulse opacity-60"></div>
-          <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-gold rounded-full animate-pulse opacity-40 animation-delay-1000"></div>
-          <div className="absolute top-1/2 left-3/4 w-1.5 h-1.5 bg-gold rounded-full animate-pulse opacity-50 animation-delay-2000"></div>
-        </div>
-        
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <h1 className="text-6xl md:text-7xl font-serif font-bold text-gold mb-6 leading-tight">
-            2 piscines semi-Olympique
-            <span className="block text-5xl md:text-6xl text-white mt-2">
-              chauffées
-            </span>
-          </h1>
-          <div className="w-32 h-1 bg-gradient-to-r from-gold to-gold-light mx-auto rounded-full shadow-gold"></div>
-        </div>
-      </section>
-
-      {/* Content Sections */}
-      <section className="py-20 bg-royal">
+    <RoyalPageTemplate
+      heroImage={aquaService}
+      title="Aqua"
+      subtitle="2 piscines semi-olympiques chauffées"
+      description="Le MOTIV'CLUB met à votre disposition deux piscines semi-olympiques chauffées pour la natation et l'aquagym. Eau maintenue à température optimale pour votre confort maximal."
+      primaryCTA={{
+        text: "Voir les Plannings",
+        action: handlePrimaryAction
+      }}
+      galleryTitle="Nos Activités Aquatiques"
+      galleryDescription="Des installations aquatiques premium pour votre bien-être"
+      images={images}
+      detailCards={detailCards}
+    >
+      {/* Additional Info Section */}
+      <section className="py-16 bg-secondary/10">
         <div className="container mx-auto px-6">
-          <div className="space-y-20">
-            {aquaServices.map((service, index) => (
-              <div
-                key={service.title}
-                className={`flex flex-col lg:flex-row items-center gap-12 ${
-                  service.reverse ? "lg:flex-row-reverse" : ""
-                }`}
-              >
-                {/* Image */}
-                <div className="flex-1 relative group">
-                  <div className="relative overflow-hidden rounded-lg border-2 border-gold/30 hover:border-gold transition-all duration-500">
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-overlay opacity-20 group-hover:opacity-10 transition-opacity duration-500"></div>
-                  </div>
-                  <div className="absolute -inset-2 bg-gradient-to-r from-gold/20 to-gold-light/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg"></div>
-                </div>
-
-                {/* Content */}
-                <div className="flex-1">
-                  <Card className="bg-navy/40 border-gold/30 backdrop-blur-sm">
-                    <CardContent className="p-8">
-                      <h2 className="text-4xl font-serif font-bold text-gold mb-6 relative">
-                        {service.title}
-                        <div className="absolute -bottom-2 left-0 w-16 h-1 bg-gradient-to-r from-gold to-gold-light rounded-full"></div>
-                      </h2>
-                      <p className="text-lg text-white leading-relaxed">
-                        {service.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <Card className="p-8 border border-accent/20">
+              <h3 className="text-2xl font-serif font-bold text-foreground mb-4">
+                Natation
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Le MOTIV' CLUB met à votre disposition deux piscines semi-olympiques chauffées pour la pratique de la natation. Que vous soyez débutant ou nageur confirmé, nos bassins offrent un environnement idéal pour votre entraînement. L'eau maintenue à température optimale garantit un confort maximal pour vos séances.
+              </p>
+            </Card>
+            
+            <Card className="p-8 border border-accent/20">
+              <h3 className="text-2xl font-serif font-bold text-foreground mb-4">
+                Aquagym
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Le MOTIV' CLUB propose des cours collectifs d'aqua gym dans nos piscines semi-olympiques chauffées. Cette activité aquatique combine fitness et plaisir dans un environnement aquatique sécurisé. Nos séances d'aqua gym permettent de travailler l'ensemble du corps en douceur grâce à la résistance naturelle de l'eau.
+              </p>
+            </Card>
           </div>
         </div>
       </section>
-    </div>
+
+      {/* Contact Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-6">
+          <Card className="max-w-2xl mx-auto p-8 border border-accent/20">
+            <h3 className="text-2xl font-serif font-bold text-foreground mb-6 text-center">
+              Informations Aqua
+            </h3>
+            
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <MapPin className="h-5 w-5 text-accent" />
+                <span className="text-muted-foreground">
+                  1841 Av. des FAR - Plaisance - MEKNES
+                </span>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <Phone className="h-5 w-5 text-accent" />
+                <span className="text-muted-foreground">
+                  0535 521 528
+                </span>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <Clock className="h-5 w-5 text-accent" />
+                <span className="text-muted-foreground">
+                  Lun-Dim: 9h00 - 20h00
+                </span>
+              </div>
+            </div>
+            
+            <div className="mt-6 text-center">
+              <Button className="btn-gold">
+                Réserver une session
+              </Button>
+            </div>
+          </Card>
+        </div>
+      </section>
+    </RoyalPageTemplate>
   );
 };
 
