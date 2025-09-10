@@ -13,6 +13,7 @@ import Kids from "./pages/Kids";
 import MoSnack from "./pages/MoSnack";
 import Plannings from "./pages/Plannings";
 import Tarifs from "./pages/Tarifs";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/mosnack" element={<MoSnack />} />
           <Route path="/plannings" element={<Plannings />} />
           <Route path="/tarifs" element={<Tarifs />} />
+          <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

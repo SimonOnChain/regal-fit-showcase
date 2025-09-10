@@ -58,7 +58,7 @@ const Navigation = () => {
               </a>
             ))}
             <Button className="btn-gold ml-4">
-              <a href="#contact">Contact</a>
+              <a href="/contact">Contact</a>
             </Button>
           </div>
 
@@ -92,7 +92,7 @@ const Navigation = () => {
             </div>
             <div className="mt-4 text-center">
               <Button className="btn-gold w-full">
-                <a href="#contact">Contact</a>
+                <a href="/contact">Contact</a>
               </Button>
             </div>
           </div>
