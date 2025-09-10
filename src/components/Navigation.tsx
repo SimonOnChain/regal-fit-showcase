@@ -36,18 +36,8 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Center - Logo */}
-          <div className="flex items-center justify-center flex-1 lg:flex-none">
-            <div className="flex items-center space-x-2">
-              <Crown className="h-8 w-8 text-accent" />
-              <span className="text-2xl font-serif font-bold text-foreground">
-                Royal Fitness
-              </span>
-            </div>
-          </div>
-
-          {/* Right - More Services & Contact (Desktop) */}
-          <div className="hidden lg:flex items-center space-x-8">
+          {/* Center - More Services & Contact (Desktop) */}
+          <div className="hidden lg:flex items-center space-x-8 flex-1 justify-center">
             {services.slice(4).map((service) => (
               <a
                 key={service.name}
@@ -60,6 +50,16 @@ const Navigation = () => {
             <Button className="btn-gold ml-4">
               <a href="/contact">Contact</a>
             </Button>
+          </div>
+
+          {/* Right - Logo */}
+          <div className="flex items-center justify-end lg:flex-none">
+            <div className="flex items-center space-x-2">
+              <Crown className="h-8 w-8 text-accent" />
+              <span className="text-2xl font-serif font-bold text-foreground">
+                Royal Fitness
+              </span>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
