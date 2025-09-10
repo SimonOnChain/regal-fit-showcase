@@ -12,6 +12,13 @@ import {
   Crown,
 } from 'lucide-react'
 
+// Import service images
+import fitnessImage from '@/assets/fitness-service.jpg'
+import aquaImage from '@/assets/aqua-service.jpg'
+import spaImage from '@/assets/spa-service.jpg'
+import kidsImage from '@/assets/kids-service.jpg'
+import snackImage from '@/assets/snack-service.jpg'
+
 const menuItems = [
   {
     id: 'concept',
@@ -20,6 +27,7 @@ const menuItems = [
       'Royal Fitness redéfinit l\'expérience du bien-être en alliant excellence, sophistication et innovation dans un environnement d\'exception.',
     icon: <Crown className="w-4 h-4" />,
     cta: 'Découvrir notre philosophie',
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80',
     gradient: `
       radial-gradient(circle at 70% 30%, rgba(72, 61, 139, 0.6) 0%, transparent 50%),
       radial-gradient(circle at 20% 80%, rgba(25, 25, 112, 0.5) 0%, transparent 40%),
@@ -35,6 +43,7 @@ const menuItems = [
       'Équipements de pointe dans un environnement royal pour sculpter votre corps et dépasser vos limites avec un coaching personnalisé.',
     icon: <Dumbbell className="w-4 h-4" />,
     cta: 'Explorer nos équipements',
+    image: fitnessImage,
     gradient: `
       radial-gradient(circle at 10% 40%, rgba(255, 215, 0, 0.3) 0%, transparent 45%),
       radial-gradient(circle at 80% 70%, rgba(184, 134, 11, 0.4) 0%, transparent 50%),
@@ -50,6 +59,7 @@ const menuItems = [
       'Piscine royale avec aqua-fitness, natation et relaxation dans une eau cristalline chauffée toute l\'année.',
     icon: <Waves className="w-4 h-4" />,
     cta: 'Plonger dans l\'expérience',
+    image: aquaImage,
     gradient: `
       radial-gradient(ellipse at 30% 20%, rgba(65, 105, 225, 0.5) 0%, transparent 60%),
       radial-gradient(circle at 80% 80%, rgba(30, 144, 255, 0.4) 0%, transparent 40%),
@@ -65,6 +75,7 @@ const menuItems = [
       'Sanctuaire de bien-être royal avec soins premium, massages thérapeutiques et rituels de beauté dans un cadre luxueux.',
     icon: <Sparkles className="w-4 h-4" />,
     cta: 'Réserver votre moment',
+    image: spaImage,
     gradient: `
       radial-gradient(circle at 60% 30%, rgba(147, 112, 219, 0.5) 0%, transparent 50%),
       radial-gradient(ellipse at 20% 70%, rgba(138, 43, 226, 0.4) 0%, transparent 45%),
@@ -80,6 +91,7 @@ const menuItems = [
       'Espace dédié aux petits princes et princesses avec activités ludiques et sécurisées, encadrement professionnel.',
     icon: <Baby className="w-4 h-4" />,
     cta: 'Découvrir l\'espace enfants',
+    image: kidsImage,
     gradient: `
       radial-gradient(ellipse at 40% 20%, rgba(255, 182, 193, 0.4) 0%, transparent 55%),
       radial-gradient(circle at 70% 80%, rgba(255, 160, 122, 0.5) 0%, transparent 40%),
@@ -95,6 +107,7 @@ const menuItems = [
       'Bar nutritionnel royal avec smoothies premium, collations saines et boissons énergisantes pour accompagner vos séances.',
     icon: <Coffee className="w-4 h-4" />,
     cta: 'Voir notre carte',
+    image: snackImage,
     gradient: `
       radial-gradient(circle at 30% 30%, rgba(210, 180, 140, 0.5) 0%, transparent 50%),
       radial-gradient(ellipse at 70% 70%, rgba(160, 82, 45, 0.4) 0%, transparent 45%),
@@ -110,6 +123,7 @@ const menuItems = [
       'Découvrez nos installations royales à travers notre galerie photo exclusive et laissez-vous séduire par notre univers.',
     icon: <Camera className="w-4 h-4" />,
     cta: 'Visiter la galerie',
+    image: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=800&q=80',
     gradient: `
       radial-gradient(ellipse at 70% 20%, rgba(169, 169, 169, 0.5) 0%, transparent 60%),
       radial-gradient(circle at 20% 60%, rgba(128, 128, 128, 0.4) 0%, transparent 45%),
@@ -125,6 +139,7 @@ const menuItems = [
       'Cours collectifs premium et sessions personnalisées avec nos coachs experts. Planifiez votre parcours vers l\'excellence.',
     icon: <Calendar className="w-4 h-4" />,
     cta: 'Consulter les horaires',
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80',
     gradient: `
       radial-gradient(circle at 50% 30%, rgba(72, 61, 139, 0.5) 0%, transparent 50%),
       radial-gradient(ellipse at 30% 70%, rgba(106, 90, 205, 0.4) 0%, transparent 45%),
@@ -140,6 +155,7 @@ const menuItems = [
       'Formules flexibles et abonnements premium adaptés à vos besoins. L\'excellence a un prix, mais elle n\'a pas de compromis.',
     icon: <Euro className="w-4 h-4" />,
     cta: 'Voir nos offres',
+    image: 'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?auto=format&fit=crop&w=800&q=80',
     gradient: `
       radial-gradient(ellipse at 60% 20%, rgba(255, 215, 0, 0.5) 0%, transparent 60%),
       radial-gradient(circle at 20% 80%, rgba(218, 165, 32, 0.4) 0%, transparent 45%),
@@ -153,14 +169,32 @@ const menuItems = [
 export const ExpandingMenu = () => {
   const [activeId, setActiveId] = useState('fitness')
 
+  // Split items into two rows of 5 each for better responsive layout
+  const firstRow = menuItems.slice(0, 5)
+  const secondRow = menuItems.slice(5, 9)
+
   return (
-    <div className="flex w-full max-w-7xl overflow-hidden">
-      <div className="flex w-full h-[400px] gap-3">
-        {menuItems.map((item, index) => (
+    <div className="flex flex-col w-full max-w-7xl space-y-4">
+      {/* First Row */}
+      <div className="flex w-full h-[300px] md:h-[400px] gap-2 md:gap-3">
+        {firstRow.map((item, index) => (
           <MenuItem
             key={item.id}
             item={item}
             index={index}
+            isActive={activeId === item.id}
+            onHover={() => setActiveId(item.id)}
+          />
+        ))}
+      </div>
+      
+      {/* Second Row */}
+      <div className="flex w-full h-[300px] md:h-[400px] gap-2 md:gap-3">
+        {secondRow.map((item, index) => (
+          <MenuItem
+            key={item.id}
+            item={item}
+            index={index + 5}
             isActive={activeId === item.id}
             onHover={() => setActiveId(item.id)}
           />
@@ -189,11 +223,11 @@ interface MenuItemProps {
 }
 
 const MenuItem = ({ item, index, isActive, onHover }: MenuItemProps) => {
-  const noiseIntensity = 0.2 + index * 0.03
+  const noiseIntensity = 0.2 + (index % 5) * 0.03
 
   return (
     <motion.div
-      className="relative h-full rounded-xl overflow-hidden cursor-pointer flex flex-col"
+      className="relative h-full rounded-lg md:rounded-xl overflow-hidden cursor-pointer flex flex-col group"
       style={{
         background: item.gradient,
       }}
@@ -209,21 +243,21 @@ const MenuItem = ({ item, index, isActive, onHover }: MenuItemProps) => {
       onMouseEnter={onHover}
     >
       <NoiseOverlay intensity={noiseIntensity} />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-70" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
       
-      <div className="absolute top-0 left-0 h-full p-6 z-10">
-        <div className="vertical-text rotate-180 text-white font-serif font-medium tracking-wide whitespace-nowrap text-sm">
+      <div className="absolute top-0 left-0 h-full p-3 md:p-6 z-10">
+        <div className="vertical-text rotate-180 text-white font-serif font-medium tracking-wide whitespace-nowrap text-xs md:text-sm">
           {item.title}
         </div>
       </div>
       
-      <div className="absolute left-[41px] bottom-[41px] text-accent z-10">
+      <div className="absolute left-[25px] md:left-[41px] bottom-[25px] md:bottom-[41px] text-accent z-10">
         {item.icon}
       </div>
       
       {isActive && (
         <p
-          className="absolute w-[311px] left-[41px] bottom-[81px] text-sm leading-[24.3px] text-[rgba(240,240,240,0.9)] font-medium"
+          className="absolute w-[250px] md:w-[311px] left-[25px] md:left-[41px] bottom-[60px] md:bottom-[81px] text-xs md:text-sm leading-[20px] md:leading-[24.3px] text-[rgba(240,240,240,0.9)] font-medium"
           style={{
             opacity: isActive ? 1 : 0,
             transition: isActive
@@ -237,7 +271,7 @@ const MenuItem = ({ item, index, isActive, onHover }: MenuItemProps) => {
       
       {isActive && (
         <div
-          className="absolute left-[65px] bottom-[41px] text-accent text-sm font-medium hover:text-accent/80 transition-colors"
+          className="absolute left-[45px] md:left-[65px] bottom-[25px] md:bottom-[41px] text-accent text-xs md:text-sm font-medium hover:text-accent/80 transition-colors"
           style={{
             opacity: isActive ? 1 : 0,
             transition: isActive
