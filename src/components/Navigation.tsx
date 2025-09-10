@@ -15,7 +15,7 @@ const Navigation = () => {
     { name: "Mo'Snack", href: "/mosnack" },
     { name: "Galerie Photos", href: "/gallery" },
     { name: "Plannings", href: "/plannings" },
-    { name: "Nos Tarifs", href: "#pricing" },
+    { name: "Nos Tarifs", href: "/tarifs" },
   ];
 
   return (
