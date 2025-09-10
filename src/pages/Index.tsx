@@ -1,41 +1,11 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import ParticleBackground from "@/components/ParticleBackground";
-import ServiceCard from "@/components/ServiceCard";
+import { ExpandingMenu } from "@/components/ExpandingMenu";
 import ContactForm from "@/components/ContactForm";
-import { Dumbbell, Waves, Sparkles, Baby, Coffee, Calendar, Euro, Camera } from "lucide-react";
+import { Sparkles, Dumbbell, Waves } from "lucide-react";
 
 const Index = () => {
-  const services = [
-    {
-      title: "Fitness",
-      description: "Équipements de pointe dans un environnement royal pour sculpter votre corps et dépasser vos limites.",
-      icon: Dumbbell,
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80",
-      features: ["Machines dernière génération", "Coaching personnalisé", "Espace cardio premium"]
-    },
-    {
-      title: "Aqua",
-      description: "Piscine royale avec aqua-fitness, natation et relaxation dans une eau cristalline.",
-      icon: Waves,
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
-      features: ["Piscine chauffée", "Cours d'aqua-fitness", "Espace détente aquatique"]
-    },
-    {
-      title: "Spa",
-      description: "Sanctuaire de bien-être royal avec soins premium, massages et rituels de beauté.",
-      icon: Sparkles,
-      image: "https://images.unsplash.com/photo-1596178060810-7d4d0e1db7ee?auto=format&fit=crop&w=800&q=80",
-      features: ["Massages thérapeutiques", "Soins du visage", "Sauna et hammam"]
-    },
-    {
-      title: "Kids",
-      description: "Espace dédié aux petits princes et princesses avec activités ludiques et sécurisées.",
-      icon: Baby,
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
-      features: ["Activités adaptées", "Encadrement professionnel", "Environnement sécurisé"]
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -82,7 +52,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section - Expanding Menu */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
@@ -95,39 +65,46 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <div key={service.title} className="slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                <ServiceCard {...service} />
-              </div>
-            ))}
+          <div className="flex justify-center">
+            <ExpandingMenu />
           </div>
         </div>
       </section>
 
-      {/* Additional Services Preview */}
+      {/* Additional Info Section */}
       <section className="py-20 bg-secondary/20">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-serif font-bold text-foreground mb-4">
+              L'Excellence à Votre Service
+            </h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Royal Fitness vous accompagne dans votre quête d'excellence avec des services premium
+              et un environnement d'exception.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center p-6">
-              <Coffee className="h-12 w-12 text-accent mx-auto mb-4" />
-              <h3 className="text-xl font-serif font-bold text-foreground mb-2">Mo'Snack</h3>
-              <p className="text-muted-foreground">Bar nutritionnel avec smoothies et collations saines</p>
+              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Sparkles className="h-8 w-8 text-accent" />
+              </div>
+              <h4 className="text-xl font-serif font-bold text-foreground mb-2">Coaching Expert</h4>
+              <p className="text-muted-foreground">Accompagnement personnalisé par nos coachs certifiés</p>
             </div>
             <div className="text-center p-6">
-              <Camera className="h-12 w-12 text-accent mx-auto mb-4" />
-              <h3 className="text-xl font-serif font-bold text-foreground mb-2">Galerie Photos</h3>
-              <p className="text-muted-foreground">Découvrez nos installations à travers notre galerie</p>
+              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Dumbbell className="h-8 w-8 text-accent" />
+              </div>
+              <h4 className="text-xl font-serif font-bold text-foreground mb-2">Équipements Premium</h4>
+              <p className="text-muted-foreground">Technologies de pointe pour des résultats optimaux</p>
             </div>
             <div className="text-center p-6">
-              <Calendar className="h-12 w-12 text-accent mx-auto mb-4" />
-              <h3 className="text-xl font-serif font-bold text-foreground mb-2">Plannings</h3>
-              <p className="text-muted-foreground">Cours collectifs et sessions personnalisées</p>
-            </div>
-            <div className="text-center p-6">
-              <Euro className="h-12 w-12 text-accent mx-auto mb-4" />
-              <h3 className="text-xl font-serif font-bold text-foreground mb-2">Nos Tarifs</h3>
-              <p className="text-muted-foreground">Formules flexibles adaptées à vos besoins</p>
+              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Waves className="h-8 w-8 text-accent" />
+              </div>
+              <h4 className="text-xl font-serif font-bold text-foreground mb-2">Bien-être Intégral</h4>
+              <p className="text-muted-foreground">Approche holistique de votre santé et forme physique</p>
             </div>
           </div>
         </div>
