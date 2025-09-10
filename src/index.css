@@ -6,43 +6,43 @@
 
 @layer base {
   :root {
-    /* Royal Color Palette */
-    --background: 240 15% 8%;
-    --foreground: 240 10% 95%;
+    /* Royal Blue Color Palette */
+    --background: 220 60% 8%;
+    --foreground: 220 20% 95%;
 
-    --card: 240 12% 12%;
-    --card-foreground: 240 8% 92%;
+    --card: 220 50% 18%;
+    --card-foreground: 220 15% 95%;
 
-    --popover: 240 12% 10%;
-    --popover-foreground: 240 8% 95%;
+    --popover: 220 50% 15%;
+    --popover-foreground: 220 15% 95%;
 
-    --primary: 240 80% 25%;
-    --primary-foreground: 48 100% 95%;
+    --primary: 220 70% 25%;
+    --primary-foreground: 220 15% 95%;
 
-    --secondary: 240 15% 15%;
-    --secondary-foreground: 240 8% 88%;
+    --secondary: 220 60% 22%;
+    --secondary-foreground: 220 15% 90%;
 
-    --muted: 240 12% 18%;
-    --muted-foreground: 240 6% 65%;
+    --muted: 220 50% 20%;
+    --muted-foreground: 220 20% 70%;
 
     --accent: 48 95% 58%;
-    --accent-foreground: 240 15% 8%;
+    --accent-foreground: 220 60% 8%;
 
     --destructive: 0 75% 55%;
-    --destructive-foreground: 240 10% 95%;
+    --destructive-foreground: 220 15% 95%;
 
-    --border: 240 15% 20%;
-    --input: 240 15% 18%;
+    --border: 220 40% 25%;
+    --input: 220 40% 22%;
     --ring: 48 95% 58%;
 
     /* Royal Design System */
-    --royal-blue: 240 80% 25%;
-    --royal-blue-dark: 240 85% 15%;
-    --royal-blue-light: 240 75% 35%;
+    --royal-blue: 220 70% 25%;
+    --royal-blue-dark: 220 80% 15%;
+    --royal-blue-light: 220 60% 35%;
     --gold: 48 95% 58%;
     --gold-light: 48 100% 68%;
-    --silver: 240 5% 75%;
-    --navy: 240 40% 8%;
+    --silver: 220 20% 75%;
+    --navy: 220 70% 12%;
 
     /* Gradients */
     --gradient-royal: linear-gradient(135deg, hsl(var(--royal-blue)) 0%, hsl(var(--royal-blue-dark)) 100%);
@@ -79,11 +79,11 @@
   }
 
   .dark {
-    /* Dark mode inherits the same royal theme */
-    --background: 240 20% 6%;
-    --foreground: 240 10% 95%;
-    --card: 240 15% 10%;
-    --card-foreground: 240 8% 92%;
+    /* Dark mode with enhanced royal blues */
+    --background: 220 70% 6%;
+    --foreground: 220 20% 95%;
+    --card: 220 60% 15%;
+    --card-foreground: 220 15% 95%;
   }
 }
 
@@ -93,7 +93,8 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    background: linear-gradient(135deg, hsl(220 60% 8%) 0%, hsl(220 70% 12%) 100%);
+    @apply text-foreground font-sans;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -170,7 +171,8 @@
 
   /* Royal Card Hover Effect */
   .card-royal {
-    @apply transition-all duration-300 hover:scale-105;
+    background: linear-gradient(135deg, hsl(220 50% 22%) 0%, hsl(220 60% 28%) 100%);
+    @apply transition-all duration-300 hover:scale-105 border border-accent/30;
     box-shadow: var(--shadow-royal);
   }
 
@@ -180,7 +182,8 @@
 
   /* Navigation Styles */
   .nav-royal {
-    @apply backdrop-blur-md bg-background/80 border-b border-border/50;
-    box-shadow: 0 4px 20px hsl(var(--royal-blue) / 0.2);
+    background: linear-gradient(135deg, hsl(220 60% 12%) 0%, hsl(220 70% 18%) 100%);
+    @apply backdrop-blur-md border-b border-accent/20;
+    box-shadow: 0 4px 20px hsl(220 60% 8% / 0.8);
   }
 }
