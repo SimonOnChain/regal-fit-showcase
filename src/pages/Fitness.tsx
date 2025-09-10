@@ -1,132 +1,102 @@
-import Navigation from "@/components/Navigation";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Crown, Dumbbell, Users, Heart, Target, Timer, Trophy } from "lucide-react";
-import cardioImage from "@/assets/cardio-zone.jpg";
-import musculationImage from "@/assets/musculation.jpg";
-import groupClassesImage from "@/assets/group-classes.jpg";
-import personalTrainingImage from "@/assets/personal-training.jpg";
-import hiitImage from "@/assets/hiit-sessions.jpg";
-import eliteImage from "@/assets/elite-programs.jpg";
+import RoyalPageTemplate from "@/components/RoyalPageTemplate";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Dumbbell, Users, Target, Clock, MapPin, Phone } from "lucide-react";
+import fitnessService from "@/assets/fitness-service.jpg";
+import musculation from "@/assets/musculation.jpg";
+import cardioZone from "@/assets/cardio-zone.jpg";
+import groupClasses from "@/assets/group-classes.jpg";
+import personalTraining from "@/assets/personal-training.jpg";
+import hiitSessions from "@/assets/hiit-sessions.jpg";
+import elitePrograms from "@/assets/elite-programs.jpg";
 
 const Fitness = () => {
-  const activities = [
+  const images = [
+    { src: musculation, caption: "Espace Musculation", category: "equipment" },
+    { src: cardioZone, caption: "Zone Cardio", category: "cardio" },
+    { src: groupClasses, caption: "Cours Collectifs", category: "classes" },
+    { src: personalTraining, caption: "Coaching Personnel", category: "training" },
+    { src: hiitSessions, caption: "Sessions HIIT", category: "training" },
+    { src: elitePrograms, caption: "Programmes Elite", category: "elite" },
+  ];
+
+  const detailCards = [
     {
-      title: "Cardio Zone",
-      description: "State-of-the-art treadmills, ellipticals, and bikes for optimal cardiovascular training",
-      icon: Heart,
-      image: cardioImage
+      icon: <Dumbbell className="h-12 w-12" />,
+      title: "Équipements Premium",
+      description: "Machines dernière génération et poids libres pour tous niveaux"
     },
     {
-      title: "Musculation",
-      description: "Professional-grade weight training equipment for strength and muscle development",
-      icon: Dumbbell,
-      image: musculationImage
+      icon: <Users className="h-12 w-12" />,
+      title: "Cours Collectifs",
+      description: "Plus de 20 cours par semaine animés par nos coachs experts"
     },
     {
-      title: "Group Classes",
-      description: "Dynamic group fitness sessions led by certified instructors",
-      icon: Users,
-      image: groupClassesImage
-    },
-    {
-      title: "Personal Training",
-      description: "One-on-one coaching tailored to your specific fitness goals",
-      icon: Target,
-      image: personalTrainingImage
-    },
-    {
-      title: "HIIT Sessions",
-      description: "High-intensity interval training for maximum results in minimum time",
-      icon: Timer,
-      image: hiitImage
-    },
-    {
-      title: "Elite Programs",
-      description: "Advanced training protocols for serious athletes and fitness enthusiasts",
-      icon: Trophy,
-      image: eliteImage
+      icon: <Target className="h-12 w-12" />,
+      title: "Coaching Personnel",
+      description: "Programmes sur-mesure avec suivi personnalisé de vos objectifs"
     }
   ];
 
+  const handlePrimaryAction = () => {
+    window.location.href = "/plannings";
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-royal-primary to-royal-secondary">
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative pt-24 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-royal-primary/80 to-royal-secondary/90" />
-        <div className="relative container mx-auto px-6 text-center">
-          <div className="flex items-center justify-center mb-6">
-            <Crown className="h-12 w-12 text-gold-primary mr-4" />
-            <h1 className="text-5xl md:text-7xl font-serif font-bold text-white">
-              Fitness
-            </h1>
-          </div>
-          <p className="text-xl md:text-2xl text-gold-primary font-light max-w-3xl mx-auto">
-            Elevate your body. Exceed your expectations.
-          </p>
-        </div>
-      </section>
-
-      {/* Activities Grid */}
-      <section className="py-20">
+    <RoyalPageTemplate
+      heroImage={fitnessService}
+      title="Fitness"
+      subtitle="Dépassez vos limites"
+      description="Découvrez notre espace fitness premium avec équipements de pointe, cours collectifs variés et coaching personnalisé pour atteindre vos objectifs."
+      primaryCTA={{
+        text: "Voir les Plannings",
+        action: handlePrimaryAction
+      }}
+      galleryTitle="Notre Espace Fitness"
+      galleryDescription="Un environnement premium pour votre transformation physique"
+      images={images}
+      detailCards={detailCards}
+    >
+      {/* Additional Contact Section */}
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {activities.map((activity, index) => {
-              const IconComponent = activity.icon;
-              return (
-                <Card 
-                  key={activity.title}
-                  className="bg-royal-primary/20 border-gold-primary/30 backdrop-blur-sm hover:bg-royal-primary/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gold-primary/20 group animate-fade-in overflow-hidden"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="relative h-48 overflow-hidden">
-                    <img 
-                      src={activity.image} 
-                      alt={activity.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-royal-primary/80 to-transparent" />
-                  </div>
-                  <CardHeader className="text-center">
-                    <div className="mx-auto mb-4 p-3 rounded-full bg-gold-primary/20 w-fit group-hover:bg-gold-primary/30 transition-colors">
-                      <IconComponent className="h-8 w-8 text-gold-primary" />
-                    </div>
-                    <CardTitle className="text-xl font-serif text-white group-hover:text-gold-primary transition-colors">
-                      {activity.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-white/80 text-center leading-relaxed">
-                      {activity.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
+          <Card className="max-w-2xl mx-auto p-8 border border-accent/20">
+            <h3 className="text-2xl font-serif font-bold text-foreground mb-6 text-center">
+              Informations Fitness
+            </h3>
+            
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <MapPin className="h-5 w-5 text-accent" />
+                <span className="text-muted-foreground">
+                  1841 Av. des FAR - Plaisance - MEKNES
+                </span>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <Phone className="h-5 w-5 text-accent" />
+                <span className="text-muted-foreground">
+                  0535 521 528
+                </span>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <Clock className="h-5 w-5 text-accent" />
+                <span className="text-muted-foreground">
+                  Lun-Dim: 6h00 - 23h00
+                </span>
+              </div>
+            </div>
+            
+            <div className="mt-6 text-center">
+              <Button className="btn-gold">
+                Réserver une séance
+              </Button>
+            </div>
+          </Card>
         </div>
       </section>
-
-      {/* Call to Action */}
-      <section className="py-16 text-center">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6">
-            Ready to Transform Your Fitness Journey?
-          </h2>
-          <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Join our elite community and experience the Royal Fitness difference
-          </p>
-          <a
-            href="#contact"
-            className="inline-flex items-center px-8 py-4 bg-gold-primary text-royal-primary font-semibold rounded-lg hover:bg-gold-secondary transition-colors duration-300"
-          >
-            Start Your Journey
-            <Crown className="ml-2 h-5 w-5" />
-          </a>
-        </div>
-      </section>
-    </div>
+    </RoyalPageTemplate>
   );
 };
 
