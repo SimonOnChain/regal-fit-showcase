@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 import {
   Dumbbell,
   Waves,
@@ -168,6 +169,7 @@ const menuItems = [
 
 export const ExpandingMenu = () => {
   const [activeId, setActiveId] = useState('fitness')
+  const navigate = useNavigate()
 
   // Split items into two rows of 5 each for better responsive layout
   const firstRow = menuItems.slice(0, 5)
@@ -178,26 +180,36 @@ export const ExpandingMenu = () => {
       {/* First Row */}
       <div className="flex w-full h-[300px] md:h-[400px] gap-2 md:gap-3">
         {firstRow.map((item, index) => (
-          <MenuItem
-            key={item.id}
-            item={item}
-            index={index}
-            isActive={activeId === item.id}
-            onHover={() => setActiveId(item.id)}
-          />
+            <MenuItem
+              key={item.id}
+              item={item}
+              index={index}
+              isActive={activeId === item.id}
+              onHover={() => setActiveId(item.id)}
+              onNavigate={(id) => {
+                if (id === 'gallery') {
+                  navigate('/gallery');
+                }
+              }}
+            />
         ))}
       </div>
       
       {/* Second Row */}
       <div className="flex w-full h-[300px] md:h-[400px] gap-2 md:gap-3">
         {secondRow.map((item, index) => (
-          <MenuItem
-            key={item.id}
-            item={item}
-            index={index + 5}
-            isActive={activeId === item.id}
-            onHover={() => setActiveId(item.id)}
-          />
+            <MenuItem
+              key={item.id}
+              item={item}
+              index={index + 5}
+              isActive={activeId === item.id}
+              onHover={() => setActiveId(item.id)}
+              onNavigate={(id) => {
+                if (id === 'gallery') {
+                  navigate('/gallery');
+                }
+              }}
+            />
         ))}
       </div>
     </div>
@@ -220,9 +232,10 @@ interface MenuItemProps {
   index: number;
   isActive: boolean;
   onHover: () => void;
+  onNavigate: (id: string) => void;
 }
 
-const MenuItem = ({ item, index, isActive, onHover }: MenuItemProps) => {
+const MenuItem = ({ item, index, isActive, onHover, onNavigate }: MenuItemProps) => {
   const noiseIntensity = 0.2 + (index % 5) * 0.03
 
   return (
@@ -270,8 +283,9 @@ const MenuItem = ({ item, index, isActive, onHover }: MenuItemProps) => {
       )}
       
       {isActive && (
-        <div
-          className="absolute left-[45px] md:left-[65px] bottom-[25px] md:bottom-[41px] text-accent text-xs md:text-sm font-medium hover:text-accent/80 transition-colors"
+        <button
+          onClick={() => onNavigate(item.id)}
+          className="absolute left-[45px] md:left-[65px] bottom-[25px] md:bottom-[41px] text-accent text-xs md:text-sm font-medium hover:text-accent/80 transition-colors cursor-pointer"
           style={{
             opacity: isActive ? 1 : 0,
             transition: isActive
@@ -280,7 +294,7 @@ const MenuItem = ({ item, index, isActive, onHover }: MenuItemProps) => {
           }}
         >
           <span>{item.cta}</span>
-        </div>
+        </button>
       )}
     </motion.div>
   )
