@@ -6,6 +6,7 @@ import spaSoins from "@/assets/spa-soins.jpg";
 import spaCoiffure from "@/assets/spa-coiffure.jpg";
 import spaWedding from "@/assets/spa-wedding.jpg";
 import spaEsthetique from "@/assets/spa-esthetique.jpg";
+import spaHeroBg from "@/assets/spa-hero-bg.jpg";
 
 const Spa = () => {
   const spaServices = [
@@ -47,9 +48,16 @@ const Spa = () => {
       
       {/* Hero Section */}
       <section className="relative h-screen overflow-hidden">
-        {/* Video Background Placeholder */}
-        <div className="absolute inset-0 bg-gradient-to-br from-royal via-navy to-royal opacity-90"></div>
-        <div className="absolute inset-0 bg-gradient-royal opacity-30"></div>
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={spaHeroBg}
+            alt="Luxury Spa Interior"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-royal/70 via-navy/60 to-royal/70"></div>
+        <div className="absolute inset-0 bg-gradient-royal opacity-20"></div>
         
         {/* Hero Content */}
         <div className="relative z-10 flex items-center justify-center h-full text-center px-6">
