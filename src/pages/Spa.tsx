@@ -1,0 +1,113 @@
+import { Card, CardContent } from "@/components/ui/card";
+import Navigation from "@/components/Navigation";
+import spaHammam from "@/assets/spa-hammam.jpg";
+import spaMassage from "@/assets/spa-massage.jpg";
+import spaSoins from "@/assets/spa-soins.jpg";
+import spaCoiffure from "@/assets/spa-coiffure.jpg";
+import spaWedding from "@/assets/spa-wedding.jpg";
+import spaEsthetique from "@/assets/spa-esthetique.jpg";
+
+const Spa = () => {
+  const spaServices = [
+    {
+      title: "Hammam",
+      image: spaHammam,
+      description: "Plongez dans la tradition du hammam oriental avec nos espaces vapeur authentiques. Purifiez votre corps et votre esprit dans une atmosphère de détente absolue."
+    },
+    {
+      title: "Massage",
+      image: spaMassage,
+      description: "Nos thérapeutes experts vous offrent une gamme complète de massages relaxants et thérapeutiques pour libérer les tensions et restaurer votre bien-être."
+    },
+    {
+      title: "Soins",
+      image: spaSoins,
+      description: "Découvrez nos soins du visage personnalisés utilisant des produits haut de gamme pour révéler la beauté naturelle de votre peau."
+    },
+    {
+      title: "Coiffure",
+      image: spaCoiffure,
+      description: "Notre salon de coiffure premium propose des coupes, colorations et soins capillaires réalisés par des professionnels passionnés."
+    },
+    {
+      title: "Cérémonie de mariage",
+      image: spaWedding,
+      description: "Vivez un moment magique avec nos forfaits mariage complets : coiffure, maquillage, soins pour être resplendissante le jour J."
+    },
+    {
+      title: "Esthétique",
+      image: spaEsthetique,
+      description: "Nos soins esthétiques avancés combinent expertise et technologies modernes pour sublimer votre beauté naturelle."
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Navigation />
+      
+      {/* Hero Section */}
+      <section className="relative h-screen overflow-hidden">
+        {/* Video Background Placeholder */}
+        <div className="absolute inset-0 bg-gradient-to-br from-royal via-navy to-royal opacity-90"></div>
+        <div className="absolute inset-0 bg-gradient-royal opacity-30"></div>
+        
+        {/* Hero Content */}
+        <div className="relative z-10 flex items-center justify-center h-full text-center px-6">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-6xl md:text-8xl font-serif font-bold text-gold mb-8 tracking-wide">
+              SPA
+            </h1>
+            <Card className="bg-royal/80 backdrop-blur-sm border-gold/30 mx-auto max-w-3xl">
+              <CardContent className="p-8">
+                <p className="text-xl md:text-2xl text-white leading-relaxed font-light">
+                  Venez vous détendre et vous ressourcer dans notre spa d'exception. 
+                  Profitez de nos espaces wellness premium et de nos soins personnalisés 
+                  dans un cadre luxueux et apaisant. Une expérience unique vous attend 
+                  dans notre établissement de luxe !
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* SPA Services Grid */}
+      <section className="py-20 bg-gradient-to-b from-royal to-navy">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {spaServices.map((service, index) => (
+              <Card 
+                key={service.title} 
+                className="group bg-royal/90 border-gold/30 overflow-hidden hover:shadow-glow transition-all duration-500 hover:-translate-y-2"
+              >
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-royal via-transparent to-transparent opacity-60"></div>
+                  <div className="absolute inset-0 bg-gold/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+                
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-serif font-bold text-gold mb-4 border-b border-gold/30 pb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-white/90 leading-relaxed">
+                    {service.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Decorative Bottom Section */}
+      <section className="h-20 bg-gradient-to-r from-gold/20 via-gold/10 to-gold/20"></section>
+    </div>
+  );
+};
+
+export default Spa;

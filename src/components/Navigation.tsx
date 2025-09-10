@@ -10,7 +10,7 @@ const Navigation = () => {
     { name: "Fitness", href: "/fitness" },
     { name: "Foot à 5", href: "/foot" },
     { name: "Aqua", href: "/aqua" },
-    { name: "Spa", href: "#spa" },
+    { name: "Spa", href: "/spa" },
     { name: "Kids", href: "#kids" },
     { name: "Mo'Snack", href: "#snack" },
     { name: "Galerie Photos", href: "/gallery" },
