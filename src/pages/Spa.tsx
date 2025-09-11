@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import spaHammam from "@/assets/spa-hammam.jpg";
 import spaMassage from "@/assets/spa-massage.jpg";
 import spaSoins from "@/assets/spa-soins.jpg";
@@ -112,8 +113,7 @@ const Spa = () => {
         </div>
       </section>
 
-      {/* Decorative Bottom Section */}
-      <section className="h-20 bg-gradient-to-r from-gold/20 via-gold/10 to-gold/20"></section>
+      <Footer />
     </div>
   );
 };

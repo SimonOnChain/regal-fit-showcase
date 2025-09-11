@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import { ExpandingMenu } from "@/components/ExpandingMenu";
 import ContactForm from "@/components/ContactForm";
@@ -162,6 +163,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 };

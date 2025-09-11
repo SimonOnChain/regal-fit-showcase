@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Crown, Mail, Phone, MapPin, Instagram, Facebook } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -253,6 +254,8 @@ const Contact = () => {
           </Card>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 };

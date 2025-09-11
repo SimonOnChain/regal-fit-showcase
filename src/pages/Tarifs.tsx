@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
@@ -306,6 +307,8 @@ const Tarifs = () => {
           </DialogContent>
         </Dialog>
       )}
+      
+      <Footer />
     </div>
   );
 };

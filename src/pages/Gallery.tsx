@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
@@ -200,6 +201,8 @@ const Gallery = () => {
           </Card>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 };

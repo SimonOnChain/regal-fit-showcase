@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import kidsHeroBg from "@/assets/kids-hero-bg.jpg";
 import kidsNatation from "@/assets/kids-natation.jpg";
 import kidsGym from "@/assets/kids-gym.jpg";
@@ -109,8 +110,7 @@ const Kids = () => {
         </div>
       </section>
 
-      {/* Decorative Bottom Section */}
-      <section className="h-20 bg-gradient-to-r from-gold/20 via-gold/10 to-gold/20"></section>
+      <Footer />
     </div>
   );
 };

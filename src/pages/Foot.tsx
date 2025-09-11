@@ -1,4 +1,5 @@
 import RoyalPageTemplate from "@/components/RoyalPageTemplate";
+import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Users, Trophy, Calendar, Clock, MapPin, Phone } from "lucide-react";
@@ -110,6 +111,8 @@ const Foot = () => {
           </Card>
         </div>
       </section>
+      
+      <Footer />
     </RoyalPageTemplate>
   );
 };

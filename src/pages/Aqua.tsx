@@ -1,4 +1,5 @@
 import RoyalPageTemplate from "@/components/RoyalPageTemplate";
+import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Waves, Heart, Users, Clock, MapPin, Phone } from "lucide-react";
@@ -116,6 +117,8 @@ const Aqua = () => {
           </Card>
         </div>
       </section>
+      
+      <Footer />
     </RoyalPageTemplate>
   );
 };
