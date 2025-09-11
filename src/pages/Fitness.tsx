@@ -1,5 +1,6 @@
 import RoyalPageTemplate from "@/components/RoyalPageTemplate";
 import Footer from "@/components/Footer";
+import { AnimatedSection, AnimatedCard } from "@/hooks/useInView";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dumbbell, Users, Target, Clock, MapPin, Phone } from "lucide-react";
@@ -59,44 +60,46 @@ const Fitness = () => {
       detailCards={detailCards}
     >
       {/* Additional Contact Section */}
-      <section className="py-16 bg-background">
+      <AnimatedSection className="py-16 bg-background">
         <div className="container mx-auto px-6">
-          <Card className="max-w-2xl mx-auto p-8 border border-accent/20">
-            <h3 className="text-2xl font-serif font-bold text-foreground mb-6 text-center">
-              Informations Fitness
-            </h3>
-            
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-accent" />
-                <span className="text-muted-foreground">
-                  1841 Av. des FAR - Plaisance - MEKNES
-                </span>
+          <AnimatedCard className="max-w-2xl mx-auto">
+            <Card className="p-8 border border-accent/20 gold-glow-hover">
+              <h3 className="text-2xl font-serif font-bold text-foreground mb-6 text-center">
+                Informations Fitness
+              </h3>
+              
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3 animate-fade-in stagger-1">
+                  <MapPin className="h-5 w-5 text-accent" />
+                  <span className="text-muted-foreground">
+                    1841 Av. des FAR - Plaisance - MEKNES
+                  </span>
+                </div>
+                
+                <div className="flex items-center space-x-3 animate-fade-in stagger-2">
+                  <Phone className="h-5 w-5 text-accent" />
+                  <span className="text-muted-foreground">
+                    0535 521 528
+                  </span>
+                </div>
+                
+                <div className="flex items-center space-x-3 animate-fade-in stagger-3">
+                  <Clock className="h-5 w-5 text-accent" />
+                  <span className="text-muted-foreground">
+                    Lun-Dim: 6h00 - 23h00
+                  </span>
+                </div>
               </div>
               
-              <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-accent" />
-                <span className="text-muted-foreground">
-                  0535 521 528
-                </span>
+              <div className="mt-6 text-center animate-slide-up stagger-4">
+                <Button className="btn-gold gold-glow-hover">
+                  Réserver une séance
+                </Button>
               </div>
-              
-              <div className="flex items-center space-x-3">
-                <Clock className="h-5 w-5 text-accent" />
-                <span className="text-muted-foreground">
-                  Lun-Dim: 6h00 - 23h00
-                </span>
-              </div>
-            </div>
-            
-            <div className="mt-6 text-center">
-              <Button className="btn-gold">
-                Réserver une séance
-              </Button>
-            </div>
-          </Card>
+            </Card>
+          </AnimatedCard>
         </div>
-      </section>
+      </AnimatedSection>
       
       <Footer />
     </RoyalPageTemplate>

@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import { ExpandingMenu } from "@/components/ExpandingMenu";
 import ContactForm from "@/components/ContactForm";
+import { AnimatedSection, AnimatedCard } from "@/hooks/useInView";
 import { Sparkles, Dumbbell, Waves } from "lucide-react";
 import fitnessHero from "@/assets/fitness-service.jpg";
 
@@ -23,21 +24,21 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/60 to-accent/70" />
         
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
-          <h1 className="text-6xl md:text-8xl font-serif font-bold mb-4 text-accent">
+          <h1 className="text-6xl md:text-8xl font-serif font-bold mb-4 text-accent animate-fade-in">
             Royal Fitness
           </h1>
-          <p className="text-2xl md:text-3xl font-light mb-8 italic">
+          <p className="text-2xl md:text-3xl font-light mb-8 italic animate-fade-in stagger-2">
             Le Concept Royal
           </p>
           
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 mb-8 max-w-2xl mx-auto rounded-lg">
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 mb-8 max-w-2xl mx-auto rounded-lg animate-slide-up stagger-3">
             <p className="text-xl leading-relaxed">
               Découvrez l'excellence fitness dans un environnement royal premium où tradition et modernité se rencontrent.
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="btn-gold text-lg px-8 py-4 text-primary font-semibold">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up stagger-4">
+            <button className="btn-gold text-lg px-8 py-4 text-primary font-semibold gold-glow-hover">
               <a href="/fitness">Découvrir nos Services</a>
             </button>
           </div>
@@ -45,7 +46,7 @@ const Index = () => {
       </section>
 
       {/* Le Concept Section */}
-      <section className="py-20 bg-secondary/10">
+      <AnimatedSection className="py-20 bg-secondary/10">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
@@ -82,70 +83,70 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Services Section */}
-      <section className="py-20 bg-background">
+      <AnimatedSection className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4 animate-fade-in">
               Nos Services Premium
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in stagger-2">
               Une gamme complète de services dans un environnement d'exception
             </p>
           </div>
           
-          <div className="flex justify-center">
+          <div className="flex justify-center animate-slide-up stagger-3">
             <ExpandingMenu />
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Excellence Section */}
-      <section className="py-20 bg-secondary/10">
+      <AnimatedSection className="py-20 bg-secondary/10">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
+            <h3 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4 animate-fade-in">
               L'Excellence à Votre Service
             </h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in stagger-2">
               Royal Fitness vous accompagne dans votre quête d'excellence avec des services premium et un environnement d'exception.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="text-center p-8 border border-accent/20 rounded-lg bg-background hover-scale">
+             <AnimatedCard className="text-center p-8 border border-accent/20 rounded-lg bg-background" delay={100}>
               <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Sparkles className="h-8 w-8 text-accent" />
               </div>
               <h4 className="text-xl font-serif font-bold text-foreground mb-4">Coaching Expert</h4>
               <p className="text-muted-foreground leading-relaxed">Accompagnement personnalisé par nos coachs certifiés et expérimentés</p>
-            </div>
+            </AnimatedCard>
             
-            <div className="text-center p-8 border border-accent/20 rounded-lg bg-background hover-scale">
+            <AnimatedCard className="text-center p-8 border border-accent/20 rounded-lg bg-background" delay={200}>
               <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Dumbbell className="h-8 w-8 text-accent" />
               </div>
               <h4 className="text-xl font-serif font-bold text-foreground mb-4">Équipements Premium</h4>
               <p className="text-muted-foreground leading-relaxed">Technologies de pointe et équipements haut de gamme pour des résultats optimaux</p>
-            </div>
+            </AnimatedCard>
             
-            <div className="text-center p-8 border border-accent/20 rounded-lg bg-background hover-scale">
+            <AnimatedCard className="text-center p-8 border border-accent/20 rounded-lg bg-background" delay={300}>
               <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Waves className="h-8 w-8 text-accent" />
               </div>
               <h4 className="text-xl font-serif font-bold text-foreground mb-4">Bien-être Intégral</h4>
               <p className="text-muted-foreground leading-relaxed">Approche holistique de votre santé et forme physique dans un cadre royal</p>
-            </div>
+            </AnimatedCard>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Call to Action */}
-      <section className="py-16 bg-background">
+      <AnimatedSection className="py-16 bg-background">
         <div className="container mx-auto px-6 text-center">
-          <div className="max-w-2xl mx-auto p-8 border border-accent/20 rounded-lg bg-secondary/5">
+          <AnimatedCard className="max-w-2xl mx-auto p-8 border border-accent/20 rounded-lg bg-secondary/5">
             <h3 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-4">
               Rejoignez Royal Fitness
             </h3>
@@ -153,16 +154,16 @@ const Index = () => {
               Découvrez l'excellence fitness dans un environnement premium et royal.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-gold">
+              <button className="btn-gold gold-glow-hover">
                 <a href="/contact">Nous contacter</a>
               </button>
-              <button className="border border-accent text-accent hover:bg-accent hover:text-white px-6 py-3 rounded-lg transition-colors">
+              <button className="border border-accent text-accent hover:bg-accent hover:text-white px-6 py-3 rounded-lg transition-colors scale-hover">
                 <a href="/tarifs">Voir les tarifs</a>
               </button>
             </div>
-          </div>
+          </AnimatedCard>
         </div>
-      </section>
+      </AnimatedSection>
       
       <Footer />
     </div>
