@@ -6,54 +6,54 @@
 
 @layer base {
   :root {
-    /* Royal Blue Color Palette */
-    --background: 220 60% 8%;
-    --foreground: 220 20% 95%;
+    /* Light Luxury Color Palette */
+    --background: 220 40% 96%;
+    --foreground: 220 70% 20%;
 
-    --card: 220 50% 18%;
-    --card-foreground: 220 15% 95%;
+    --card: 220 30% 98%;
+    --card-foreground: 220 60% 25%;
 
-    --popover: 220 50% 15%;
-    --popover-foreground: 220 15% 95%;
+    --popover: 220 20% 99%;
+    --popover-foreground: 220 70% 20%;
 
     --primary: 220 70% 25%;
-    --primary-foreground: 220 15% 95%;
+    --primary-foreground: 40 20% 96%;
 
-    --secondary: 220 60% 22%;
-    --secondary-foreground: 220 15% 90%;
+    --secondary: 220 25% 94%;
+    --secondary-foreground: 220 70% 25%;
 
-    --muted: 220 50% 20%;
-    --muted-foreground: 220 20% 70%;
+    --muted: 220 20% 92%;
+    --muted-foreground: 220 40% 45%;
 
-    --accent: 48 95% 58%;
-    --accent-foreground: 220 60% 8%;
+    --accent: 40 20% 96%;
+    --accent-foreground: 220 70% 25%;
 
     --destructive: 0 75% 55%;
-    --destructive-foreground: 220 15% 95%;
+    --destructive-foreground: 40 20% 96%;
 
-    --border: 220 40% 25%;
-    --input: 220 40% 22%;
-    --ring: 48 95% 58%;
+    --border: 220 30% 88%;
+    --input: 220 25% 94%;
+    --ring: 220 70% 25%;
 
-    /* Royal Design System */
+    /* Light Royal Design System */
     --royal-blue: 220 70% 25%;
     --royal-blue-dark: 220 80% 15%;
-    --royal-blue-light: 220 60% 35%;
-    --gold: 48 95% 58%;
-    --gold-light: 48 100% 68%;
-    --silver: 220 20% 75%;
-    --navy: 220 70% 12%;
+    --royal-blue-light: 220 50% 85%;
+    --bone: 40 20% 96%;
+    --bone-light: 40 25% 98%;
+    --silver: 220 15% 70%;
+    --navy: 220 70% 20%;
 
-    /* Gradients */
-    --gradient-royal: linear-gradient(135deg, hsl(var(--royal-blue)) 0%, hsl(var(--royal-blue-dark)) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(var(--navy)) 0%, hsl(var(--royal-blue-dark)) 50%, hsl(var(--royal-blue)) 100%);
-    --gradient-overlay: linear-gradient(45deg, hsl(var(--royal-blue) / 0.9), hsl(var(--navy) / 0.8));
+    /* Light Gradients */
+    --gradient-royal: linear-gradient(135deg, hsl(var(--royal-blue-light)) 0%, hsl(var(--background)) 100%);
+    --gradient-bone: linear-gradient(135deg, hsl(var(--bone)) 0%, hsl(var(--bone-light)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--royal-blue-light)) 0%, hsl(var(--background)) 50%, hsl(var(--card)) 100%);
+    --gradient-overlay: linear-gradient(45deg, hsl(var(--royal-blue) / 0.1), hsl(var(--navy) / 0.05));
 
-    /* Shadows */
-    --shadow-royal: 0 10px 40px hsl(var(--royal-blue) / 0.3);
-    --shadow-gold: 0 0 30px hsl(var(--gold) / 0.4);
-    --shadow-elegant: 0 20px 60px hsl(240 80% 5% / 0.6);
+    /* Light Shadows */
+    --shadow-royal: 0 10px 40px hsl(var(--royal-blue) / 0.15);
+    --shadow-bone: 0 4px 20px hsl(var(--bone) / 0.8);
+    --shadow-elegant: 0 20px 60px hsl(220 40% 70% / 0.2);
 
     /* Animations */
     --transition-royal: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -95,7 +95,7 @@
   }
 
   body {
-    background: linear-gradient(135deg, hsl(220 60% 8%) 0%, hsl(220 70% 12%) 100%);
+    background: linear-gradient(135deg, hsl(220 40% 96%) 0%, hsl(220 30% 98%) 100%);
     @apply text-foreground font-sans;
   }
 
@@ -117,7 +117,7 @@
     position: absolute;
     width: 4px;
     height: 4px;
-    background: hsl(var(--gold));
+    background: hsl(var(--bone));
     border-radius: 50%;
     animation: float 6s ease-in-out infinite;
     opacity: 0.7;
@@ -138,18 +138,19 @@
     50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
   }
 
-  /* Royal Button Variants */
+  /* Light Royal Button Variants */
   .btn-royal {
-    @apply bg-gradient-to-r from-primary to-primary/80 text-primary-foreground;
-    @apply hover:from-primary/90 hover:to-primary/70;
+    @apply bg-gradient-to-r from-primary to-primary/90 text-primary-foreground;
+    @apply hover:from-primary/95 hover:to-primary/85;
     @apply shadow-lg hover:shadow-xl transition-all duration-300;
-    @apply border border-accent/20;
+    @apply border border-bone/30;
   }
 
-  .btn-gold {
-    @apply bg-gradient-to-r from-accent to-accent/80 text-accent-foreground;
-    @apply hover:from-accent/90 hover:to-accent/70;
+  .btn-bone {
+    @apply bg-gradient-to-r from-bone to-bone/95 text-accent-foreground;
+    @apply hover:from-bone/90 hover:to-bone/80;
     @apply shadow-lg hover:shadow-xl transition-all duration-300;
+    @apply border border-royal-blue/20;
   }
 
   /* Content-First Animations */
@@ -182,12 +183,12 @@
     transform: scale(1.02);
   }
 
-  .gold-glow-hover {
+  .bone-glow-hover {
     transition: box-shadow 0.3s ease-out, transform 0.2s ease-out;
   }
 
-  .gold-glow-hover:hover {
-    box-shadow: 0 0 20px hsl(var(--gold) / 0.4), 0 10px 30px hsl(var(--gold) / 0.2);
+  .bone-glow-hover:hover {
+    box-shadow: 0 0 20px hsl(var(--bone) / 0.6), 0 10px 30px hsl(var(--royal-blue) / 0.1);
     transform: translateY(-2px);
   }
 
@@ -202,7 +203,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background: hsl(var(--gold));
+    background: hsl(var(--bone));
     transform: scaleX(0);
     transition: transform 0.3s ease-out;
     transform-origin: center;
@@ -233,16 +234,16 @@
     }
   }
 
-  @keyframes goldPulse {
-    0% { box-shadow: 0 0 0 0 hsl(var(--gold) / 0.5); }
-    70% { box-shadow: 0 0 0 10px hsl(var(--gold) / 0); }
-    100% { box-shadow: 0 0 0 0 hsl(var(--gold) / 0); }
+  @keyframes bonePulse {
+    0% { box-shadow: 0 0 0 0 hsl(var(--bone) / 0.8); }
+    70% { box-shadow: 0 0 0 10px hsl(var(--bone) / 0); }
+    100% { box-shadow: 0 0 0 0 hsl(var(--bone) / 0); }
   }
 
-  /* Royal Card Hover Effect */
+  /* Light Royal Card Hover Effect */
   .card-royal {
-    background: linear-gradient(135deg, hsl(220 50% 22%) 0%, hsl(220 60% 28%) 100%);
-    @apply transition-all duration-300 hover:scale-105 border border-accent/30;
+    background: linear-gradient(135deg, hsl(220 30% 98%) 0%, hsl(220 25% 99%) 100%);
+    @apply transition-all duration-300 hover:scale-105 border border-bone/40;
     box-shadow: var(--shadow-royal);
   }
 
@@ -250,18 +251,18 @@
     box-shadow: var(--shadow-elegant);
   }
 
-  /* Navigation Styles */
+  /* Light Navigation Styles */
   .nav-royal {
-    background: linear-gradient(135deg, hsl(220 60% 12%) 0%, hsl(220 70% 18%) 100%);
-    @apply backdrop-blur-md border-b border-accent/20;
-    box-shadow: 0 4px 20px hsl(220 60% 8% / 0.8);
+    background: linear-gradient(135deg, hsl(220 30% 98% / 0.95) 0%, hsl(220 20% 99% / 0.95) 100%);
+    @apply backdrop-blur-md border-b border-bone/30;
+    box-shadow: 0 4px 20px hsl(220 40% 80% / 0.3);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .nav-royal.scrolled {
-    background: linear-gradient(135deg, hsl(220 70% 8% / 0.95) 0%, hsl(220 80% 12% / 0.95) 100%);
+    background: linear-gradient(135deg, hsl(220 25% 99% / 0.98) 0%, hsl(220 15% 100% / 0.98) 100%);
     backdrop-filter: blur(20px);
-    box-shadow: 0 8px 32px hsl(220 60% 8% / 0.4);
+    box-shadow: 0 8px 32px hsl(220 40% 80% / 0.2);
   }
 
   /* Accessibility: Reduce motion for users who prefer it */
