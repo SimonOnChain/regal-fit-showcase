@@ -56,22 +56,22 @@ export default {
           "blue-dark": "hsl(var(--royal-blue-dark))",
           "blue-light": "hsl(var(--royal-blue-light))",
         },
-        bone: {
-          DEFAULT: "hsl(var(--bone))",
-          light: "hsl(var(--bone-light))",
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          light: "hsl(var(--gold-light))",
         },
         silver: "hsl(var(--silver))",
         navy: "hsl(var(--navy))",
       },
       backgroundImage: {
         'gradient-royal': 'var(--gradient-royal)',
-        'gradient-bone': 'var(--gradient-bone)',
+        'gradient-gold': 'var(--gradient-gold)',
         'gradient-hero': 'var(--gradient-hero)',
         'gradient-overlay': 'var(--gradient-overlay)',
       },
       boxShadow: {
         'royal': 'var(--shadow-royal)',
-        'bone': 'var(--shadow-bone)',
+        'gold': 'var(--shadow-gold)',
         'elegant': 'var(--shadow-elegant)',
       },
       borderRadius: {
@@ -112,10 +112,10 @@ export default {
           "0%": { transform: "scale(0.95)", opacity: "0" },
           "100%": { transform: "scale(1)", opacity: "1" },
         },
-        "bone-pulse": {
-          "0%": { boxShadow: "0 0 0 0 hsl(var(--bone) / 0.8)" },
-          "70%": { boxShadow: "0 0 0 10px hsl(var(--bone) / 0)" },
-          "100%": { boxShadow: "0 0 0 0 hsl(var(--bone) / 0)" },
+        "gold-pulse": {
+          "0%": { boxShadow: "0 0 0 0 hsl(var(--gold) / 0.5)" },
+          "70%": { boxShadow: "0 0 0 10px hsl(var(--gold) / 0)" },
+          "100%": { boxShadow: "0 0 0 0 hsl(var(--gold) / 0)" },
         },
         "stagger-fade-in": {
           "0%": { opacity: "0", transform: "translateY(20px)" },
@@ -131,7 +131,7 @@ export default {
         "slide-in-right": "slide-in-right 0.3s ease-out",
         "slide-out-right": "slide-out-right 0.3s ease-out",
         "scale-in": "scale-in 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
-        "bone-pulse": "bone-pulse 2s infinite",
+        "gold-pulse": "gold-pulse 2s infinite",
         "stagger-fade-in": "stagger-fade-in 0.6s ease-out forwards",
         "enter": "fade-in 0.6s ease-out, scale-in 0.4s ease-out",
         "exit": "fade-out 0.3s ease-out",
