@@ -56,22 +56,22 @@ export default {
           "blue-dark": "hsl(var(--royal-blue-dark))",
           "blue-light": "hsl(var(--royal-blue-light))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
+        white: {
+          DEFAULT: "hsl(var(--white))",
+          warm: "hsl(var(--white-warm))",
         },
-        silver: "hsl(var(--silver))",
+        "blue-soft": "hsl(var(--blue-soft))",
         navy: "hsl(var(--navy))",
       },
       backgroundImage: {
         'gradient-royal': 'var(--gradient-royal)',
-        'gradient-gold': 'var(--gradient-gold)',
+        'gradient-white': 'var(--gradient-white)',
         'gradient-hero': 'var(--gradient-hero)',
         'gradient-overlay': 'var(--gradient-overlay)',
       },
       boxShadow: {
         'royal': 'var(--shadow-royal)',
-        'gold': 'var(--shadow-gold)',
+        'white': 'var(--shadow-white)',
         'elegant': 'var(--shadow-elegant)',
       },
       borderRadius: {
@@ -112,10 +112,10 @@ export default {
           "0%": { transform: "scale(0.95)", opacity: "0" },
           "100%": { transform: "scale(1)", opacity: "1" },
         },
-        "gold-pulse": {
-          "0%": { boxShadow: "0 0 0 0 hsl(var(--gold) / 0.5)" },
-          "70%": { boxShadow: "0 0 0 10px hsl(var(--gold) / 0)" },
-          "100%": { boxShadow: "0 0 0 0 hsl(var(--gold) / 0)" },
+        "white-pulse": {
+          "0%": { boxShadow: "0 0 0 0 hsl(var(--white) / 0.8)" },
+          "70%": { boxShadow: "0 0 0 10px hsl(var(--white) / 0)" },
+          "100%": { boxShadow: "0 0 0 0 hsl(var(--white) / 0)" },
         },
         "stagger-fade-in": {
           "0%": { opacity: "0", transform: "translateY(20px)" },
@@ -131,7 +131,7 @@ export default {
         "slide-in-right": "slide-in-right 0.3s ease-out",
         "slide-out-right": "slide-out-right 0.3s ease-out",
         "scale-in": "scale-in 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
-        "gold-pulse": "gold-pulse 2s infinite",
+        "white-pulse": "white-pulse 2s infinite",
         "stagger-fade-in": "stagger-fade-in 0.6s ease-out forwards",
         "enter": "fade-in 0.6s ease-out, scale-in 0.4s ease-out",
         "exit": "fade-out 0.3s ease-out",
