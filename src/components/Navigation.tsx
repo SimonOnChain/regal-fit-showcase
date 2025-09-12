@@ -86,7 +86,7 @@ const Navigation = () => {
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
                       <button
-                        className={`nav-link-active text-white hover:text-blue-200 transition-all duration-300 font-bold text-xl uppercase tracking-wide fade-slide-in stagger-${index + 1} flex items-center gap-1`}
+                        className={`nav-link-active text-white hover:text-blue-200 transition-all duration-300 font-bold text-base uppercase tracking-wide fade-slide-in stagger-${index + 1} flex items-center gap-1`}
                         style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 800 }}
                       >
                         {item.name}
@@ -110,7 +110,7 @@ const Navigation = () => {
                   ) : (
                     <a
                       href={item.href}
-                      className={`nav-link-active text-white hover:text-blue-200 transition-all duration-300 font-bold text-xl uppercase tracking-wide fade-slide-in stagger-${index + 1}`}
+                      className={`nav-link-active text-white hover:text-blue-200 transition-all duration-300 font-bold text-base uppercase tracking-wide fade-slide-in stagger-${index + 1}`}
                       style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 800 }}
                     >
                       {item.name}
@@ -123,7 +123,7 @@ const Navigation = () => {
 
           {/* Right - Contact Button (Desktop) */}
           <div className="hidden lg:flex items-center">
-            <Button className="bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white px-12 py-6 text-xl font-extrabold uppercase tracking-wide rounded-full shadow-lg hover:shadow-xl transition-all duration-300 btn-shine-loop"
+            <Button className="bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white px-8 py-4 text-lg font-extrabold uppercase tracking-wide rounded-full shadow-lg hover:shadow-xl transition-all duration-300 btn-shine-loop"
                     style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 900 }}>
               <a href="/contact">CONTACT</a>
             </Button>

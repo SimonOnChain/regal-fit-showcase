@@ -22,18 +22,31 @@ const Index = () => {
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-r from-blue-300/20 via-blue-200/30 to-blue-300/20" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-blue-400/30 via-blue-300/20 to-transparent opacity-80" />
         
         <div className="relative z-10 flex items-center justify-center h-full">
-          <h1 className="text-8xl md:text-[12rem] font-extrabold uppercase tracking-wider text-center animate-fade-in"
-              style={{ 
-                color: 'hsl(210 60% 70%)',
-                textShadow: '0 8px 16px rgba(255, 255, 255, 0.5)',
-                fontFamily: 'Montserrat, sans-serif',
-                fontWeight: 900
-              }}>
-            ROYAL FITNESS
-          </h1>
+          <div className="text-center animate-fade-in">
+            <div className="text-6xl md:text-8xl font-extrabold uppercase tracking-wider"
+                 style={{ 
+                   color: 'hsl(210 60% 70%)',
+                   textShadow: '0 8px 16px rgba(255, 255, 255, 0.5)',
+                   fontFamily: 'Montserrat, sans-serif',
+                   fontWeight: 900,
+                   lineHeight: '0.9'
+                 }}>
+              ROYAL
+            </div>
+            <div className="text-6xl md:text-8xl font-extrabold uppercase tracking-wider"
+                 style={{ 
+                   color: 'hsl(210 60% 70%)',
+                   textShadow: '0 8px 16px rgba(255, 255, 255, 0.5)',
+                   fontFamily: 'Montserrat, sans-serif',
+                   fontWeight: 900,
+                   lineHeight: '0.9'
+                 }}>
+              FITNESS
+            </div>
+          </div>
         </div>
       </section>
 
