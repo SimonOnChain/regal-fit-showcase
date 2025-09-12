@@ -60,7 +60,7 @@ const Footer = () => {
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-royal-blue-hover to-transparent"></div>
       
       <div className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
           
           {/* Left Column - Logo & Contact Info */}
           <div className="space-y-8 animate-slide-up" style={{ animationDelay: "0.1s" }}>
@@ -107,7 +107,7 @@ const Footer = () => {
 
           {/* Center Column - Contact Form */}
           <div className="space-y-6 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-            <h4 className="text-xl font-serif font-bold text-royal-blue-dark mb-6">Contactez-nous</h4>
+            <h4 className="text-xl font-serif font-bold text-royal-blue-dark">Contactez-nous</h4>
             
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -169,14 +169,14 @@ const Footer = () => {
 
           {/* Right Column - Navigation Links */}
           <div className="space-y-6 animate-slide-up" style={{ animationDelay: "0.3s" }}>
-            <h4 className="text-xl font-serif font-bold text-royal-blue-dark mb-6">Navigation</h4>
+            <h4 className="text-xl font-serif font-bold text-royal-blue-dark">Navigation</h4>
             
-            <div className="grid grid-cols-1 gap-3">
+            <div className="space-y-3">
               {navigationLinks.map((link, index) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-royal-blue hover:text-royal-blue-dark transition-colors duration-300 py-1 block hover:translate-x-1 hover:font-medium"
+                  className="text-royal-blue hover:text-royal-blue-dark transition-colors duration-300 block hover:translate-x-1 hover:font-medium"
                   style={{ 
                     animationDelay: `${0.1 * index}s`,
                     animation: "fadeIn 0.6s ease-out forwards"
