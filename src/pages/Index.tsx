@@ -29,7 +29,7 @@ const Index = () => {
             <div className="text-6xl md:text-8xl font-extrabold uppercase tracking-wider"
                  style={{ 
                    color: 'hsl(210 60% 70%)',
-                   textShadow: '0 8px 16px rgba(255, 255, 255, 0.5)',
+                   textShadow: '0 8px 16px rgba(255, 255, 255, 0.2)',
                    fontFamily: 'Montserrat, sans-serif',
                    fontWeight: 900,
                    lineHeight: '0.9'
@@ -39,7 +39,7 @@ const Index = () => {
             <div className="text-6xl md:text-8xl font-extrabold uppercase tracking-wider"
                  style={{ 
                    color: 'hsl(210 60% 70%)',
-                   textShadow: '0 8px 16px rgba(255, 255, 255, 0.5)',
+                   textShadow: '0 8px 16px rgba(255, 255, 255, 0.2)',
                    fontFamily: 'Montserrat, sans-serif',
                    fontWeight: 900,
                    lineHeight: '0.9'
@@ -51,10 +51,10 @@ const Index = () => {
       </section>
 
       {/* Transition Section */}
-      <section className="h-20 bg-gradient-to-b from-blue-400/80 to-blue-400/60"></section>
+      <section className="h-20 bg-gradient-to-b from-blue-200/60 to-blue-200/40"></section>
 
       {/* Le Concept Section */}
-      <AnimatedSection className="py-20 bg-gradient-to-b from-blue-400/60 via-blue-400/40 to-blue-400/20">
+      <AnimatedSection className="py-20 bg-gradient-to-b from-blue-200/40 via-blue-200/30 to-blue-200/20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
