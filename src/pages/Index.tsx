@@ -98,6 +98,92 @@ const Index = () => {
         </div>
       </AnimatedSection>
 
+      {/* Excellence Training Section */}
+      <AnimatedSection className="py-20 bg-blue-500">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left Content */}
+            <div className="space-y-8">
+              <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-wide text-white"
+                  style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                EXCELLENCE TRAINING
+              </h2>
+              
+              <div className="space-y-6 text-white">
+                <p className="text-lg md:text-xl leading-relaxed">
+                  Notre approche personnalisée garantit des résultats exceptionnels grâce à nos équipements de dernière génération et nos coachs certifiés.
+                </p>
+                
+                <p className="text-lg md:text-xl leading-relaxed">
+                  Bénéficiez d'un accompagnement sur mesure dans un environnement premium conçu pour maximiser vos performances et votre bien-être.
+                </p>
+                
+                <p className="text-lg md:text-xl leading-relaxed">
+                  Découvrez une expérience fitness unique où chaque détail est pensé pour votre réussite et votre épanouissement personnel.
+                </p>
+              </div>
+              
+              <button className="bg-transparent border-2 border-white text-white px-8 py-4 text-lg font-bold uppercase tracking-wide hover:bg-white hover:text-blue-600 transition-all duration-300"
+                      style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                <a href="/contact">Nous contacter</a>
+              </button>
+            </div>
+            
+            {/* Right Image */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="w-full h-96 lg:h-[500px] bg-cover bg-center rounded-lg overflow-hidden"
+                   style={{ backgroundImage: `url(${fitnessHero})` }}>
+              </div>
+            </div>
+          </div>
+        </div>
+      </AnimatedSection>
+
+      {/* Stats Section */}
+      <AnimatedSection className="relative py-20 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${fitnessHero})`
+          }}
+        />
+        <div className="absolute inset-0 bg-black/60" />
+        
+        <div className="relative z-10 container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <AnimatedCard className="space-y-4" delay={100}>
+              <div className="text-5xl md:text-6xl font-bold text-white"
+                   style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                +97%
+              </div>
+              <p className="text-xl text-white/90 font-medium">
+                Clients satisfaits
+              </p>
+            </AnimatedCard>
+            
+            <AnimatedCard className="space-y-4" delay={200}>
+              <div className="text-5xl md:text-6xl font-bold text-white"
+                   style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                +124
+              </div>
+              <p className="text-xl text-white/90 font-medium">
+                Cours collectifs
+              </p>
+            </AnimatedCard>
+            
+            <AnimatedCard className="space-y-4" delay={300}>
+              <div className="text-5xl md:text-6xl font-bold text-white"
+                   style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                +15
+              </div>
+              <p className="text-xl text-white/90 font-medium">
+                Années d'expérience
+              </p>
+            </AnimatedCard>
+          </div>
+        </div>
+      </AnimatedSection>
+
       {/* Services Section */}
       <AnimatedSection className="py-20 bg-background">
         <div className="container mx-auto px-6">
