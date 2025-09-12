@@ -201,68 +201,6 @@ const Index = () => {
           </div>
         </div>
       </AnimatedSection>
-
-      {/* Excellence Section */}
-      <AnimatedSection className="py-20 bg-secondary/10">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4 animate-fade-in">
-              L'Excellence à Votre Service
-            </h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in stagger-2">
-              Royal Fitness vous accompagne dans votre quête d'excellence avec des services premium et un environnement d'exception.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-             <AnimatedCard className="text-center p-8 border border-accent/20 rounded-lg bg-background" delay={100}>
-              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Sparkles className="h-8 w-8 text-accent" />
-              </div>
-              <h4 className="text-xl font-serif font-bold text-foreground mb-4">Coaching Expert</h4>
-              <p className="text-muted-foreground leading-relaxed">Accompagnement personnalisé par nos coachs certifiés et expérimentés</p>
-            </AnimatedCard>
-            
-            <AnimatedCard className="text-center p-8 border border-accent/20 rounded-lg bg-background" delay={200}>
-              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Dumbbell className="h-8 w-8 text-accent" />
-              </div>
-              <h4 className="text-xl font-serif font-bold text-foreground mb-4">Équipements Premium</h4>
-              <p className="text-muted-foreground leading-relaxed">Technologies de pointe et équipements haut de gamme pour des résultats optimaux</p>
-            </AnimatedCard>
-            
-            <AnimatedCard className="text-center p-8 border border-accent/20 rounded-lg bg-background" delay={300}>
-              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Waves className="h-8 w-8 text-accent" />
-              </div>
-              <h4 className="text-xl font-serif font-bold text-foreground mb-4">Bien-être Intégral</h4>
-              <p className="text-muted-foreground leading-relaxed">Approche holistique de votre santé et forme physique dans un cadre royal</p>
-            </AnimatedCard>
-          </div>
-        </div>
-      </AnimatedSection>
-
-      {/* Call to Action */}
-      <AnimatedSection className="py-16 bg-background">
-        <div className="container mx-auto px-6 text-center">
-          <AnimatedCard className="max-w-2xl mx-auto p-8 border border-accent/20 rounded-lg bg-secondary/5">
-            <h3 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-4">
-              Rejoignez Royal Fitness
-            </h3>
-            <p className="text-lg text-muted-foreground mb-6">
-              Découvrez l'excellence fitness dans un environnement premium et royal.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-gold gold-glow-hover">
-                <a href="/contact">Nous contacter</a>
-              </button>
-              <button className="border border-accent text-accent hover:bg-accent hover:text-white px-6 py-3 rounded-lg transition-colors scale-hover">
-                <a href="/tarifs">Voir les tarifs</a>
-              </button>
-            </div>
-          </AnimatedCard>
-        </div>
-      </AnimatedSection>
       
       <Footer />
     </div>
