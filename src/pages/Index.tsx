@@ -22,7 +22,7 @@ const Index = () => {
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-blue-400/60 via-blue-300/40 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-blue-400/80 via-blue-300/60 to-transparent" />
         
         <div className="relative z-10 flex items-center justify-center h-full">
           <div className="text-center animate-fade-in">
@@ -50,8 +50,11 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Transition Section */}
+      <section className="h-20 bg-gradient-to-b from-blue-400/80 to-blue-400/20"></section>
+
       {/* Le Concept Section */}
-      <AnimatedSection className="py-20 bg-secondary/10">
+      <AnimatedSection className="py-20 bg-gradient-to-b from-blue-400/20 to-secondary/10">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
