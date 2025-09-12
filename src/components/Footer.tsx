@@ -63,7 +63,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
           
           {/* Left Column - Logo & Contact Info */}
-          <div className="flex flex-col justify-center items-center h-full animate-slide-up text-center" style={{ animationDelay: "0.1s" }}>
+          <div className="flex flex-col justify-between h-full animate-slide-up text-center" style={{ animationDelay: "0.1s" }}>
             <div className="space-y-8">
               {/* Logo */}
               <div className="flex items-center justify-center space-x-3">
@@ -85,31 +85,31 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-              
-              {/* Social Media */}
-              <div className="space-y-3">
-                <h4 className="text-royal-blue-dark font-semibold">Suivez-nous</h4>
-                <div className="flex justify-center space-x-4">
-                  <a 
-                    href="#" 
-                    className="w-10 h-10 bg-royal-blue/20 rounded-full flex items-center justify-center hover:bg-royal-blue/30 hover:scale-110 transition-all duration-300 group"
-                  >
-                    <Instagram className="h-5 w-5 text-royal-blue group-hover:text-white" />
-                  </a>
-                  <a 
-                    href="#" 
-                    className="w-10 h-10 bg-royal-blue/20 rounded-full flex items-center justify-center hover:bg-royal-blue/30 hover:scale-110 transition-all duration-300 group"
-                  >
-                    <Facebook className="h-5 w-5 text-royal-blue group-hover:text-white" />
-                  </a>
-                </div>
+            </div>
+            
+            {/* Social Media - Bottom aligned */}
+            <div className="space-y-3 mt-8">
+              <h4 className="text-royal-blue-dark font-semibold">Suivez-nous</h4>
+              <div className="flex justify-center space-x-4">
+                <a 
+                  href="#" 
+                  className="w-10 h-10 bg-royal-blue/20 rounded-full flex items-center justify-center hover:bg-royal-blue/30 hover:scale-110 transition-all duration-300 group"
+                >
+                  <Instagram className="h-5 w-5 text-royal-blue group-hover:text-white" />
+                </a>
+                <a 
+                  href="#" 
+                  className="w-10 h-10 bg-royal-blue/20 rounded-full flex items-center justify-center hover:bg-royal-blue/30 hover:scale-110 transition-all duration-300 group"
+                >
+                  <Facebook className="h-5 w-5 text-royal-blue group-hover:text-white" />
+                </a>
               </div>
             </div>
           </div>
 
           {/* Center Column - Contact Form */}
-          <div className="flex flex-col justify-center items-center h-full animate-slide-up text-center" style={{ animationDelay: "0.2s" }}>
-            <div className="space-y-6 w-full">
+          <div className="flex flex-col justify-between h-full animate-slide-up text-center" style={{ animationDelay: "0.2s" }}>
+            <div className="space-y-6">
               <h4 className="text-xl font-serif font-bold text-royal-blue-dark">Contactez-nous</h4>
               
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -160,19 +160,20 @@ const Footer = () => {
                   className="bg-white border-royal-blue/30 text-royal-blue-dark placeholder:text-royal-blue focus:border-royal-blue focus:ring-royal-blue/50 resize-none"
                   required
                 />
-                
-                <Button 
-                  onClick={handleSubmit}
-                  className="bg-royal-blue hover:bg-royal-blue-hover text-white w-full hover:shadow-lg hover:shadow-royal-blue/25 transition-all duration-300"
-                >
-                  Envoyer
-                </Button>
               </form>
             </div>
+            
+            {/* Submit Button - Bottom aligned */}
+            <Button 
+              onClick={handleSubmit}
+              className="bg-royal-blue hover:bg-royal-blue-hover text-white w-full hover:shadow-lg hover:shadow-royal-blue/25 transition-all duration-300 mt-6"
+            >
+              Envoyer
+            </Button>
           </div>
 
           {/* Right Column - Navigation Links */}
-          <div className="flex flex-col justify-center items-center h-full animate-slide-up text-center" style={{ animationDelay: "0.3s" }}>
+          <div className="flex flex-col justify-between h-full animate-slide-up text-center" style={{ animationDelay: "0.3s" }}>
             <div className="space-y-6">
               <h4 className="text-xl font-serif font-bold text-royal-blue-dark">Navigation</h4>
               
@@ -191,12 +192,13 @@ const Footer = () => {
                   </a>
                 ))}
               </div>
-              
-              <div className="pt-6 border-t border-royal-blue/20">
-                <Button className="bg-royal-blue hover:bg-royal-blue-hover text-white w-full hover:shadow-lg hover:shadow-royal-blue/25 transition-all duration-300">
-                  <a href="/contact">Rejoignez-nous</a>
-                </Button>
-              </div>
+            </div>
+            
+            {/* Join Button - Bottom aligned */}
+            <div className="pt-6 border-t border-royal-blue/20 mt-8">
+              <Button className="bg-royal-blue hover:bg-royal-blue-hover text-white w-full hover:shadow-lg hover:shadow-royal-blue/25 transition-all duration-300">
+                <a href="/contact">Rejoignez-nous</a>
+              </Button>
             </div>
           </div>
         </div>
