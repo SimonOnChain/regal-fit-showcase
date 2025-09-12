@@ -76,7 +76,7 @@ const Navigation = () => {
 
           {/* Center - Main Navigation (Desktop) */}
           <div className="hidden lg:flex items-center justify-center flex-1">
-            <div className="flex items-center space-x-10">
+            <div className="flex items-center gap-10">
               {mainNavItems.map((item, index) => (
                 <div key={item.name} className="relative">
                   {item.dropdown ? (
