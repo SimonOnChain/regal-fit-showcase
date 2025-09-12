@@ -64,7 +64,7 @@ const Footer = () => {
           
           {/* Left Column - Logo & Contact Info */}
           <div className="flex flex-col justify-between h-full animate-slide-up text-center" style={{ animationDelay: "0.1s" }}>
-            <div className="space-y-8">
+            <div className="flex flex-col justify-center flex-1 space-y-8">
               {/* Logo */}
               <div className="flex items-center justify-center space-x-3">
                 <Crown className="h-10 w-10 text-royal-blue animate-pulse" />
@@ -76,8 +76,8 @@ const Footer = () => {
               
               {/* Address */}
               <div className="space-y-3">
-                <div className="flex items-start justify-center space-x-3">
-                  <MapPin className="h-5 w-5 text-royal-blue mt-1 flex-shrink-0" />
+                <div className="flex items-center justify-center space-x-3">
+                  <MapPin className="h-5 w-5 text-royal-blue flex-shrink-0" />
                   <div className="text-center">
                     <p className="text-royal-blue-dark font-medium">MOTIV'CLUB</p>
                     <p className="text-royal-blue text-sm">1841 Av. des FAR</p>
