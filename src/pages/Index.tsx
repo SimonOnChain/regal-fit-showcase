@@ -21,13 +21,16 @@ const Index = () => {
             backgroundImage: `url(${fitnessHero})`
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/60 to-accent/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-r from-blue-300/20 via-blue-200/30 to-blue-300/20" />
         
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
-          <h1 className="text-7xl md:text-9xl font-sans font-black mb-4 animate-fade-in tracking-tight"
+        <div className="relative z-10 flex items-center justify-center h-full">
+          <h1 className="text-8xl md:text-[12rem] font-extrabold uppercase tracking-wider text-center animate-fade-in"
               style={{ 
                 color: 'hsl(210 60% 70%)',
-                textShadow: '0 6px 12px rgba(255, 255, 255, 0.4), 0 12px 24px rgba(255, 255, 255, 0.2)'
+                textShadow: '0 8px 16px rgba(255, 255, 255, 0.5)',
+                fontFamily: 'Montserrat, sans-serif',
+                fontWeight: 900
               }}>
             ROYAL FITNESS
           </h1>

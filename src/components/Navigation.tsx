@@ -67,8 +67,8 @@ const Navigation = () => {
           {/* Left - Logo */}
           <div className="flex items-center">
             <div className="flex items-center space-x-3 fade-slide-in">
-              <Crown className="h-10 w-10 text-blue-300" />
-              <span className="text-2xl font-sans font-black text-blue-300">
+              <Crown className="h-12 w-12 text-white" />
+              <span className="text-3xl font-extrabold uppercase tracking-wide text-white" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 900 }}>
                 Royal Fitness
               </span>
             </div>
@@ -86,10 +86,11 @@ const Navigation = () => {
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
                       <button
-                        className={`nav-link-active text-blue-300 hover:text-blue-200 transition-all duration-300 font-semibold text-lg fade-slide-in stagger-${index + 1} flex items-center gap-1`}
+                        className={`nav-link-active text-white hover:text-blue-200 transition-all duration-300 font-bold text-xl uppercase tracking-wide fade-slide-in stagger-${index + 1} flex items-center gap-1`}
+                        style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 800 }}
                       >
                         {item.name}
-                        <ChevronDown className="h-4 w-4 transition-transform duration-200" 
+                        <ChevronDown className="h-5 w-5 transition-transform duration-200" 
                           style={{ transform: activeDropdown === item.name ? 'rotate(180deg)' : 'rotate(0deg)' }} />
                       </button>
                       {activeDropdown === item.name && (
@@ -109,7 +110,8 @@ const Navigation = () => {
                   ) : (
                     <a
                       href={item.href}
-                      className={`nav-link-active text-blue-300 hover:text-blue-200 transition-all duration-300 font-semibold text-lg fade-slide-in stagger-${index + 1}`}
+                      className={`nav-link-active text-white hover:text-blue-200 transition-all duration-300 font-bold text-xl uppercase tracking-wide fade-slide-in stagger-${index + 1}`}
+                      style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 800 }}
                     >
                       {item.name}
                     </a>
@@ -121,7 +123,8 @@ const Navigation = () => {
 
           {/* Right - Contact Button (Desktop) */}
           <div className="hidden lg:flex items-center">
-            <Button className="btn-contact-shine px-10 py-4 text-lg font-bold rounded-xl">
+            <Button className="bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white px-12 py-6 text-xl font-extrabold uppercase tracking-wide rounded-full shadow-lg hover:shadow-xl transition-all duration-300 btn-shine-loop"
+                    style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 900 }}>
               <a href="/contact">CONTACT</a>
             </Button>
           </div>
