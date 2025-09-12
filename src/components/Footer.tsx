@@ -63,10 +63,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
           
           {/* Left Column - Logo & Contact Info */}
-          <div className="flex flex-col justify-between h-full animate-slide-up" style={{ animationDelay: "0.1s" }}>
+          <div className="flex flex-col justify-between h-full animate-slide-up text-center" style={{ animationDelay: "0.1s" }}>
             <div className="space-y-8">
               {/* Logo */}
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center justify-center space-x-3">
                 <Crown className="h-10 w-10 text-royal-blue animate-pulse" />
                 <div>
                   <h3 className="text-2xl font-serif font-bold text-royal-blue-dark">Royal Fitness</h3>
@@ -76,9 +76,9 @@ const Footer = () => {
               
               {/* Address */}
               <div className="space-y-3">
-                <div className="flex items-start space-x-3">
+                <div className="flex items-start justify-center space-x-3">
                   <MapPin className="h-5 w-5 text-royal-blue mt-1 flex-shrink-0" />
-                  <div>
+                  <div className="text-center">
                     <p className="text-royal-blue-dark font-medium">MOTIV'CLUB</p>
                     <p className="text-royal-blue text-sm">1841 Av. des FAR</p>
                     <p className="text-royal-blue text-sm">Plaisance - MEKNES</p>
@@ -90,7 +90,7 @@ const Footer = () => {
             {/* Social Media - Bottom aligned */}
             <div className="space-y-3 mt-8">
               <h4 className="text-royal-blue-dark font-semibold">Suivez-nous</h4>
-              <div className="flex space-x-4">
+              <div className="flex justify-center space-x-4">
                 <a 
                   href="#" 
                   className="w-10 h-10 bg-royal-blue/20 rounded-full flex items-center justify-center hover:bg-royal-blue/30 hover:scale-110 transition-all duration-300 group"
@@ -108,7 +108,7 @@ const Footer = () => {
           </div>
 
           {/* Center Column - Contact Form */}
-          <div className="flex flex-col justify-between h-full animate-slide-up" style={{ animationDelay: "0.2s" }}>
+          <div className="flex flex-col justify-between h-full animate-slide-up text-center" style={{ animationDelay: "0.2s" }}>
             <div className="space-y-6">
               <h4 className="text-xl font-serif font-bold text-royal-blue-dark">Contactez-nous</h4>
               
@@ -173,7 +173,7 @@ const Footer = () => {
           </div>
 
           {/* Right Column - Navigation Links */}
-          <div className="flex flex-col justify-between h-full animate-slide-up" style={{ animationDelay: "0.3s" }}>
+          <div className="flex flex-col justify-between h-full animate-slide-up text-center" style={{ animationDelay: "0.3s" }}>
             <div className="space-y-6">
               <h4 className="text-xl font-serif font-bold text-royal-blue-dark">Navigation</h4>
               
