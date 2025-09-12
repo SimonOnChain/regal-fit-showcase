@@ -252,17 +252,17 @@
 
   /* Navigation Styles */
   .nav-royal {
-    background: linear-gradient(135deg, hsl(210 40% 85%) 0%, hsl(210 50% 90%) 100%);
-    @apply backdrop-blur-md border-b border-white/30;
-    box-shadow: 0 4px 20px hsl(210 40% 70% / 0.3);
+    background: linear-gradient(135deg, hsl(220 60% 15%) 0%, hsl(220 70% 20%) 100%);
+    @apply backdrop-blur-md border-b border-white/20;
+    box-shadow: 0 4px 20px hsl(220 60% 8% / 0.8);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     min-height: 100px;
   }
 
   .nav-royal.scrolled {
-    background: linear-gradient(135deg, hsl(210 40% 80% / 0.95) 0%, hsl(210 50% 85% / 0.95) 100%);
+    background: linear-gradient(135deg, hsl(220 70% 12% / 0.95) 0%, hsl(220 80% 15% / 0.95) 100%);
     backdrop-filter: blur(20px);
-    box-shadow: 0 8px 32px hsl(210 40% 70% / 0.4);
+    box-shadow: 0 8px 32px hsl(220 60% 8% / 0.4);
     min-height: 90px;
   }
 

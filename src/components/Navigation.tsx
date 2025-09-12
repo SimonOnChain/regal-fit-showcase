@@ -67,8 +67,8 @@ const Navigation = () => {
           {/* Left - Logo */}
           <div className="flex items-center">
             <div className="flex items-center space-x-3 fade-slide-in">
-              <Crown className="h-10 w-10 text-blue-600" />
-              <span className="text-2xl font-sans font-black text-blue-900">
+              <Crown className="h-10 w-10 text-blue-300" />
+              <span className="text-2xl font-sans font-black text-blue-300">
                 Royal Fitness
               </span>
             </div>
@@ -86,7 +86,7 @@ const Navigation = () => {
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
                       <button
-                        className={`nav-link-active text-blue-900 hover:text-blue-600 transition-all duration-300 font-semibold text-lg fade-slide-in stagger-${index + 1} flex items-center gap-1`}
+                        className={`nav-link-active text-blue-300 hover:text-blue-200 transition-all duration-300 font-semibold text-lg fade-slide-in stagger-${index + 1} flex items-center gap-1`}
                       >
                         {item.name}
                         <ChevronDown className="h-4 w-4 transition-transform duration-200" 
@@ -109,7 +109,7 @@ const Navigation = () => {
                   ) : (
                     <a
                       href={item.href}
-                      className={`nav-link-active text-blue-900 hover:text-blue-600 transition-all duration-300 font-semibold text-lg fade-slide-in stagger-${index + 1}`}
+                      className={`nav-link-active text-blue-300 hover:text-blue-200 transition-all duration-300 font-semibold text-lg fade-slide-in stagger-${index + 1}`}
                     >
                       {item.name}
                     </a>
