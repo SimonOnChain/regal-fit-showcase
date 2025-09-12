@@ -184,24 +184,67 @@ const Index = () => {
         </div>
       </AnimatedSection>
 
-      {/* Community Section */}
-      <AnimatedSection className="py-20 bg-royal-blue">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="space-y-6 text-white">
-              <p className="text-lg md:text-xl leading-relaxed">
-                Chez Royal Fitness, chaque membre fait partie d'une grande famille où le bien-être, le dépassement de soi et la convivialité sont au cœur de l'expérience. Ici, nous croyons en la puissance du collectif : votre succès, vos progrès et votre plaisir sont notre priorité absolue.
-              </p>
-              
-              <p className="text-lg md:text-xl leading-relaxed">
-                Rejoignez une communauté dynamique, soutenue par des coachs passionnés, des équipements haut de gamme et une ambiance inspirante pensée pour booster votre motivation chaque jour. Faites le choix d'un cadre où confort, innovation et excellence se rencontrent pour vous offrir le meilleur du fitness.
-              </p>
+      {/* Modern Glass Design Section */}
+      <AnimatedSection className="relative py-20 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${fitnessHero})`
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-royal-blue/80 via-blue-600/70 to-royal-blue/80" />
+        
+        <div className="relative z-10 container mx-auto px-6">
+          <div className="max-w-5xl mx-auto">
+            <div className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-2xl p-8 md:p-12 shadow-2xl">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                {/* Left Content */}
+                <div className="space-y-8">
+                  <div className="space-y-4">
+                    <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-wide text-white"
+                        style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                      ROYAL FITNESS
+                    </h2>
+                    <div className="bg-yellow-400 text-black px-6 py-2 text-xl font-bold uppercase tracking-wide inline-block"
+                         style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                      1800 DH/AN
+                    </div>
+                  </div>
+                  
+                  <div className="border-2 border-white p-6">
+                    <h3 className="text-2xl md:text-3xl font-bold uppercase text-white mb-4"
+                        style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                      RESTEZ EN FORME
+                    </h3>
+                  </div>
+                  
+                  <div className="text-white text-lg">
+                    <p className="font-bold">0535 521 528</p>
+                  </div>
+                </div>
+                
+                {/* Right Content */}
+                <div className="space-y-6 text-white">
+                  <h3 className="text-2xl font-bold uppercase"
+                      style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                    ROYAL FITNESS
+                  </h3>
+                  
+                  <p className="text-lg leading-relaxed">
+                    Le Royal Fitness est un programme d'entraînement physique complet et efficace qui élève l'amélioration de la condition physique globale. Adapté à tous vos niveaux, les entraînements expérimentés et personnels supervisent chaque session pour maximiser vos résultats.
+                  </p>
+                  
+                  <p className="text-lg leading-relaxed">
+                    Rejoignez notre club de fitness et découvrez les bénéfices incroyables de ce programme d'entraînement unique et stimulant.
+                  </p>
+                  
+                  <button className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 text-lg font-bold uppercase tracking-wide transition-colors duration-300"
+                          style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                    <a href="/contact">DÉCOUVRIR</a>
+                  </button>
+                </div>
+              </div>
             </div>
-            
-            <button className="bg-white text-royal-blue px-8 py-4 text-lg font-bold uppercase tracking-wide hover:bg-blue-50 transition-colors duration-300 hover:scale-105 transform"
-                    style={{ fontFamily: 'Montserrat, sans-serif' }}>
-              <a href="/contact">REJOIGNEZ LA FAMILLE</a>
-            </button>
           </div>
         </div>
       </AnimatedSection>
