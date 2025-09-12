@@ -54,40 +54,45 @@ const Index = () => {
       <section className="h-20 bg-gradient-to-b from-blue-200/60 to-blue-200/40"></section>
 
       {/* Le Concept Section */}
-      <AnimatedSection className="py-20 bg-gradient-to-b from-blue-200/40 via-blue-200/30 to-blue-200/20">
+      <AnimatedSection className="py-20 bg-blue-600">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
-              Le Concept Royal
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Royal Fitness redéfinit l'expérience du bien-être en alliant excellence, sophistication et innovation.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="text-center p-8 border border-accent/20 rounded-lg bg-background hover-scale">
-              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Sparkles className="h-8 w-8 text-accent" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="space-y-8">
+              <h2 className="text-5xl md:text-6xl font-bold uppercase tracking-wide text-white"
+                  style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                LE CONCEPT
+              </h2>
+              
+              <div className="space-y-6 text-white">
+                <p className="text-lg md:text-xl leading-relaxed">
+                  Le concept du ROYAL FITNESS redéfinit l'expérience du bien-être en alliant excellence, sophistication et innovation dans un environnement d'exception.
+                </p>
+                
+                <p className="text-lg md:text-xl leading-relaxed">
+                  Découvrez une gamme complète de services premium incluant fitness, aqua-training, spa de luxe, football professionnel, et des programmes spécialisés pour enfants. Notre équipe de coachs certifiés et expérimentés vous accompagne dans votre quête d'excellence.
+                </p>
+                
+                <p className="text-lg md:text-xl leading-relaxed">
+                  Que vous visiez l'amélioration de votre mobilité, la croissance musculaire, ou simplement le bien-être intégral, nous avons l'expertise et les équipements de pointe pour vous mener vers vos objectifs.
+                </p>
+                
+                <p className="text-lg md:text-xl leading-relaxed">
+                  Prêt à élever votre parcours fitness ? Rejoignez-nous et découvrez le frisson d'atteindre de nouveaux sommets !
+                </p>
               </div>
-              <h3 className="text-2xl font-serif font-bold text-foreground mb-4">Excellence</h3>
-              <p className="text-muted-foreground leading-relaxed">Des standards de qualité exceptionnels dans chaque service et équipement</p>
+              
+              <button className="bg-white text-blue-600 px-8 py-4 text-lg font-bold uppercase tracking-wide hover:bg-blue-50 transition-colors duration-300 hover:scale-105 transform"
+                      style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                <a href="/contact">RÉSERVEZ VOTRE ESSAI GRATUIT</a>
+              </button>
             </div>
             
-            <div className="text-center p-8 border border-accent/20 rounded-lg bg-background hover-scale">
-              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Dumbbell className="h-8 w-8 text-accent" />
+            {/* Right Visual Space */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="w-full max-w-md h-96 bg-white/10 rounded-lg flex items-center justify-center">
+                <span className="text-white/60 text-lg">Espace pour visuel</span>
               </div>
-              <h3 className="text-2xl font-serif font-bold text-foreground mb-4">Innovation</h3>
-              <p className="text-muted-foreground leading-relaxed">Technologies de pointe et méthodes avant-gardistes au service de votre forme</p>
-            </div>
-            
-            <div className="text-center p-8 border border-accent/20 rounded-lg bg-background hover-scale">
-              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Waves className="h-8 w-8 text-accent" />
-              </div>
-              <h3 className="text-2xl font-serif font-bold text-foreground mb-4">Bien-être</h3>
-              <p className="text-muted-foreground leading-relaxed">Un écosystème complet dédié à votre santé physique et mentale</p>
             </div>
           </div>
         </div>
