@@ -64,64 +64,66 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-6">
         <div className="flex items-center justify-between h-12">
           
-          {/* Left - Main Navigation (Desktop) */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {mainNavItems.map((item, index) => (
-              <div key={item.name} className="relative">
-                {item.dropdown ? (
-                  <div 
-                    className="relative"
-                    onMouseEnter={() => setActiveDropdown(item.name)}
-                    onMouseLeave={() => setActiveDropdown(null)}
-                  >
-                    <button
-                      className={`nav-link-active text-foreground hover:text-accent transition-all duration-300 font-medium fade-slide-in stagger-${index + 1} flex items-center gap-1`}
-                    >
-                      {item.name}
-                      <ChevronDown className="h-4 w-4 transition-transform duration-200" 
-                        style={{ transform: activeDropdown === item.name ? 'rotate(180deg)' : 'rotate(0deg)' }} />
-                    </button>
-                    {activeDropdown === item.name && (
-                      <div className="dropdown-menu absolute top-full left-0 mt-2 w-48 py-2 z-50">
-                        {item.dropdown.map((dropdownItem) => (
-                          <a
-                            key={dropdownItem.name}
-                            href={dropdownItem.href}
-                            className="dropdown-item block"
-                          >
-                            {dropdownItem.name}
-                          </a>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <a
-                    href={item.href}
-                    className={`nav-link-active text-foreground hover:text-accent transition-all duration-300 font-medium fade-slide-in stagger-${index + 1}`}
-                  >
-                    {item.name}
-                  </a>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* Center - Contact Button (Desktop) */}
-          <div className="hidden lg:flex items-center">
-            <Button className="btn-gold gold-glow-hover animate-pulse hover:animate-gold-pulse px-8 py-3 text-base font-medium">
-              <a href="/contact">Contact</a>
-            </Button>
-          </div>
-
-          {/* Right - Logo */}
-          <div className="flex items-center justify-end lg:flex-none">
+          {/* Left - Logo */}
+          <div className="flex items-center">
             <div className="flex items-center space-x-3 fade-slide-in">
-              <Crown className="h-9 w-9 text-accent gold-glow-hover" />
-              <span className="text-2xl font-sans font-bold text-foreground">
+              <Crown className="h-10 w-10 text-blue-600" />
+              <span className="text-2xl font-sans font-black text-blue-900">
                 Royal Fitness
               </span>
             </div>
+          </div>
+
+          {/* Center - Main Navigation (Desktop) */}
+          <div className="hidden lg:flex items-center justify-center flex-1">
+            <div className="flex items-center space-x-12">
+              {mainNavItems.map((item, index) => (
+                <div key={item.name} className="relative">
+                  {item.dropdown ? (
+                    <div 
+                      className="relative"
+                      onMouseEnter={() => setActiveDropdown(item.name)}
+                      onMouseLeave={() => setActiveDropdown(null)}
+                    >
+                      <button
+                        className={`nav-link-active text-blue-900 hover:text-blue-600 transition-all duration-300 font-semibold text-lg fade-slide-in stagger-${index + 1} flex items-center gap-1`}
+                      >
+                        {item.name}
+                        <ChevronDown className="h-4 w-4 transition-transform duration-200" 
+                          style={{ transform: activeDropdown === item.name ? 'rotate(180deg)' : 'rotate(0deg)' }} />
+                      </button>
+                      {activeDropdown === item.name && (
+                        <div className="dropdown-menu absolute top-full left-0 mt-2 w-48 py-2 z-50">
+                          {item.dropdown.map((dropdownItem) => (
+                            <a
+                              key={dropdownItem.name}
+                              href={dropdownItem.href}
+                              className="dropdown-item block"
+                            >
+                              {dropdownItem.name}
+                            </a>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <a
+                      href={item.href}
+                      className={`nav-link-active text-blue-900 hover:text-blue-600 transition-all duration-300 font-semibold text-lg fade-slide-in stagger-${index + 1}`}
+                    >
+                      {item.name}
+                    </a>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right - Contact Button (Desktop) */}
+          <div className="hidden lg:flex items-center">
+            <Button className="btn-contact-shine px-10 py-4 text-lg font-bold rounded-xl">
+              <a href="/contact">CONTACT</a>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}

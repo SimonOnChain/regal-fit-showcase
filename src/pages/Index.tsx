@@ -23,25 +23,14 @@ const Index = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/60 to-accent/70" />
         
-        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
-          <h1 className="text-6xl md:text-8xl font-serif font-bold mb-4 text-accent animate-fade-in">
-            Royal Fitness
+        <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
+          <h1 className="text-7xl md:text-9xl font-sans font-black mb-4 animate-fade-in tracking-tight"
+              style={{ 
+                color: 'hsl(210 60% 70%)',
+                textShadow: '0 6px 12px rgba(255, 255, 255, 0.4), 0 12px 24px rgba(255, 255, 255, 0.2)'
+              }}>
+            ROYAL FITNESS
           </h1>
-          <p className="text-2xl md:text-3xl font-light mb-8 italic animate-fade-in stagger-2">
-            Le Concept Royal
-          </p>
-          
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 mb-8 max-w-2xl mx-auto rounded-lg animate-slide-up stagger-3">
-            <p className="text-xl leading-relaxed">
-              Découvrez l'excellence fitness dans un environnement royal premium où tradition et modernité se rencontrent.
-            </p>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up stagger-4">
-            <button className="btn-gold text-lg px-8 py-4 text-primary font-semibold gold-glow-hover">
-              <a href="/fitness">Découvrir nos Services</a>
-            </button>
-          </div>
         </div>
       </section>
 
