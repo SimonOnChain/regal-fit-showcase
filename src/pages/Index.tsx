@@ -184,6 +184,28 @@ const Index = () => {
         </div>
       </AnimatedSection>
 
+      {/* Community Section */}
+      <AnimatedSection className="py-20 bg-royal-blue">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <div className="space-y-6 text-white">
+              <p className="text-lg md:text-xl leading-relaxed">
+                Chez Royal Fitness, chaque membre fait partie d'une grande famille où le bien-être, le dépassement de soi et la convivialité sont au cœur de l'expérience. Ici, nous croyons en la puissance du collectif : votre succès, vos progrès et votre plaisir sont notre priorité absolue.
+              </p>
+              
+              <p className="text-lg md:text-xl leading-relaxed">
+                Rejoignez une communauté dynamique, soutenue par des coachs passionnés, des équipements haut de gamme et une ambiance inspirante pensée pour booster votre motivation chaque jour. Faites le choix d'un cadre où confort, innovation et excellence se rencontrent pour vous offrir le meilleur du fitness.
+              </p>
+            </div>
+            
+            <button className="bg-white text-royal-blue px-8 py-4 text-lg font-bold uppercase tracking-wide hover:bg-blue-50 transition-colors duration-300 hover:scale-105 transform"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}>
+              <a href="/contact">REJOIGNEZ LA FAMILLE</a>
+            </button>
+          </div>
+        </div>
+      </AnimatedSection>
+
       {/* Services Section */}
       <AnimatedSection className="py-20 bg-background">
         <div className="container mx-auto px-6">
