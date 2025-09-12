@@ -55,9 +55,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-gradient-to-b from-navy to-royal-blue-dark border-t border-accent/20 animate-fade-in">
-      {/* Gold accent line */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+    <footer className="relative bg-gradient-to-b from-royal-blue-lightest to-royal-blue-lighter border-t border-royal-blue-hover/20 animate-fade-in">
+      {/* Light blue accent line */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-royal-blue-hover to-transparent"></div>
       
       <div className="container mx-auto px-6 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -66,40 +66,40 @@ const Footer = () => {
           <div className="space-y-8 animate-slide-up" style={{ animationDelay: "0.1s" }}>
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <Crown className="h-10 w-10 text-accent animate-pulse" />
+              <Crown className="h-10 w-10 text-royal-blue animate-pulse" />
               <div>
-                <h3 className="text-2xl font-serif font-bold text-foreground">Royal Fitness</h3>
-                <p className="text-sm text-accent font-light">Excellence & Prestige</p>
+                <h3 className="text-2xl font-serif font-bold text-royal-blue-dark">Royal Fitness</h3>
+                <p className="text-sm text-royal-blue font-light">Excellence & Prestige</p>
               </div>
             </div>
             
             {/* Address */}
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
+                <MapPin className="h-5 w-5 text-royal-blue mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-foreground font-medium">MOTIV'CLUB</p>
-                  <p className="text-accent text-sm">1841 Av. des FAR</p>
-                  <p className="text-accent text-sm">Plaisance - MEKNES</p>
+                  <p className="text-royal-blue-dark font-medium">MOTIV'CLUB</p>
+                  <p className="text-royal-blue text-sm">1841 Av. des FAR</p>
+                  <p className="text-royal-blue text-sm">Plaisance - MEKNES</p>
                 </div>
               </div>
             </div>
             
             {/* Social Media */}
             <div className="space-y-3">
-              <h4 className="text-foreground font-semibold">Suivez-nous</h4>
+              <h4 className="text-royal-blue-dark font-semibold">Suivez-nous</h4>
               <div className="flex space-x-4">
                 <a 
                   href="#" 
-                  className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center hover:bg-accent/30 hover:scale-110 transition-all duration-300 group"
+                  className="w-10 h-10 bg-royal-blue/20 rounded-full flex items-center justify-center hover:bg-royal-blue/30 hover:scale-110 transition-all duration-300 group"
                 >
-                  <Instagram className="h-5 w-5 text-accent group-hover:text-accent-foreground" />
+                  <Instagram className="h-5 w-5 text-royal-blue group-hover:text-white" />
                 </a>
                 <a 
                   href="#" 
-                  className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center hover:bg-accent/30 hover:scale-110 transition-all duration-300 group"
+                  className="w-10 h-10 bg-royal-blue/20 rounded-full flex items-center justify-center hover:bg-royal-blue/30 hover:scale-110 transition-all duration-300 group"
                 >
-                  <Facebook className="h-5 w-5 text-accent group-hover:text-accent-foreground" />
+                  <Facebook className="h-5 w-5 text-royal-blue group-hover:text-white" />
                 </a>
               </div>
             </div>
@@ -107,7 +107,7 @@ const Footer = () => {
 
           {/* Center Column - Contact Form */}
           <div className="space-y-6 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-            <h4 className="text-xl font-serif font-bold text-foreground mb-6">Contactez-nous</h4>
+            <h4 className="text-xl font-serif font-bold text-royal-blue-dark mb-6">Contactez-nous</h4>
             
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -116,7 +116,7 @@ const Footer = () => {
                   placeholder="Prénom"
                   value={formData.firstName}
                   onChange={handleInputChange}
-                  className="bg-primary/20 border-accent/30 text-foreground placeholder:text-muted-foreground focus:border-accent focus:ring-accent/50"
+                  className="bg-white border-royal-blue/30 text-royal-blue-dark placeholder:text-royal-blue focus:border-royal-blue focus:ring-royal-blue/50"
                   required
                 />
                 <Input
@@ -124,7 +124,7 @@ const Footer = () => {
                   placeholder="Nom"
                   value={formData.lastName}
                   onChange={handleInputChange}
-                  className="bg-primary/20 border-accent/30 text-foreground placeholder:text-muted-foreground focus:border-accent focus:ring-accent/50"
+                  className="bg-white border-royal-blue/30 text-royal-blue-dark placeholder:text-royal-blue focus:border-royal-blue focus:ring-royal-blue/50"
                   required
                 />
               </div>
@@ -135,7 +135,7 @@ const Footer = () => {
                 placeholder="Email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="bg-primary/20 border-accent/30 text-foreground placeholder:text-muted-foreground focus:border-accent focus:ring-accent/50"
+                className="bg-white border-royal-blue/30 text-royal-blue-dark placeholder:text-royal-blue focus:border-royal-blue focus:ring-royal-blue/50"
                 required
               />
               
@@ -145,7 +145,7 @@ const Footer = () => {
                 placeholder="Téléphone"
                 value={formData.phone}
                 onChange={handleInputChange}
-                className="bg-primary/20 border-accent/30 text-foreground placeholder:text-muted-foreground focus:border-accent focus:ring-accent/50"
+                className="bg-white border-royal-blue/30 text-royal-blue-dark placeholder:text-royal-blue focus:border-royal-blue focus:ring-royal-blue/50"
               />
               
               <Textarea
@@ -154,13 +154,13 @@ const Footer = () => {
                 value={formData.message}
                 onChange={handleInputChange}
                 rows={4}
-                className="bg-primary/20 border-accent/30 text-foreground placeholder:text-muted-foreground focus:border-accent focus:ring-accent/50 resize-none"
+                className="bg-white border-royal-blue/30 text-royal-blue-dark placeholder:text-royal-blue focus:border-royal-blue focus:ring-royal-blue/50 resize-none"
                 required
               />
               
               <Button 
                 type="submit" 
-                className="btn-gold w-full hover:shadow-lg hover:shadow-accent/25 transition-all duration-300"
+                className="bg-royal-blue hover:bg-royal-blue-hover text-white w-full hover:shadow-lg hover:shadow-royal-blue/25 transition-all duration-300"
               >
                 Envoyer
               </Button>
@@ -169,14 +169,14 @@ const Footer = () => {
 
           {/* Right Column - Navigation Links */}
           <div className="space-y-6 animate-slide-up" style={{ animationDelay: "0.3s" }}>
-            <h4 className="text-xl font-serif font-bold text-foreground mb-6">Navigation</h4>
+            <h4 className="text-xl font-serif font-bold text-royal-blue-dark mb-6">Navigation</h4>
             
             <div className="grid grid-cols-1 gap-3">
               {navigationLinks.map((link, index) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-muted-foreground hover:text-accent transition-colors duration-300 py-1 block hover:translate-x-1 hover:font-medium"
+                  className="text-royal-blue hover:text-royal-blue-dark transition-colors duration-300 py-1 block hover:translate-x-1 hover:font-medium"
                   style={{ 
                     animationDelay: `${0.1 * index}s`,
                     animation: "fadeIn 0.6s ease-out forwards"
@@ -187,8 +187,8 @@ const Footer = () => {
               ))}
             </div>
             
-            <div className="pt-6 border-t border-accent/20">
-              <Button className="btn-gold w-full hover:shadow-lg hover:shadow-accent/25 transition-all duration-300">
+            <div className="pt-6 border-t border-royal-blue/20">
+              <Button className="bg-royal-blue hover:bg-royal-blue-hover text-white w-full hover:shadow-lg hover:shadow-royal-blue/25 transition-all duration-300">
                 <a href="/contact">Rejoignez-nous</a>
               </Button>
             </div>
@@ -196,8 +196,8 @@ const Footer = () => {
         </div>
         
         {/* Bottom Copyright */}
-        <div className="mt-16 pt-8 border-t border-accent/20 text-center">
-          <p className="text-muted-foreground text-sm">
+        <div className="mt-16 pt-8 border-t border-royal-blue/20 text-center">
+          <p className="text-royal-blue text-sm">
             © 2024 Royal Fitness MOTIV'CLUB. Tous droits réservés.
           </p>
         </div>

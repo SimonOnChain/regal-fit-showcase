@@ -6,52 +6,55 @@
 
 @layer base {
   :root {
-    /* Royal Blue Color Palette */
+    /* Modern Light Blue Color Palette */
     --foreground: 220 20% 95%;
 
-    --card: 220 50% 18%;
-    --card-foreground: 220 15% 95%;
+    --card: 210 70% 95%;
+    --card-foreground: 210 70% 15%;
 
-    --popover: 220 50% 15%;
-    --popover-foreground: 220 15% 95%;
+    --popover: 210 70% 95%;
+    --popover-foreground: 210 70% 15%;
 
-    --primary: 220 70% 25%;
-    --primary-foreground: 220 15% 95%;
+    --primary: 210 70% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 60% 22%;
-    --secondary-foreground: 220 15% 90%;
+    --secondary: 210 70% 85%;
+    --secondary-foreground: 210 70% 15%;
 
-    --muted: 220 50% 20%;
-    --muted-foreground: 220 20% 70%;
+    --muted: 210 50% 90%;
+    --muted-foreground: 210 20% 45%;
 
-    --accent: 48 95% 58%;
-    --accent-foreground: 220 60% 8%;
+    --accent: 210 70% 75%;
+    --accent-foreground: 210 70% 15%;
 
     --destructive: 0 75% 55%;
     --destructive-foreground: 220 15% 95%;
 
-    --border: 220 40% 25%;
-    --input: 220 40% 22%;
-    --ring: 48 95% 58%;
+    --border: 210 40% 80%;
+    --input: 210 40% 90%;
+    --ring: 210 70% 55%;
 
-    /* Royal Design System */
-    --royal-blue: 220 70% 25%;
-    --royal-blue-dark: 220 80% 15%;
-    --royal-blue-light: 220 60% 35%;
-    --gold: 48 95% 58%;
-    --gold-light: 48 100% 68%;
+    /* Modern Blue Design System */
+    --royal-blue: 210 70% 55%;
+    --royal-blue-dark: 210 70% 45%;
+    --royal-blue-light: 210 70% 65%;
+    --royal-blue-lighter: 210 70% 80%;
+    --royal-blue-lightest: 210 70% 95%;
+    --royal-blue-hover: 210 70% 75%;
     --silver: 220 20% 75%;
-    --navy: 220 70% 12%;
+    --navy: 210 70% 25%;
 
-    /* Gradients */
-    --gradient-royal: linear-gradient(135deg, hsl(var(--royal-blue)) 0%, hsl(var(--royal-blue-dark)) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 100%);
+    /* Seamless Blue Gradients */
+    --gradient-royal: linear-gradient(135deg, hsl(var(--royal-blue)) 0%, hsl(var(--royal-blue-light)) 100%);
+    --gradient-blue-seamless: linear-gradient(180deg, hsl(var(--royal-blue)) 0%, hsl(var(--royal-blue-light)) 50%, hsl(var(--royal-blue-lighter)) 100%);
     --gradient-hero: linear-gradient(135deg, hsl(var(--navy)) 0%, hsl(var(--royal-blue-dark)) 50%, hsl(var(--royal-blue)) 100%);
     --gradient-overlay: linear-gradient(45deg, hsl(var(--royal-blue) / 0.9), hsl(var(--navy) / 0.8));
+    --gradient-footer: linear-gradient(135deg, hsl(var(--royal-blue-lightest)) 0%, hsl(var(--royal-blue-lighter)) 100%);
+    --gradient-transition: linear-gradient(180deg, rgba(96, 165, 250, 0.1) 0%, rgba(96, 165, 250, 0.05) 100%);
 
     /* Shadows */
     --shadow-royal: 0 10px 40px hsl(var(--royal-blue) / 0.3);
-    --shadow-gold: 0 0 30px hsl(var(--gold) / 0.4);
+    --shadow-blue-soft: 0 4px 20px hsla(210, 70%, 55%, 0.15);
     --shadow-elegant: 0 20px 60px hsl(240 80% 5% / 0.6);
 
     /* Animations */
@@ -330,7 +333,7 @@
     left: 50%;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, hsl(210 60% 70%), white);
+    background: linear-gradient(90deg, transparent, hsl(var(--royal-blue-hover)), transparent);
     transition: all 0.3s ease;
     transform: translateX(-50%);
   }
@@ -405,10 +408,11 @@
   }
 
   .dropdown-item {
-    @apply px-4 py-3 text-foreground hover:text-accent hover:bg-accent/10 transition-all duration-200 cursor-pointer;
+    @apply px-4 py-3 text-foreground hover:text-white transition-all duration-200 cursor-pointer;
   }
 
   .dropdown-item:hover {
+    background: linear-gradient(135deg, hsl(var(--royal-blue-hover)), hsl(var(--royal-blue-light)));
     transform: translateX(4px);
   }
 

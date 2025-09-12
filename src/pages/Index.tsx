@@ -50,8 +50,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Transition Section */}
-      <section className="h-20 bg-gradient-to-b from-blue-200/60 to-blue-200/40"></section>
+      {/* Seamless Transition Section */}
+      <section className="h-20 bg-gradient-to-b from-blue-200/40 via-blue-300/30 to-royal-blue"></section>
 
       {/* Le Concept Section */}
       <AnimatedSection className="py-20 bg-blue-600">
