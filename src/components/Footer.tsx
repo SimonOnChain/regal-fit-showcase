@@ -63,30 +63,32 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
           
           {/* Left Column - Logo & Contact Info */}
-          <div className="space-y-8 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            {/* Logo */}
-            <div className="flex items-center space-x-3">
-              <Crown className="h-10 w-10 text-royal-blue animate-pulse" />
-              <div>
-                <h3 className="text-2xl font-serif font-bold text-royal-blue-dark">Royal Fitness</h3>
-                <p className="text-sm text-royal-blue font-light">Excellence & Prestige</p>
-              </div>
-            </div>
-            
-            {/* Address */}
-            <div className="space-y-3">
-              <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-royal-blue mt-1 flex-shrink-0" />
+          <div className="flex flex-col justify-between h-full animate-slide-up" style={{ animationDelay: "0.1s" }}>
+            <div className="space-y-8">
+              {/* Logo */}
+              <div className="flex items-center space-x-3">
+                <Crown className="h-10 w-10 text-royal-blue animate-pulse" />
                 <div>
-                  <p className="text-royal-blue-dark font-medium">MOTIV'CLUB</p>
-                  <p className="text-royal-blue text-sm">1841 Av. des FAR</p>
-                  <p className="text-royal-blue text-sm">Plaisance - MEKNES</p>
+                  <h3 className="text-2xl font-serif font-bold text-royal-blue-dark">Royal Fitness</h3>
+                  <p className="text-sm text-royal-blue font-light">Excellence & Prestige</p>
+                </div>
+              </div>
+              
+              {/* Address */}
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <MapPin className="h-5 w-5 text-royal-blue mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="text-royal-blue-dark font-medium">MOTIV'CLUB</p>
+                    <p className="text-royal-blue text-sm">1841 Av. des FAR</p>
+                    <p className="text-royal-blue text-sm">Plaisance - MEKNES</p>
+                  </div>
                 </div>
               </div>
             </div>
             
-            {/* Social Media */}
-            <div className="space-y-3">
+            {/* Social Media - Bottom aligned */}
+            <div className="space-y-3 mt-8">
               <h4 className="text-royal-blue-dark font-semibold">Suivez-nous</h4>
               <div className="flex space-x-4">
                 <a 
@@ -106,88 +108,94 @@ const Footer = () => {
           </div>
 
           {/* Center Column - Contact Form */}
-          <div className="space-y-6 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-            <h4 className="text-xl font-serif font-bold text-royal-blue-dark">Contactez-nous</h4>
+          <div className="flex flex-col justify-between h-full animate-slide-up" style={{ animationDelay: "0.2s" }}>
+            <div className="space-y-6">
+              <h4 className="text-xl font-serif font-bold text-royal-blue-dark">Contactez-nous</h4>
+              
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <Input
+                    name="firstName"
+                    placeholder="Prénom"
+                    value={formData.firstName}
+                    onChange={handleInputChange}
+                    className="bg-white border-royal-blue/30 text-royal-blue-dark placeholder:text-royal-blue focus:border-royal-blue focus:ring-royal-blue/50"
+                    required
+                  />
+                  <Input
+                    name="lastName"
+                    placeholder="Nom"
+                    value={formData.lastName}
+                    onChange={handleInputChange}
+                    className="bg-white border-royal-blue/30 text-royal-blue-dark placeholder:text-royal-blue focus:border-royal-blue focus:ring-royal-blue/50"
+                    required
+                  />
+                </div>
+                
+                <Input
+                  name="email"
+                  type="email"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="bg-white border-royal-blue/30 text-royal-blue-dark placeholder:text-royal-blue focus:border-royal-blue focus:ring-royal-blue/50"
+                  required
+                />
+                
+                <Input
+                  name="phone"
+                  type="tel"
+                  placeholder="Téléphone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  className="bg-white border-royal-blue/30 text-royal-blue-dark placeholder:text-royal-blue focus:border-royal-blue focus:ring-royal-blue/50"
+                />
+                
+                <Textarea
+                  name="message"
+                  placeholder="Votre message..."
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  rows={4}
+                  className="bg-white border-royal-blue/30 text-royal-blue-dark placeholder:text-royal-blue focus:border-royal-blue focus:ring-royal-blue/50 resize-none"
+                  required
+                />
+              </form>
+            </div>
             
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <Input
-                  name="firstName"
-                  placeholder="Prénom"
-                  value={formData.firstName}
-                  onChange={handleInputChange}
-                  className="bg-white border-royal-blue/30 text-royal-blue-dark placeholder:text-royal-blue focus:border-royal-blue focus:ring-royal-blue/50"
-                  required
-                />
-                <Input
-                  name="lastName"
-                  placeholder="Nom"
-                  value={formData.lastName}
-                  onChange={handleInputChange}
-                  className="bg-white border-royal-blue/30 text-royal-blue-dark placeholder:text-royal-blue focus:border-royal-blue focus:ring-royal-blue/50"
-                  required
-                />
-              </div>
-              
-              <Input
-                name="email"
-                type="email"
-                placeholder="Email"
-                value={formData.email}
-                onChange={handleInputChange}
-                className="bg-white border-royal-blue/30 text-royal-blue-dark placeholder:text-royal-blue focus:border-royal-blue focus:ring-royal-blue/50"
-                required
-              />
-              
-              <Input
-                name="phone"
-                type="tel"
-                placeholder="Téléphone"
-                value={formData.phone}
-                onChange={handleInputChange}
-                className="bg-white border-royal-blue/30 text-royal-blue-dark placeholder:text-royal-blue focus:border-royal-blue focus:ring-royal-blue/50"
-              />
-              
-              <Textarea
-                name="message"
-                placeholder="Votre message..."
-                value={formData.message}
-                onChange={handleInputChange}
-                rows={4}
-                className="bg-white border-royal-blue/30 text-royal-blue-dark placeholder:text-royal-blue focus:border-royal-blue focus:ring-royal-blue/50 resize-none"
-                required
-              />
-              
-              <Button 
-                type="submit" 
-                className="bg-royal-blue hover:bg-royal-blue-hover text-white w-full hover:shadow-lg hover:shadow-royal-blue/25 transition-all duration-300"
-              >
-                Envoyer
-              </Button>
-            </form>
+            {/* Submit Button - Bottom aligned */}
+            <Button 
+              onClick={handleSubmit}
+              className="bg-royal-blue hover:bg-royal-blue-hover text-white w-full hover:shadow-lg hover:shadow-royal-blue/25 transition-all duration-300 mt-6"
+            >
+              Envoyer
+            </Button>
           </div>
 
           {/* Right Column - Navigation Links */}
-          <div className="space-y-6 animate-slide-up" style={{ animationDelay: "0.3s" }}>
-            <h4 className="text-xl font-serif font-bold text-royal-blue-dark">Navigation</h4>
-            
-            <div className="space-y-3">
-              {navigationLinks.map((link, index) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-royal-blue hover:text-royal-blue-dark transition-colors duration-300 block hover:translate-x-1 hover:font-medium"
-                  style={{ 
-                    animationDelay: `${0.1 * index}s`,
-                    animation: "fadeIn 0.6s ease-out forwards"
-                  }}
-                >
-                  {link.name}
-                </a>
-              ))}
+          <div className="flex flex-col justify-between h-full animate-slide-up" style={{ animationDelay: "0.3s" }}>
+            <div className="space-y-6">
+              <h4 className="text-xl font-serif font-bold text-royal-blue-dark">Navigation</h4>
+              
+              <div className="space-y-3">
+                {navigationLinks.map((link, index) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className="text-royal-blue hover:text-royal-blue-dark transition-colors duration-300 block hover:translate-x-1 hover:font-medium"
+                    style={{ 
+                      animationDelay: `${0.1 * index}s`,
+                      animation: "fadeIn 0.6s ease-out forwards"
+                    }}
+                  >
+                    {link.name}
+                  </a>
+                ))}
+              </div>
             </div>
             
-            <div className="pt-6 border-t border-royal-blue/20">
+            {/* Join Button - Bottom aligned */}
+            <div className="pt-6 border-t border-royal-blue/20 mt-8">
               <Button className="bg-royal-blue hover:bg-royal-blue-hover text-white w-full hover:shadow-lg hover:shadow-royal-blue/25 transition-all duration-300">
                 <a href="/contact">Rejoignez-nous</a>
               </Button>
