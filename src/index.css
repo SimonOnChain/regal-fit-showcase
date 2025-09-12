@@ -257,6 +257,7 @@
     box-shadow: 0 4px 20px hsl(220 60% 8% / 0.8);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     min-height: 100px;
+    animation: nav-slide-down 0.8s ease-out;
   }
 
   .nav-royal.scrolled {
@@ -301,6 +302,44 @@
     animation: shine-loop 3s infinite;
   }
 
+  /* New Contact Button Shimmer Animation */
+  .btn-contact-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-contact-shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  /* Navigation Link Premium Styles */
+  .nav-link-premium {
+    position: relative;
+  }
+
+  .nav-link-premium::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, hsl(210 60% 70%), white);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .nav-link-premium:hover::after {
+    width: 100%;
+  }
+
   @keyframes shine {
     0%, 100% { box-shadow: 0 0 10px hsl(210 60% 70% / 0.3); }
     50% { box-shadow: 0 0 20px hsl(210 60% 70% / 0.5); }
@@ -321,6 +360,41 @@
     }
     100% {
       left: 100%;
+    }
+  }
+
+  @keyframes shimmer {
+    0%, 100% {
+      left: -100%;
+    }
+    50% {
+      left: 100%;
+    }
+  }
+
+  @keyframes nav-slide-down {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-slide-down {
+    animation: slide-down 0.3s ease-out;
+  }
+
+  @keyframes slide-down {
+    0% {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
     }
   }
 

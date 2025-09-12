@@ -22,7 +22,7 @@ const Index = () => {
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-blue-400/30 via-blue-300/20 to-transparent opacity-80" />
+        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-blue-400/60 via-blue-300/40 to-transparent" />
         
         <div className="relative z-10 flex items-center justify-center h-full">
           <div className="text-center animate-fade-in">

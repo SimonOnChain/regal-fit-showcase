@@ -64,11 +64,11 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-6">
         <div className="flex items-center justify-between h-12">
           
-          {/* Left - Logo */}
-          <div className="flex items-center">
-            <div className="flex items-center space-x-3 fade-slide-in">
-              <Crown className="h-12 w-12 text-white" />
-              <span className="text-3xl font-extrabold uppercase tracking-wide text-white" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 900 }}>
+          {/* Left - Logo & Branding */}
+          <div className="flex items-center flex-shrink-0">
+            <div className="flex items-center space-x-4 fade-slide-in">
+              <Crown className="h-10 w-10 text-white" />
+              <span className="text-2xl font-extrabold uppercase tracking-wider text-white" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 900 }}>
                 Royal Fitness
               </span>
             </div>
@@ -76,7 +76,7 @@ const Navigation = () => {
 
           {/* Center - Main Navigation (Desktop) */}
           <div className="hidden lg:flex items-center justify-center flex-1">
-            <div className="flex items-center space-x-12">
+            <div className="flex items-center space-x-10">
               {mainNavItems.map((item, index) => (
                 <div key={item.name} className="relative">
                   {item.dropdown ? (
@@ -86,15 +86,15 @@ const Navigation = () => {
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
                       <button
-                        className={`nav-link-active text-white hover:text-blue-200 transition-all duration-300 font-bold text-base uppercase tracking-wide fade-slide-in stagger-${index + 1} flex items-center gap-1`}
+                        className={`nav-link-premium text-white hover:text-blue-200 transition-all duration-300 font-bold text-sm uppercase tracking-widest px-3 py-2 fade-slide-in stagger-${index + 1} flex items-center gap-1`}
                         style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 800 }}
                       >
                         {item.name}
-                        <ChevronDown className="h-5 w-5 transition-transform duration-200" 
+                        <ChevronDown className="h-4 w-4 transition-transform duration-200" 
                           style={{ transform: activeDropdown === item.name ? 'rotate(180deg)' : 'rotate(0deg)' }} />
                       </button>
                       {activeDropdown === item.name && (
-                        <div className="dropdown-menu absolute top-full left-0 mt-2 w-48 py-2 z-50">
+                        <div className="dropdown-menu absolute top-full left-0 mt-2 w-48 py-2 z-50 animate-slide-down">
                           {item.dropdown.map((dropdownItem) => (
                             <a
                               key={dropdownItem.name}
@@ -110,7 +110,7 @@ const Navigation = () => {
                   ) : (
                     <a
                       href={item.href}
-                      className={`nav-link-active text-white hover:text-blue-200 transition-all duration-300 font-bold text-base uppercase tracking-wide fade-slide-in stagger-${index + 1}`}
+                      className={`nav-link-premium text-white hover:text-blue-200 transition-all duration-300 font-bold text-sm uppercase tracking-widest px-3 py-2 fade-slide-in stagger-${index + 1}`}
                       style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 800 }}
                     >
                       {item.name}
@@ -122,8 +122,8 @@ const Navigation = () => {
           </div>
 
           {/* Right - Contact Button (Desktop) */}
-          <div className="hidden lg:flex items-center">
-            <Button className="bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white px-8 py-4 text-lg font-extrabold uppercase tracking-wide rounded-full shadow-lg hover:shadow-xl transition-all duration-300 btn-shine-loop"
+          <div className="hidden lg:flex items-center flex-shrink-0">
+            <Button className="bg-gradient-to-r from-blue-300 to-blue-400 hover:from-blue-400 hover:to-blue-500 text-white px-10 py-4 text-base font-extrabold uppercase tracking-widest rounded-full shadow-lg hover:shadow-xl transition-all duration-300 btn-contact-shimmer"
                     style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 900 }}>
               <a href="/contact">CONTACT</a>
             </Button>
