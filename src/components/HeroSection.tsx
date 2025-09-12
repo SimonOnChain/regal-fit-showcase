@@ -19,7 +19,7 @@ const HeroSection = () => {
         <div className="fade-in">
           <div className="flex items-center justify-center mb-6">
             <Crown className="h-16 w-16 text-accent mr-4" />
-            <h1 className="text-6xl md:text-8xl font-serif font-bold text-foreground">
+            <h1 className="text-6xl md:text-8xl font-serif font-bold">
               Royal Fitness
             </h1>
           </div>
