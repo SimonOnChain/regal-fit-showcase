@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Crown, Menu, X } from "lucide-react";
+import { Crown, Menu, X, ChevronDown } from "lucide-react";
 
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -15,7 +15,34 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const services = [
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const mainNavItems = [
+    { name: "Le Concept", href: "/" },
+    { 
+      name: "Activités", 
+      href: "#",
+      dropdown: [
+        { name: "Fitness", href: "/fitness" },
+        { name: "Foot à 5", href: "/foot" },
+        { name: "Aqua", href: "/aqua" },
+        { name: "Spa", href: "/spa" },
+        { name: "Kids", href: "/kids" },
+      ]
+    },
+    { name: "Mo'Snack", href: "/mosnack" },
+    { 
+      name: "Découvrir", 
+      href: "#",
+      dropdown: [
+        { name: "Galerie Photos", href: "/gallery" },
+        { name: "Plannings", href: "/plannings" },
+      ]
+    },
+    { name: "Nos Tarifs", href: "/tarifs" },
+  ];
+
+  const allServices = [
     { name: "Le Concept", href: "/" },
     { name: "Fitness", href: "/fitness" },
     { name: "Foot à 5", href: "/foot" },
@@ -28,45 +55,70 @@ const Navigation = () => {
     { name: "Nos Tarifs", href: "/tarifs" },
   ];
 
+  const handleDropdownToggle = (itemName: string) => {
+    setActiveDropdown(activeDropdown === itemName ? null : itemName);
+  };
+
   return (
     <nav className={`nav-royal fixed top-0 left-0 right-0 z-50 ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+      <div className="container mx-auto px-6 py-6">
+        <div className="flex items-center justify-between h-12">
           
-          {/* Left - Services Menu (Desktop) */}
+          {/* Left - Main Navigation (Desktop) */}
           <div className="hidden lg:flex items-center space-x-8">
-            {services.slice(0, 4).map((service, index) => (
-              <a
-                key={service.name}
-                href={service.href}
-                className={`nav-link-active text-foreground hover:text-accent transition-all duration-300 font-medium fade-slide-in stagger-${index + 1}`}
-              >
-                {service.name}
-              </a>
+            {mainNavItems.map((item, index) => (
+              <div key={item.name} className="relative">
+                {item.dropdown ? (
+                  <div 
+                    className="relative"
+                    onMouseEnter={() => setActiveDropdown(item.name)}
+                    onMouseLeave={() => setActiveDropdown(null)}
+                  >
+                    <button
+                      className={`nav-link-active text-foreground hover:text-accent transition-all duration-300 font-medium fade-slide-in stagger-${index + 1} flex items-center gap-1`}
+                    >
+                      {item.name}
+                      <ChevronDown className="h-4 w-4 transition-transform duration-200" 
+                        style={{ transform: activeDropdown === item.name ? 'rotate(180deg)' : 'rotate(0deg)' }} />
+                    </button>
+                    {activeDropdown === item.name && (
+                      <div className="dropdown-menu absolute top-full left-0 mt-2 w-48 py-2 z-50">
+                        {item.dropdown.map((dropdownItem) => (
+                          <a
+                            key={dropdownItem.name}
+                            href={dropdownItem.href}
+                            className="dropdown-item block"
+                          >
+                            {dropdownItem.name}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <a
+                    href={item.href}
+                    className={`nav-link-active text-foreground hover:text-accent transition-all duration-300 font-medium fade-slide-in stagger-${index + 1}`}
+                  >
+                    {item.name}
+                  </a>
+                )}
+              </div>
             ))}
           </div>
 
-          {/* Center - More Services & Contact (Desktop) */}
-          <div className="hidden lg:flex items-center space-x-8 flex-1 justify-center">
-            {services.slice(4).map((service, index) => (
-              <a
-                key={service.name}
-                href={service.href}
-                className={`nav-link-active text-foreground hover:text-accent transition-all duration-300 font-medium fade-slide-in stagger-${index + 5}`}
-              >
-                {service.name}
-              </a>
-            ))}
-            <Button className="btn-gold ml-4 gold-glow-hover animate-pulse hover:animate-gold-pulse">
+          {/* Center - Contact Button (Desktop) */}
+          <div className="hidden lg:flex items-center">
+            <Button className="btn-gold gold-glow-hover animate-pulse hover:animate-gold-pulse px-8 py-3 text-base font-medium">
               <a href="/contact">Contact</a>
             </Button>
           </div>
 
           {/* Right - Logo */}
           <div className="flex items-center justify-end lg:flex-none">
-            <div className="flex items-center space-x-2 fade-slide-in">
-              <Crown className="h-8 w-8 text-accent gold-glow-hover" />
-              <span className="text-2xl font-serif font-bold text-foreground">
+            <div className="flex items-center space-x-3 fade-slide-in">
+              <Crown className="h-9 w-9 text-accent gold-glow-hover" />
+              <span className="text-2xl font-sans font-bold text-foreground">
                 Royal Fitness
               </span>
             </div>
@@ -87,21 +139,21 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-border/50 animate-slide-in-right">
-            <div className="grid grid-cols-2 gap-4 mt-4">
-              {services.map((service, index) => (
+          <div className="lg:hidden mt-6 pb-4 border-t border-border/50 animate-slide-in-right">
+            <div className="grid grid-cols-2 gap-4 mt-6">
+              {allServices.map((service, index) => (
                 <a
                   key={service.name}
                   href={service.href}
-                  className={`text-foreground hover:text-accent transition-all duration-300 py-2 text-center font-medium scale-hover animate-stagger-fade-in stagger-${index % 6 + 1}`}
+                  className={`text-foreground hover:text-accent transition-all duration-300 py-3 text-center font-medium scale-hover animate-stagger-fade-in stagger-${index % 6 + 1}`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {service.name}
                 </a>
               ))}
             </div>
-            <div className="mt-4 text-center animate-fade-in stagger-6">
-              <Button className="btn-gold w-full gold-glow-hover">
+            <div className="mt-6 text-center animate-fade-in stagger-6">
+              <Button className="btn-gold w-full gold-glow-hover py-3 text-base font-medium">
                 <a href="/contact">Contact</a>
               </Button>
             </div>
