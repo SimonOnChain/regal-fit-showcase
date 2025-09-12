@@ -150,35 +150,41 @@ const Index = () => {
         <div className="absolute inset-0 bg-black/60" />
         
         <div className="relative z-10 container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-            <AnimatedCard className="space-y-4" delay={100}>
-              <div className="text-5xl md:text-6xl font-bold text-white"
-                   style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                +97%
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <AnimatedCard className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-xl p-8 shadow-xl hover:bg-white/15 transition-all duration-300" delay={100}>
+              <div className="space-y-4">
+                <div className="text-5xl md:text-6xl font-bold text-white"
+                     style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                  +97%
+                </div>
+                <p className="text-xl text-white/90 font-medium">
+                  Clients satisfaits
+                </p>
               </div>
-              <p className="text-xl text-white/90 font-medium">
-                Clients satisfaits
-              </p>
             </AnimatedCard>
             
-            <AnimatedCard className="space-y-4" delay={200}>
-              <div className="text-5xl md:text-6xl font-bold text-white"
-                   style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                +124
+            <AnimatedCard className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-xl p-8 shadow-xl hover:bg-white/15 transition-all duration-300" delay={200}>
+              <div className="space-y-4">
+                <div className="text-5xl md:text-6xl font-bold text-white"
+                     style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                  +124
+                </div>
+                <p className="text-xl text-white/90 font-medium">
+                  Cours collectifs
+                </p>
               </div>
-              <p className="text-xl text-white/90 font-medium">
-                Cours collectifs
-              </p>
             </AnimatedCard>
             
-            <AnimatedCard className="space-y-4" delay={300}>
-              <div className="text-5xl md:text-6xl font-bold text-white"
-                   style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                +15
+            <AnimatedCard className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-xl p-8 shadow-xl hover:bg-white/15 transition-all duration-300" delay={300}>
+              <div className="space-y-4">
+                <div className="text-5xl md:text-6xl font-bold text-white"
+                     style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                  +15
+                </div>
+                <p className="text-xl text-white/90 font-medium">
+                  Années d'expérience
+                </p>
               </div>
-              <p className="text-xl text-white/90 font-medium">
-                Années d'expérience
-              </p>
             </AnimatedCard>
           </div>
         </div>
