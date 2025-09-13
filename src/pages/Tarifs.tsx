@@ -98,6 +98,7 @@ const Tarifs = () => {
         />
         <div className="absolute inset-0 bg-gradient-royal"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-royal/80 via-navy/70 to-royal/80"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-blue-600/80 via-blue-500/60 to-transparent"></div>
         
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
           <div className="space-y-8 animate-fade-in">
