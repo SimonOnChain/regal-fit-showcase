@@ -128,60 +128,86 @@ const Tarifs = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6"></div>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Choisissez la formule qui vous convient le mieux
+              Découvrez nos services spa premium avec des tarifs préférentiels pour nos abonnés
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <Card 
-                key={plan.id} 
-                className={`card-royal group overflow-hidden hover-scale cursor-pointer transition-all duration-300 animate-fade-in bg-royal/90 border-gold/30 ${
-                  plan.popular ? 'border-2 border-blue-600 shadow-lg' : 'bg-white/70 border-blue-300/30'
-                }`}
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                {plan.popular && (
-                  <div className="bg-blue-600 text-white text-center py-2 font-semibold">
-                    ⭐ Plus Populaire
-                  </div>
-                )}
-                
-                <div className="relative">
-                  <img 
-                    src={plan.imgSrc} 
-                    alt={plan.title}
-                    className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900 via-transparent to-transparent opacity-80" />
-                  <div className="absolute inset-0 bg-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 className="text-2xl font-serif font-bold text-white mb-2">
-                      {plan.title}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* First Spa Menu Image */}
+            <Card className="group overflow-hidden hover-scale cursor-pointer transition-all duration-500 bg-white/90 border border-blue-300/30 rounded-2xl shadow-xl hover:shadow-2xl animate-fade-in">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-blue-100/30 rounded-2xl"></div>
+                <div className="p-8">
+                  <div className="text-center mb-6">
+                    <h3 className="text-3xl font-serif font-bold text-slate-800 mb-2">
+                      Services Spa Premium
                     </h3>
-                    <p className="text-3xl font-bold mb-2">{plan.price}</p>
-                    <p className="text-white/90 text-sm mb-4">{plan.description}</p>
+                    <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto"></div>
+                  </div>
+                  
+                  <div className="relative overflow-hidden rounded-xl shadow-lg group-hover:shadow-xl transition-shadow duration-500">
+                    <img 
+                      src="/src/assets/image.png" 
+                      alt="Menu Spa Services"
+                      className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
+                  
+                  <div className="mt-6 text-center">
+                    <div className="inline-block bg-blue-600/10 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                      -15% pour les abonnés fitness
+                    </div>
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      Hammams, massages, soins du visage et packs wellness dans un environnement luxueux
+                    </p>
                   </div>
                 </div>
-                
-                <div className="p-6">
-                  <Button className="bg-blue-600 hover:bg-blue-700 text-white w-full text-lg py-3 transition-all duration-300">
-                    Sélectionner
-                  </Button>
+              </div>
+            </Card>
+
+            {/* Second Spa Menu Image */}
+            <Card className="group overflow-hidden hover-scale cursor-pointer transition-all duration-500 bg-white/90 border border-blue-300/30 rounded-2xl shadow-xl hover:shadow-2xl animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-blue-100/30 rounded-2xl"></div>
+                <div className="p-8">
+                  <div className="text-center mb-6">
+                    <h3 className="text-3xl font-serif font-bold text-slate-800 mb-2">
+                      Coiffure & Esthétique
+                    </h3>
+                    <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto"></div>
+                  </div>
+                  
+                  <div className="relative overflow-hidden rounded-xl shadow-lg group-hover:shadow-xl transition-shadow duration-500">
+                    <img 
+                      src="/src/assets/image.png" 
+                      alt="Menu Coiffure et Esthétique"
+                      className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
+                  
+                  <div className="mt-6 text-center">
+                    <div className="inline-block bg-blue-600/10 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                      Services premium disponibles
+                    </div>
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      Coiffure professionnelle, épilation, onglerie et soins esthétiques de qualité
+                    </p>
+                  </div>
                 </div>
-              </Card>
-            ))}
+              </div>
+            </Card>
           </div>
 
           {/* Mo'Spa Tariffs Button */}
           <div className="text-center mt-16">
             <Button 
               onClick={openSpaModal}
-              className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-4 transition-all duration-300"
+              className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-4 transition-all duration-300 rounded-full shadow-lg hover:shadow-xl"
             >
-              Voir Tarifs SPA
-              <span className="ml-2 bg-blue-500/20 px-2 py-1 rounded text-sm">-15% pour les abonnés</span>
+              Voir Tous les Tarifs SPA
+              <span className="ml-2 bg-blue-500/20 px-3 py-1 rounded-full text-sm">Détails complets</span>
             </Button>
           </div>
         </div>
