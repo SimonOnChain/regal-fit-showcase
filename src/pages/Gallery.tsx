@@ -194,20 +194,11 @@ const Gallery = () => {
         <div className="container mx-auto px-6 text-center">
           <Card className="max-w-2xl mx-auto p-8 bg-white/70 border-blue-300/30 rounded-lg">
             <h3 className="text-2xl md:text-3xl font-serif font-bold text-slate-800 mb-4">
-              Venez Découvrir Royal Fitness
+            <h1 className="text-6xl md:text-8xl font-serif font-bold text-white">
             </h3>
             <p className="text-lg text-slate-700 mb-6">
               Visitez nos installations premium et découvrez l'excellence Royal Fitness.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-all duration-300">
-                <a href="/contact">Planifier une visite</a>
-              </Button>
-              <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white">
-                <a href="/tarifs">Voir nos offres</a>
-              </Button>
-            </div>
-          </Card>
         </div>
       </section>
       
