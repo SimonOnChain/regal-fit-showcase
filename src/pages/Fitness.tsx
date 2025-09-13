@@ -55,15 +55,11 @@ const Fitness = () => {
         action: handlePrimaryAction
       }}
       galleryTitle="Notre Espace Fitness"
-          <h1 className="text-6xl md:text-8xl font-serif font-bold text-accent animate-fade-in">
+      galleryDescription="Découvrez nos installations modernes et nos équipements de pointe"
       images={images}
       detailCards={detailCards}
-          
-          {/* Geometric accents */}
-          <div className="absolute top-1/4 right-1/4 w-20 h-20 border border-blue-400/25 rotate-45 animate-spin-slow"></div>
-          <div className="absolute bottom-1/4 left-1/3 w-12 h-12 bg-blue-300/15 rounded-lg rotate-12 animate-float" style={{ animationDelay: '2s' }}></div>
-        </div>
-        
+    >
+      <AnimatedSection>
         <div className="container mx-auto px-6">
           <AnimatedCard className="max-w-2xl mx-auto">
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -150,7 +146,6 @@ const Fitness = () => {
       
       <Footer />
     </RoyalPageTemplate>
-  )
   );
 };
 
