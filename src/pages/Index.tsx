@@ -51,16 +51,7 @@ const Index = () => {
       </section>
 
       {/* Seamless Transition Section */}
-      <section className="h-32 bg-gradient-to-b from-blue-500/60 via-blue-600/80 to-blue-700 relative overflow-hidden">
-        {/* Smooth shadow transition overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-800/20 to-blue-900/40"></div>
-        
-        {/* Subtle animated elements for modern feel */}
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-blue-400/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-1/3 w-48 h-48 bg-blue-300/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        </div>
-      </section>
+
 
       {/* Le Concept Section */}
       <AnimatedSection className="relative py-20 overflow-hidden">
