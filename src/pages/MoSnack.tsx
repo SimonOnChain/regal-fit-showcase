@@ -171,7 +171,7 @@ const MoSnack = () => {
             
             <div className="mt-6 text-center">
               <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-all duration-300">
-                Voir sur la carte
+                <a href="/contact" className="block w-full h-full">Voir sur la carte</a>
               </Button>
             </div>
           </Card>
