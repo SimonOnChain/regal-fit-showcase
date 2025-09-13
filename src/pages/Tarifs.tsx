@@ -76,7 +76,16 @@ const Tarifs = () => {
   const closeSpaModal = () => setSpaModalOpen(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
+    <div className="min-h-screen bg-blue-100 relative overflow-hidden">
+      {/* Modern Background Animation */}
+      <div className="absolute inset-0">
+        <div className="absolute top-16 right-20 w-44 h-44 bg-blue-200/20 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-24 left-12 w-36 h-36 bg-blue-300/15 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute top-1/3 left-2/3 w-28 h-28 bg-blue-400/12 rounded-full blur-xl animate-bounce" style={{ animationDelay: '3.5s', animationDuration: '6s' }}></div>
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute w-full h-full bg-gradient-to-tr from-blue-300/30 via-transparent to-blue-400/30 animate-pulse" style={{ animationDuration: '12s' }}></div>
+        </div>
+      </div>
       <Navigation />
       
       {/* Hero Pricing Section */}

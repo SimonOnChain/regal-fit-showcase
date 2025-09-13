@@ -54,7 +54,7 @@ const Foot = () => {
       detailCards={detailCards}
     >
       {/* Additional Info Section */}
-      <section className="py-16">
+      <section className="py-16 bg-blue-100">
         <div className="container mx-auto px-6">
           <Card className="max-w-4xl mx-auto p-8 border border-accent/20">
             <h3 className="text-3xl font-serif font-bold text-slate-800 mb-6 text-center">
@@ -73,7 +73,7 @@ const Foot = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16">
+      <section className="py-16 bg-blue-100">
         <div className="container mx-auto px-6">
           <Card className="max-w-2xl mx-auto p-8 border border-accent/20">
             <h3 className="text-2xl font-serif font-bold text-slate-800 mb-6 text-center">

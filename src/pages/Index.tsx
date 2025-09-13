@@ -54,33 +54,26 @@ const Index = () => {
 
 
       {/* Le Concept Section */}
-      <AnimatedSection className="relative py-20 overflow-hidden bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
+      <AnimatedSection className="relative py-20 overflow-hidden bg-blue-100">
         {/* Modern Blue Background with Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-100/30 via-blue-200/20 to-blue-300/10"></div>
+        <div className="absolute inset-0 bg-blue-100"></div>
         
         {/* Geometric Background Elements */}
         <div className="absolute inset-0">
-          {/* Top geometric shapes */}
-          <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-blue-300/10 to-transparent"></div>
-          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400/5 rounded-full blur-3xl transform translate-x-48 -translate-y-48"></div>
-          <div className="absolute top-20 left-20 w-64 h-64 bg-blue-300/5 rounded-full blur-2xl"></div>
+          {/* Modern floating orbs */}
+          <div className="absolute top-10 right-10 w-32 h-32 bg-blue-200/30 rounded-full blur-xl animate-float"></div>
+          <div className="absolute bottom-20 left-20 w-24 h-24 bg-blue-300/20 rounded-full blur-lg animate-pulse"></div>
+          <div className="absolute top-1/3 left-1/4 w-16 h-16 bg-blue-400/25 rounded-full blur-md animate-bounce" style={{ animationDelay: '2s', animationDuration: '3s' }}></div>
           
-          {/* Modern grid pattern */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="grid grid-cols-12 gap-4 h-full">
-              {Array.from({ length: 48 }).map((_, i) => (
-                <div 
-                  key={i} 
-                  className="border border-blue-400/20 animate-pulse"
-                  style={{ animationDelay: `${i * 0.1}s` }}
-                ></div>
-              ))}
-            </div>
+          {/* Subtle wave animation */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-blue-400/20 to-transparent animate-pulse" style={{ animationDuration: '4s' }}></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-l from-transparent via-blue-300/15 to-transparent animate-pulse" style={{ animationDelay: '2s', animationDuration: '6s' }}></div>
           </div>
           
-          {/* Floating elements */}
-          <div className="absolute top-1/4 right-1/4 w-32 h-32 border border-blue-400/20 rotate-45 animate-spin-slow"></div>
-          <div className="absolute bottom-1/4 left-1/3 w-24 h-24 bg-gradient-to-r from-blue-400/10 to-blue-500/10 rounded-lg rotate-12 animate-float"></div>
+          {/* Modern geometric shapes */}
+          <div className="absolute top-1/4 right-1/3 w-20 h-20 border border-blue-400/30 rotate-45 animate-spin-slow"></div>
+          <div className="absolute bottom-1/3 left-1/4 w-12 h-12 bg-blue-300/20 rounded-lg rotate-12 animate-float" style={{ animationDelay: '1s' }}></div>
         </div>
         
         <div className="container mx-auto px-6">
@@ -172,7 +165,7 @@ const Index = () => {
       </AnimatedSection>
 
       {/* Excellence Training Section */}
-      <AnimatedSection className="py-20 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
+      <AnimatedSection className="py-20 bg-blue-100">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
@@ -329,7 +322,7 @@ const Index = () => {
       </AnimatedSection>
 
       {/* Services Section */}
-      <AnimatedSection className="py-20 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
+      <AnimatedSection className="py-20 bg-blue-100">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4 animate-fade-in">

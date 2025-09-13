@@ -62,7 +62,16 @@ const Plannings = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-blue-100 relative overflow-hidden">
+      {/* Modern Background Animation */}
+      <div className="absolute inset-0">
+        <div className="absolute top-14 left-18 w-42 h-42 bg-blue-200/21 rounded-full blur-2xl animate-float"></div>
+        <div className="absolute bottom-18 right-14 w-34 h-34 bg-blue-300/17 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2.2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-26 h-26 bg-blue-400/13 rounded-full blur-lg animate-bounce" style={{ animationDelay: '4.8s', animationDuration: '5.5s' }}></div>
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute w-full h-full bg-gradient-to-tl from-blue-300/24 via-transparent to-blue-400/24 animate-pulse" style={{ animationDuration: '13s' }}></div>
+        </div>
+      </div>
       <Navigation />
       
       {/* Hero Section */}

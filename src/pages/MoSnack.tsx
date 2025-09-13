@@ -25,7 +25,16 @@ const MoSnack = () => {
   const displayedImages = showAllPhotos ? foodImages : foodImages.slice(0, 3);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
+    <div className="min-h-screen bg-blue-100 relative overflow-hidden">
+      {/* Modern Background Animation */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-36 h-36 bg-blue-200/25 rounded-full blur-2xl animate-float"></div>
+        <div className="absolute bottom-32 right-16 w-28 h-28 bg-blue-300/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-2/3 right-1/4 w-20 h-20 bg-blue-400/15 rounded-full blur-lg animate-bounce" style={{ animationDelay: '4s', animationDuration: '5s' }}></div>
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute w-full h-full bg-gradient-to-tl from-blue-300/25 via-transparent to-blue-400/25 animate-pulse" style={{ animationDuration: '10s' }}></div>
+        </div>
+      </div>
       <Navigation />
       
       {/* Hero Section */}

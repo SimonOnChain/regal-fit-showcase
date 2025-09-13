@@ -27,7 +27,16 @@ const Kids = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
+    <div className="min-h-screen bg-blue-100 relative overflow-hidden">
+      {/* Modern Background Animation */}
+      <div className="absolute inset-0">
+        <div className="absolute top-8 right-12 w-38 h-38 bg-blue-200/24 rounded-full blur-2xl animate-float"></div>
+        <div className="absolute bottom-12 left-24 w-30 h-30 bg-blue-300/19 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1.8s' }}></div>
+        <div className="absolute top-2/5 right-1/3 w-22 h-22 bg-blue-400/16 rounded-full blur-lg animate-bounce" style={{ animationDelay: '3.2s', animationDuration: '4.5s' }}></div>
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute w-full h-full bg-gradient-to-br from-blue-300/26 via-transparent to-blue-400/26 animate-pulse" style={{ animationDuration: '11s' }}></div>
+        </div>
+      </div>
       <Navigation />
       
       {/* Hero Section */}

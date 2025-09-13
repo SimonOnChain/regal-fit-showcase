@@ -44,7 +44,16 @@ const Spa = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
+    <div className="min-h-screen bg-blue-100 relative overflow-hidden">
+      {/* Modern Background Animation */}
+      <div className="absolute inset-0">
+        <div className="absolute top-12 left-16 w-40 h-40 bg-blue-200/22 rounded-full blur-2xl animate-float"></div>
+        <div className="absolute bottom-16 right-20 w-32 h-32 bg-blue-300/18 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2.5s' }}></div>
+        <div className="absolute top-3/4 left-1/4 w-24 h-24 bg-blue-400/14 rounded-full blur-lg animate-bounce" style={{ animationDelay: '4.5s', animationDuration: '7s' }}></div>
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute w-full h-full bg-gradient-to-bl from-blue-300/28 via-transparent to-blue-400/28 animate-pulse" style={{ animationDuration: '9s' }}></div>
+        </div>
+      </div>
       <Navigation />
       
       {/* Hero Section */}
