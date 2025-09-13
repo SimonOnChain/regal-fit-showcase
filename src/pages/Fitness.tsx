@@ -90,56 +90,6 @@ const Fitness = () => {
       </section>
 
       {/* Fitness Gallery Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
-              Notre Espace Fitness
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6"></div>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Un environnement premium pour votre transformation physique
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {displayedImages.map((image, index) => (
-              <Card 
-                key={index} 
-                className="group overflow-hidden hover-scale cursor-pointer bg-white/70 border-blue-300/30 animate-fade-in rounded-lg shadow-lg"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="relative">
-                  <img 
-                    src={image.src} 
-                    alt={image.caption}
-                    className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900 via-transparent to-transparent opacity-60" />
-                  <div className="absolute inset-0 bg-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white font-semibold text-lg">
-                      {image.caption}
-                    </span>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-          
-          {!showAllPhotos && fitnessImages.length > 6 && (
-            <div className="text-center mt-12">
-              <Button 
-                variant="outline" 
-                onClick={() => setShowAllPhotos(true)}
-                className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
-              >
-                Voir Plus
-              </Button>
-            </div>
-          )}
-        </div>
-      </section>
 
 
       <Footer />
