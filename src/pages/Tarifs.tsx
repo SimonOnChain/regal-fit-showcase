@@ -213,6 +213,63 @@ const Tarifs = () => {
         </div>
       </section>
 
+      {/* Partners Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-800 mb-4">
+              PARTENAIRES
+            </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6"></div>
+            <p className="text-lg text-slate-600">
+              Ils nous font confiance:
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto items-center">
+            <div className="flex justify-center items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in group">
+              <img 
+                src="/src/assets/image.png" 
+                alt="Hoist Fitness"
+                className="max-h-16 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+              />
+            </div>
+            
+            <div className="flex justify-center items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in group" style={{ animationDelay: "0.1s" }}>
+              <img 
+                src="/src/assets/image.png" 
+                alt="Bose"
+                className="max-h-16 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+              />
+            </div>
+            
+            <div className="flex justify-center items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in group" style={{ animationDelay: "0.2s" }}>
+              <img 
+                src="/src/assets/image.png" 
+                alt="LafargeHolcim"
+                className="max-h-16 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+              />
+            </div>
+            
+            <div className="flex justify-center items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in group" style={{ animationDelay: "0.3s" }}>
+              <img 
+                src="/src/assets/image.png" 
+                alt="InterPub"
+                className="max-h-16 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+              />
+            </div>
+            
+            <div className="flex justify-center items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in group col-span-2 md:col-span-1" style={{ animationDelay: "0.4s" }}>
+              <img 
+                src="/src/assets/image.png" 
+                alt="Guinot Institut Paris"
+                className="max-h-16 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
