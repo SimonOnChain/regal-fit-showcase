@@ -172,17 +172,19 @@ const Index = () => {
       </AnimatedSection>
 
       {/* Excellence Training Section */}
-      <AnimatedSection className="py-20 bg-blue-500">
+      <AnimatedSection className="py-20 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
             <div className="space-y-8">
               <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-wide text-white"
                   style={{ fontFamily: 'Montserrat, sans-serif' }}>
+              <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-wide text-slate-800"
+                  style={{ fontFamily: 'Montserrat, sans-serif' }}>
                 EXCELLENCE TRAINING
               </h2>
               
-              <div className="space-y-6 text-white">
+              <div className="space-y-6 text-slate-700">
                 <p className="text-lg md:text-xl leading-relaxed">
                   Notre approche personnalisée garantit des résultats exceptionnels grâce à nos équipements de dernière génération et nos coachs certifiés.
                 </p>
@@ -196,7 +198,7 @@ const Index = () => {
                 </p>
               </div>
               
-              <button className="bg-transparent border-2 border-white text-white px-8 py-4 text-lg font-bold uppercase tracking-wide hover:bg-white hover:text-blue-600 transition-all duration-300"
+              <button className="bg-blue-600 border-2 border-blue-600 text-white px-8 py-4 text-lg font-bold uppercase tracking-wide hover:bg-blue-700 hover:border-blue-700 transition-all duration-300"
                       style={{ fontFamily: 'Montserrat, sans-serif' }}>
                 <a href="/contact">Nous contacter</a>
               </button>
