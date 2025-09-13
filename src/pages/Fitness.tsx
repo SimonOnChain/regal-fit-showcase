@@ -39,16 +39,21 @@ const Fitness = () => {
       description: "Programmes sur-mesure avec suivi personnalisé de vos objectifs"
     }
   ];
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+
   const handlePrimaryAction = () => {
     window.location.href = "/plannings";
-          <h1 className="text-8xl md:text-9xl font-serif font-bold text-white animate-fade-in">
+  };
 
   return (
+    <RoyalPageTemplate>
+      <AnimatedSection>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        <h1 className="text-8xl md:text-9xl font-serif font-bold text-white animate-fade-in">
           
           {/* Geometric accents */}
           <div className="absolute top-1/4 right-1/4 w-20 h-20 border border-blue-400/25 rotate-45 animate-spin-slow"></div>
           <div className="absolute bottom-1/4 left-1/3 w-12 h-12 bg-blue-300/15 rounded-lg rotate-12 animate-float" style={{ animationDelay: '2s' }}></div>
+        </h1>
         </div>
         
         <div className="container mx-auto px-6">
