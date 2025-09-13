@@ -172,7 +172,7 @@ const Index = () => {
       </AnimatedSection>
 
       {/* Excellence Training Section */}
-      <AnimatedSection className="py-20 bg-blue-400">
+      <AnimatedSection className="py-20 bg-blue-500">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
@@ -331,25 +331,12 @@ const Index = () => {
       {/* Services Section */}
       <AnimatedSection className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          {/* Reference Image Above Title */}
-          <div className="flex justify-center mb-12 animate-fade-in">
-            <div className="relative w-full max-w-4xl h-64 rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src="/src/assets/{C10127BE-C239-4D9F-A18C-6FF43E9CEC4A}.png"
-                alt="Fitness Training"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-transparent to-blue-600/20"></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
-            </div>
-          </div>
-          
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4 animate-fade-in">
-              Notre Espace Fitness
+              Nos Services Premium
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in stagger-2">
-              Équipements de pointe et coaching personnalisé dans un environnement d'exception
+              Une gamme complète de services dans un environnement d'exception
             </p>
           </div>
           
