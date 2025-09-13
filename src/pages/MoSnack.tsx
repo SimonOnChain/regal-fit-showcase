@@ -57,36 +57,6 @@ const MoSnack = () => {
               </h1>
               <div className="w-12 h-0.5 bg-gold"></div>
             </div>
-            <p className="text-2xl md:text-3xl font-light italic text-white/90">
-              Faites vous plaisir
-            </p>
-            
-            <Card className="card-royal bg-royal/80 backdrop-blur-sm border-gold/30 p-8 max-w-2xl mx-auto">
-              <p className="text-xl leading-relaxed text-white">
-                Découvrez notre snack healthy, savoureux & convivial, au cœur du club.
-              </p>
-            </Card>
-            
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button className="btn-gold text-lg px-8 py-4 shadow-glow hover:shadow-glow-intense transition-all duration-300">
-                  Voir la carte
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="max-w-4xl max-h-[90vh] p-0 overflow-hidden">
-                <div className="relative">
-                  <DialogHeader className="sr-only">
-                    <DialogTitle>Menu Mo'Snack</DialogTitle>
-                    <DialogDescription>Carte complète du restaurant Mo'Snack</DialogDescription>
-                  </DialogHeader>
-                  <img 
-                    src={snackMenu} 
-                    alt="Menu Mo'Snack" 
-                    className="w-full h-auto"
-                  />
-                </div>
-              </DialogContent>
-            </Dialog>
           </div>
         </div>
       </section>
