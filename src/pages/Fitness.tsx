@@ -62,3 +62,5 @@ const Fitness = () => {
     </RoyalPageTemplate>
   );
 };
+
+export default Fitness;
