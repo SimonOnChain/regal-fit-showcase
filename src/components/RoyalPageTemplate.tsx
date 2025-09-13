@@ -113,13 +113,13 @@ const RoyalPageTemplate = ({
       </section>
 
       {/* Image Gallery Section */}
-      <AnimatedSection className="py-20 bg-secondary/10">
+      <AnimatedSection className="py-20 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4 animate-fade-in">
               {galleryTitle}
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in stagger-2">
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto animate-fade-in stagger-2">
               {galleryDescription}
             </p>
           </div>
@@ -166,24 +166,24 @@ const RoyalPageTemplate = ({
 
       {/* Detail Cards Section */}
       {detailCards && (
-        <AnimatedSection className="py-16 bg-background">
+        <AnimatedSection className="py-16 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {detailCards.map((card, index) => (
                 <AnimatedCard 
                   key={index} 
-                  className="p-8 border border-accent/20"
+                  className="p-8 bg-white/70 border border-blue-300/30 rounded-lg shadow-lg"
                   delay={index * 150}
                 >
                   <Card className="h-full bg-transparent border-none">
                     <div className="text-center">
-                      <div className="mb-6 text-accent">
+                      <div className="mb-6 text-blue-600">
                         {card.icon}
                       </div>
-                      <h3 className="text-2xl font-serif font-bold text-foreground mb-4">
+                      <h3 className="text-2xl font-serif font-bold text-slate-800 mb-4">
                         {card.title}
                       </h3>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <p className="text-slate-700 leading-relaxed">
                         {card.description}
                       </p>
                     </div>
