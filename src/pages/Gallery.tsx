@@ -140,15 +140,35 @@ const Gallery = () => {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`transition-all duration-300 ${
                   selectedCategory === category.id 
-                    ? "bg-blue-600 text-white hover:bg-blue-700 border-blue-600" 
-                    : "border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white bg-white/70"
+                    ? "bg-blue-600 text-white hover:bg-blue-700 border-blue-600 shadow-lg" 
+                    : "border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white bg-white/70 hover:shadow-md"
                 }`}
               >
                 {category.icon}
                 <span className="ml-2">{category.name}</span>
+                {selectedCategory !== "all" && selectedCategory === category.id && (
+                  <span className="ml-2 bg-white/20 px-2 py-1 rounded-full text-xs">
+                    {filteredImages.length}
+                  </span>
+                )}
               </Button>
             ))}
           </div>
+          
+          {/* Show active filter info */}
+          {selectedCategory !== "all" && (
+            <div className="text-center mt-4">
+              <p className="text-slate-600">
+                Affichage de {filteredImages.length} photo{filteredImages.length > 1 ? 's' : ''} 
+                {selectedCategory === "fitness" && " de Fitness"}
+                {selectedCategory === "foot" && " de Foot à 5"}
+                {selectedCategory === "aqua" && " d'Aqua"}
+                {selectedCategory === "spa" && " de Spa"}
+                {selectedCategory === "snack" && " de Mo'Snack"}
+                {selectedCategory === "kids" && " de Kids"}
+              </p>
+            </div>
+          )}
         </div>
       </section>
 
@@ -215,9 +235,21 @@ const Gallery = () => {
               <Button 
                 variant="outline" 
                 onClick={() => setShowAllPhotos(true)}
-                className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
+                className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white shadow-md hover:shadow-lg transition-all duration-300"
               >
                 Voir Plus ({filteredImages.length - 9} photos)
+              </Button>
+            </div>
+          )}
+          
+          {showAllPhotos && filteredImages.length > 9 && (
+            <div className="text-center mt-12">
+              <Button 
+                variant="outline" 
+                onClick={() => setShowAllPhotos(false)}
+                className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white shadow-md hover:shadow-lg transition-all duration-300"
+              >
+                Voir Moins
               </Button>
             </div>
           )}
