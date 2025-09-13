@@ -66,29 +66,46 @@ const Spa = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-royal"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-royal/80 via-navy/70 to-royal/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-transparent"></div>
         
-        {/* Hero Content */}
+        {/* Centered Title Only */}
         <div className="relative z-10 flex items-center justify-center h-full text-center px-6">
-          <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
-            <div className="flex items-center justify-center space-x-4 mb-4">
-              <div className="w-12 h-0.5 bg-gold"></div>
-              <h1 className="text-6xl md:text-8xl font-serif font-bold text-gold tracking-wide">
-                SPA
-              </h1>
-              <div className="w-12 h-0.5 bg-gold"></div>
+          <div className="text-center animate-fade-in">
+            <h1 className="text-8xl md:text-9xl font-extrabold uppercase tracking-wider text-white"
+                style={{ 
+                  fontFamily: 'Montserrat, sans-serif',
+                  fontWeight: 900,
+                  textShadow: '0 8px 32px rgba(0, 0, 0, 0.5)'
+                }}>
+              SPA
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      {/* Description Section - Blue Background */}
+      <section className="relative py-20 bg-gradient-to-b from-blue-600 to-blue-700 overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 right-20 w-32 h-32 bg-blue-400/20 rounded-full blur-xl animate-float"></div>
+          <div className="absolute bottom-16 left-16 w-24 h-24 bg-blue-300/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '1s' }}></div>
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-5xl mx-auto text-center">
+            <div className="space-y-8 animate-fade-in">
+              <p className="text-xl md:text-2xl text-white leading-relaxed font-light">
+                Venez vous détendre et vous ressourcer dans notre spa d'exception. 
+                Profitez de nos espaces wellness premium et de nos soins personnalisés 
+                dans un cadre luxueux et apaisant. Une expérience unique vous attend 
+                dans notre établissement de luxe !
+              </p>
+              
+              <p className="text-2xl md:text-3xl font-bold text-white animate-fade-in stagger-2"
+                 style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                Votre sanctuaire de bien-être royal !
+              </p>
             </div>
-            <Card className="card-royal bg-royal/80 backdrop-blur-sm border-gold/30 mx-auto max-w-3xl">
-              <CardContent className="p-8">
-                <p className="text-xl md:text-2xl text-white leading-relaxed font-light">
-                  Venez vous détendre et vous ressourcer dans notre spa d'exception. 
-                  Profitez de nos espaces wellness premium et de nos soins personnalisés 
-                  dans un cadre luxueux et apaisant. Une expérience unique vous attend 
-                  dans notre établissement de luxe !
-                </p>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>

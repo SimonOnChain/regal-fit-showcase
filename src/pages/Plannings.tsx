@@ -77,35 +77,51 @@ const Plannings = () => {
       {/* Hero Section */}
       <section 
         className="relative h-screen flex items-center justify-center overflow-hidden"
-        style={{
-          background: `
-            radial-gradient(ellipse at 30% 20%, rgba(80, 120, 255, 0.7) 0%, transparent 60%),
-            radial-gradient(circle at 80% 80%, rgba(50, 160, 255, 0.6) 0%, transparent 40%),
-            linear-gradient(225deg, rgba(40, 60, 180, 1), rgba(10, 10, 30, 1))
-          `
-        }}
       >
+        {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{
             backgroundImage: `url(${planningHero})`,
           }}
         />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-transparent"></div>
         
+        {/* Centered Title Only */}
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
-          <h1 className="text-6xl md:text-8xl font-serif font-bold mb-4 text-accent animate-fade-in">
-            <span className="relative">
-              Plannings
-              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-transparent animate-pulse"></div>
-            </span>
+          <h1 className="text-8xl md:text-9xl font-extrabold uppercase tracking-wider text-white animate-fade-in"
+              style={{ 
+                fontFamily: 'Montserrat, sans-serif',
+                fontWeight: 900,
+                textShadow: '0 8px 32px rgba(0, 0, 0, 0.5)'
+              }}>
+            PLANNINGS
           </h1>
-          
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-8 mb-8 max-w-3xl mx-auto animate-fade-in">
-            <p className="text-xl leading-relaxed">
-              Découvrez les plannings de cours et d'activités du Royal Fitness Club. 
-              Nos offres sont adaptées à tous niveaux et besoins, encadrées par des 
-              professionnels passionnés.
-            </p>
+        </div>
+      </section>
+
+      {/* Description Section - Blue Background */}
+      <section className="relative py-20 bg-gradient-to-b from-blue-600 to-blue-700 overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 right-20 w-32 h-32 bg-blue-400/20 rounded-full blur-xl animate-float"></div>
+          <div className="absolute bottom-16 left-16 w-24 h-24 bg-blue-300/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '1s' }}></div>
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-5xl mx-auto text-center">
+            <div className="space-y-8 animate-fade-in">
+              <p className="text-xl md:text-2xl text-white leading-relaxed font-light">
+                Découvrez les plannings de cours et d'activités du Royal Fitness Club. 
+                Nos offres sont adaptées à tous niveaux et besoins, encadrées par des 
+                professionnels passionnés.
+              </p>
+              
+              <p className="text-2xl md:text-3xl font-bold text-white animate-fade-in stagger-2"
+                 style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                Organisez votre emploi du temps fitness royal !
+              </p>
+            </div>
           </div>
         </div>
       </section>

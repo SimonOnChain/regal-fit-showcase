@@ -146,22 +146,15 @@ const Fitness = () => {
                   {/* Central content */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center space-y-4">
-                      <div className="w-20 h-20 mx-auto bg-gradient-to-br from-blue-300/30 to-blue-200/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                        <div className="w-8 h-8 bg-blue-600 rounded-lg animate-pulse"></div>
-                      </div>
-                      <div className="space-y-2">
-                        <div className="h-2 w-32 bg-blue-400/40 rounded-full mx-auto animate-pulse"></div>
-                        <div className="h-2 w-24 bg-blue-300/30 rounded-full mx-auto animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Corner accents */}
-                  <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-blue-400/40 rounded-tl-lg"></div>
-                  <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-blue-400/40 rounded-br-lg"></div>
-                </div>
-              </div>
-            </div>
+          <div className="text-center animate-fade-in">
+            <h1 className="text-8xl md:text-9xl font-extrabold uppercase tracking-wider text-white"
+                style={{ 
+                  fontFamily: 'Montserrat, sans-serif',
+                  fontWeight: 900,
+                  textShadow: '0 8px 32px rgba(0, 0, 0, 0.5)'
+                }}>
+              FITNESS
+            </h1>
           </AnimatedCard>
         </div>
       </AnimatedSection>
@@ -170,5 +163,29 @@ const Fitness = () => {
     </RoyalPageTemplate>
   );
 };
+
+      {/* Description Section - Blue Background */}
+      <section className="relative py-20 bg-gradient-to-b from-blue-600 to-blue-700 overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 right-20 w-32 h-32 bg-blue-400/20 rounded-full blur-xl animate-float"></div>
+          <div className="absolute bottom-16 left-16 w-24 h-24 bg-blue-300/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '1s' }}></div>
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-5xl mx-auto text-center">
+            <div className="space-y-8 animate-fade-in">
+              <p className="text-xl md:text-2xl text-white leading-relaxed font-light">
+                Découvrez notre espace fitness premium avec équipements de pointe, cours collectifs variés et coaching personnalisé pour atteindre vos objectifs. Machines dernière génération et poids libres pour tous niveaux.
+              </p>
+              
+              <p className="text-2xl md:text-3xl font-bold text-white animate-fade-in stagger-2"
+                 style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                Dépassez vos limites dans un environnement d'exception !
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
 export default Fitness;

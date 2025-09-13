@@ -54,26 +54,43 @@ const Aqua = () => {
       detailCards={detailCards}
     >
       {/* Additional Info Section */}
-      <section className="py-16 bg-blue-100">
-        <div className="container mx-auto px-6">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-transparent"></div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <Card className="p-8 border border-accent/20">
+        {/* Centered Title Only */}
               <h3 className="text-2xl font-serif font-bold text-slate-800 mb-4">
-                Natation
-              </h3>
-              <p className="text-slate-700 leading-relaxed">
-                Le MOTIV' CLUB met à votre disposition deux piscines semi-olympiques chauffées pour la pratique de la natation. Que vous soyez débutant ou nageur confirmé, nos bassins offrent un environnement idéal pour votre entraînement. L'eau maintenue à température optimale garantit un confort maximal pour vos séances.
+          <div className="text-center animate-fade-in">
+            <h1 className="text-8xl md:text-9xl font-extrabold uppercase tracking-wider text-white"
+                style={{ 
+                  fontFamily: 'Montserrat, sans-serif',
+                  fontWeight: 900,
+                  textShadow: '0 8px 32px rgba(0, 0, 0, 0.5)'
+                }}>
+              AQUA
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      {/* Description Section - Blue Background */}
+      <section className="relative py-20 bg-gradient-to-b from-blue-600 to-blue-700 overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 right-20 w-32 h-32 bg-blue-400/20 rounded-full blur-xl animate-float"></div>
+          <div className="absolute bottom-16 left-16 w-24 h-24 bg-blue-300/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '1s' }}></div>
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-5xl mx-auto text-center">
+            <div className="space-y-8 animate-fade-in">
+              <p className="text-xl md:text-2xl text-white leading-relaxed font-light">
+                Le MOTIV'CLUB met à votre disposition deux piscines semi-olympiques chauffées pour la natation et l'aquagym. Eau maintenue à température optimale pour votre confort maximal.
               </p>
-            </Card>
-            
-            <Card className="p-8 border border-accent/20">
-              <h3 className="text-2xl font-serif font-bold text-slate-800 mb-4">
-                Aquagym
-              </h3>
-              <p className="text-slate-700 leading-relaxed">
-                Le MOTIV' CLUB propose des cours collectifs d'aqua gym dans nos piscines semi-olympiques chauffées. Cette activité aquatique combine fitness et plaisir dans un environnement aquatique sécurisé. Nos séances d'aqua gym permettent de travailler l'ensemble du corps en douceur grâce à la résistance naturelle de l'eau.
+              
+              <p className="text-2xl md:text-3xl font-bold text-white animate-fade-in stagger-2"
+                 style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                Plongez dans l'excellence aquatique !
               </p>
-            </Card>
+            </div>
           </div>
         </div>
       </section>

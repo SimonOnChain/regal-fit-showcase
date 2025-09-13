@@ -48,27 +48,44 @@ const Foot = () => {
         text: "Réserver un terrain",
         action: handlePrimaryAction
       }}
-      galleryTitle="Nos Terrains & Tournois"
-      galleryDescription="Des installations FIFA pour une expérience football authentique"
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-transparent"></div>
       images={images}
-      detailCards={detailCards}
+        {/* Centered Title Only */}
     >
-      {/* Additional Info Section */}
-      <section className="py-16 bg-blue-100">
-        <div className="container mx-auto px-6">
-          <Card className="max-w-4xl mx-auto p-8 border border-accent/20">
-            <h3 className="text-3xl font-serif font-bold text-slate-800 mb-6 text-center">
-              À Propos du Foot à 5
-            </h3>
-            <div className="space-y-6">
-              <p className="text-lg text-slate-700 leading-relaxed text-center">
-                Le Football à 5 est un sport qui se joue avec deux équipes de 5 joueurs sur des terrains complètement fermés avec une particularité: un gazon synthétique imitant parfaitement le gazon naturel.
+          <div className="text-center animate-fade-in">
+            <h1 className="text-8xl md:text-9xl font-extrabold uppercase tracking-wider text-white"
+                style={{ 
+                  fontFamily: 'Montserrat, sans-serif',
+                  fontWeight: 900,
+                  textShadow: '0 8px 32px rgba(0, 0, 0, 0.5)'
+                }}>
+              FOOT À 5
+            </h1>
+          </Card>
+        </div>
+      </section>
+
+      {/* Description Section - Blue Background */}
+      <section className="relative py-20 bg-gradient-to-b from-blue-600 to-blue-700 overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 right-20 w-32 h-32 bg-blue-400/20 rounded-full blur-xl animate-float"></div>
+          <div className="absolute bottom-16 left-16 w-24 h-24 bg-blue-300/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '1s' }}></div>
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-5xl mx-auto text-center">
+            <div className="space-y-8 animate-fade-in">
+              <p className="text-xl md:text-2xl text-white leading-relaxed font-light">
+                Trois terrains de Foot à 5 avec gazon synthétique certifiés FIFA. Le centre de vos exploits sportifs avec de nombreux tournois régionaux. Nos terrains offrent un environnement professionnel pour tous les niveaux.
               </p>
-              <p className="text-lg text-slate-700 leading-relaxed text-center">
-                Les aires de jeux au MOTIV'CLUB sont certifiés FIFA. Trois terrains de Foot à 5 avec gazon synthétique deviendront le centre de vos exploits.
+              
+              <p className="text-2xl md:text-3xl font-bold text-white animate-fade-in stagger-2"
+                 style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                Nos terrains certifiés FIFA vous attendent !
               </p>
             </div>
-          </Card>
+          </div>
         </div>
       </section>
 
