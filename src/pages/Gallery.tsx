@@ -32,23 +32,55 @@ const Gallery = () => {
   const navigate = useNavigate();
 
   const galleryImages = [
-    { src: fitnessService, caption: "Espace Fitness", category: "fitness" },
+    // Fitness Category
+    { src: fitnessService, caption: "Espace Fitness Principal", category: "fitness" },
     { src: musculation, caption: "Salle de Musculation", category: "fitness" },
-    { src: cardioZone, caption: "Zone Cardio", category: "fitness" },
+    { src: cardioZone, caption: "Zone Cardio Premium", category: "fitness" },
     { src: groupClasses, caption: "Cours Collectifs", category: "fitness" },
     { src: personalTraining, caption: "Coaching Personnel", category: "fitness" },
+    { src: "https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg", caption: "Salle de Sport Moderne", category: "fitness" },
+    { src: "https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg", caption: "Équipements Haut de Gamme", category: "fitness" },
+    { src: "https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg", caption: "Zone d'Entraînement", category: "fitness" },
+    
+    // Football Category
     { src: footballField1, caption: "Terrain FIFA 1", category: "foot" },
     { src: footballField2, caption: "Terrain FIFA 2", category: "foot" },
     { src: footballMatch, caption: "Match en Action", category: "foot" },
-    { src: aquaService, caption: "Espace Aquatique", category: "aqua" },
-    { src: spaService, caption: "Royal Spa", category: "spa" },
+    { src: "https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg", caption: "Terrain Synthétique", category: "foot" },
+    { src: "https://images.pexels.com/photos/1618200/pexels-photo-1618200.jpeg", caption: "Équipe en Action", category: "foot" },
+    { src: "https://images.pexels.com/photos/1171084/pexels-photo-1171084.jpeg", caption: "Tournoi Royal", category: "foot" },
+    
+    // Aqua Category
+    { src: aquaService, caption: "Piscine Semi-Olympique", category: "aqua" },
+    { src: "https://images.pexels.com/photos/863988/pexels-photo-863988.jpeg", caption: "Cours d'Aquagym", category: "aqua" },
+    { src: "https://images.pexels.com/photos/1263349/pexels-photo-1263349.jpeg", caption: "Natation Libre", category: "aqua" },
+    { src: "https://images.pexels.com/photos/1263348/pexels-photo-1263348.jpeg", caption: "Espace Détente Aquatique", category: "aqua" },
+    { src: "https://images.pexels.com/photos/1263347/pexels-photo-1263347.jpeg", caption: "Piscine Chauffée", category: "aqua" },
+    
+    // Spa Category
+    { src: spaService, caption: "Royal Spa Entrance", category: "spa" },
     { src: spaHammam, caption: "Hammam Traditionnel", category: "spa" },
     { src: spaMassage, caption: "Salon de Massage", category: "spa" },
-    { src: snackHero, caption: "Mo'Snack", category: "snack" },
+    { src: "https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg", caption: "Salle de Relaxation", category: "spa" },
+    { src: "https://images.pexels.com/photos/3757941/pexels-photo-3757941.jpeg", caption: "Soins du Visage", category: "spa" },
+    { src: "https://images.pexels.com/photos/3757940/pexels-photo-3757940.jpeg", caption: "Espace Bien-être", category: "spa" },
+    { src: "https://images.pexels.com/photos/3757939/pexels-photo-3757939.jpeg", caption: "Salon de Beauté", category: "spa" },
+    
+    // Mo'Snack Category
+    { src: snackHero, caption: "Mo'Snack Restaurant", category: "snack" },
     { src: snackFood1, caption: "Cuisine Healthy", category: "snack" },
-    { src: kidsService, caption: "Espace Kids", category: "kids" },
-    { src: kidsGym, caption: "Gym Enfants", category: "kids" },
+    { src: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg", caption: "Smoothies Premium", category: "snack" },
+    { src: "https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg", caption: "Salades Fraîches", category: "snack" },
+    { src: "https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg", caption: "Boissons Énergisantes", category: "snack" },
+    { src: "https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg", caption: "Espace Restauration", category: "snack" },
+    
+    // Kids Category
+    { src: kidsService, caption: "Espace Kids Academy", category: "kids" },
+    { src: kidsGym, caption: "Gym pour Enfants", category: "kids" },
     { src: kidsFootball, caption: "Football Kids", category: "kids" },
+    { src: "https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg", caption: "Cours de Natation Enfants", category: "kids" },
+    { src: "https://images.pexels.com/photos/8613088/pexels-photo-8613088.jpeg", caption: "Activités Ludiques", category: "kids" },
+    { src: "https://images.pexels.com/photos/8613087/pexels-photo-8613087.jpeg", caption: "Jeux Éducatifs", category: "kids" },
   ];
 
   const categories = [
@@ -129,52 +161,6 @@ const Gallery = () => {
         </div>
       </section>
 
-      {/* Category Filter */}
-      <section className="py-8">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category) => (
-              <Button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`transition-all duration-300 flex items-center gap-2 ${
-                  selectedCategory === category.id 
-                    ? "bg-blue-600 text-white hover:bg-blue-700 shadow-lg border-blue-600" 
-                    : "bg-white/80 border-blue-300 text-blue-600 hover:bg-blue-600 hover:text-white hover:border-blue-600"
-                }`}
-              >
-                {category.icon}
-                <span>{category.name}</span>
-                {selectedCategory === category.id && filteredImages.length > 0 && (
-                  <span className="bg-white/20 px-2 py-1 rounded-full text-xs font-semibold">
-                    {filteredImages.length}
-                  </span>
-                )}
-              </Button>
-            ))}
-          </div>
-          
-          {/* Show active filter info */}
-          <div className="text-center mt-4">
-            {selectedCategory !== "all" ? (
-              <p className="text-slate-600">
-                Affichage de {filteredImages.length} photo{filteredImages.length > 1 ? 's' : ''} 
-                {selectedCategory === "fitness" && " de Fitness"}
-                {selectedCategory === "foot" && " de Foot à 5"}
-                {selectedCategory === "aqua" && " d'Aqua"}
-                {selectedCategory === "spa" && " de Spa"}
-                {selectedCategory === "snack" && " de Mo'Snack"}
-                {selectedCategory === "kids" && " de Kids"}
-              </p>
-            ) : (
-              <p className="text-slate-600">
-                Affichage de {filteredImages.length} photos au total
-              </p>
-            )}
-          </div>
-        </div>
-      </section>
-
       {/* Gallery Grid */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -186,6 +172,55 @@ const Gallery = () => {
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               Une visite virtuelle de nos installations premium
             </p>
+          </div>
+          
+          {/* Category Filter - Now under the title */}
+          <div className="mb-12">
+            <div className="flex flex-wrap justify-center gap-4 mb-6">
+              {categories.map((category) => (
+                <Button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  variant={selectedCategory === category.id ? "default" : "outline"}
+                  className={`transition-all duration-300 flex items-center gap-2 ${
+                    selectedCategory === category.id 
+                      ? "bg-blue-600 text-white hover:bg-blue-700 shadow-lg" 
+                      : "bg-white/80 border-blue-300 text-blue-600 hover:bg-blue-600 hover:text-white"
+                  }`}
+                >
+                  {category.icon}
+                  <span>{category.name}</span>
+                  {filteredImages.length > 0 && (
+                    <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
+                      selectedCategory === category.id 
+                        ? "bg-white/20 text-white" 
+                        : "bg-blue-100 text-blue-600"
+                    }`}>
+                      {filteredImages.length}
+                    </span>
+                  )}
+                </Button>
+              ))}
+            </div>
+            
+            {/* Show active filter info */}
+            <div className="text-center">
+              {selectedCategory !== "all" ? (
+                <p className="text-slate-600">
+                  Affichage de {filteredImages.length} photo{filteredImages.length > 1 ? 's' : ''} 
+                  {selectedCategory === "fitness" && " de Fitness"}
+                  {selectedCategory === "foot" && " de Foot à 5"}
+                  {selectedCategory === "aqua" && " d'Aqua"}
+                  {selectedCategory === "spa" && " de Spa"}
+                  {selectedCategory === "snack" && " de Mo'Snack"}
+                  {selectedCategory === "kids" && " de Kids"}
+                </p>
+              ) : (
+                <p className="text-slate-600">
+                  Affichage de {filteredImages.length} photos au total
+                </p>
+              )}
+            </div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
