@@ -329,13 +329,13 @@ const Index = () => {
       </AnimatedSection>
 
       {/* Services Section */}
-      <AnimatedSection className="py-20 bg-background">
+      <AnimatedSection className="py-20 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4 animate-fade-in">
               Nos Services Premium
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in stagger-2">
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto animate-fade-in stagger-2">
               Une gamme complète de services dans un environnement d'exception
             </p>
           </div>
