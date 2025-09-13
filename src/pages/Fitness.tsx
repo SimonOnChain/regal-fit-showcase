@@ -141,54 +141,6 @@ const Fitness = () => {
         </div>
       </section>
 
-      {/* Detail Cards Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="p-8 bg-white/70 border border-blue-300/30 rounded-lg shadow-lg animate-fade-in">
-              <div className="text-center">
-                <div className="mb-6 text-blue-600">
-                  <Dumbbell className="h-12 w-12 mx-auto" />
-                </div>
-                <h3 className="text-2xl font-serif font-bold text-slate-800 mb-4">
-                  Équipements Premium
-                </h3>
-                <p className="text-slate-700 leading-relaxed">
-                  Machines dernière génération et poids libres pour tous niveaux
-                </p>
-              </div>
-            </Card>
-
-            <Card className="p-8 bg-white/70 border border-blue-300/30 rounded-lg shadow-lg animate-fade-in" style={{ animationDelay: "0.15s" }}>
-              <div className="text-center">
-                <div className="mb-6 text-blue-600">
-                  <Users className="h-12 w-12 mx-auto" />
-                </div>
-                <h3 className="text-2xl font-serif font-bold text-slate-800 mb-4">
-                  Cours Collectifs
-                </h3>
-                <p className="text-slate-700 leading-relaxed">
-                  Plus de 20 cours par semaine animés par nos coachs experts
-                </p>
-              </div>
-            </Card>
-
-            <Card className="p-8 bg-white/70 border border-blue-300/30 rounded-lg shadow-lg animate-fade-in" style={{ animationDelay: "0.3s" }}>
-              <div className="text-center">
-                <div className="mb-6 text-blue-600">
-                  <Target className="h-12 w-12 mx-auto" />
-                </div>
-                <h3 className="text-2xl font-serif font-bold text-slate-800 mb-4">
-                  Coaching Personnel
-                </h3>
-                <p className="text-slate-700 leading-relaxed">
-                  Programmes sur-mesure avec suivi personnalisé de vos objectifs
-                </p>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>
