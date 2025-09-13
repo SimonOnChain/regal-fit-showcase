@@ -350,43 +350,6 @@ const Tarifs = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <Card className="p-6 text-center bg-white/70 border-blue-300/30 hover-scale animate-fade-in rounded-lg shadow-lg">
-              <Users className="h-8 w-8 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-serif font-bold text-slate-800 mb-2">
-                Communauté Exclusive
-              </h3>
-              <p className="text-slate-700 text-sm">
-                Rejoignez une communauté de passionnés de fitness et de bien-être
-              </p>
-            </Card>
-
-            <Card className="p-6 text-center bg-white/70 border-blue-300/30 hover-scale animate-fade-in rounded-lg shadow-lg" style={{ animationDelay: "0.2s" }}>
-              <Award className="h-8 w-8 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-serif font-bold text-slate-800 mb-2">
-                Coaching Premium
-              </h3>
-              <p className="text-slate-700 text-sm">
-                Bénéficiez d'un accompagnement personnalisé par nos experts
-              </p>
-            </Card>
-
-            <Card className="p-6 text-center bg-white/70 border-blue-300/30 hover-scale animate-fade-in rounded-lg shadow-lg" style={{ animationDelay: "0.4s" }}>
-              <Target className="h-8 w-8 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-serif font-bold text-slate-800 mb-2">
-                Résultats Garantis
-              </h3>
-              <p className="text-slate-700 text-sm">
-                Atteignez vos objectifs avec nos programmes personnalisés
-              </p>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* Spa Tariffs Modal */}
       {spaModalOpen && (
         <Dialog open={spaModalOpen} onOpenChange={closeSpaModal}>
