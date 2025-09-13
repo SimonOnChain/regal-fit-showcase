@@ -189,3 +189,5 @@ const Fitness = () => {
       </section>
 
 export default Fitness;
+  )
+}
