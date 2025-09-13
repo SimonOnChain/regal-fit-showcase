@@ -264,47 +264,47 @@ const Index = () => {
       </AnimatedSection>
 
       {/* Modern Glass Design Section */}
-      <AnimatedSection className="relative py-20 overflow-hidden">
+      <AnimatedSection className="relative py-20 overflow-hidden bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: `url(${fitnessHero})`
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-royal-blue/80 via-blue-600/70 to-royal-blue/80" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-100/60 via-blue-200/40 to-blue-300/60" />
         
         <div className="relative z-10 container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
-            <div className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-2xl p-8 md:p-12 shadow-2xl">
+            <div className="backdrop-blur-lg bg-white/30 border border-blue-300/30 rounded-2xl p-8 md:p-12 shadow-2xl">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {/* Left Content */}
                 <div className="space-y-8">
                   <div className="space-y-4">
-                    <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-wide text-white"
+                    <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-wide text-slate-800"
                         style={{ fontFamily: 'Montserrat, sans-serif' }}>
                       ROYAL FITNESS
                     </h2>
-                    <div className="bg-yellow-400 text-black px-6 py-2 text-xl font-bold uppercase tracking-wide inline-block"
+                    <div className="bg-blue-500 text-white px-6 py-2 text-xl font-bold uppercase tracking-wide inline-block"
                          style={{ fontFamily: 'Montserrat, sans-serif' }}>
                       1800 DH/AN
                     </div>
                   </div>
                   
-                  <div className="border-2 border-white p-6">
-                    <h3 className="text-2xl md:text-3xl font-bold uppercase text-white mb-4"
+                  <div className="border-2 border-slate-700 p-6">
+                    <h3 className="text-2xl md:text-3xl font-bold uppercase text-slate-800 mb-4"
                         style={{ fontFamily: 'Montserrat, sans-serif' }}>
                       RESTEZ EN FORME
                     </h3>
                   </div>
                   
-                  <div className="text-white text-lg">
+                  <div className="text-slate-800 text-lg">
                     <p className="font-bold">0535 521 528</p>
                   </div>
                 </div>
                 
                 {/* Right Content */}
-                <div className="space-y-6 text-white">
-                  <h3 className="text-2xl font-bold uppercase"
+                <div className="space-y-6 text-slate-700">
+                  <h3 className="text-2xl font-bold uppercase text-slate-800"
                       style={{ fontFamily: 'Montserrat, sans-serif' }}>
                     ROYAL FITNESS
                   </h3>
@@ -317,7 +317,7 @@ const Index = () => {
                     Rejoignez notre club de fitness et découvrez les bénéfices incroyables de ce programme d'entraînement unique et stimulant.
                   </p>
                   
-                  <button className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 text-lg font-bold uppercase tracking-wide transition-colors duration-300"
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg font-bold uppercase tracking-wide transition-colors duration-300"
                           style={{ fontFamily: 'Montserrat, sans-serif' }}>
                     <a href="/contact">DÉCOUVRIR</a>
                   </button>
