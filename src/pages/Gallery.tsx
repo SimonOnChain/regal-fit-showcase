@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
 import { Camera, Eye, Image } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 // Import all gallery images
 import fitnessService from "@/assets/fitness-service.jpg";
@@ -28,6 +29,7 @@ import kidsFootball from "@/assets/kids-football.jpg";
 const Gallery = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const navigate = useNavigate();
 
   const galleryImages = [
     { src: fitnessService, caption: "Espace Fitness", category: "fitness" },
@@ -232,8 +234,11 @@ const Gallery = () => {
             <p className="text-lg text-slate-700 mb-6">
               Visitez nos installations premium et découvrez l'excellence Royal Fitness.
             </p>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-all duration-300">
-              <a href="/contact" className="block w-full h-full">Nous contacter</a>
+            <Button 
+              onClick={() => navigate('/contact')}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-all duration-300"
+            >
+              Nous contacter
             </Button>
           </Card>
         </div>
