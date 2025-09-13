@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
 import { Calendar, Clock, Users, MapPin, Phone, Eye } from "lucide-react";
 import planningHero from "@/assets/planning-hero.jpg";
 import planningHommesMixtes from "@/assets/planning-hommes-mixtes.jpg";
@@ -219,14 +219,14 @@ const Plannings = () => {
         <Dialog open={!!selectedPlan} onOpenChange={closeModal}>
           <DialogContent className="max-w-4xl max-h-[90vh] p-2 overflow-hidden">
             <div className="relative">
-              <div className="mb-4 text-center border-b border-accent/20 pb-4">
-                <h2 className="text-2xl font-serif font-bold text-slate-800">
+              <DialogHeader>
+                <DialogTitle className="text-2xl font-serif font-bold text-slate-800 text-center border-b border-accent/20 pb-4 mb-4">
                   Planning {selectedPlan.label}
-                </h2>
-                <p className="text-slate-600">
+                </DialogTitle>
+                <DialogDescription className="text-slate-600 text-center">
                   {selectedPlan.description}
-                </p>
-              </div>
+                </DialogDescription>
+              </DialogHeader>
               <div className="max-h-[70vh] overflow-auto">
                 <img 
                   src={selectedPlan.imgSrc} 

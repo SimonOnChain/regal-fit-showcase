@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Star, Users, Award, Target } from "lucide-react";
 import tarifsHero from "@/assets/tarifs-hero.jpg";
 import tarifJournee from "@/assets/tarif-journee.jpg";
@@ -355,14 +355,16 @@ const Tarifs = () => {
         <Dialog open={spaModalOpen} onOpenChange={closeSpaModal}>
           <DialogContent className="max-w-4xl max-h-[90vh] p-2 overflow-hidden bg-royal/95 border-gold/30">
             <div className="relative">
-              <div className="mb-4 text-center border-b border-gold/30 pb-4">
-                <h2 className="text-2xl font-serif font-bold text-gold">
+              <DialogHeader>
+                <DialogTitle className="text-2xl font-serif font-bold text-gold text-center border-b border-gold/30 pb-4 mb-4">
                   Tarifs Mo'Spa
-                </h2>
-                <div className="inline-block bg-gold/10 text-gold px-3 py-1 rounded-full text-sm font-semibold mt-2">
-                  -15% pour les abonnés fitness
-                </div>
-              </div>
+                </DialogTitle>
+                <DialogDescription className="text-center">
+                  <div className="inline-block bg-gold/10 text-gold px-3 py-1 rounded-full text-sm font-semibold">
+                    -15% pour les abonnés fitness
+                  </div>
+                </DialogDescription>
+              </DialogHeader>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[70vh] overflow-auto">
                 <img 
                   src={spaTarifs1} 

@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
 import { MapPin, Phone, Clock } from "lucide-react";
 import snackHero from "@/assets/snack-hero.jpg";
 import snackMenu from "@/assets/snack-menu.jpg";
@@ -75,6 +75,10 @@ const MoSnack = () => {
               </DialogTrigger>
               <DialogContent className="max-w-4xl max-h-[90vh] p-0 overflow-hidden">
                 <div className="relative">
+                  <DialogHeader className="sr-only">
+                    <DialogTitle>Menu Mo'Snack</DialogTitle>
+                    <DialogDescription>Carte complète du restaurant Mo'Snack</DialogDescription>
+                  </DialogHeader>
                   <img 
                     src={snackMenu} 
                     alt="Menu Mo'Snack" 

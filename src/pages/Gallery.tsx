@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
 import { Camera, Eye, Image } from "lucide-react";
 
 // Import all gallery images
@@ -170,6 +170,10 @@ const Gallery = () => {
                 </DialogTrigger>
                 <DialogContent className="max-w-4xl max-h-[90vh] p-0 overflow-hidden">
                   <div className="relative">
+                    <DialogHeader className="sr-only">
+                      <DialogTitle>{image.caption}</DialogTitle>
+                      <DialogDescription>Image en plein écran de {image.caption}</DialogDescription>
+                    </DialogHeader>
                     <img 
                       src={image.src} 
                       alt={image.caption} 
