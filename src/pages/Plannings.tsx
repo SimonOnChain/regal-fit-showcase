@@ -177,43 +177,6 @@ const Plannings = () => {
         </div>
       </section>
 
-      {/* Info Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <Card className="p-6 text-center border border-blue-300/20 hover-scale bg-white/70 rounded-lg shadow-lg">
-              <Calendar className="h-8 w-8 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-serif font-bold text-slate-800 mb-2">
-                Plannings Mis à Jour
-              </h3>
-              <p className="text-slate-700 text-sm">
-                Consultez nos plannings régulièrement mis à jour pour ne rien manquer
-              </p>
-            </Card>
-
-            <Card className="p-6 text-center border border-blue-300/20 hover-scale bg-white/70 rounded-lg shadow-lg">
-              <Users className="h-8 w-8 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-serif font-bold text-slate-800 mb-2">
-                Cours Encadrés
-              </h3>
-              <p className="text-slate-700 text-sm">
-                Tous nos cours sont encadrés par des professionnels certifiés
-              </p>
-            </Card>
-
-            <Card className="p-6 text-center border border-blue-300/20 hover-scale bg-white/70 rounded-lg shadow-lg">
-              <Clock className="h-8 w-8 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-serif font-bold text-slate-800 mb-2">
-                Horaires Flexibles
-              </h3>
-              <p className="text-slate-700 text-sm">
-                Large amplitude horaire pour s'adapter à votre emploi du temps
-              </p>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* Modal for Planning Details */}
       {selectedPlan && (
         <Dialog open={!!selectedPlan} onOpenChange={closeModal}>
