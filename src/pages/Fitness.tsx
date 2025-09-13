@@ -60,31 +60,31 @@ const Fitness = () => {
       detailCards={detailCards}
     >
       {/* Additional Contact Section */}
-      <AnimatedSection className="py-16 bg-background">
+      <AnimatedSection className="py-16 bg-gradient-to-b from-blue-50 via-blue-100/50 to-blue-200/30">
         <div className="container mx-auto px-6">
           <AnimatedCard className="max-w-2xl mx-auto">
-            <Card className="p-8 border border-accent/20 gold-glow-hover">
+            <Card className="p-8 border border-blue-300/40 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300 bg-white/80 backdrop-blur-sm">
               <h3 className="text-2xl font-serif font-bold text-foreground mb-6 text-center">
                 Informations Fitness
               </h3>
               
               <div className="space-y-4">
                 <div className="flex items-center space-x-3 animate-fade-in stagger-1">
-                  <MapPin className="h-5 w-5 text-accent" />
+                  <MapPin className="h-5 w-5 text-blue-600" />
                   <span className="text-muted-foreground">
                     1841 Av. des FAR - Plaisance - MEKNES
                   </span>
                 </div>
                 
                 <div className="flex items-center space-x-3 animate-fade-in stagger-2">
-                  <Phone className="h-5 w-5 text-accent" />
+                  <Phone className="h-5 w-5 text-blue-600" />
                   <span className="text-muted-foreground">
                     0535 521 528
                   </span>
                 </div>
                 
                 <div className="flex items-center space-x-3 animate-fade-in stagger-3">
-                  <Clock className="h-5 w-5 text-accent" />
+                  <Clock className="h-5 w-5 text-blue-600" />
                   <span className="text-muted-foreground">
                     Lun-Dim: 6h00 - 23h00
                   </span>
@@ -92,7 +92,7 @@ const Fitness = () => {
               </div>
               
               <div className="mt-6 text-center animate-slide-up stagger-4">
-                <Button className="btn-gold gold-glow-hover">
+                <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg shadow-lg hover:shadow-blue-500/30 transition-all duration-300">
                   Réserver une séance
                 </Button>
               </div>
