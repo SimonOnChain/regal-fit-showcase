@@ -93,7 +93,7 @@ const Gallery = () => {
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-blue-600/80 via-blue-500/60 to-transparent"></div>
         
         <div className="relative z-10 flex items-center justify-center h-full max-w-7xl mx-auto px-6">
-          <h1 className="text-8xl md:text-9xl font-extrabold uppercase tracking-wider text-white animate-fade-in text-center"
+          <h1 className="text-8xl md:text-9xl font-extrabold uppercase tracking-wider text-white animate-fade-in text-center mx-auto"
               style={{ 
                 fontFamily: 'Montserrat, sans-serif',
                 fontWeight: 900,
@@ -130,24 +130,23 @@ const Gallery = () => {
       </section>
 
       {/* Category Filter */}
-      <section className="py-8 border-none shadow-none">
+      <section className="py-8">
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
               <Button
                 key={category.id}
-                variant={selectedCategory === category.id ? "default" : "outline"}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`transition-all duration-300 ${
+                className={`transition-all duration-300 flex items-center gap-2 ${
                   selectedCategory === category.id 
-                    ? "bg-blue-600 text-white hover:bg-blue-700 border-blue-600 shadow-lg" 
-                    : "border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white bg-white/70 hover:shadow-md"
+                    ? "bg-blue-600 text-white hover:bg-blue-700 shadow-lg border-blue-600" 
+                    : "bg-white/80 border-blue-300 text-blue-600 hover:bg-blue-600 hover:text-white hover:border-blue-600"
                 }`}
               >
                 {category.icon}
-                <span className="ml-2">{category.name}</span>
-                {selectedCategory !== "all" && selectedCategory === category.id && (
-                  <span className="ml-2 bg-white/20 px-2 py-1 rounded-full text-xs">
+                <span>{category.name}</span>
+                {selectedCategory === category.id && filteredImages.length > 0 && (
+                  <span className="bg-white/20 px-2 py-1 rounded-full text-xs font-semibold">
                     {filteredImages.length}
                   </span>
                 )}
@@ -156,8 +155,8 @@ const Gallery = () => {
           </div>
           
           {/* Show active filter info */}
-          {selectedCategory !== "all" && (
-            <div className="text-center mt-4">
+          <div className="text-center mt-4">
+            {selectedCategory !== "all" ? (
               <p className="text-slate-600">
                 Affichage de {filteredImages.length} photo{filteredImages.length > 1 ? 's' : ''} 
                 {selectedCategory === "fitness" && " de Fitness"}
@@ -167,8 +166,12 @@ const Gallery = () => {
                 {selectedCategory === "snack" && " de Mo'Snack"}
                 {selectedCategory === "kids" && " de Kids"}
               </p>
-            </div>
-          )}
+            ) : (
+              <p className="text-slate-600">
+                Affichage de {filteredImages.length} photos au total
+              </p>
+            )}
+          </div>
         </div>
       </section>
 
