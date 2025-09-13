@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CardContent } from "@/components/ui/card";
 import { MapPin, Phone, Clock } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import snackHero from "@/assets/snack-hero.jpg";
 import snackFood1 from "@/assets/snack-food-1.jpg";
 import snackFood2 from "@/assets/snack-food-2.jpg";
@@ -13,12 +14,21 @@ import snackAmbience1 from "@/assets/snack-ambience-1.jpg";
 
 const MoSnack = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
+  const navigate = useNavigate();
 
   const foodImages = [
     { src: snackFood1, caption: "Sandwich Gourmet", category: "food" },
     { src: snackFood2, caption: "Salade Fraîche", category: "food" },
     { src: snackFood3, caption: "Bowl Healthy", category: "food" },
     { src: snackAmbience1, caption: "Ambiance Conviviale", category: "ambience" },
+    { src: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg", caption: "Smoothies Premium", category: "drinks" },
+    { src: "https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg", caption: "Salades Fraîches", category: "food" },
+    { src: "https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg", caption: "Boissons Énergisantes", category: "drinks" },
+    { src: "https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg", caption: "Espace Restauration", category: "ambience" },
+    { src: "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg", caption: "Jus de Fruits Frais", category: "drinks" },
+    { src: "https://images.pexels.com/photos/1059905/pexels-photo-1059905.jpeg", caption: "Plats Healthy", category: "food" },
+    { src: "https://images.pexels.com/photos/1640771/pexels-photo-1640771.jpeg", caption: "Café Premium", category: "drinks" },
+    { src: "https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg", caption: "Wraps Nutritifs", category: "food" },
   ];
 
   const displayedImages = showAllPhotos ? foodImages : foodImages.slice(0, 3);
@@ -170,8 +180,11 @@ const MoSnack = () => {
             </div>
             
             <div className="mt-6 text-center">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-all duration-300">
-                <a href="/contact" className="block w-full h-full">Voir sur la carte</a>
+              <Button 
+                onClick={() => navigate('/contact')}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-all duration-300"
+              >
+                Voir sur la carte
               </Button>
             </div>
           </Card>
