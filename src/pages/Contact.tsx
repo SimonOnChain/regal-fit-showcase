@@ -76,7 +76,7 @@ const Contact = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-800/70 to-blue-900/80"></div>
         
         {/* Hero Content */}
-        <div className="relative z-10 flex items-center justify-center h-full text-center px-6">
+        <div className="relative z-10 flex items-center h-full max-w-7xl mx-auto px-6">
           <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
             <div className="flex items-center justify-center space-x-4 mb-4">
               <div className="w-12 h-0.5 bg-blue-300"></div>

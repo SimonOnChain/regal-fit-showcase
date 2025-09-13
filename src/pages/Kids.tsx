@@ -53,17 +53,15 @@ const Kids = () => {
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-blue-600/80 via-blue-500/60 to-transparent"></div>
         
         {/* Centered Title Only */}
-        <div className="relative z-10 flex items-center h-full text-left max-w-7xl mx-auto px-6">
-          <div className="text-left animate-fade-in">
-            <h1 className="text-8xl md:text-9xl font-extrabold uppercase tracking-wider text-white"
-                style={{ 
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontWeight: 900,
-                  textShadow: '0 8px 32px rgba(0, 0, 0, 0.5)'
-                }}>
-              KID'S ACADEMY
-            </h1>
-          </div>
+        <div className="relative z-10 flex items-center h-full max-w-7xl mx-auto px-6">
+          <h1 className="text-8xl md:text-9xl font-extrabold uppercase tracking-wider text-white animate-fade-in"
+              style={{ 
+                fontFamily: 'Montserrat, sans-serif',
+                fontWeight: 900,
+                textShadow: '0 8px 32px rgba(0, 0, 0, 0.5)'
+              }}>
+            KID'S ACADEMY
+          </h1>
         </div>
       </section>
 

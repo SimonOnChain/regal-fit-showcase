@@ -100,17 +100,15 @@ const Tarifs = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-royal/80 via-navy/70 to-royal/80"></div>
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-blue-600/80 via-blue-500/60 to-transparent"></div>
         
-        <div className="relative z-10 text-left text-white max-w-7xl mx-auto px-6">
-          <div className="space-y-8 animate-fade-in">
-            <h1 className="text-8xl md:text-9xl font-extrabold uppercase tracking-wider text-white animate-fade-in"
-                style={{ 
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontWeight: 900,
-                  textShadow: '0 8px 32px rgba(0, 0, 0, 0.5)'
-                }}>
-              NOS TARIFS
-            </h1>
-          </div>
+        <div className="relative z-10 flex items-center h-full max-w-7xl mx-auto px-6">
+          <h1 className="text-8xl md:text-9xl font-extrabold uppercase tracking-wider text-white animate-fade-in"
+              style={{ 
+                fontFamily: 'Montserrat, sans-serif',
+                fontWeight: 900,
+                textShadow: '0 8px 32px rgba(0, 0, 0, 0.5)'
+              }}>
+            NOS TARIFS
+          </h1>
         </div>
       </section>
 

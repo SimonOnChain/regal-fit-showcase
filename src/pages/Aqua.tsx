@@ -48,7 +48,7 @@ const Aqua = () => {
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-blue-600/80 via-blue-500/60 to-transparent"></div>
         
         {/* Centered Title Only */}
-        <div className="relative z-10 text-left max-w-7xl mx-auto px-6">
+        <div className="relative z-10 flex items-center h-full max-w-7xl mx-auto px-6">
           <h1 className="text-8xl md:text-9xl font-extrabold uppercase tracking-wider text-white animate-fade-in"
               style={{ 
                 fontFamily: 'Montserrat, sans-serif',
