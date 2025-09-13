@@ -229,7 +229,7 @@ const Tarifs = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto items-center">
             <div className="flex justify-center items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in group">
               <img 
-                src="/src/assets/image.png" 
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
                 alt="Hoist Fitness"
                 className="max-h-16 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
               />
@@ -237,7 +237,7 @@ const Tarifs = () => {
             
             <div className="flex justify-center items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in group" style={{ animationDelay: "0.1s" }}>
               <img 
-                src="/src/assets/image.png" 
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
                 alt="Bose"
                 className="max-h-16 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
               />
@@ -245,7 +245,7 @@ const Tarifs = () => {
             
             <div className="flex justify-center items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in group" style={{ animationDelay: "0.2s" }}>
               <img 
-                src="/src/assets/image.png" 
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
                 alt="LafargeHolcim"
                 className="max-h-16 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
               />
@@ -253,19 +253,12 @@ const Tarifs = () => {
             
             <div className="flex justify-center items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in group" style={{ animationDelay: "0.3s" }}>
               <img 
-                src="/src/assets/image.png" 
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
                 alt="InterPub"
                 className="max-h-16 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
               />
             </div>
             
-            <div className="flex justify-center items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in group col-span-2 md:col-span-1" style={{ animationDelay: "0.4s" }}>
-              <img 
-                src="/src/assets/image.png" 
-                alt="Guinot Institut Paris"
-                className="max-h-16 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-              />
-            </div>
           </div>
         </div>
       </section>
