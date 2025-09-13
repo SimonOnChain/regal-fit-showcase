@@ -39,43 +39,12 @@ const Fitness = () => {
       description: "Programmes sur-mesure avec suivi personnalisé de vos objectifs"
     }
   ];
-
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
   const handlePrimaryAction = () => {
     window.location.href = "/plannings";
-  };
+          <h1 className="text-8xl md:text-9xl font-serif font-bold text-white animate-fade-in">
 
   return (
-    <RoyalPageTemplate
-      heroImage={fitnessService}
-      title="Fitness"
-      subtitle="Dépassez vos limites"
-      description="Découvrez notre espace fitness premium avec équipements de pointe, cours collectifs variés et coaching personnalisé pour atteindre vos objectifs."
-      primaryCTA={{
-        text: "Voir les Plannings",
-        action: handlePrimaryAction
-      }}
-      galleryTitle="Notre Espace Fitness"
-      galleryDescription="Un environnement premium pour votre transformation physique"
-      images={images}
-      detailCards={detailCards}
-    >
-      {/* Additional Contact Section */}
-      <AnimatedSection className="py-16 bg-blue-100">
-        {/* Modern Blue Background with Gradient */}
-        <div className="absolute inset-0 bg-blue-100"></div>
-        
-        {/* Geometric Background Elements */}
-        <div className="absolute inset-0">
-          {/* Modern floating elements */}
-          <div className="absolute top-8 right-8 w-32 h-32 bg-blue-200/25 rounded-full blur-xl animate-float"></div>
-          <div className="absolute bottom-12 left-12 w-24 h-24 bg-blue-300/20 rounded-full blur-lg animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-          <div className="absolute top-1/3 left-1/3 w-16 h-16 bg-blue-400/18 rounded-full blur-md animate-bounce" style={{ animationDelay: '3s', animationDuration: '4s' }}></div>
-          
-          {/* Subtle background waves */}
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute w-full h-full bg-gradient-to-r from-transparent via-blue-400/25 to-transparent animate-pulse" style={{ animationDuration: '6s' }}></div>
-            <div className="absolute w-full h-full bg-gradient-to-l from-transparent via-blue-300/20 to-transparent animate-pulse" style={{ animationDelay: '3s', animationDuration: '8s' }}></div>
-          </div>
           
           {/* Geometric accents */}
           <div className="absolute top-1/4 right-1/4 w-20 h-20 border border-blue-400/25 rotate-45 animate-spin-slow"></div>
