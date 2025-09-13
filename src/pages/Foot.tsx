@@ -49,7 +49,6 @@ const Foot = () => {
         action: handlePrimaryAction
       }}
     </RoyalPageTemplate>
-  )
   );
 };
 
