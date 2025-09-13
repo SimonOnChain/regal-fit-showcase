@@ -282,6 +282,7 @@ const MenuItem = ({ item, index, isActive, onHover, onNavigate }: MenuItemProps)
         damping: 30,
       }}
       onMouseEnter={onHover}
+      onClick={() => onNavigate(item.id)}
     >
       <NoiseOverlay intensity={noiseIntensity} />
       
@@ -323,7 +324,7 @@ const MenuItem = ({ item, index, isActive, onHover, onNavigate }: MenuItemProps)
       {isActive && (
         <button
           onClick={() => onNavigate(item.id)}
-          className="absolute left-[45px] md:left-[65px] bottom-[25px] md:bottom-[41px] text-accent text-xs md:text-sm font-medium hover:text-accent/80 transition-colors cursor-pointer"
+          className="absolute left-[45px] md:left-[65px] bottom-[25px] md:bottom-[41px] text-white text-xs md:text-sm font-medium hover:text-white/80 transition-colors cursor-pointer"
           style={{
             opacity: isActive ? 1 : 0,
             transition: isActive
