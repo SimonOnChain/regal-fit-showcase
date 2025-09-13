@@ -103,7 +103,7 @@ const Gallery = () => {
       </section>
 
       {/* Category Filter */}
-      <section className="py-8 bg-navy">
+      <section className="py-8 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
@@ -111,7 +111,7 @@ const Gallery = () => {
                 key={category.id}
                 variant={selectedCategory === category.id ? "default" : "outline"}
                 onClick={() => setSelectedCategory(category.id)}
-                className={selectedCategory === category.id ? "btn-gold" : "border-gold text-gold hover:bg-gold hover:text-royal"}
+                className={selectedCategory === category.id ? "bg-blue-600 text-white hover:bg-blue-700" : "border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"}
               >
                 {category.icon}
                 <span className="ml-2">{category.name}</span>
