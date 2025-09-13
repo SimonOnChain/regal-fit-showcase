@@ -90,7 +90,7 @@ const Gallery = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-royal/80 via-navy/70 to-royal/80"></div>
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-blue-600/80 via-blue-500/60 to-transparent"></div>
         
-        <div className="relative z-10 flex items-center h-full max-w-7xl mx-auto px-6">
+        <div className="relative z-10 flex items-center justify-center h-full max-w-7xl mx-auto px-6">
           <h1 className="text-8xl md:text-9xl font-extrabold uppercase tracking-wider text-white animate-fade-in"
               style={{ 
                 fontFamily: 'Montserrat, sans-serif',
@@ -228,6 +228,9 @@ const Gallery = () => {
             <p className="text-lg text-slate-700 mb-6">
               Visitez nos installations premium et découvrez l'excellence Royal Fitness.
             </p>
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-all duration-300">
+              <a href="/contact" className="block w-full h-full">Nous contacter</a>
+            </Button>
           </Card>
         </div>
       </section>
