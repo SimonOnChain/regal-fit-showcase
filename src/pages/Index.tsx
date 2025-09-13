@@ -177,8 +177,6 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
             <div className="space-y-8">
-              <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-wide text-white"
-                  style={{ fontFamily: 'Montserrat, sans-serif' }}>
               <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-wide text-slate-800"
                   style={{ fontFamily: 'Montserrat, sans-serif' }}>
                 EXCELLENCE TRAINING
