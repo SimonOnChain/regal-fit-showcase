@@ -284,10 +284,20 @@ const MenuItem = ({ item, index, isActive, onHover, onNavigate }: MenuItemProps)
       onMouseEnter={onHover}
     >
       <NoiseOverlay intensity={noiseIntensity} />
+      
+      {/* Background Image */}
+      <div className="absolute inset-0 opacity-30">
+        <img
+          src={item.image}
+          alt={item.title}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
       
       <div className="absolute top-0 left-0 h-full p-3 md:p-6 z-10">
-        <div className="vertical-text rotate-180 text-white font-serif font-medium tracking-wide whitespace-nowrap text-xs md:text-sm">
+        <div className="vertical-text text-white font-serif font-medium tracking-wide whitespace-nowrap text-xs md:text-sm" style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}>
           {item.title}
         </div>
       </div>
