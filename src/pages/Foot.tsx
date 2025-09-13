@@ -16,6 +16,9 @@ const Foot = () => {
         text: "Réserver un terrain",
         action: handlePrimaryAction
       }}
+      images={[]}
+      galleryTitle="Galerie Photos"
+      galleryDescription="Découvrez nos installations"
     />
   );
 };
