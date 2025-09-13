@@ -122,14 +122,14 @@ const Gallery = () => {
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-20 bg-gradient-to-b from-royal to-navy">
+      <section className="py-20 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-gold mb-4">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
               Nos Espaces & Activités
             </h2>
-            <div className="w-24 h-1 bg-gradient-gold mx-auto mb-6"></div>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto">
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6"></div>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               Une visite virtuelle de nos installations premium
             </p>
           </div>
@@ -138,17 +138,17 @@ const Gallery = () => {
             {displayedImages.map((image, index) => (
               <Dialog key={index}>
                 <DialogTrigger asChild>
-                  <Card className="card-royal group overflow-hidden hover-scale cursor-pointer bg-royal/90 border-gold/30 animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                  <Card className="group overflow-hidden hover-scale cursor-pointer bg-white/70 border-blue-300/30 animate-fade-in rounded-lg shadow-lg" style={{ animationDelay: `${index * 0.1}s` }}>
                     <div className="relative">
                       <img 
                         src={image.src} 
                         alt={image.caption}
                         className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-royal via-transparent to-transparent opacity-60" />
-                      <div className="absolute inset-0 bg-gold/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-blue-900 via-transparent to-transparent opacity-60" />
+                      <div className="absolute inset-0 bg-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <span className="text-gold font-semibold text-lg">
+                        <span className="text-white font-semibold text-lg">
                           {image.caption}
                         </span>
                         <div className="flex items-center mt-2">
@@ -180,7 +180,7 @@ const Gallery = () => {
               <Button 
                 variant="outline" 
                 onClick={() => setShowAllPhotos(true)}
-                className="border-gold text-gold hover:bg-gold hover:text-royal"
+                className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
               >
                 Voir Plus ({filteredImages.length - 9} photos)
               </Button>
@@ -190,20 +190,20 @@ const Gallery = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-navy">
+      <section className="py-16 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
         <div className="container mx-auto px-6 text-center">
-          <Card className="card-royal max-w-2xl mx-auto p-8 bg-royal/90 border-gold/30">
-            <h3 className="text-2xl md:text-3xl font-serif font-bold text-gold mb-4">
+          <Card className="max-w-2xl mx-auto p-8 bg-white/70 border-blue-300/30 rounded-lg shadow-lg">
+            <h3 className="text-2xl md:text-3xl font-serif font-bold text-slate-800 mb-4">
               Venez Découvrir Royal Fitness
             </h3>
-            <p className="text-lg text-white/90 mb-6">
+            <p className="text-lg text-slate-700 mb-6">
               Visitez nos installations premium et découvrez l'excellence Royal Fitness.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="btn-gold shadow-glow hover:shadow-glow-intense transition-all duration-300">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-all duration-300">
                 <a href="/contact">Planifier une visite</a>
               </Button>
-              <Button variant="outline" className="border-gold text-gold hover:bg-gold hover:text-royal">
+              <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white">
                 <a href="/tarifs">Voir nos offres</a>
               </Button>
             </div>

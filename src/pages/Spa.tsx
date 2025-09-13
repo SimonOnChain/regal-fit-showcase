@@ -85,14 +85,14 @@ const Spa = () => {
       </section>
 
       {/* SPA Services Grid */}
-      <section className="py-20 bg-gradient-to-b from-royal to-navy">
+      <section className="py-20 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-gold mb-4">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
               Nos Services Premium
             </h2>
-            <div className="w-24 h-1 bg-gradient-gold mx-auto mb-6"></div>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto">
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6"></div>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               Découvrez notre gamme complète de soins et services wellness dans un cadre d'exception
             </p>
           </div>
@@ -101,7 +101,7 @@ const Spa = () => {
             {spaServices.map((service, index) => (
               <Card 
                 key={service.title} 
-                className="card-royal group bg-royal/90 border-gold/30 overflow-hidden hover:shadow-glow transition-all duration-500 hover:-translate-y-2 animate-fade-in"
+                className="group bg-white/70 border-blue-300/30 overflow-hidden hover:shadow-lg transition-all duration-500 hover:-translate-y-2 animate-fade-in rounded-lg shadow-lg"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative h-64 overflow-hidden">
@@ -110,15 +110,15 @@ const Spa = () => {
                     alt={service.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-royal via-transparent to-transparent opacity-60"></div>
-                  <div className="absolute inset-0 bg-gold/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900 via-transparent to-transparent opacity-60"></div>
+                  <div className="absolute inset-0 bg-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
                 
                 <CardContent className="p-6">
-                  <h3 className="text-2xl font-serif font-bold text-gold mb-4 border-b border-gold/30 pb-2">
+                  <h3 className="text-2xl font-serif font-bold text-slate-800 mb-4 border-b border-blue-300/30 pb-2">
                     {service.title}
                   </h3>
-                  <p className="text-white/90 leading-relaxed">
+                  <p className="text-slate-700 leading-relaxed">
                     {service.description}
                   </p>
                 </CardContent>

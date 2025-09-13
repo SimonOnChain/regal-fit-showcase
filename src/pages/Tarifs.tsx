@@ -111,14 +111,14 @@ const Tarifs = () => {
       </section>
 
       {/* Pricing Cards Grid */}
-      <section className="py-20 bg-gradient-to-b from-royal to-navy">
+      <section className="py-20 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-gold mb-4">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
               Nos Formules
             </h2>
-            <div className="w-24 h-1 bg-gradient-gold mx-auto mb-6"></div>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto">
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6"></div>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               Choisissez la formule qui vous convient le mieux
             </p>
           </div>
@@ -128,12 +128,12 @@ const Tarifs = () => {
               <Card 
                 key={plan.id} 
                 className={`card-royal group overflow-hidden hover-scale cursor-pointer transition-all duration-300 animate-fade-in bg-royal/90 border-gold/30 ${
-                  plan.popular ? 'border-2 border-gold shadow-glow' : ''
+                  plan.popular ? 'border-2 border-blue-600 shadow-lg' : 'bg-white/70 border-blue-300/30'
                 }`}
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 {plan.popular && (
-                  <div className="bg-gold text-royal text-center py-2 font-semibold">
+                  <div className="bg-blue-600 text-white text-center py-2 font-semibold">
                     ⭐ Plus Populaire
                   </div>
                 )}
@@ -144,11 +144,11 @@ const Tarifs = () => {
                     alt={plan.title}
                     className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-royal via-transparent to-transparent opacity-80" />
-                  <div className="absolute inset-0 bg-gold/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900 via-transparent to-transparent opacity-80" />
+                  <div className="absolute inset-0 bg-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 className="text-2xl font-serif font-bold text-gold mb-2">
+                    <h3 className="text-2xl font-serif font-bold text-white mb-2">
                       {plan.title}
                     </h3>
                     <p className="text-3xl font-bold mb-2">{plan.price}</p>
@@ -157,7 +157,7 @@ const Tarifs = () => {
                 </div>
                 
                 <div className="p-6">
-                  <Button className="btn-gold w-full text-lg py-3 shadow-glow hover:shadow-glow-intense transition-all duration-300">
+                  <Button className="bg-blue-600 hover:bg-blue-700 text-white w-full text-lg py-3 transition-all duration-300">
                     Sélectionner
                   </Button>
                 </div>
@@ -169,24 +169,24 @@ const Tarifs = () => {
           <div className="text-center mt-16">
             <Button 
               onClick={openSpaModal}
-              className="btn-gold text-lg px-8 py-4 shadow-glow hover:shadow-glow-intense transition-all duration-300"
+              className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-4 transition-all duration-300"
             >
               Voir Tarifs SPA
-              <span className="ml-2 bg-gold/20 px-2 py-1 rounded text-sm">-15% pour les abonnés</span>
+              <span className="ml-2 bg-blue-500/20 px-2 py-1 rounded text-sm">-15% pour les abonnés</span>
             </Button>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-navy">
+      <section className="py-20 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-gold mb-4">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
               Témoignages
             </h2>
-            <div className="w-24 h-1 bg-gradient-gold mx-auto mb-6"></div>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto">
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6"></div>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               Découvrez ce que nos membres pensent de leur expérience Royal Fitness
             </p>
           </div>
@@ -195,28 +195,28 @@ const Tarifs = () => {
             {testimonials.map((testimonial, index) => (
               <Card 
                 key={index} 
-                className="card-royal p-6 text-center hover-scale bg-royal/90 border-gold/30 animate-fade-in"
+                className="p-6 text-center hover-scale bg-white/70 border-blue-300/30 animate-fade-in rounded-lg shadow-lg"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 <div className="relative mb-6">
                   <img 
                     src={testimonial.image} 
                     alt={testimonial.name}
-                    className="w-20 h-20 rounded-full mx-auto object-cover border-4 border-gold"
+                    className="w-20 h-20 rounded-full mx-auto object-cover border-4 border-blue-600"
                   />
                 </div>
                 
                 <div className="flex justify-center mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-gold fill-current" />
+                    <Star key={i} className="h-5 w-5 text-blue-600 fill-current" />
                   ))}
                 </div>
                 
-                <p className="text-white/90 italic mb-4 leading-relaxed">
+                <p className="text-slate-700 italic mb-4 leading-relaxed">
                   "{testimonial.text}"
                 </p>
                 
-                <h4 className="text-xl font-serif font-bold text-gold">
+                <h4 className="text-xl font-serif font-bold text-slate-800">
                   {testimonial.name}
                 </h4>
               </Card>
@@ -226,35 +226,35 @@ const Tarifs = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-gradient-to-b from-royal to-navy">
+      <section className="py-16 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <Card className="card-royal p-6 text-center bg-royal/90 border-gold/30 hover-scale animate-fade-in">
-              <Users className="h-8 w-8 text-gold mx-auto mb-4" />
-              <h3 className="text-xl font-serif font-bold text-gold mb-2">
+            <Card className="p-6 text-center bg-white/70 border-blue-300/30 hover-scale animate-fade-in rounded-lg shadow-lg">
+              <Users className="h-8 w-8 text-blue-600 mx-auto mb-4" />
+              <h3 className="text-xl font-serif font-bold text-slate-800 mb-2">
                 Communauté Exclusive
               </h3>
-              <p className="text-white/90 text-sm">
+              <p className="text-slate-700 text-sm">
                 Rejoignez une communauté de passionnés de fitness et de bien-être
               </p>
             </Card>
 
-            <Card className="card-royal p-6 text-center bg-royal/90 border-gold/30 hover-scale animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <Award className="h-8 w-8 text-gold mx-auto mb-4" />
-              <h3 className="text-xl font-serif font-bold text-gold mb-2">
+            <Card className="p-6 text-center bg-white/70 border-blue-300/30 hover-scale animate-fade-in rounded-lg shadow-lg" style={{ animationDelay: "0.2s" }}>
+              <Award className="h-8 w-8 text-blue-600 mx-auto mb-4" />
+              <h3 className="text-xl font-serif font-bold text-slate-800 mb-2">
                 Coaching Premium
               </h3>
-              <p className="text-white/90 text-sm">
+              <p className="text-slate-700 text-sm">
                 Bénéficiez d'un accompagnement personnalisé par nos experts
               </p>
             </Card>
 
-            <Card className="card-royal p-6 text-center bg-royal/90 border-gold/30 hover-scale animate-fade-in" style={{ animationDelay: "0.4s" }}>
-              <Target className="h-8 w-8 text-gold mx-auto mb-4" />
-              <h3 className="text-xl font-serif font-bold text-gold mb-2">
+            <Card className="p-6 text-center bg-white/70 border-blue-300/30 hover-scale animate-fade-in rounded-lg shadow-lg" style={{ animationDelay: "0.4s" }}>
+              <Target className="h-8 w-8 text-blue-600 mx-auto mb-4" />
+              <h3 className="text-xl font-serif font-bold text-slate-800 mb-2">
                 Résultats Garantis
               </h3>
-              <p className="text-white/90 text-sm">
+              <p className="text-slate-700 text-sm">
                 Atteignez vos objectifs avec nos programmes personnalisés
               </p>
             </Card>

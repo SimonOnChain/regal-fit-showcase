@@ -54,23 +54,23 @@ const Aqua = () => {
       detailCards={detailCards}
     >
       {/* Additional Info Section */}
-      <section className="py-16 bg-secondary/10">
+      <section className="py-16 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <Card className="p-8 border border-accent/20">
-              <h3 className="text-2xl font-serif font-bold text-foreground mb-4">
+              <h3 className="text-2xl font-serif font-bold text-slate-800 mb-4">
                 Natation
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-slate-700 leading-relaxed">
                 Le MOTIV' CLUB met à votre disposition deux piscines semi-olympiques chauffées pour la pratique de la natation. Que vous soyez débutant ou nageur confirmé, nos bassins offrent un environnement idéal pour votre entraînement. L'eau maintenue à température optimale garantit un confort maximal pour vos séances.
               </p>
             </Card>
             
             <Card className="p-8 border border-accent/20">
-              <h3 className="text-2xl font-serif font-bold text-foreground mb-4">
+              <h3 className="text-2xl font-serif font-bold text-slate-800 mb-4">
                 Aquagym
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-slate-700 leading-relaxed">
                 Le MOTIV' CLUB propose des cours collectifs d'aqua gym dans nos piscines semi-olympiques chauffées. Cette activité aquatique combine fitness et plaisir dans un environnement aquatique sécurisé. Nos séances d'aqua gym permettent de travailler l'ensemble du corps en douceur grâce à la résistance naturelle de l'eau.
               </p>
             </Card>
@@ -79,31 +79,31 @@ const Aqua = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
         <div className="container mx-auto px-6">
           <Card className="max-w-2xl mx-auto p-8 border border-accent/20">
-            <h3 className="text-2xl font-serif font-bold text-foreground mb-6 text-center">
+            <h3 className="text-2xl font-serif font-bold text-slate-800 mb-6 text-center">
               Informations Aqua
             </h3>
             
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-accent" />
-                <span className="text-muted-foreground">
+                <span className="text-slate-700">
                   1841 Av. des FAR - Plaisance - MEKNES
                 </span>
               </div>
               
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-accent" />
-                <span className="text-muted-foreground">
+                <span className="text-slate-700">
                   0535 521 528
                 </span>
               </div>
               
               <div className="flex items-center space-x-3">
                 <Clock className="h-5 w-5 text-accent" />
-                <span className="text-muted-foreground">
+                <span className="text-slate-700">
                   Lun-Dim: 9h00 - 20h00
                 </span>
               </div>

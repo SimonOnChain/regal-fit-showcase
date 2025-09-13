@@ -102,13 +102,13 @@ const Plannings = () => {
       </section>
 
       {/* Planning Cards Grid Section */}
-      <section className="py-20 bg-gradient-to-b from-background to-secondary/20">
+      <section className="py-20 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
               Nos Plannings
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               Choisissez votre planning selon vos préférences et votre emploi du temps
             </p>
           </div>
@@ -117,7 +117,7 @@ const Plannings = () => {
             {planningCards.map((plan, index) => (
               <Card 
                 key={plan.id} 
-                className="group overflow-hidden hover-scale cursor-pointer border-2 border-transparent hover:border-accent/50 transition-all duration-300 animate-fade-in"
+                className="group overflow-hidden hover-scale cursor-pointer border-2 border-transparent hover:border-blue-500/50 transition-all duration-300 animate-fade-in bg-white/70 rounded-lg shadow-lg"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="relative">
@@ -130,7 +130,7 @@ const Plannings = () => {
                   
                   {/* Category Badge */}
                   <div className="absolute top-4 left-4">
-                    <span className="bg-accent/90 backdrop-blur-sm text-primary px-3 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-blue-600/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-semibold">
                       {plan.category.charAt(0).toUpperCase() + plan.category.slice(1)}
                     </span>
                   </div>
@@ -138,7 +138,7 @@ const Plannings = () => {
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <Button 
-                      className="btn-gold"
+                      className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg"
                       onClick={() => openModal(plan)}
                     >
                       <Eye className="h-4 w-4 mr-2" />
@@ -148,15 +148,15 @@ const Plannings = () => {
                 </div>
                 
                 <div className="p-6">
-                  <h3 className="text-xl font-serif font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
+                  <h3 className="text-xl font-serif font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">
                     {plan.label}
                   </h3>
-                  <p className="text-muted-foreground text-sm mb-4">
+                  <p className="text-slate-600 text-sm mb-4">
                     {plan.description}
                   </p>
                   <Button 
                     variant="outline" 
-                    className="w-full border-accent text-accent hover:bg-accent hover:text-white"
+                    className="w-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
                     onClick={() => openModal(plan)}
                   >
                     Consulter
@@ -169,35 +169,35 @@ const Plannings = () => {
       </section>
 
       {/* Info Section */}
-      <section className="py-16 bg-secondary/10">
+      <section className="py-16 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <Card className="p-6 text-center border border-accent/20 hover-scale">
-              <Calendar className="h-8 w-8 text-accent mx-auto mb-4" />
-              <h3 className="text-xl font-serif font-bold text-foreground mb-2">
+            <Card className="p-6 text-center border border-blue-300/20 hover-scale bg-white/70 rounded-lg shadow-lg">
+              <Calendar className="h-8 w-8 text-blue-600 mx-auto mb-4" />
+              <h3 className="text-xl font-serif font-bold text-slate-800 mb-2">
                 Plannings Mis à Jour
               </h3>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-slate-700 text-sm">
                 Consultez nos plannings régulièrement mis à jour pour ne rien manquer
               </p>
             </Card>
 
-            <Card className="p-6 text-center border border-accent/20 hover-scale">
-              <Users className="h-8 w-8 text-accent mx-auto mb-4" />
-              <h3 className="text-xl font-serif font-bold text-foreground mb-2">
+            <Card className="p-6 text-center border border-blue-300/20 hover-scale bg-white/70 rounded-lg shadow-lg">
+              <Users className="h-8 w-8 text-blue-600 mx-auto mb-4" />
+              <h3 className="text-xl font-serif font-bold text-slate-800 mb-2">
                 Cours Encadrés
               </h3>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-slate-700 text-sm">
                 Tous nos cours sont encadrés par des professionnels certifiés
               </p>
             </Card>
 
-            <Card className="p-6 text-center border border-accent/20 hover-scale">
-              <Clock className="h-8 w-8 text-accent mx-auto mb-4" />
-              <h3 className="text-xl font-serif font-bold text-foreground mb-2">
+            <Card className="p-6 text-center border border-blue-300/20 hover-scale bg-white/70 rounded-lg shadow-lg">
+              <Clock className="h-8 w-8 text-blue-600 mx-auto mb-4" />
+              <h3 className="text-xl font-serif font-bold text-slate-800 mb-2">
                 Horaires Flexibles
               </h3>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-slate-700 text-sm">
                 Large amplitude horaire pour s'adapter à votre emploi du temps
               </p>
             </Card>
@@ -211,10 +211,10 @@ const Plannings = () => {
           <DialogContent className="max-w-4xl max-h-[90vh] p-2 overflow-hidden">
             <div className="relative">
               <div className="mb-4 text-center border-b border-accent/20 pb-4">
-                <h2 className="text-2xl font-serif font-bold text-foreground">
+                <h2 className="text-2xl font-serif font-bold text-slate-800">
                   Planning {selectedPlan.label}
                 </h2>
-                <p className="text-muted-foreground">
+                <p className="text-slate-600">
                   {selectedPlan.description}
                 </p>
               </div>

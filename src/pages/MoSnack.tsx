@@ -79,14 +79,14 @@ const MoSnack = () => {
       </section>
 
       {/* Image Gallery Section */}
-      <section className="py-20 bg-gradient-to-b from-royal to-navy">
+      <section className="py-20 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-gold mb-4">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
               Découvrez Mo'Snack
             </h2>
-            <div className="w-24 h-1 bg-gradient-gold mx-auto mb-6"></div>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto">
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6"></div>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               Une expérience culinaire unique alliant saveur, santé et convivialité
             </p>
           </div>
@@ -95,7 +95,7 @@ const MoSnack = () => {
             {displayedImages.map((image, index) => (
               <Card 
                 key={index} 
-                className="card-royal group overflow-hidden hover-scale cursor-pointer bg-royal/90 border-gold/30 animate-fade-in"
+                className="group overflow-hidden hover-scale cursor-pointer bg-white/70 border-blue-300/30 animate-fade-in rounded-lg shadow-lg"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative">
@@ -104,10 +104,10 @@ const MoSnack = () => {
                     alt={image.caption}
                     className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-royal via-transparent to-transparent opacity-60" />
-                  <div className="absolute inset-0 bg-gold/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900 via-transparent to-transparent opacity-60" />
+                  <div className="absolute inset-0 bg-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-gold font-semibold text-lg">
+                    <span className="text-white font-semibold text-lg">
                       {image.caption}
                     </span>
                   </div>
@@ -121,7 +121,7 @@ const MoSnack = () => {
               <Button 
                 variant="outline" 
                 onClick={() => setShowAllPhotos(true)}
-                className="border-gold text-gold hover:bg-gold hover:text-royal"
+                className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
               >
                 Voir Plus
               </Button>
@@ -131,38 +131,38 @@ const MoSnack = () => {
       </section>
 
       {/* Contact Card */}
-      <section className="py-16 bg-navy">
+      <section className="py-16 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
         <div className="container mx-auto px-6">
-          <Card className="card-royal max-w-2xl mx-auto p-8 bg-royal/90 border-gold/30">
-            <h3 className="text-2xl font-serif font-bold text-gold mb-6 text-center">
+          <Card className="max-w-2xl mx-auto p-8 bg-white/70 border-blue-300/30 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-serif font-bold text-slate-800 mb-6 text-center">
               Où nous trouver
             </h3>
             
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-gold" />
-                <span className="text-white/90">
+                <MapPin className="h-5 w-5 text-blue-600" />
+                <span className="text-slate-700">
                   1841 Av. des FAR - Plaisance - MEKNES
                 </span>
               </div>
               
               <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-gold" />
-                <span className="text-white/90">
+                <Phone className="h-5 w-5 text-blue-600" />
+                <span className="text-slate-700">
                   0535 521 528
                 </span>
               </div>
               
               <div className="flex items-center space-x-3">
-                <Clock className="h-5 w-5 text-gold" />
-                <span className="text-white/90">
+                <Clock className="h-5 w-5 text-blue-600" />
+                <span className="text-slate-700">
                   Ouvert tous les jours de 8h à 22h
                 </span>
               </div>
             </div>
             
             <div className="mt-6 text-center">
-              <Button className="btn-gold shadow-glow hover:shadow-glow-intense transition-all duration-300">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-all duration-300">
                 Voir sur la carte
               </Button>
             </div>
