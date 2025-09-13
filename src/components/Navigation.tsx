@@ -55,8 +55,20 @@ const Navigation = () => {
     { name: "Nos Tarifs", href: "/tarifs" },
   ];
 
-  const handleDropdownToggle = (itemName: string) => {
-    setActiveDropdown(activeDropdown === itemName ? null : itemName);
+  // Improved dropdown state management
+  const handleDropdownEnter = (itemName: string) => {
+    setActiveDropdown(itemName);
+  };
+
+  const handleDropdownLeave = () => {
+    // Small delay to allow moving between dropdown and trigger
+    setTimeout(() => {
+      setActiveDropdown(null);
+    }, 150);
+  };
+
+  const handleDropdownStay = (itemName: string) => {
+    setActiveDropdown(itemName);
   };
 
   return (
@@ -82,8 +94,8 @@ const Navigation = () => {
                   {item.dropdown ? (
                     <div 
                       className="relative"
-                      onMouseEnter={() => setActiveDropdown(item.name)}
-                      onMouseLeave={() => setTimeout(() => setActiveDropdown(null), 150)}
+                      onMouseEnter={() => handleDropdownEnter(item.name)}
+                      onMouseLeave={handleDropdownLeave}
                     >
                       <button
                         className={`nav-link-premium text-white hover:text-blue-200 transition-all duration-300 font-bold text-sm uppercase tracking-widest px-3 py-2 fade-slide-in stagger-${index + 1} flex items-center gap-1`}
@@ -96,8 +108,8 @@ const Navigation = () => {
                       {activeDropdown === item.name && (
                         <div 
                           className="dropdown-menu absolute top-full left-0 mt-1 w-48 py-2 z-50 animate-slide-down"
-                          onMouseEnter={() => setActiveDropdown(item.name)}
-                          onMouseLeave={() => setTimeout(() => setActiveDropdown(null), 100)}
+                          onMouseEnter={() => handleDropdownStay(item.name)}
+                          onMouseLeave={handleDropdownLeave}
                         >
                           {item.dropdown.map((dropdownItem) => (
                             <a
