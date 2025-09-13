@@ -29,6 +29,20 @@ const MoSnack = () => {
     { src: "https://images.pexels.com/photos/1059905/pexels-photo-1059905.jpeg", caption: "Plats Healthy", category: "food" },
     { src: "https://images.pexels.com/photos/1640771/pexels-photo-1640771.jpeg", caption: "Café Premium", category: "drinks" },
     { src: "https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg", caption: "Wraps Nutritifs", category: "food" },
+    { src: "https://images.pexels.com/photos/1199957/pexels-photo-1199957.jpeg", caption: "Burger Végétarien", category: "food" },
+    { src: "https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg", caption: "Smoothie Bowl", category: "drinks" },
+    { src: "https://images.pexels.com/photos/1640770/pexels-photo-1640770.jpeg", caption: "Salade de Quinoa", category: "food" },
+    { src: "https://images.pexels.com/photos/1640769/pexels-photo-1640769.jpeg", caption: "Jus Détox", category: "drinks" },
+    { src: "https://images.pexels.com/photos/1640768/pexels-photo-1640768.jpeg", caption: "Wrap Avocat", category: "food" },
+    { src: "https://images.pexels.com/photos/1640767/pexels-photo-1640767.jpeg", caption: "Café Latte", category: "drinks" },
+    { src: "https://images.pexels.com/photos/1640766/pexels-photo-1640766.jpeg", caption: "Salade César", category: "food" },
+    { src: "https://images.pexels.com/photos/1640765/pexels-photo-1640765.jpeg", caption: "Smoothie Protéiné", category: "drinks" },
+    { src: "https://images.pexels.com/photos/1640764/pexels-photo-1640764.jpeg", caption: "Sandwich Club", category: "food" },
+    { src: "https://images.pexels.com/photos/1640763/pexels-photo-1640763.jpeg", caption: "Thé Glacé", category: "drinks" },
+    { src: "https://images.pexels.com/photos/1640762/pexels-photo-1640762.jpeg", caption: "Bowl Açaï", category: "food" },
+    { src: "https://images.pexels.com/photos/1640761/pexels-photo-1640761.jpeg", caption: "Eau Infusée", category: "drinks" },
+    { src: "https://images.pexels.com/photos/1640760/pexels-photo-1640760.jpeg", caption: "Panini Grillé", category: "food" },
+    { src: "https://images.pexels.com/photos/1640759/pexels-photo-1640759.jpeg", caption: "Milkshake Fruits", category: "drinks" },
   ];
 
   const displayedImages = showAllPhotos ? foodImages : foodImages.slice(0, 3);
@@ -139,7 +153,8 @@ const MoSnack = () => {
               <Button 
                 variant="outline" 
                 onClick={() => setShowAllPhotos(true)}
-                className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 px-6 py-3 cursor-pointer"
+                className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 px-8 py-4 text-lg font-semibold cursor-pointer shadow-lg hover:shadow-xl"
+                style={{ pointerEvents: 'auto' }}
               >
                 Voir Plus
               </Button>
@@ -151,7 +166,8 @@ const MoSnack = () => {
               <Button 
                 variant="outline" 
                 onClick={() => setShowAllPhotos(false)}
-                className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 px-6 py-3 cursor-pointer"
+                className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 px-8 py-4 text-lg font-semibold cursor-pointer shadow-lg hover:shadow-xl"
+                style={{ pointerEvents: 'auto' }}
               >
                 Voir Moins
               </Button>
