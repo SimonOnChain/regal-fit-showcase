@@ -420,18 +420,23 @@
 
   /* Dropdown Menu Styles */
   .dropdown-menu {
-    @apply bg-card border border-border/50 rounded-lg shadow-elegant backdrop-blur-md;
-    background: linear-gradient(135deg, hsl(220 50% 18%) 0%, hsl(220 60% 22%) 100%);
+    @apply bg-slate-800/95 border border-white/20 rounded-lg shadow-2xl backdrop-blur-md;
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(51, 65, 85, 0.95) 100%);
     animation: fadeSlideDown 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    /* Add padding to create hover buffer zone */
+    padding: 4px;
+    margin-top: -2px;
   }
 
   .dropdown-item {
-    @apply px-4 py-3 text-foreground hover:text-white transition-all duration-200 cursor-pointer;
+    @apply text-white/90 hover:text-white transition-all duration-200 cursor-pointer rounded-md;
+    padding: 12px 16px;
+    margin: 2px 0;
   }
 
   .dropdown-item:hover {
-    background: linear-gradient(135deg, hsl(var(--royal-blue-hover)), hsl(var(--royal-blue-light)));
-    transform: translateX(4px);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(96, 165, 250, 0.2));
+    transform: translateX(2px);
   }
 
   @keyframes fadeSlideDown {

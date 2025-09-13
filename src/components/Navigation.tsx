@@ -83,7 +83,7 @@ const Navigation = () => {
                     <div 
                       className="relative"
                       onMouseEnter={() => setActiveDropdown(item.name)}
-                      onMouseLeave={() => setActiveDropdown(null)}
+                      onMouseLeave={() => setTimeout(() => setActiveDropdown(null), 150)}
                     >
                       <button
                         className={`nav-link-premium text-white hover:text-blue-200 transition-all duration-300 font-bold text-sm uppercase tracking-widest px-3 py-2 fade-slide-in stagger-${index + 1} flex items-center gap-1`}
@@ -94,12 +94,16 @@ const Navigation = () => {
                           style={{ transform: activeDropdown === item.name ? 'rotate(180deg)' : 'rotate(0deg)' }} />
                       </button>
                       {activeDropdown === item.name && (
-                        <div className="dropdown-menu absolute top-full left-0 mt-2 w-48 py-2 z-50 animate-slide-down">
+                        <div 
+                          className="dropdown-menu absolute top-full left-0 mt-1 w-48 py-2 z-50 animate-slide-down"
+                          onMouseEnter={() => setActiveDropdown(item.name)}
+                          onMouseLeave={() => setTimeout(() => setActiveDropdown(null), 100)}
+                        >
                           {item.dropdown.map((dropdownItem) => (
                             <a
                               key={dropdownItem.name}
                               href={dropdownItem.href}
-                              className="dropdown-item block"
+                              className="dropdown-item block px-4 py-3 hover:bg-blue-500/20 transition-all duration-200"
                             >
                               {dropdownItem.name}
                             </a>
