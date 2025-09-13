@@ -44,7 +44,7 @@ const Spa = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-royal">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
       <Navigation />
       
       {/* Hero Section */}
@@ -85,7 +85,7 @@ const Spa = () => {
       </section>
 
       {/* SPA Services Grid */}
-      <section className="py-20 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
+      <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">

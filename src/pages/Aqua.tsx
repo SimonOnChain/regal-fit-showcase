@@ -54,7 +54,7 @@ const Aqua = () => {
       detailCards={detailCards}
     >
       {/* Additional Info Section */}
-      <section className="py-16 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
+      <section className="py-16">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <Card className="p-8 border border-accent/20">
@@ -79,7 +79,7 @@ const Aqua = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
+      <section className="py-16">
         <div className="container mx-auto px-6">
           <Card className="max-w-2xl mx-auto p-8 border border-accent/20">
             <h3 className="text-2xl font-serif font-bold text-slate-800 mb-6 text-center">

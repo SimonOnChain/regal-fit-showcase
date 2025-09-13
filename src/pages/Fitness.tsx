@@ -60,7 +60,7 @@ const Fitness = () => {
       detailCards={detailCards}
     >
       {/* Additional Contact Section */}
-      <AnimatedSection className="py-16 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
+      <AnimatedSection className="py-16">
         {/* Modern Blue Background with Gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-100/60 via-blue-200/40 to-blue-300/60"></div>
         

@@ -76,7 +76,7 @@ const Tarifs = () => {
   const closeSpaModal = () => setSpaModalOpen(false);
 
   return (
-    <div className="min-h-screen bg-gradient-royal">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
       <Navigation />
       
       {/* Hero Pricing Section */}
@@ -111,7 +111,7 @@ const Tarifs = () => {
       </section>
 
       {/* Pricing Cards Grid */}
-      <section className="py-20 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
+      <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
@@ -179,7 +179,7 @@ const Tarifs = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
+      <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
@@ -226,7 +226,7 @@ const Tarifs = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
+      <section className="py-16">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <Card className="p-6 text-center bg-white/70 border-blue-300/30 hover-scale animate-fade-in rounded-lg shadow-lg">

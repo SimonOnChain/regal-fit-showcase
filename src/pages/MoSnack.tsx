@@ -25,7 +25,7 @@ const MoSnack = () => {
   const displayedImages = showAllPhotos ? foodImages : foodImages.slice(0, 3);
 
   return (
-    <div className="min-h-screen bg-gradient-royal">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
       <Navigation />
       
       {/* Hero Section */}
@@ -79,7 +79,7 @@ const MoSnack = () => {
       </section>
 
       {/* Image Gallery Section */}
-      <section className="py-20 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
+      <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
@@ -131,7 +131,7 @@ const MoSnack = () => {
       </section>
 
       {/* Contact Card */}
-      <section className="py-16 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
+      <section className="py-16">
         <div className="container mx-auto px-6">
           <Card className="max-w-2xl mx-auto p-8 bg-white/70 border-blue-300/30 rounded-lg shadow-lg">
             <h3 className="text-2xl font-serif font-bold text-slate-800 mb-6 text-center">

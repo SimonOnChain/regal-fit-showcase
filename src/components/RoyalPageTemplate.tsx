@@ -113,7 +113,7 @@ const RoyalPageTemplate = ({
       </section>
 
       {/* Image Gallery Section */}
-      <AnimatedSection className="py-20 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
+      <AnimatedSection className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4 animate-fade-in">
@@ -166,7 +166,7 @@ const RoyalPageTemplate = ({
 
       {/* Detail Cards Section */}
       {detailCards && (
-        <AnimatedSection className="py-16 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
+        <AnimatedSection className="py-16">
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {detailCards.map((card, index) => (
