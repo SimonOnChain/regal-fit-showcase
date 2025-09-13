@@ -113,12 +113,13 @@ const RoyalPageTemplate = ({
       </section>
 
       {/* Image Gallery Section */}
-      <AnimatedSection className="py-20">
+      <AnimatedSection className="py-20 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4 animate-fade-in">
               {galleryTitle}
             </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6"></div>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto animate-fade-in stagger-2">
               {galleryDescription}
             </p>
