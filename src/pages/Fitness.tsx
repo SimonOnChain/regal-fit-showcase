@@ -150,6 +150,7 @@ const Fitness = () => {
       
       <Footer />
     </RoyalPageTemplate>
+  )
   );
 };
 
