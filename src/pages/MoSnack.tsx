@@ -139,9 +139,9 @@ const MoSnack = () => {
               <Button 
                 variant="outline" 
                 onClick={() => setShowAllPhotos(true)}
-                className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white cursor-pointer transition-all duration-300 px-6 py-3"
+                className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 px-6 py-3 cursor-pointer"
               >
-                Voir Plus ({foodImages.length - 3} photos supplémentaires)
+                Voir Plus
               </Button>
             </div>
           )}
@@ -151,7 +151,7 @@ const MoSnack = () => {
               <Button 
                 variant="outline" 
                 onClick={() => setShowAllPhotos(false)}
-                className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white cursor-pointer transition-all duration-300 px-6 py-3"
+                className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 px-6 py-3 cursor-pointer"
               >
                 Voir Moins
               </Button>
