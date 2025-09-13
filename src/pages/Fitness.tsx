@@ -55,11 +55,33 @@ const Fitness = () => {
         action: handlePrimaryAction
       }}
       galleryTitle="Notre Espace Fitness"
-      galleryDescription="Découvrez nos installations modernes et nos équipements de pointe"
+      galleryDescription="Un environnement premium pour votre transformation physique"
       images={images}
       detailCards={detailCards}
     >
-      <AnimatedSection>
+      {/* Additional Contact Section */}
+      <AnimatedSection className="py-16 bg-blue-100">
+        {/* Modern Blue Background with Gradient */}
+        <div className="absolute inset-0 bg-blue-100"></div>
+        
+        {/* Geometric Background Elements */}
+        <div className="absolute inset-0">
+          {/* Modern floating elements */}
+          <div className="absolute top-8 right-8 w-32 h-32 bg-blue-200/25 rounded-full blur-xl animate-float"></div>
+          <div className="absolute bottom-12 left-12 w-24 h-24 bg-blue-300/20 rounded-full blur-lg animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+          <div className="absolute top-1/3 left-1/3 w-16 h-16 bg-blue-400/18 rounded-full blur-md animate-bounce" style={{ animationDelay: '3s', animationDuration: '4s' }}></div>
+          
+          {/* Subtle background waves */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute w-full h-full bg-gradient-to-r from-transparent via-blue-400/25 to-transparent animate-pulse" style={{ animationDuration: '6s' }}></div>
+            <div className="absolute w-full h-full bg-gradient-to-l from-transparent via-blue-300/20 to-transparent animate-pulse" style={{ animationDelay: '3s', animationDuration: '8s' }}></div>
+          </div>
+          
+          {/* Geometric accents */}
+          <div className="absolute top-1/4 right-1/4 w-20 h-20 border border-blue-400/25 rotate-45 animate-spin-slow"></div>
+          <div className="absolute bottom-1/4 left-1/3 w-12 h-12 bg-blue-300/15 rounded-lg rotate-12 animate-float" style={{ animationDelay: '2s' }}></div>
+        </div>
+        
         <div className="container mx-auto px-6">
           <AnimatedCard className="max-w-2xl mx-auto">
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
