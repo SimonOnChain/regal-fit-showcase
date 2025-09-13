@@ -176,35 +176,6 @@ const MoSnack = () => {
         </div>
       </section>
 
-      {/* Show More/Less Button */}
-      {foodImages.length > 3 && (
-        <div className="container mx-auto px-6 pb-8">
-          <div className="text-center">
-            {!showAllPhotos ? (
-              <button 
-                onClick={() => {
-                  console.log('Voir Plus clicked!');
-                  setShowAllPhotos(true);
-                }}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer"
-              >
-                Voir Plus
-              </button>
-            ) : (
-              <button 
-                onClick={() => {
-                  console.log('Voir Moins clicked!');
-                  setShowAllPhotos(false);
-                }}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer"
-              >
-                Voir Moins
-              </button>
-            )}
-          </div>
-        </div>
-      )}
-
       {/* Contact Card */}
       <section className="py-16">
         <div className="container mx-auto px-6">
