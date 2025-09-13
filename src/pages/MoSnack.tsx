@@ -4,10 +4,8 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CardContent } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
 import { MapPin, Phone, Clock } from "lucide-react";
 import snackHero from "@/assets/snack-hero.jpg";
-import snackMenu from "@/assets/snack-menu.jpg";
 import snackFood1 from "@/assets/snack-food-1.jpg";
 import snackFood2 from "@/assets/snack-food-2.jpg";
 import snackFood3 from "@/assets/snack-food-3.jpg";
@@ -38,37 +36,51 @@ const MoSnack = () => {
       </div>
       <Navigation />
       
-      {/* Hero Section */}
+      {/* Hero Section - Just the title centered */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${snackHero})`,
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-royal"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-royal/80 via-navy/70 to-royal/80"></div>
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={snackHero}
+            alt="Mo'Snack Restaurant"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-transparent"></div>
         
-        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
-          <div className="space-y-8 animate-fade-in">
-            <div className="flex items-center justify-center space-x-4 mb-4">
-              <div className="w-12 h-0.5 bg-gold"></div>
-              <h1 className="text-6xl md:text-8xl font-serif font-bold text-gold">
-                Mo'Snack
-              </h1>
-              <div className="w-12 h-0.5 bg-gold"></div>
+        {/* Centered Title Only */}
+        <div className="relative z-10 text-center">
+          <h1 className="text-8xl md:text-9xl font-extrabold uppercase tracking-wider text-white animate-fade-in"
+              style={{ 
+                fontFamily: 'Montserrat, sans-serif',
+                fontWeight: 900,
+                textShadow: '0 8px 32px rgba(0, 0, 0, 0.5)'
+              }}>
+            MO'SNACK
+          </h1>
+        </div>
+      </section>
+
+      {/* Description Section - Blue Background */}
+      <section className="relative py-20 bg-gradient-to-b from-blue-600 to-blue-700 overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 right-20 w-32 h-32 bg-blue-400/20 rounded-full blur-xl animate-float"></div>
+          <div className="absolute bottom-16 left-16 w-24 h-24 bg-blue-300/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '1s' }}></div>
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-5xl mx-auto text-center">
+            <div className="space-y-8 animate-fade-in">
+              <p className="text-xl md:text-2xl text-white leading-relaxed font-light">
+                Venez découvrir notre snack au sein de notre club de fitness ! Nous proposons une cuisine saine et savoureuse pour vous aider à maintenir une alimentation équilibrée tout en profitant de moments de détente et de convivialité. Le Mo'Snack est le choix idéal pour ceux qui cherchent à prendre soin de leur santé tout en se régalant. Nous avons une sélection de plats frais et savoureux, préparés avec des ingrédients de qualité et sans additifs ni conservateurs.
+              </p>
+              
+              <p className="text-2xl md:text-3xl font-bold text-white animate-fade-in stagger-2"
+                 style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                Venez vite déguster nos délicieux plats !
+              </p>
             </div>
-            
-            <Card className="card-royal bg-royal/80 backdrop-blur-sm border-gold/30 mx-auto max-w-4xl">
-              <CardContent className="p-8">
-                <p className="text-lg md:text-xl text-white leading-relaxed font-light">
-                  Venez découvrir notre snack au sein de notre club de fitness ! Nous proposons une cuisine saine et savoureuse pour vous aider à maintenir une alimentation équilibrée tout en profitant de moments de détente et de convivialité. Le Mo'Snack est le choix idéal pour ceux qui cherchent à prendre soin de leur santé tout en se régalant. Nous avons une sélection de plats frais et savoureux, préparés avec des ingrédients de qualité et sans additifs ni conservateurs.
-                </p>
-                <p className="text-xl md:text-2xl text-gold font-bold mt-6">
-                  Venez vite déguster nos délicieux plats !
-                </p>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
