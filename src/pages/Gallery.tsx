@@ -192,7 +192,7 @@ const Gallery = () => {
       {/* Call to Action */}
       <section className="py-16 bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
         <div className="container mx-auto px-6 text-center">
-          <Card className="max-w-2xl mx-auto p-8 bg-white/70 border-blue-300/30 rounded-lg shadow-lg">
+          <Card className="max-w-2xl mx-auto p-8 bg-white/70 border-blue-300/30 rounded-lg">
             <h3 className="text-2xl md:text-3xl font-serif font-bold text-slate-800 mb-4">
               Venez Découvrir Royal Fitness
             </h3>
