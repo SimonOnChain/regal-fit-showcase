@@ -54,24 +54,24 @@ const Index = () => {
 
 
       {/* Le Concept Section */}
-      <AnimatedSection className="relative py-20 overflow-hidden">
+      <AnimatedSection className="relative py-20 overflow-hidden bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
         {/* Modern Blue Background with Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-100/30 via-blue-200/20 to-blue-300/10"></div>
         
         {/* Geometric Background Elements */}
         <div className="absolute inset-0">
           {/* Top geometric shapes */}
-          <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-blue-400/20 to-transparent"></div>
-          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl transform translate-x-48 -translate-y-48"></div>
-          <div className="absolute top-20 left-20 w-64 h-64 bg-blue-300/10 rounded-full blur-2xl"></div>
+          <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-blue-300/10 to-transparent"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400/5 rounded-full blur-3xl transform translate-x-48 -translate-y-48"></div>
+          <div className="absolute top-20 left-20 w-64 h-64 bg-blue-300/5 rounded-full blur-2xl"></div>
           
           {/* Modern grid pattern */}
-          <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 opacity-10">
             <div className="grid grid-cols-12 gap-4 h-full">
               {Array.from({ length: 48 }).map((_, i) => (
                 <div 
                   key={i} 
-                  className="border border-white/20 animate-pulse"
+                  className="border border-blue-400/20 animate-pulse"
                   style={{ animationDelay: `${i * 0.1}s` }}
                 ></div>
               ))}
@@ -79,8 +79,8 @@ const Index = () => {
           </div>
           
           {/* Floating elements */}
-          <div className="absolute top-1/4 right-1/4 w-32 h-32 border border-white/20 rotate-45 animate-spin-slow"></div>
-          <div className="absolute bottom-1/4 left-1/3 w-24 h-24 bg-gradient-to-r from-blue-300/20 to-blue-500/20 rounded-lg rotate-12 animate-float"></div>
+          <div className="absolute top-1/4 right-1/4 w-32 h-32 border border-blue-400/20 rotate-45 animate-spin-slow"></div>
+          <div className="absolute bottom-1/4 left-1/3 w-24 h-24 bg-gradient-to-r from-blue-400/10 to-blue-500/10 rounded-lg rotate-12 animate-float"></div>
         </div>
         
         <div className="container mx-auto px-6">
@@ -89,49 +89,49 @@ const Index = () => {
             <div className="space-y-8">
               <h2 className="text-5xl md:text-7xl font-bold uppercase tracking-wide text-white relative"
                   style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                <span className="relative z-10">
+                <span className="relative z-10 text-slate-800">
                 LE CONCEPT
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent opacity-80"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-800 via-blue-600 to-slate-800 bg-clip-text text-transparent opacity-80"></div>
               </h2>
               
               {/* Modern accent line */}
-              <div className="w-24 h-1 bg-gradient-to-r from-white to-blue-200 rounded-full animate-pulse"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full animate-pulse"></div>
               
-              <div className="space-y-6 text-white">
-                <p className="text-lg md:text-xl leading-relaxed hover:text-blue-100 transition-colors duration-300 relative group">
-                  <span className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-300 to-blue-500 rounded-full transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
+              <div className="space-y-6 text-slate-700">
+                <p className="text-lg md:text-xl leading-relaxed hover:text-slate-900 transition-colors duration-300 relative group">
+                  <span className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-blue-600 rounded-full transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
                   <span className="pl-6">
                   Le concept du ROYAL FITNESS redéfinit l'expérience du bien-être en alliant excellence, sophistication et innovation dans un environnement d'exception.
                   </span>
                 </p>
                 
-                <p className="text-lg md:text-xl leading-relaxed hover:text-blue-100 transition-colors duration-300 relative group">
-                  <span className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-400 to-blue-600 rounded-full transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
+                <p className="text-lg md:text-xl leading-relaxed hover:text-slate-900 transition-colors duration-300 relative group">
+                  <span className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-blue-600 rounded-full transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
                   <span className="pl-6">
                   Découvrez une gamme complète de services premium incluant fitness, aqua-training, spa de luxe, football professionnel, et des programmes spécialisés pour enfants. Notre équipe de coachs certifiés et expérimentés vous accompagne dans votre quête d'excellence.
                   </span>
                 </p>
                 
-                <p className="text-lg md:text-xl leading-relaxed hover:text-blue-100 transition-colors duration-300 relative group">
-                  <span className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-blue-700 rounded-full transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
+                <p className="text-lg md:text-xl leading-relaxed hover:text-slate-900 transition-colors duration-300 relative group">
+                  <span className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-blue-600 rounded-full transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
                   <span className="pl-6">
                   Que vous visiez l'amélioration de votre mobilité, la croissance musculaire, ou simplement le bien-être intégral, nous avons l'expertise et les équipements de pointe pour vous mener vers vos objectifs.
                   </span>
                 </p>
                 
-                <p className="text-lg md:text-xl leading-relaxed hover:text-blue-100 transition-colors duration-300 relative group">
-                  <span className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-600 to-blue-800 rounded-full transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
+                <p className="text-lg md:text-xl leading-relaxed hover:text-slate-900 transition-colors duration-300 relative group">
+                  <span className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-blue-600 rounded-full transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
                   <span className="pl-6">
                   Prêt à élever votre parcours fitness ? Rejoignez-nous et découvrez le frisson d'atteindre de nouveaux sommets !
                   </span>
                 </p>
               </div>
               
-              <button className="relative group bg-white text-blue-600 px-10 py-5 text-lg font-bold uppercase tracking-wide rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 transform shadow-2xl hover:shadow-blue-500/25"
+              <button className="relative group bg-blue-600 text-white px-10 py-5 text-lg font-bold uppercase tracking-wide rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 transform shadow-2xl hover:shadow-blue-500/25"
                       style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                <span className="absolute inset-0 bg-gradient-to-r from-blue-50 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                <span className="absolute inset-0 border-2 border-blue-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                <span className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                <span className="absolute inset-0 border-2 border-blue-400 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                 <span className="relative z-10">
                 <a href="/contact">RÉSERVEZ VOTRE ESSAI GRATUIT</a>
                 </span>
@@ -142,29 +142,29 @@ const Index = () => {
             <div className="flex justify-center lg:justify-end">
               <div className="relative w-full max-w-lg h-96">
                 {/* Modern geometric design */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-2xl backdrop-blur-sm border border-white/20"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-200/20 to-blue-100/10 rounded-2xl backdrop-blur-sm border border-blue-300/20"></div>
                 
                 {/* Floating geometric elements */}
-                <div className="absolute top-8 right-8 w-16 h-16 bg-gradient-to-br from-blue-300/30 to-blue-500/30 rounded-xl rotate-12 animate-float"></div>
-                <div className="absolute bottom-12 left-8 w-12 h-12 border-2 border-white/40 rounded-lg rotate-45 animate-pulse"></div>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-white/20 to-blue-200/20 rounded-full animate-spin-slow"></div>
+                <div className="absolute top-8 right-8 w-16 h-16 bg-gradient-to-br from-blue-400/20 to-blue-500/20 rounded-xl rotate-12 animate-float"></div>
+                <div className="absolute bottom-12 left-8 w-12 h-12 border-2 border-blue-400/40 rounded-lg rotate-45 animate-pulse"></div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-blue-300/20 to-blue-400/20 rounded-full animate-spin-slow"></div>
                 
                 {/* Central content */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center space-y-4">
-                    <div className="w-20 h-20 mx-auto bg-gradient-to-br from-white/30 to-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                      <div className="w-8 h-8 bg-white rounded-lg animate-pulse"></div>
+                    <div className="w-20 h-20 mx-auto bg-gradient-to-br from-blue-300/30 to-blue-200/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                      <div className="w-8 h-8 bg-blue-600 rounded-lg animate-pulse"></div>
                     </div>
                     <div className="space-y-2">
-                      <div className="h-2 w-32 bg-white/30 rounded-full mx-auto animate-pulse"></div>
-                      <div className="h-2 w-24 bg-white/20 rounded-full mx-auto animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                      <div className="h-2 w-32 bg-blue-400/40 rounded-full mx-auto animate-pulse"></div>
+                      <div className="h-2 w-24 bg-blue-300/30 rounded-full mx-auto animate-pulse" style={{ animationDelay: '0.5s' }}></div>
                     </div>
                   </div>
                 </div>
                 
                 {/* Corner accents */}
-                <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-white/40 rounded-tl-lg"></div>
-                <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-white/40 rounded-br-lg"></div>
+                <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-blue-400/40 rounded-tl-lg"></div>
+                <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-blue-400/40 rounded-br-lg"></div>
               </div>
             </div>
           </div>
