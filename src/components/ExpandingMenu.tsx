@@ -29,6 +29,7 @@ const menuItems = [
     icon: <Crown className="w-4 h-4" />,
     cta: 'Découvrir notre philosophie',
     image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80',
+    route: '/',
     gradient: `
       radial-gradient(circle at 70% 30%, rgba(72, 61, 139, 0.6) 0%, transparent 50%),
       radial-gradient(circle at 20% 80%, rgba(25, 25, 112, 0.5) 0%, transparent 40%),
@@ -45,6 +46,7 @@ const menuItems = [
     icon: <Dumbbell className="w-4 h-4" />,
     cta: 'Explorer nos équipements',
     image: fitnessImage,
+    route: '/fitness',
     gradient: `
       radial-gradient(circle at 10% 40%, rgba(255, 215, 0, 0.3) 0%, transparent 45%),
       radial-gradient(circle at 80% 70%, rgba(184, 134, 11, 0.4) 0%, transparent 50%),
@@ -61,6 +63,7 @@ const menuItems = [
     icon: <Waves className="w-4 h-4" />,
     cta: 'Plonger dans l\'expérience',
     image: aquaImage,
+    route: '/aqua',
     gradient: `
       radial-gradient(ellipse at 30% 20%, rgba(65, 105, 225, 0.5) 0%, transparent 60%),
       radial-gradient(circle at 80% 80%, rgba(30, 144, 255, 0.4) 0%, transparent 40%),
@@ -69,6 +72,23 @@ const menuItems = [
     textUpdated:
       'Piscine chauffée, cours d\'aqua-fitness et espace détente aquatique. L\'eau devient votre terrain de jeu et de bien-être.',
   },
+ {
+   id: 'foot',
+   title: 'Foot à 5',
+   description:
+     'Terrains certifiés FIFA avec gazon synthétique pour vos matchs et tournois dans des installations professionnelles.',
+   icon: <Crown className="w-4 h-4" />,
+   cta: 'Découvrir nos terrains',
+   image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80',
+   route: '/foot',
+   gradient: `
+     radial-gradient(circle at 30% 30%, rgba(34, 197, 94, 0.5) 0%, transparent 50%),
+     radial-gradient(ellipse at 70% 70%, rgba(22, 163, 74, 0.4) 0%, transparent 45%),
+     linear-gradient(225deg, rgba(21, 128, 61, 1), rgba(0, 0, 0, 1))
+   `,
+   textUpdated:
+     'Trois terrains FIFA avec gazon synthétique, tournois régionaux et installations de qualité professionnelle.',
+ },
   {
     id: 'spa',
     title: 'Spa',
@@ -77,6 +97,7 @@ const menuItems = [
     icon: <Sparkles className="w-4 h-4" />,
     cta: 'Réserver votre moment',
     image: spaImage,
+    route: '/spa',
     gradient: `
       radial-gradient(circle at 60% 30%, rgba(147, 112, 219, 0.5) 0%, transparent 50%),
       radial-gradient(ellipse at 20% 70%, rgba(138, 43, 226, 0.4) 0%, transparent 45%),
@@ -93,6 +114,7 @@ const menuItems = [
     icon: <Baby className="w-4 h-4" />,
     cta: 'Découvrir l\'espace enfants',
     image: kidsImage,
+    route: '/kids',
     gradient: `
       radial-gradient(ellipse at 40% 20%, rgba(255, 182, 193, 0.4) 0%, transparent 55%),
       radial-gradient(circle at 70% 80%, rgba(255, 160, 122, 0.5) 0%, transparent 40%),
@@ -109,6 +131,7 @@ const menuItems = [
     icon: <Coffee className="w-4 h-4" />,
     cta: 'Voir notre carte',
     image: snackImage,
+    route: '/mosnack',
     gradient: `
       radial-gradient(circle at 30% 30%, rgba(210, 180, 140, 0.5) 0%, transparent 50%),
       radial-gradient(ellipse at 70% 70%, rgba(160, 82, 45, 0.4) 0%, transparent 45%),
@@ -125,6 +148,7 @@ const menuItems = [
     icon: <Camera className="w-4 h-4" />,
     cta: 'Visiter la galerie',
     image: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=800&q=80',
+    route: '/gallery',
     gradient: `
       radial-gradient(ellipse at 70% 20%, rgba(169, 169, 169, 0.5) 0%, transparent 60%),
       radial-gradient(circle at 20% 60%, rgba(128, 128, 128, 0.4) 0%, transparent 45%),
@@ -141,6 +165,7 @@ const menuItems = [
     icon: <Calendar className="w-4 h-4" />,
     cta: 'Consulter les horaires',
     image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80',
+    route: '/plannings',
     gradient: `
       radial-gradient(circle at 50% 30%, rgba(72, 61, 139, 0.5) 0%, transparent 50%),
       radial-gradient(ellipse at 30% 70%, rgba(106, 90, 205, 0.4) 0%, transparent 45%),
@@ -157,6 +182,7 @@ const menuItems = [
     icon: <Euro className="w-4 h-4" />,
     cta: 'Voir nos offres',
     image: 'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?auto=format&fit=crop&w=800&q=80',
+    route: '/tarifs',
     gradient: `
       radial-gradient(ellipse at 60% 20%, rgba(255, 215, 0, 0.5) 0%, transparent 60%),
       radial-gradient(circle at 20% 80%, rgba(218, 165, 32, 0.4) 0%, transparent 45%),
@@ -187,8 +213,9 @@ export const ExpandingMenu = () => {
               isActive={activeId === item.id}
               onHover={() => setActiveId(item.id)}
               onNavigate={(id) => {
-                if (id === 'gallery') {
-                  navigate('/gallery');
+                const menuItem = menuItems.find(item => item.id === id);
+                if (menuItem?.route) {
+                  navigate(menuItem.route);
                 }
               }}
             />
@@ -205,8 +232,9 @@ export const ExpandingMenu = () => {
               isActive={activeId === item.id}
               onHover={() => setActiveId(item.id)}
               onNavigate={(id) => {
-                if (id === 'gallery') {
-                  navigate('/gallery');
+                const menuItem = menuItems.find(item => item.id === id);
+                if (menuItem?.route) {
+                  navigate(menuItem.route);
                 }
               }}
             />
