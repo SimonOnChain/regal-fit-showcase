@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Crown, MapPin, Instagram, Facebook } from "lucide-react";
+import { Crown, MapPin, Instagram, Facebook, Phone, Mail, Clock, Dumbbell } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 
 const Footer = () => {
@@ -55,159 +55,185 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-gradient-to-b from-royal-blue-lightest to-royal-blue-lighter border-t border-royal-blue-hover/20 animate-fade-in">
-      {/* Light blue accent line */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-royal-blue-hover to-transparent"></div>
+    <footer className="relative bg-gradient-to-b from-slate-900 via-slate-800 to-black border-t border-slate-700/50">
+      {/* Modern geometric background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
+        <div className="absolute top-10 right-10 w-32 h-32 bg-blue-500/5 rounded-full blur-xl"></div>
+        <div className="absolute bottom-20 left-20 w-24 h-24 bg-slate-600/10 rounded-lg rotate-45"></div>
+        <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-slate-400 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+      </div>
       
-      <div className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+      <div className="container mx-auto px-6 py-20 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           
-          {/* Left Column - Logo & Contact Info */}
-          <div className="flex flex-col justify-between h-full animate-slide-up text-center" style={{ animationDelay: "0.1s" }}>
-            <div className="flex flex-col justify-center flex-1 space-y-8">
-              {/* Logo */}
-              <div className="flex items-center justify-center space-x-3">
-                <Crown className="h-10 w-10 text-royal-blue animate-pulse" />
+          {/* Brand Section */}
+          <div className="lg:col-span-1 space-y-8">
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <div className="p-2 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg">
+                  <Dumbbell className="h-8 w-8 text-white" />
+                </div>
                 <div>
-                  <h3 className="text-2xl font-serif font-bold text-royal-blue-dark">Royal Fitness</h3>
-                  <p className="text-sm text-royal-blue font-light">Excellence & Prestige</p>
+                  <h3 className="text-2xl font-bold text-white tracking-tight">Royal Fitness</h3>
+                  <p className="text-sm text-slate-400 font-medium">Excellence & Performance</p>
                 </div>
               </div>
               
-              {/* Address */}
+              <p className="text-slate-300 leading-relaxed text-sm">
+                Votre destination premium pour l'excellence fitness. Équipements de pointe, 
+                coaching expert et environnement d'exception.
+              </p>
+            </div>
+            
+            {/* Contact Info */}
+            <div className="space-y-4">
+              <h4 className="text-white font-semibold text-sm uppercase tracking-wider border-b border-slate-700 pb-2">
+                Contact
+              </h4>
               <div className="space-y-3">
-                <div className="flex items-center justify-center space-x-3">
-                  <MapPin className="h-5 w-5 text-royal-blue flex-shrink-0" />
-                  <div className="text-center">
-                    <p className="text-royal-blue-dark font-medium">MOTIV'CLUB</p>
-                    <p className="text-royal-blue text-sm">1841 Av. des FAR</p>
-                    <p className="text-royal-blue text-sm">Plaisance - MEKNES</p>
+                <div className="flex items-center space-x-3 text-slate-300 hover:text-white transition-colors">
+                  <MapPin className="h-4 w-4 text-blue-400 flex-shrink-0" />
+                  <div className="text-sm">
+                    <p className="font-medium">MOTIV'CLUB</p>
+                    <p>1841 Av. des FAR, Plaisance - MEKNES</p>
                   </div>
                 </div>
-              </div>
-            </div>
-            
-            {/* Social Media - Bottom aligned */}
-            <div className="space-y-3 mt-8">
-              <h4 className="text-royal-blue-dark font-semibold">Suivez-nous</h4>
-              <div className="flex justify-center space-x-4">
-                <a 
-                  href="#" 
-                  className="w-10 h-10 bg-royal-blue/20 rounded-full flex items-center justify-center hover:bg-royal-blue/30 hover:scale-110 transition-all duration-300 group"
-                >
-                  <Instagram className="h-5 w-5 text-royal-blue group-hover:text-white" />
-                </a>
-                <a 
-                  href="#" 
-                  className="w-10 h-10 bg-royal-blue/20 rounded-full flex items-center justify-center hover:bg-royal-blue/30 hover:scale-110 transition-all duration-300 group"
-                >
-                  <Facebook className="h-5 w-5 text-royal-blue group-hover:text-white" />
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Center Column - Contact Form */}
-          <div className="flex flex-col justify-between h-full animate-slide-up text-center" style={{ animationDelay: "0.2s" }}>
-            <div className="space-y-6">
-              <h4 className="text-xl font-serif font-bold text-royal-blue-dark">Contactez-nous</h4>
-              
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <Input
-                    name="firstName"
-                    placeholder="Prénom"
-                    value={formData.firstName}
-                    onChange={handleInputChange}
-                    className="bg-white border-royal-blue/30 text-royal-blue-dark placeholder:text-royal-blue focus:border-royal-blue focus:ring-royal-blue/50"
-                    required
-                  />
-                  <Input
-                    name="lastName"
-                    placeholder="Nom"
-                    value={formData.lastName}
-                    onChange={handleInputChange}
-                    className="bg-white border-royal-blue/30 text-royal-blue-dark placeholder:text-royal-blue focus:border-royal-blue focus:ring-royal-blue/50"
-                    required
-                  />
+                
+                <div className="flex items-center space-x-3 text-slate-300 hover:text-white transition-colors">
+                  <Phone className="h-4 w-4 text-blue-400 flex-shrink-0" />
+                  <span className="text-sm">0535 521 528</span>
                 </div>
                 
-                <Input
-                  name="email"
-                  type="email"
-                  placeholder="Email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  className="bg-white border-royal-blue/30 text-royal-blue-dark placeholder:text-royal-blue focus:border-royal-blue focus:ring-royal-blue/50"
-                  required
-                />
+                <div className="flex items-center space-x-3 text-slate-300 hover:text-white transition-colors">
+                  <Mail className="h-4 w-4 text-blue-400 flex-shrink-0" />
+                  <span className="text-sm">contact@royalfitness.ma</span>
+                </div>
                 
-                <Input
-                  name="phone"
-                  type="tel"
-                  placeholder="Téléphone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  className="bg-white border-royal-blue/30 text-royal-blue-dark placeholder:text-royal-blue focus:border-royal-blue focus:ring-royal-blue/50"
-                />
-                
-                <Textarea
-                  name="message"
-                  placeholder="Votre message..."
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  rows={4}
-                  className="bg-white border-royal-blue/30 text-royal-blue-dark placeholder:text-royal-blue focus:border-royal-blue focus:ring-royal-blue/50 resize-none"
-                  required
-                />
-              </form>
-            </div>
-            
-            {/* Submit Button - Bottom aligned */}
-            <Button 
-              onClick={handleSubmit}
-              className="bg-royal-blue hover:bg-royal-blue-hover text-white w-full hover:shadow-lg hover:shadow-royal-blue/25 transition-all duration-300 mt-6"
-            >
-              Envoyer
-            </Button>
-          </div>
-
-          {/* Right Column - Navigation Links */}
-          <div className="flex flex-col justify-between h-full animate-slide-up text-center" style={{ animationDelay: "0.3s" }}>
-            <div className="space-y-6">
-              <h4 className="text-xl font-serif font-bold text-royal-blue-dark">Navigation</h4>
-              
-              <div className="space-y-3">
-                {navigationLinks.map((link, index) => (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    className="text-royal-blue hover:text-royal-blue-dark transition-colors duration-300 block hover:translate-x-1 hover:font-medium"
-                    style={{ 
-                      animationDelay: `${0.1 * index}s`,
-                      animation: "fadeIn 0.6s ease-out forwards"
-                    }}
-                  >
-                    {link.name}
-                  </a>
-                ))}
+                <div className="flex items-center space-x-3 text-slate-300">
+                  <Clock className="h-4 w-4 text-blue-400 flex-shrink-0" />
+                  <span className="text-sm">Lun-Dim: 6h00 - 23h00</span>
+                </div>
               </div>
             </div>
-            
-            {/* Join Button - Bottom aligned */}
-            <div className="pt-6 border-t border-royal-blue/20 mt-8">
-              <Button className="bg-royal-blue hover:bg-royal-blue-hover text-white w-full hover:shadow-lg hover:shadow-royal-blue/25 transition-all duration-300">
-                <a href="/contact">Rejoignez-nous</a>
-              </Button>
+          </div>
+
+          {/* Navigation Links */}
+          <div className="lg:col-span-1 space-y-6">
+            <h4 className="text-white font-semibold text-sm uppercase tracking-wider border-b border-slate-700 pb-2">
+              Navigation
+            </h4>
+            <div className="grid grid-cols-1 gap-2">
+              {navigationLinks.map((link, index) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-slate-300 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm py-1 group"
+                >
+                  <span className="border-b border-transparent group-hover:border-blue-400 transition-colors">
+                    {link.name}
+                  </span>
+                </a>
+              ))}
             </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className="lg:col-span-2 space-y-6">
+            <h4 className="text-white font-semibold text-sm uppercase tracking-wider border-b border-slate-700 pb-2">
+              Contactez-nous
+            </h4>
+            
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <Input
+                  name="firstName"
+                  placeholder="Prénom"
+                  value={formData.firstName}
+                  onChange={handleInputChange}
+                  className="bg-slate-800/50 border-slate-600 text-white placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500/20 transition-all"
+                  required
+                />
+                <Input
+                  name="lastName"
+                  placeholder="Nom"
+                  value={formData.lastName}
+                  onChange={handleInputChange}
+                  className="bg-slate-800/50 border-slate-600 text-white placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500/20 transition-all"
+                  required
+                />
+              </div>
+              
+              <Input
+                name="email"
+                type="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleInputChange}
+                className="bg-slate-800/50 border-slate-600 text-white placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500/20 transition-all"
+                required
+              />
+              
+              <Input
+                name="phone"
+                type="tel"
+                placeholder="Téléphone"
+                value={formData.phone}
+                onChange={handleInputChange}
+                className="bg-slate-800/50 border-slate-600 text-white placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500/20 transition-all"
+              />
+              
+              <Textarea
+                name="message"
+                placeholder="Votre message..."
+                value={formData.message}
+                onChange={handleInputChange}
+                rows={4}
+                className="bg-slate-800/50 border-slate-600 text-white placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500/20 resize-none transition-all"
+                required
+              />
+              
+              <Button 
+                type="submit"
+                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
+              >
+                Envoyer le message
+              </Button>
+            </form>
           </div>
         </div>
         
-        {/* Bottom Copyright */}
-        <div className="mt-16 pt-8 border-t border-royal-blue/20 text-center">
-          <p className="text-royal-blue text-sm">
-            © 2024 Royal Fitness MOTIV'CLUB. Tous droits réservés.
-          </p>
+        {/* Social Media & Bottom Section */}
+        <div className="mt-16 pt-8 border-t border-slate-700/50">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="flex items-center space-x-6">
+              <span className="text-slate-400 text-sm font-medium">Suivez-nous:</span>
+              <div className="flex space-x-4">
+                <a 
+                  href="#" 
+                  className="w-10 h-10 bg-slate-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300 group"
+                >
+                  <Instagram className="h-5 w-5 text-slate-400 group-hover:text-white" />
+                </a>
+                <a 
+                  href="#" 
+                  className="w-10 h-10 bg-slate-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300 group"
+                >
+                  <Facebook className="h-5 w-5 text-slate-400 group-hover:text-white" />
+                </a>
+              </div>
+            </div>
+            
+            <div className="text-center md:text-right">
+              <p className="text-slate-400 text-sm">
+                © 2024 Royal Fitness MOTIV'CLUB. Tous droits réservés.
+              </p>
+              <p className="text-slate-500 text-xs mt-1">
+                Conçu pour l'excellence fitness
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
