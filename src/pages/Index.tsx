@@ -168,7 +168,14 @@ const Index = () => {
       <AnimatedSection className="py-20 bg-blue-100">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Left Content */}
+            {/* Left Image */}
+            <div className="flex justify-center lg:justify-start">
+              <div className="w-full h-96 lg:h-[500px] bg-cover bg-center rounded-lg overflow-hidden"
+                   style={{ backgroundImage: `url(${fitnessHero})` }}>
+              </div>
+            </div>
+            
+            {/* Right Content */}
             <div className="space-y-8">
               <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-wide text-slate-800"
                   style={{ fontFamily: 'Montserrat, sans-serif' }}>
@@ -193,13 +200,6 @@ const Index = () => {
                       style={{ fontFamily: 'Montserrat, sans-serif' }}>
                 <a href="/contact">Nous contacter</a>
               </button>
-            </div>
-            
-            {/* Right Image */}
-            <div className="flex justify-center lg:justify-end">
-              <div className="w-full h-96 lg:h-[500px] bg-cover bg-center rounded-lg overflow-hidden"
-                   style={{ backgroundImage: `url(${fitnessHero})` }}>
-              </div>
             </div>
           </div>
         </div>
