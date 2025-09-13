@@ -27,7 +27,7 @@ const Kids = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-royal">
       <Navigation />
       
       {/* Hero Section */}
@@ -40,20 +40,24 @@ const Kids = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-royal/70 via-navy/60 to-royal/70"></div>
-        <div className="absolute inset-0 bg-gradient-royal opacity-20"></div>
+        <div className="absolute inset-0 bg-gradient-royal"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-royal/80 via-navy/70 to-royal/80"></div>
         
         {/* Hero Content */}
         <div className="relative z-10 flex items-center justify-center h-full text-center px-6">
-          <div className="max-w-5xl mx-auto">
-            <h1 className="text-6xl md:text-8xl font-serif font-bold text-gold mb-6 tracking-wide">
-              Kid's Academy
-            </h1>
+          <div className="max-w-5xl mx-auto space-y-8 animate-fade-in">
+            <div className="flex items-center justify-center space-x-4 mb-4">
+              <div className="w-12 h-0.5 bg-gold"></div>
+              <h1 className="text-6xl md:text-8xl font-serif font-bold text-gold tracking-wide">
+                Kid's Academy
+              </h1>
+              <div className="w-12 h-0.5 bg-gold"></div>
+            </div>
             <p className="text-2xl md:text-3xl text-white mb-8 font-light">
               Un lieu pour s'amuser, progresser, et s'épanouir – découvrez nos activités enfants !
             </p>
             
-            <Card className="bg-royal/80 backdrop-blur-sm border-gold/30 mx-auto max-w-4xl">
+            <Card className="card-royal bg-royal/80 backdrop-blur-sm border-gold/30 mx-auto max-w-4xl">
               <CardContent className="p-8">
                 <p className="text-lg md:text-xl text-white leading-relaxed">
                   Notre club de fitness propose une large gamme d'activités pour les enfants, 
@@ -72,11 +76,21 @@ const Kids = () => {
       {/* Kids Activities Section */}
       <section className="py-20 bg-gradient-to-b from-royal to-navy">
         <div className="container mx-auto px-6">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-gold mb-4">
+              Nos Activités Enfants
+            </h2>
+            <div className="w-24 h-1 bg-gradient-gold mx-auto mb-6"></div>
+            <p className="text-xl text-white/90 max-w-2xl mx-auto">
+              Des programmes adaptés pour le développement physique et personnel de votre enfant
+            </p>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {kidsActivities.map((activity, index) => (
               <Card 
                 key={activity.title} 
-                className="group bg-royal/90 border-gold/30 overflow-hidden hover:shadow-glow transition-all duration-500 hover:-translate-y-2 animate-fade-in"
+                className="card-royal group bg-royal/90 border-gold/30 overflow-hidden hover:shadow-glow transition-all duration-500 hover:-translate-y-2 animate-fade-in"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="relative h-64 overflow-hidden">

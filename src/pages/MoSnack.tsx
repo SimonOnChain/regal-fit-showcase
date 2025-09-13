@@ -25,7 +25,7 @@ const MoSnack = () => {
   const displayedImages = showAllPhotos ? foodImages : foodImages.slice(0, 3);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-royal">
       <Navigation />
       
       {/* Hero Section */}
@@ -36,65 +36,78 @@ const MoSnack = () => {
             backgroundImage: `url(${snackHero})`,
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/60 to-accent/70" />
+        <div className="absolute inset-0 bg-gradient-royal"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-royal/80 via-navy/70 to-royal/80"></div>
         
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
-          <h1 className="text-6xl md:text-8xl font-serif font-bold mb-4 text-accent">
-            Mo'Snack
-          </h1>
-          <p className="text-2xl md:text-3xl font-light mb-8 italic">
-            Faites vous plaisir
-          </p>
-          
-          <Card className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 mb-8 max-w-2xl mx-auto">
-            <p className="text-xl leading-relaxed">
-              Découvrez notre snack healthy, savoureux & convivial, au cœur du club.
+          <div className="space-y-8 animate-fade-in">
+            <div className="flex items-center justify-center space-x-4 mb-4">
+              <div className="w-12 h-0.5 bg-gold"></div>
+              <h1 className="text-6xl md:text-8xl font-serif font-bold text-gold">
+                Mo'Snack
+              </h1>
+              <div className="w-12 h-0.5 bg-gold"></div>
+            </div>
+            <p className="text-2xl md:text-3xl font-light italic text-white/90">
+              Faites vous plaisir
             </p>
-          </Card>
-          
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button className="btn-gold text-lg px-8 py-4 text-primary font-semibold">
-                Voir la carte
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="max-w-4xl max-h-[90vh] p-0 overflow-hidden">
-              <div className="relative">
-                <img 
-                  src={snackMenu} 
-                  alt="Menu Mo'Snack" 
-                  className="w-full h-auto"
-                />
-              </div>
-            </DialogContent>
-          </Dialog>
+            
+            <Card className="card-royal bg-royal/80 backdrop-blur-sm border-gold/30 p-8 max-w-2xl mx-auto">
+              <p className="text-xl leading-relaxed text-white">
+                Découvrez notre snack healthy, savoureux & convivial, au cœur du club.
+              </p>
+            </Card>
+            
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button className="btn-gold text-lg px-8 py-4 shadow-glow hover:shadow-glow-intense transition-all duration-300">
+                  Voir la carte
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="max-w-4xl max-h-[90vh] p-0 overflow-hidden">
+                <div className="relative">
+                  <img 
+                    src={snackMenu} 
+                    alt="Menu Mo'Snack" 
+                    className="w-full h-auto"
+                  />
+                </div>
+              </DialogContent>
+            </Dialog>
+          </div>
         </div>
       </section>
 
       {/* Image Gallery Section */}
-      <section className="py-20 bg-secondary/10">
+      <section className="py-20 bg-gradient-to-b from-royal to-navy">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-gold mb-4">
               Découvrez Mo'Snack
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <div className="w-24 h-1 bg-gradient-gold mx-auto mb-6"></div>
+            <p className="text-xl text-white/90 max-w-2xl mx-auto">
               Une expérience culinaire unique alliant saveur, santé et convivialité
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {displayedImages.map((image, index) => (
-              <Card key={index} className="group overflow-hidden hover-scale cursor-pointer">
+              <Card 
+                key={index} 
+                className="card-royal group overflow-hidden hover-scale cursor-pointer bg-royal/90 border-gold/30 animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
                 <div className="relative">
                   <img 
                     src={image.src} 
                     alt={image.caption}
                     className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-royal via-transparent to-transparent opacity-60" />
+                  <div className="absolute inset-0 bg-gold/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-accent font-semibold text-lg">
+                    <span className="text-gold font-semibold text-lg">
                       {image.caption}
                     </span>
                   </div>
@@ -108,7 +121,7 @@ const MoSnack = () => {
               <Button 
                 variant="outline" 
                 onClick={() => setShowAllPhotos(true)}
-                className="border-accent text-accent hover:bg-accent hover:text-white"
+                className="border-gold text-gold hover:bg-gold hover:text-royal"
               >
                 Voir Plus
               </Button>
@@ -118,38 +131,38 @@ const MoSnack = () => {
       </section>
 
       {/* Contact Card */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-navy">
         <div className="container mx-auto px-6">
-          <Card className="max-w-2xl mx-auto p-8 border border-accent/20">
-            <h3 className="text-2xl font-serif font-bold text-foreground mb-6 text-center">
+          <Card className="card-royal max-w-2xl mx-auto p-8 bg-royal/90 border-gold/30">
+            <h3 className="text-2xl font-serif font-bold text-gold mb-6 text-center">
               Où nous trouver
             </h3>
             
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-accent" />
-                <span className="text-muted-foreground">
+                <MapPin className="h-5 w-5 text-gold" />
+                <span className="text-white/90">
                   1841 Av. des FAR - Plaisance - MEKNES
                 </span>
               </div>
               
               <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-accent" />
-                <span className="text-muted-foreground">
+                <Phone className="h-5 w-5 text-gold" />
+                <span className="text-white/90">
                   0535 521 528
                 </span>
               </div>
               
               <div className="flex items-center space-x-3">
-                <Clock className="h-5 w-5 text-accent" />
-                <span className="text-muted-foreground">
+                <Clock className="h-5 w-5 text-gold" />
+                <span className="text-white/90">
                   Ouvert tous les jours de 8h à 22h
                 </span>
               </div>
             </div>
             
             <div className="mt-6 text-center">
-              <Button className="btn-gold">
+              <Button className="btn-gold shadow-glow hover:shadow-glow-intense transition-all duration-300">
                 Voir sur la carte
               </Button>
             </div>

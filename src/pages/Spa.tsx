@@ -44,7 +44,7 @@ const Spa = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-royal">
       <Navigation />
       
       {/* Hero Section */}
@@ -57,16 +57,20 @@ const Spa = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-royal/70 via-navy/60 to-royal/70"></div>
-        <div className="absolute inset-0 bg-gradient-royal opacity-20"></div>
+        <div className="absolute inset-0 bg-gradient-royal"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-royal/80 via-navy/70 to-royal/80"></div>
         
         {/* Hero Content */}
         <div className="relative z-10 flex items-center justify-center h-full text-center px-6">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-6xl md:text-8xl font-serif font-bold text-gold mb-8 tracking-wide">
-              SPA
-            </h1>
-            <Card className="bg-royal/80 backdrop-blur-sm border-gold/30 mx-auto max-w-3xl">
+          <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
+            <div className="flex items-center justify-center space-x-4 mb-4">
+              <div className="w-12 h-0.5 bg-gold"></div>
+              <h1 className="text-6xl md:text-8xl font-serif font-bold text-gold tracking-wide">
+                SPA
+              </h1>
+              <div className="w-12 h-0.5 bg-gold"></div>
+            </div>
+            <Card className="card-royal bg-royal/80 backdrop-blur-sm border-gold/30 mx-auto max-w-3xl">
               <CardContent className="p-8">
                 <p className="text-xl md:text-2xl text-white leading-relaxed font-light">
                   Venez vous détendre et vous ressourcer dans notre spa d'exception. 
@@ -83,11 +87,22 @@ const Spa = () => {
       {/* SPA Services Grid */}
       <section className="py-20 bg-gradient-to-b from-royal to-navy">
         <div className="container mx-auto px-6">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-gold mb-4">
+              Nos Services Premium
+            </h2>
+            <div className="w-24 h-1 bg-gradient-gold mx-auto mb-6"></div>
+            <p className="text-xl text-white/90 max-w-2xl mx-auto">
+              Découvrez notre gamme complète de soins et services wellness dans un cadre d'exception
+            </p>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {spaServices.map((service, index) => (
               <Card 
                 key={service.title} 
-                className="group bg-royal/90 border-gold/30 overflow-hidden hover:shadow-glow transition-all duration-500 hover:-translate-y-2"
+                className="card-royal group bg-royal/90 border-gold/30 overflow-hidden hover:shadow-glow transition-all duration-500 hover:-translate-y-2 animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative h-64 overflow-hidden">
                   <img

@@ -66,7 +66,7 @@ const Gallery = () => {
   const displayedImages = showAllPhotos ? filteredImages : filteredImages.slice(0, 9);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-royal">
       <Navigation />
       
       {/* Hero Section */}
@@ -77,26 +77,33 @@ const Gallery = () => {
             backgroundImage: `url(${fitnessService})`,
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/60 to-accent/70" />
+        <div className="absolute inset-0 bg-gradient-royal"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-royal/80 via-navy/70 to-royal/80"></div>
         
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
-          <h1 className="text-6xl md:text-8xl font-serif font-bold mb-4 text-accent">
-            Galerie Photos
-          </h1>
-          <p className="text-2xl md:text-3xl font-light mb-8 italic">
-            Découvrez Royal Fitness
-          </p>
-          
-          <Card className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 mb-8 max-w-2xl mx-auto">
-            <p className="text-xl leading-relaxed">
-              Explorez nos espaces premium à travers notre galerie photo complète.
+          <div className="space-y-8 animate-fade-in">
+            <div className="flex items-center justify-center space-x-4 mb-4">
+              <div className="w-12 h-0.5 bg-gold"></div>
+              <h1 className="text-6xl md:text-8xl font-serif font-bold text-gold">
+                Galerie Photos
+              </h1>
+              <div className="w-12 h-0.5 bg-gold"></div>
+            </div>
+            <p className="text-2xl md:text-3xl font-light italic text-white/90">
+              Découvrez Royal Fitness
             </p>
-          </Card>
+            
+            <Card className="card-royal bg-royal/80 backdrop-blur-sm border-gold/30 p-8 max-w-2xl mx-auto">
+              <p className="text-xl leading-relaxed text-white">
+                Explorez nos espaces premium à travers notre galerie photo complète.
+              </p>
+            </Card>
+          </div>
         </div>
       </section>
 
       {/* Category Filter */}
-      <section className="py-8 bg-secondary/10">
+      <section className="py-8 bg-navy">
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
@@ -104,7 +111,7 @@ const Gallery = () => {
                 key={category.id}
                 variant={selectedCategory === category.id ? "default" : "outline"}
                 onClick={() => setSelectedCategory(category.id)}
-                className={selectedCategory === category.id ? "btn-gold" : "border-accent text-accent hover:bg-accent hover:text-white"}
+                className={selectedCategory === category.id ? "btn-gold" : "border-gold text-gold hover:bg-gold hover:text-royal"}
               >
                 {category.icon}
                 <span className="ml-2">{category.name}</span>
@@ -115,13 +122,14 @@ const Gallery = () => {
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-20 bg-secondary/10">
+      <section className="py-20 bg-gradient-to-b from-royal to-navy">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-gold mb-4">
               Nos Espaces & Activités
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <div className="w-24 h-1 bg-gradient-gold mx-auto mb-6"></div>
+            <p className="text-xl text-white/90 max-w-2xl mx-auto">
               Une visite virtuelle de nos installations premium
             </p>
           </div>
@@ -130,16 +138,17 @@ const Gallery = () => {
             {displayedImages.map((image, index) => (
               <Dialog key={index}>
                 <DialogTrigger asChild>
-                  <Card className="group overflow-hidden hover-scale cursor-pointer">
+                  <Card className="card-royal group overflow-hidden hover-scale cursor-pointer bg-royal/90 border-gold/30 animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
                     <div className="relative">
                       <img 
                         src={image.src} 
                         alt={image.caption}
                         className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-royal via-transparent to-transparent opacity-60" />
+                      <div className="absolute inset-0 bg-gold/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <span className="text-accent font-semibold text-lg">
+                        <span className="text-gold font-semibold text-lg">
                           {image.caption}
                         </span>
                         <div className="flex items-center mt-2">
@@ -171,7 +180,7 @@ const Gallery = () => {
               <Button 
                 variant="outline" 
                 onClick={() => setShowAllPhotos(true)}
-                className="border-accent text-accent hover:bg-accent hover:text-white"
+                className="border-gold text-gold hover:bg-gold hover:text-royal"
               >
                 Voir Plus ({filteredImages.length - 9} photos)
               </Button>
@@ -181,20 +190,20 @@ const Gallery = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-navy">
         <div className="container mx-auto px-6 text-center">
-          <Card className="max-w-2xl mx-auto p-8 border border-accent/20">
-            <h3 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-4">
+          <Card className="card-royal max-w-2xl mx-auto p-8 bg-royal/90 border-gold/30">
+            <h3 className="text-2xl md:text-3xl font-serif font-bold text-gold mb-4">
               Venez Découvrir Royal Fitness
             </h3>
-            <p className="text-lg text-muted-foreground mb-6">
+            <p className="text-lg text-white/90 mb-6">
               Visitez nos installations premium et découvrez l'excellence Royal Fitness.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="btn-gold">
+              <Button className="btn-gold shadow-glow hover:shadow-glow-intense transition-all duration-300">
                 <a href="/contact">Planifier une visite</a>
               </Button>
-              <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-white">
+              <Button variant="outline" className="border-gold text-gold hover:bg-gold hover:text-royal">
                 <a href="/tarifs">Voir nos offres</a>
               </Button>
             </div>
