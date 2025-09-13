@@ -101,20 +101,39 @@ const Tarifs = () => {
         
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
           <div className="space-y-8 animate-fade-in">
-            <div className="flex items-center justify-center space-x-4 mb-4">
-              <div className="w-12 h-0.5 bg-gold"></div>
-              <h1 className="text-6xl md:text-8xl font-serif font-bold text-gold">
-                Nos tarifs fitness
-              </h1>
-              <div className="w-12 h-0.5 bg-gold"></div>
-            </div>
-            
-            <Card className="card-royal bg-royal/80 backdrop-blur-sm border-gold/30 p-8 max-w-3xl mx-auto">
-              <p className="text-xl leading-relaxed text-white">
+            <h1 className="text-8xl md:text-9xl font-extrabold uppercase tracking-wider text-white animate-fade-in"
+                style={{ 
+                  fontFamily: 'Montserrat, sans-serif',
+                  fontWeight: 900,
+                  textShadow: '0 8px 32px rgba(0, 0, 0, 0.5)'
+                }}>
+              NOS TARIFS
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      {/* Description Section - Blue Background */}
+      <section className="relative py-20 bg-gradient-to-b from-blue-600 to-blue-700 overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 right-20 w-32 h-32 bg-blue-400/20 rounded-full blur-xl animate-float"></div>
+          <div className="absolute bottom-16 left-16 w-24 h-24 bg-blue-300/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '1s' }}></div>
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-5xl mx-auto text-center">
+            <div className="space-y-8 animate-fade-in">
+              <p className="text-xl md:text-2xl text-white leading-relaxed font-light">
                 L'adhésion a ses privilèges : accès illimité, réduction SPA, et bien plus. 
                 Contactez-nous pour organiser une visite ou échanger avec nous aujourd'hui.
               </p>
-            </Card>
+              
+              <p className="text-2xl md:text-3xl font-bold text-white animate-fade-in stagger-2"
+                 style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                Découvrez nos formules premium !
+              </p>
+            </div>
           </div>
         </div>
       </section>
