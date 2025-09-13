@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
 import { MapPin, Phone, Clock } from "lucide-react";
 import snackHero from "@/assets/snack-hero.jpg";
@@ -57,11 +58,22 @@ const MoSnack = () => {
               </h1>
               <div className="w-12 h-0.5 bg-gold"></div>
             </div>
+            
+            <Card className="card-royal bg-royal/80 backdrop-blur-sm border-gold/30 mx-auto max-w-4xl">
+              <CardContent className="p-8">
+                <p className="text-lg md:text-xl text-white leading-relaxed font-light">
+                  Venez découvrir notre snack au sein de notre club de fitness ! Nous proposons une cuisine saine et savoureuse pour vous aider à maintenir une alimentation équilibrée tout en profitant de moments de détente et de convivialité. Le Mo'Snack est le choix idéal pour ceux qui cherchent à prendre soin de leur santé tout en se régalant. Nous avons une sélection de plats frais et savoureux, préparés avec des ingrédients de qualité et sans additifs ni conservateurs.
+                </p>
+                <p className="text-xl md:text-2xl text-gold font-bold mt-6">
+                  Venez vite déguster nos délicieux plats !
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* Image Gallery Section */}
+      {/* Découvrez Mo'Snack Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in">
