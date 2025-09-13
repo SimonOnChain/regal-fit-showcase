@@ -88,83 +88,85 @@ const Fitness = () => {
           <div className="absolute top-1/4 right-1/4 w-32 h-32 border border-white/20 rotate-45 animate-spin-slow"></div>
           <div className="absolute bottom-1/4 left-1/3 w-24 h-24 bg-gradient-to-r from-blue-300/20 to-blue-500/20 rounded-lg rotate-12 animate-float"></div>
         </div>
-          <AnimatedCard className="max-w-2xl mx-auto">
+        
         <div className="container mx-auto px-6">
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Left Content */}
-            <div className="space-y-8">
-              <h2 className="text-5xl md:text-7xl font-bold uppercase tracking-wide text-white relative"
-                  style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                <span className="relative z-10">
-                  FITNESS
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent opacity-80"></div>
-              </h2>
-              
-              {/* Modern accent line */}
-              <div className="w-24 h-1 bg-gradient-to-r from-white to-blue-200 rounded-full animate-pulse"></div>
-              
-              <div className="space-y-6 text-white">
-                <p className="text-lg md:text-xl leading-relaxed hover:text-blue-100 transition-colors duration-300 relative group">
-                  <span className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-300 to-blue-500 rounded-full transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
-                  <span className="pl-6">
-                    Découvrez notre espace fitness premium avec équipements de pointe, cours collectifs variés et coaching personnalisé pour atteindre vos objectifs.
+          <AnimatedCard className="max-w-2xl mx-auto">
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              {/* Left Content */}
+              <div className="space-y-8">
+                <h2 className="text-5xl md:text-7xl font-bold uppercase tracking-wide text-white relative"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                  <span className="relative z-10">
+                    FITNESS
                   </span>
-                </p>
+                  <div className="absolute inset-0 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent opacity-80"></div>
+                </h2>
                 
-                <p className="text-lg md:text-xl leading-relaxed hover:text-blue-100 transition-colors duration-300 relative group">
-                  <span className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-400 to-blue-600 rounded-full transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
-                  <span className="pl-6">
-                    Machines dernière génération et poids libres pour tous niveaux. Plus de 20 cours par semaine animés par nos coachs experts.
-                  </span>
-                </p>
+                {/* Modern accent line */}
+                <div className="w-24 h-1 bg-gradient-to-r from-white to-blue-200 rounded-full animate-pulse"></div>
                 
-                <p className="text-lg md:text-xl leading-relaxed hover:text-blue-100 transition-colors duration-300 relative group">
-                  <span className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-blue-700 rounded-full transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
-                  <span className="pl-6">
-                    Programmes sur-mesure avec suivi personnalisé de vos objectifs. Dépassez vos limites dans un environnement d'exception.
-                  </span>
-                </p>
-              </div>
-              
-              <button className="relative group bg-white text-blue-600 px-10 py-5 text-lg font-bold uppercase tracking-wide rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 transform shadow-2xl hover:shadow-blue-500/25"
-                      style={{ fontFamily: 'Montserrat, sans-serif' }}
-                      onClick={handlePrimaryAction}>
-                <span className="absolute inset-0 bg-gradient-to-r from-blue-50 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                <span className="absolute inset-0 border-2 border-blue-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                <span className="relative z-10">
-                  VOIR LES PLANNINGS
-                </span>
-              </button>
-            </div>
-            
-            {/* Right Modern Visual */}
-            <div className="flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-lg h-96">
-                {/* Modern geometric design */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-2xl backdrop-blur-sm border border-white/20"></div>
-                
-                {/* Floating geometric elements */}
-                <div className="absolute top-8 right-8 w-16 h-16 bg-gradient-to-br from-blue-300/30 to-blue-500/30 rounded-xl rotate-12 animate-float"></div>
-                <div className="absolute bottom-12 left-8 w-12 h-12 border-2 border-white/40 rounded-lg rotate-45 animate-pulse"></div>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-white/20 to-blue-200/20 rounded-full animate-spin-slow"></div>
-                
-                {/* Central content */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center space-y-4">
-                    <div className="w-20 h-20 mx-auto bg-gradient-to-br from-white/30 to-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                      <div className="w-8 h-8 bg-white rounded-lg animate-pulse"></div>
-                    </div>
-                    <div className="space-y-2">
-                      <div className="h-2 w-32 bg-white/30 rounded-full mx-auto animate-pulse"></div>
-                      <div className="h-2 w-24 bg-white/20 rounded-full mx-auto animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-                    </div>
-                  </div>
+                <div className="space-y-6 text-white">
+                  <p className="text-lg md:text-xl leading-relaxed hover:text-blue-100 transition-colors duration-300 relative group">
+                    <span className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-300 to-blue-500 rounded-full transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
+                    <span className="pl-6">
+                      Découvrez notre espace fitness premium avec équipements de pointe, cours collectifs variés et coaching personnalisé pour atteindre vos objectifs.
+                    </span>
+                  </p>
+                  
+                  <p className="text-lg md:text-xl leading-relaxed hover:text-blue-100 transition-colors duration-300 relative group">
+                    <span className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-400 to-blue-600 rounded-full transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
+                    <span className="pl-6">
+                      Machines dernière génération et poids libres pour tous niveaux. Plus de 20 cours par semaine animés par nos coachs experts.
+                    </span>
+                  </p>
+                  
+                  <p className="text-lg md:text-xl leading-relaxed hover:text-blue-100 transition-colors duration-300 relative group">
+                    <span className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-blue-700 rounded-full transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
+                    <span className="pl-6">
+                      Programmes sur-mesure avec suivi personnalisé de vos objectifs. Dépassez vos limites dans un environnement d'exception.
+                    </span>
+                  </p>
                 </div>
                 
-                {/* Corner accents */}
-                <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-white/40 rounded-tl-lg"></div>
-                <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-white/40 rounded-br-lg"></div>
+                <button className="relative group bg-white text-blue-600 px-10 py-5 text-lg font-bold uppercase tracking-wide rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 transform shadow-2xl hover:shadow-blue-500/25"
+                        style={{ fontFamily: 'Montserrat, sans-serif' }}
+                        onClick={handlePrimaryAction}>
+                  <span className="absolute inset-0 bg-gradient-to-r from-blue-50 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  <span className="absolute inset-0 border-2 border-blue-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  <span className="relative z-10">
+                    VOIR LES PLANNINGS
+                  </span>
+                </button>
+              </div>
+              
+              {/* Right Modern Visual */}
+              <div className="flex justify-center lg:justify-end">
+                <div className="relative w-full max-w-lg h-96">
+                  {/* Modern geometric design */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-2xl backdrop-blur-sm border border-white/20"></div>
+                  
+                  {/* Floating geometric elements */}
+                  <div className="absolute top-8 right-8 w-16 h-16 bg-gradient-to-br from-blue-300/30 to-blue-500/30 rounded-xl rotate-12 animate-float"></div>
+                  <div className="absolute bottom-12 left-8 w-12 h-12 border-2 border-white/40 rounded-lg rotate-45 animate-pulse"></div>
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-white/20 to-blue-200/20 rounded-full animate-spin-slow"></div>
+                  
+                  {/* Central content */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center space-y-4">
+                      <div className="w-20 h-20 mx-auto bg-gradient-to-br from-white/30 to-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                        <div className="w-8 h-8 bg-white rounded-lg animate-pulse"></div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="h-2 w-32 bg-white/30 rounded-full mx-auto animate-pulse"></div>
+                        <div className="h-2 w-24 bg-white/20 rounded-full mx-auto animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Corner accents */}
+                  <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-white/40 rounded-tl-lg"></div>
+                  <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-white/40 rounded-br-lg"></div>
+                </div>
               </div>
             </div>
           </AnimatedCard>
