@@ -262,49 +262,6 @@ const Fitness = () => {
         </div>
       </section>
 
-      {/* CrossFit Section */}
-      <section id="crossfit" className="relative py-20 bg-gradient-to-b from-blue-600 to-blue-700 overflow-hidden">
-        {/* Subtle background pattern */}
-        <div className="absolute inset-0">
-          <div className="absolute top-10 right-20 w-32 h-32 bg-blue-400/20 rounded-full blur-xl animate-float"></div>
-          <div className="absolute bottom-16 left-16 w-24 h-24 bg-blue-300/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '1s' }}></div>
-        </div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16 animate-fade-in">
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">
-                CrossFit
-              </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-300 to-blue-200 mx-auto mb-8"></div>
-            </div>
-            
-            <div className="space-y-8 animate-fade-in">
-              <p className="text-xl md:text-2xl text-white leading-relaxed font-light">
-                Le MOTIV'CLUB, dispose d'un espace de 500 m2 dédié spécialement au CROSSFIT.
-              </p>
-              
-              <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-                Le crossfit est une méthode d'entraînement intense qui allie des exercices de musculation et de cardio-training de manière à développer la force, l'endurance et la souplesse de manière globale. Au sein de notre club de fitness, nous proposons des séances de crossfit encadrées par des professionnels qualifiés et adaptées aux niveaux de chacun. Les séances de crossfit sont variées et incluent des exercices à haute intensité utilisant différents équipements et accessoires, comme des kettlebells, des barres de traction, des ballons de stabilité, etc.
-              </p>
-            </div>
-            
-            {/* Video placeholder - you can add your video here */}
-            <div className="mt-12 animate-fade-in stagger-2">
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 text-center">
-                <div className="w-full h-64 bg-blue-800/30 rounded-xl flex items-center justify-center border-2 border-dashed border-white/30">
-                  <p className="text-white/70 text-lg">
-                    Vidéo CrossFit - À ajouter
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Fitness Gallery Section */}
-
 
       <Footer />
     </div>
