@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Crown, MapPin, Instagram, Facebook, Phone, Mail, Clock, Dumbbell } from "lucide-react";
+import { Crown, MapPin, Instagram, Facebook, Phone, Mail, Clock, Dumbbell, Music } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 
 const Footer = () => {
@@ -221,6 +221,12 @@ const Footer = () => {
                   className="w-10 h-10 bg-white/70 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300 group border border-blue-300"
                 >
                   <Facebook className="h-5 w-5 text-slate-600 group-hover:text-white" />
+                </a>
+                <a 
+                  href="#" 
+                  className="w-10 h-10 bg-white/70 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300 group border border-blue-300"
+                >
+                  <Music className="h-5 w-5 text-slate-600 group-hover:text-white" />
                 </a>
               </div>
             </div>
