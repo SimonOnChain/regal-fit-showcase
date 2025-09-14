@@ -27,7 +27,7 @@ const CrossFit = () => {
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-blue-600 via-blue-500/90 to-blue-400/30"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-blue-600 via-blue-500/70 via-blue-400/40 via-blue-300/20 to-transparent"></div>
         
         {/* Centered Title Only */}
         <div className="relative z-10 flex items-center justify-center h-full max-w-7xl mx-auto px-6">
