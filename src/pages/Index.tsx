@@ -28,7 +28,7 @@ const Index = () => {
           <div className="text-center animate-fade-in">
             <div className="text-4xl sm:text-6xl md:text-8xl font-extrabold uppercase tracking-wider hero-title-mobile"
                  style={{ 
-                   color: 'hsl(210 60% 70%)',
+                   color: 'white',
                    textShadow: '0 8px 16px rgba(255, 255, 255, 0.2)',
                    fontFamily: 'Montserrat, sans-serif',
                    fontWeight: 900,
@@ -38,7 +38,7 @@ const Index = () => {
             </div>
             <div className="text-4xl sm:text-6xl md:text-8xl font-extrabold uppercase tracking-wider hero-title-mobile"
                  style={{ 
-                   color: 'hsl(210 60% 70%)',
+                   color: 'white',
                    textShadow: '0 8px 16px rgba(255, 255, 255, 0.2)',
                    fontFamily: 'Montserrat, sans-serif',
                    fontWeight: 900,
