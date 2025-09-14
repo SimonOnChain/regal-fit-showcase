@@ -86,13 +86,13 @@ const Navigation = () => {
   return (
     <nav className={`nav-royal fixed top-0 left-0 right-0 z-50 ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container mx-auto px-4 py-4 md:px-6 md:py-6">
-        <div className="flex items-center justify-between h-12">
+        <div className="flex items-center justify-between h-16 md:h-20">
           
           {/* Left - Logo & Branding */}
           <div className="flex items-center flex-shrink-0">
             <div className="flex items-center space-x-3 fade-slide-in">
-              <Crown className="h-8 w-8 md:h-10 md:w-10 text-white flex-shrink-0" />
-              <span className="text-lg md:text-2xl font-bold uppercase tracking-wide text-white leading-none" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>
+              <Crown className="h-7 w-7 sm:h-8 sm:w-8 lg:h-9 lg:w-9 text-white flex-shrink-0" />
+              <span className="text-base sm:text-lg lg:text-xl xl:text-2xl font-bold uppercase tracking-wide text-white leading-none" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>
                 Royal Fitness
               </span>
             </div>
@@ -100,7 +100,7 @@ const Navigation = () => {
 
           {/* Center - Main Navigation (Desktop) */}
           <div className="hidden lg:flex items-center justify-center flex-1">
-            <div className="flex items-center">
+            <div className="flex items-center gap-2 lg:gap-3 xl:gap-4">
               {mainNavItems.map((item, index) => (
                 <div key={item.name} className="relative">
                   {item.dropdown ? (
@@ -110,8 +110,8 @@ const Navigation = () => {
                       onMouseLeave={handleDropdownLeave}
                     >
                       <button
-                        className={`nav-link-premium text-white hover:text-blue-200 transition-all duration-300 font-semibold text-xs md:text-sm uppercase tracking-wide px-2 md:px-3 py-2 fade-slide-in stagger-${index + 1} flex items-center gap-1 leading-none`}
-                        style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600 }}
+                        className={`nav-link-premium text-white hover:text-blue-200 transition-all duration-300 font-medium text-[12px] sm:text-xs lg:text-[13px] xl:text-sm uppercase tracking-normal lg:tracking-wide px-1.5 sm:px-2 lg:px-2 xl:px-3 py-2 fade-slide-in stagger-${index + 1} flex items-center gap-1 leading-none`}
+                        style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}
                       >
                         {item.name}
                         <ChevronDown className="h-4 w-4 transition-transform duration-200" 
@@ -138,8 +138,8 @@ const Navigation = () => {
                   ) : (
                     <a
                       href={item.href}
-                      className={`nav-link-premium text-white hover:text-blue-200 transition-all duration-300 font-semibold text-xs md:text-sm uppercase tracking-wide px-2 md:px-3 py-2 fade-slide-in stagger-${index + 1} leading-none`}
-                      style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600 }}
+                      className={`nav-link-premium text-white hover:text-blue-200 transition-all duration-300 font-medium text-[12px] sm:text-xs lg:text-[13px] xl:text-sm uppercase tracking-normal lg:tracking-wide px-1.5 sm:px-2 lg:px-2 xl:px-3 py-2 fade-slide-in stagger-${index + 1} leading-none`}
+                      style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}
                     >
                       {item.name}
                     </a>
@@ -173,7 +173,7 @@ const Navigation = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="lg:hidden fixed inset-x-0 top-[80px] md:top-[90px] lg:top-[100px] bottom-0 bg-slate-900/95 backdrop-blur-md z-40 animate-slide-down overscroll-contain">
-            <div className="h-full overflow-y-auto p-6">
+            <div className="h-full overflow-y-auto p-6 pt-24 pb-8">
               <div className="grid grid-cols-1 gap-3 max-w-md mx-auto">
                 {allServices.map((service, index) => (
                   <a
