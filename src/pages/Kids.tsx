@@ -132,18 +132,120 @@ const Kids = () => {
                   </p>
                 </CardContent>
               </Card>
-            ))}
-          </div>
-          
-          {/* Call to Action */}
-          <div className="text-center mt-12">
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-4 transition-all duration-300">
-              En savoir plus - Contactez-nous pour les cours enfants
             </Button>
           </div>
         </div>
-      </section>
+    {/* Kids Club Section */}
+    <section className="py-20">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
+            Kids Club
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6"></div>
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+            Découvrez nos espaces dédiés aux enfants avec des équipements sécurisés et des activités adaptées
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <Card 
+            className="group bg-white/70 border-blue-300/30 overflow-hidden hover:shadow-lg transition-all duration-500 hover:-translate-y-2 animate-fade-in rounded-lg shadow-lg"
+          >
+            <div className="relative h-64 overflow-hidden">
+              <img
+                src="/src/assets/image.png"
+                alt="Kids Club - Espace de Jeux"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-900 via-transparent to-transparent opacity-60"></div>
+              <div className="absolute inset-0 bg-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
+            
+            <CardContent className="p-6">
+              <h3 className="text-2xl font-serif font-bold text-slate-800 mb-4 border-b border-blue-300/30 pb-2">
+                Espace de Jeux Sécurisé
+              </h3>
+              <p className="text-slate-700 leading-relaxed">
+                Un espace coloré et sécurisé avec des équipements adaptés aux enfants de 2 à 5 ans.
+              </p>
+            </CardContent>
+          </Card>
 
+          <Card 
+            className="group bg-white/70 border-blue-300/30 overflow-hidden hover:shadow-lg transition-all duration-500 hover:-translate-y-2 animate-fade-in rounded-lg shadow-lg"
+            style={{ animationDelay: "0.1s" }}
+          >
+            <div className="relative h-64 overflow-hidden">
+              <img
+                src="/src/assets/image.png"
+                alt="Kids Club - Activités Éducatives"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-900 via-transparent to-transparent opacity-60"></div>
+              <div className="absolute inset-0 bg-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
+            
+            <CardContent className="p-6">
+              <h3 className="text-2xl font-serif font-bold text-slate-800 mb-4 border-b border-blue-300/30 pb-2">
+                Activités Éducatives
+              </h3>
+              <p className="text-slate-700 leading-relaxed">
+                Des activités ludiques et éducatives pour développer la créativité et l'imagination.
+              </p>
+            </CardContent>
+          </Card>
+      </section>
+          <Card 
+            className="group bg-white/70 border-blue-300/30 overflow-hidden hover:shadow-lg transition-all duration-500 hover:-translate-y-2 animate-fade-in rounded-lg shadow-lg"
+            style={{ animationDelay: "0.2s" }}
+          >
+            <div className="relative h-64 overflow-hidden">
+              <img
+                src="/src/assets/image.png"
+                alt="Kids Club - Règlement Intérieur"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-900 via-transparent to-transparent opacity-60"></div>
+              <div className="absolute inset-0 bg-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
+            
+            <CardContent className="p-6">
+              <h3 className="text-2xl font-serif font-bold text-slate-800 mb-4 border-b border-blue-300/30 pb-2">
+                Règlement & Sécurité
+              </h3>
+              <p className="text-slate-700 leading-relaxed">
+                Toutes les informations importantes pour la sécurité et le bien-être de vos enfants.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card 
+            className="group bg-white/70 border-blue-300/30 overflow-hidden hover:shadow-lg transition-all duration-500 hover:-translate-y-2 animate-fade-in rounded-lg shadow-lg"
+            style={{ animationDelay: "0.3s" }}
+          >
+            <div className="relative h-64 overflow-hidden">
+              <img
+                src="/src/assets/image.png"
+                alt="Kids Club - Espace Détente"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-900 via-transparent to-transparent opacity-60"></div>
+              <div className="absolute inset-0 bg-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
+            
+            <CardContent className="p-6">
+              <h3 className="text-2xl font-serif font-bold text-slate-800 mb-4 border-b border-blue-300/30 pb-2">
+                Espace Détente Parents
+              </h3>
+              <p className="text-slate-700 leading-relaxed">
+                Un espace confortable pour les parents pendant que les enfants s'amusent en sécurité.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
       <Footer />
     </div>
   );
