@@ -108,6 +108,9 @@ const Kids = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {kidsActivities.map((activity, index) => (
+                 )
+                 )
+                 }
               <Card 
                 key={activity.title} 
                 className="group bg-white/70 border-blue-300/30 overflow-hidden hover:shadow-lg transition-all duration-500 hover:-translate-y-2 animate-fade-in rounded-lg shadow-lg"
