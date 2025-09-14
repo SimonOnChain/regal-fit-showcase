@@ -15,6 +15,17 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      const prev = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.body.style.overflow = prev;
+      };
+    }
+  }, [isMobileMenuOpen]);
+
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const mainNavItems = [
@@ -74,7 +85,7 @@ const Navigation = () => {
 
   return (
     <nav className={`nav-royal fixed top-0 left-0 right-0 z-50 ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="container mx-auto px-6 py-6">
+      <div className="container mx-auto px-4 py-4 md:px-6 md:py-6">
         <div className="flex items-center justify-between h-12">
           
           {/* Left - Logo & Branding */}
@@ -161,7 +172,7 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden fixed inset-0 top-[100px] bg-slate-900/95 backdrop-blur-md z-40 animate-slide-down">
+          <div className="lg:hidden fixed inset-x-0 top-[80px] md:top-[90px] lg:top-[100px] bottom-0 bg-slate-900/95 backdrop-blur-md z-40 animate-slide-down overscroll-contain">
             <div className="h-full overflow-y-auto p-6">
               <div className="grid grid-cols-1 gap-3 max-w-md mx-auto">
                 {allServices.map((service, index) => (
