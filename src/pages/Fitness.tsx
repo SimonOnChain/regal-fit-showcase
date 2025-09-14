@@ -102,6 +102,177 @@ const Fitness = () => {
             </p>
           </div>
           
+          <div className="space-y-20 max-w-7xl mx-auto">
+            {/* Row 1: Cardio - Image Left, Text Right */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="relative">
+                <img
+                  src={cardioZone}
+                  alt="Zone Cardio"
+                  className="w-full h-96 object-cover rounded-lg shadow-lg"
+                />
+                <div className="absolute top-4 left-4 bg-blue-600 text-white px-4 py-2 rounded-lg font-bold">
+                  CARDIO
+                </div>
+              </div>
+              <div className="space-y-6">
+                <h3 className="text-3xl md:text-4xl font-bold text-slate-800 uppercase tracking-wide"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                  CARDIO
+                </h3>
+                <p className="text-lg text-slate-700 leading-relaxed">
+                  Le cardio-training regroupe toutes les activités d'endurance qui ont pour but d'améliorer vos capacités physiques. À la clef, une plus grande endurance dans la vie de tous les jours, moins de fatigue lors des efforts physiques et une meilleure forme physique générale. Le cardio-training améliorera votre capacité pulmonaire, votre souffle, vos performances cardiaques et de manière générale votre endurance. Au MOTIV'CLUB deux plateaux de plus de 2000 m² sont à votre disposition avec une palette de machines de la dernière génération.
+                </p>
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg font-bold uppercase tracking-wide transition-all duration-300">
+                  <a href="/contact">DÉCOUVRIR</a>
+                </Button>
+              </div>
+            </div>
+
+            {/* Row 2: Musculation - Text Left, Image Right */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6 lg:order-1">
+                <h3 className="text-3xl md:text-4xl font-bold text-slate-800 uppercase tracking-wide"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                  MUSCULATION
+                </h3>
+                <p className="text-lg text-slate-700 leading-relaxed">
+                  La musculation est une activité physique qui peut être réalisée par tous et dans n'importe quel lieu. Les avantages sont extrêmement nombreux à condition de suivre les conseils de nos spécialistes et porter une attention particulière à votre alimentation. Le MOTIV'CLUB est l'espace de musculation par excellence et certainement le mieux équipé au Maroc. Notre équipe de coachs professionnels se fera un plaisir de vous guider pour atteindre le corps de vos rêves.
+                </p>
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg font-bold uppercase tracking-wide transition-all duration-300">
+                  <a href="/contact">DÉCOUVRIR</a>
+                </Button>
+              </div>
+              <div className="relative lg:order-2">
+                <img
+                  src={musculation}
+                  alt="Salle de Musculation"
+                  className="w-full h-96 object-cover rounded-lg shadow-lg"
+                />
+                <div className="absolute top-4 left-4 bg-blue-600 text-white px-4 py-2 rounded-lg font-bold">
+                  MUSCULATION
+                </div>
+              </div>
+            </div>
+
+            {/* Row 3: Cours collectifs cardio - Image Left, Text Right */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="relative">
+                <img
+                  src={groupClasses}
+                  alt="Cours Collectifs Cardio"
+                  className="w-full h-96 object-cover rounded-lg shadow-lg"
+                />
+                <div className="absolute top-4 left-4 bg-blue-600 text-white px-4 py-2 rounded-lg font-bold">
+                  COURS COLLECTIFS CARDIO
+                </div>
+              </div>
+              <div className="space-y-6">
+                <h3 className="text-3xl md:text-4xl font-bold text-slate-800 uppercase tracking-wide"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                  COURS COLLECTIFS CARDIO
+                </h3>
+                <p className="text-lg text-slate-700 leading-relaxed">
+                  Le MOTIV'CLUB vous propose des cours collectifs pour améliorer vos capacités cardiaques et vasculaires. Cela vous permettra de perfectionner votre condition physique générale. Quel que soit le cours choisi, vous brûlerez beaucoup de calories et bénéficierez d'une perte de poids et d'une plus grande tonicité. Nos coachs vous plongeront dans une ambiance dynamique et rigoureuse sans vous faire oublier l'aspect ludique et convivial ! Tous nos cours sont animés par des coachs certifiés. Au MOTIV'CLUB vous êtes entre les mains de vrais professionnels !
+                </p>
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg font-bold uppercase tracking-wide transition-all duration-300">
+                  <a href="/contact">DÉCOUVRIR</a>
+                </Button>
+              </div>
+            </div>
+
+            {/* Row 4: Cours collectifs renforcement - Text Left, Image Right */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6 lg:order-1">
+                <h3 className="text-3xl md:text-4xl font-bold text-slate-800 uppercase tracking-wide"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                  COURS COLLECTIFS RENFORCEMENT
+                </h3>
+                <p className="text-lg text-slate-700 leading-relaxed">
+                  Nos cours collectifs de renforcement sont des entraînements pré-chorégraphiés inspirés des arts martiaux tels que le karaté, la capoeira, la boxe, le Kung fu, le kickboxing, le Taekwondo, le Tai-chi. Sur des musiques motivantes, ces cours vous feront entrer en guerre contre la sédentarité et les calories, en déchargeant le guerrier qui est en vous ! Ils sont accessibles et adaptables à tous. La séance varie selon le format choisi : le cours de renforcement peut durer entre 30 et 60 minutes selon le format choisi. Avec un taux de calories brûlées très important (entre 500 et 800).
+                </p>
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg font-bold uppercase tracking-wide transition-all duration-300">
+                  <a href="/contact">DÉCOUVRIR</a>
+                </Button>
+              </div>
+              <div className="relative lg:order-2">
+                <img
+                  src={hiitSessions}
+                  alt="Cours Collectifs Renforcement"
+                  className="w-full h-96 object-cover rounded-lg shadow-lg"
+                />
+                <div className="absolute top-4 left-4 bg-blue-600 text-white px-4 py-2 rounded-lg font-bold">
+                  RENFORCEMENT
+                </div>
+              </div>
+            </div>
+
+            {/* Row 5: Cours collectifs danse - Image Left, Text Right */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="relative">
+                <img
+                  src="https://images.pexels.com/photos/3775593/pexels-photo-3775593.jpeg"
+                  alt="Cours Collectifs Danse"
+                  className="w-full h-96 object-cover rounded-lg shadow-lg"
+                />
+                <div className="absolute top-4 left-4 bg-blue-600 text-white px-4 py-2 rounded-lg font-bold">
+                  COURS COLLECTIFS DANSE
+                </div>
+              </div>
+              <div className="space-y-6">
+                <h3 className="text-3xl md:text-4xl font-bold text-slate-800 uppercase tracking-wide"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                  COURS COLLECTIFS DANSE
+                </h3>
+                <p className="text-lg text-slate-700 leading-relaxed">
+                  Le MOTIV'CLUB propose des cours collectifs de danse pour apprendre à danser tout en s'éclatant. Les séances se déroulent sur les sons les plus tendances du moment, avec un coach certifié. La danse est un véritable exutoire, vous relâchez la pression du quotidien et ressentez de vrais moments de détente et de plaisir. Ici, tout le monde est là pour s'amuser et se lâcher, sans complexe et sans prise de tête ! Vous vous dépensez en musique tout en vous amusant. En même temps, vous améliorez votre coordination, votre endurance et la souplesse de votre corps. Vous brûlerez les calories et perdrez du poids sans même vous en rendre compte. Mesdames, vous n'avez pas le sens du rythme ? Pas de panique, les cours collectifs de danse orientale sont accessibles à toutes.
+                </p>
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg font-bold uppercase tracking-wide transition-all duration-300">
+                  <a href="/contact">DÉCOUVRIR</a>
+                </Button>
+              </div>
+            </div>
+
+            {/* Row 6: MOTIV TRAINING - Text Left, Image Right */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6 lg:order-1">
+                <h3 className="text-3xl md:text-4xl font-bold text-slate-800 uppercase tracking-wide"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                  MOTIV TRAINING
+                </h3>
+                <p className="text-lg text-slate-700 leading-relaxed">
+                  Le MOTIV'TRAINING est un ensemble d'exercices spécifiques dédiés exclusivement aux membres de la communauté MOTIV'CLUB. Cette méthode permet, sous le contrôle de nos coachs, de vous faire évoluer vers un objectif prédéfini (perte de poids, tonicité, gainage etc...) Grâce à différentes méthodes élaborées au MOTIV'CLUB, nos personal-trainers vous faciliteront l'application de vos besoins en utilisant des techniques propres à notre établissement.
+                </p>
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg font-bold uppercase tracking-wide transition-all duration-300">
+                  <a href="/contact">DÉCOUVRIR</a>
+                </Button>
+              </div>
+              <div className="relative lg:order-2">
+                <img
+                  src={elitePrograms}
+                  alt="MOTIV Training"
+                  className="w-full h-96 object-cover rounded-lg shadow-lg"
+                />
+                <div className="absolute top-4 left-4 bg-blue-600 text-white px-4 py-2 rounded-lg font-bold">
+                  MOTIV TRAINING
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
+              Nos Activités Fitness
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6"></div>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Découvrez notre gamme complète d'activités pour tous les niveaux
+            </p>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Cardio */}
             <Card className="p-8 bg-white/70 border border-blue-300/30 rounded-lg shadow-lg animate-fade-in">
