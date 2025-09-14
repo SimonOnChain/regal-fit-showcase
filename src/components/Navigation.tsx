@@ -185,8 +185,8 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden fixed inset-x-0 bottom-0 bg-slate-900/30 backdrop-blur-xl z-40 animate-slide-down overscroll-contain" style={{ top: overlayTop }}>
-            <div className="overflow-y-auto overscroll-contain p-4 pb-20 backdrop-blur-md bg-slate-800/20" style={{ height: `calc(100vh - ${overlayTop}px)` }}>
+          <div className="lg:hidden fixed inset-x-0 bottom-0 bg-slate-900/80 backdrop-blur-2xl z-40 animate-slide-down overscroll-contain" style={{ top: overlayTop }}>
+            <div className="overflow-y-auto overscroll-contain p-4 pb-20" style={{ height: `calc(100vh - ${overlayTop}px)` }}>
               <div className="grid grid-cols-1 gap-3 max-w-md mx-auto mt-6 sm:mt-8">
                 {allServices.map((service, index) => (
                   <a
