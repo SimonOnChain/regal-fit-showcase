@@ -89,18 +89,16 @@ const Tarifs = () => {
       <Navigation />
       
       {/* Hero Pricing Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: `url(${tarifsHero})`,
           }}
         />
-        <div className="absolute inset-0 bg-gradient-royal"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-royal/80 via-navy/70 to-royal/80"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-blue-600 via-blue-500/70 via-blue-400/40 via-blue-300/20 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-transparent"></div>
         
-        <div className="relative z-10 flex items-center h-full max-w-7xl mx-auto px-6">
+        <div className="relative z-10 flex items-center justify-center h-full max-w-7xl mx-auto px-6">
           <h1 className="text-8xl md:text-9xl font-extrabold uppercase tracking-wider text-white animate-fade-in"
               style={{ 
                 fontFamily: 'Montserrat, sans-serif',
@@ -109,31 +107,6 @@ const Tarifs = () => {
               }}>
             NOS TARIFS
           </h1>
-        </div>
-      </section>
-
-      {/* Description Section - Blue Background */}
-      <section className="relative py-20 bg-gradient-to-b from-blue-600 to-blue-700 overflow-hidden">
-        {/* Subtle background pattern */}
-        <div className="absolute inset-0">
-          <div className="absolute top-10 right-20 w-32 h-32 bg-blue-400/20 rounded-full blur-xl animate-float"></div>
-          <div className="absolute bottom-16 left-16 w-24 h-24 bg-blue-300/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '1s' }}></div>
-        </div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-5xl mx-auto text-center">
-            <div className="space-y-8 animate-fade-in">
-              <p className="text-xl md:text-2xl text-white leading-relaxed font-light">
-                L'adhésion a ses privilèges : accès illimité, réduction SPA, et bien plus. 
-                Contactez-nous pour organiser une visite ou échanger avec nous aujourd'hui.
-              </p>
-              
-              <p className="text-2xl md:text-3xl font-bold text-white animate-fade-in stagger-2"
-                 style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                Découvrez nos formules premium !
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 

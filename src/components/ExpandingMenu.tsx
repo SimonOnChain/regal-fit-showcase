@@ -326,7 +326,7 @@ const MenuItem = ({ item, index, isActive, onHover, onNavigate }: MenuItemProps)
       
       {isActive && (
         <p
-          className="absolute w-[180px] sm:w-[220px] md:w-[250px] lg:w-[311px] left-[15px] sm:left-[20px] md:left-[25px] lg:left-[41px] bottom-[45px] sm:bottom-[50px] md:bottom-[60px] lg:bottom-[81px] text-xs sm:text-sm leading-[16px] sm:leading-[18px] md:leading-[20px] lg:leading-[24.3px] text-[rgba(240,240,240,0.9)] font-medium"
+          className="absolute w-[140px] xs:w-[160px] sm:w-[200px] md:w-[250px] lg:w-[311px] left-[15px] sm:left-[20px] md:left-[25px] lg:left-[41px] bottom-[45px] sm:bottom-[50px] md:bottom-[60px] lg:bottom-[81px] text-[10px] xs:text-xs sm:text-sm leading-[12px] xs:leading-[14px] sm:leading-[16px] md:leading-[20px] lg:leading-[24.3px] text-[rgba(240,240,240,0.9)] font-medium"
           style={{
             opacity: isActive ? 1 : 0,
             transition: isActive
@@ -341,7 +341,7 @@ const MenuItem = ({ item, index, isActive, onHover, onNavigate }: MenuItemProps)
       {isActive && (
         <button
           onClick={() => onNavigate(item.id)}
-          className="absolute left-[35px] sm:left-[40px] md:left-[45px] lg:left-[65px] bottom-[15px] sm:bottom-[20px] md:bottom-[25px] lg:bottom-[41px] text-white text-xs sm:text-sm font-medium hover:text-white/80 transition-colors cursor-pointer min-h-[32px] flex items-center"
+          className="absolute left-[35px] sm:left-[40px] md:left-[45px] lg:left-[65px] bottom-[15px] sm:bottom-[20px] md:bottom-[25px] lg:bottom-[41px] text-white text-[10px] xs:text-xs sm:text-sm font-medium hover:text-white/80 transition-colors cursor-pointer min-h-[28px] xs:min-h-[32px] flex items-center"
           style={{
             opacity: isActive ? 1 : 0,
             transition: isActive
