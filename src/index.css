@@ -430,6 +430,23 @@
     }
   }
 
+  /* Ensure dropdowns are visible */
+  .dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    z-index: 9999 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Debug styles for dropdown visibility */
+  .dropdown-debug {
+    background: red !important;
+    color: white !important;
+    border: 2px solid yellow !important;
+  }
   /* Accessibility: Reduce motion for users who prefer it */
   @media (prefers-reduced-motion: reduce) {
     * {

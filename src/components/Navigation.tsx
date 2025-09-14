@@ -8,6 +8,7 @@ const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,8 +31,6 @@ const Navigation = () => {
       document.body.style.overflow = 'unset';
     };
   }, [isMobileMenuOpen]);
-
-  const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   const mainNavItems = [
     { name: "LE CONCEPT", href: "/" },
@@ -73,9 +72,10 @@ const Navigation = () => {
     { name: "Nos Tarifs", href: "/tarifs" },
   ];
 
-  const handleDropdownClick = (itemName: string, e: React.MouseEvent) => {
+  const handleDropdownToggle = (itemName: string, e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
+    console.log('Dropdown clicked:', itemName); // Debug log
     setActiveDropdown(activeDropdown === itemName ? null : itemName);
   };
 
@@ -104,40 +104,49 @@ const Navigation = () => {
           
           {/* Left - Logo & Branding */}
           <div className="flex items-center flex-shrink-0">
-            <div className="flex items-center space-x-2 sm:space-x-3 fade-slide-in">
-              <Crown className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 lg:h-7 lg:w-7 text-white flex-shrink-0" />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg font-bold uppercase tracking-wide text-white leading-none" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>
+            <Link to="/" className="flex items-center space-x-2 sm:space-x-3 fade-slide-in">
+              <Crown className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-white flex-shrink-0" />
+              <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold uppercase tracking-wide text-white leading-none" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>
                 Royal Fitness
               </span>
-            </div>
+            </Link>
           </div>
 
           {/* Center - Main Navigation (Desktop) */}
-          <div className="hidden lg:flex items-center justify-center flex-1 overflow-hidden" ref={dropdownRef}>
-            <div className="flex items-center gap-2 xl:gap-4 overflow-x-auto scrollbar-hide max-w-full">
+          <div className="hidden lg:flex items-center justify-center flex-1 overflow-visible" ref={dropdownRef}>
+            <div className="flex items-center gap-2 xl:gap-4 max-w-full">
               {mainNavItems.map((item, index) => (
                 <div key={item.name} className="relative">
                   {item.dropdown ? (
                     <div className="relative">
                       <button
-                        onClick={(e) => handleDropdownClick(item.name, e)}
-                        className="nav-link-premium text-white hover:text-blue-200 transition-all duration-300 font-medium text-xs lg:text-sm xl:text-base uppercase tracking-tight px-2 lg:px-3 xl:px-4 py-2 fade-slide-in flex items-center gap-1 leading-none whitespace-nowrap"
-                        style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}
+                        type="button"
+                        onClick={(e) => handleDropdownToggle(item.name, e)}
+                        className="text-white hover:text-blue-200 transition-all duration-300 font-medium text-sm xl:text-base uppercase tracking-tight px-3 xl:px-4 py-2 fade-slide-in flex items-center gap-1 leading-none whitespace-nowrap border-none bg-transparent cursor-pointer"
+                        style={{ 
+                          fontFamily: 'Montserrat, sans-serif', 
+                          fontWeight: 500,
+                          outline: 'none'
+                        }}
                       >
                         {item.name}
-                        <ChevronDown className="h-3 w-3 lg:h-4 lg:w-4 transition-transform duration-200 ml-1" 
-                          style={{ transform: activeDropdown === item.name ? 'rotate(180deg)' : 'rotate(0deg)' }} />
+                        <ChevronDown 
+                          className={`h-4 w-4 transition-transform duration-200 ml-1 ${
+                            activeDropdown === item.name ? 'rotate-180' : 'rotate-0'
+                          }`}
+                        />
                       </button>
                       
-                      {/* Dropdown Menu */}
+                      {/* Dropdown Menu - Fixed positioning and visibility */}
                       {activeDropdown === item.name && (
                         <div 
-                          className="absolute top-full left-0 mt-2 w-48 rounded-lg shadow-2xl py-2 animate-fade-in"
+                          className="absolute top-full left-0 mt-2 w-48 rounded-lg shadow-2xl py-2 z-[9999]"
                           style={{
-                            backgroundColor: 'rgba(30, 41, 59, 0.95)',
-                            backdropFilter: 'blur(12px)',
-                            border: '1px solid rgba(255, 255, 255, 0.2)',
-                            zIndex: 9999
+                            backgroundColor: 'rgba(15, 23, 42, 0.98)',
+                            backdropFilter: 'blur(16px)',
+                            border: '1px solid rgba(255, 255, 255, 0.1)',
+                            boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2)',
+                            animation: 'fadeSlideDown 0.2s ease-out forwards'
                           }}
                         >
                           {item.dropdown.map((dropdownItem) => (
@@ -146,10 +155,11 @@ const Navigation = () => {
                               to={dropdownItem.href}
                               className="block px-4 py-3 text-white/90 hover:text-white transition-all duration-200 rounded-md mx-2 font-medium text-sm"
                               style={{
-                                backgroundColor: 'transparent'
+                                backgroundColor: 'transparent',
+                                fontFamily: 'Montserrat, sans-serif'
                               }}
                               onMouseEnter={(e) => {
-                                e.currentTarget.style.backgroundColor = 'rgba(59, 130, 246, 0.3)';
+                                e.currentTarget.style.backgroundColor = 'rgba(59, 130, 246, 0.4)';
                               }}
                               onMouseLeave={(e) => {
                                 e.currentTarget.style.backgroundColor = 'transparent';
@@ -165,7 +175,7 @@ const Navigation = () => {
                   ) : (
                     <Link
                       to={item.href}
-                      className="nav-link-premium text-white hover:text-blue-200 transition-all duration-300 font-medium text-xs lg:text-sm xl:text-base uppercase tracking-tight px-2 lg:px-3 xl:px-4 py-2 fade-slide-in leading-none whitespace-nowrap"
+                      className="text-white hover:text-blue-200 transition-all duration-300 font-medium text-sm xl:text-base uppercase tracking-tight px-3 xl:px-4 py-2 fade-slide-in leading-none whitespace-nowrap"
                       style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}
                     >
                       {item.name}
@@ -179,7 +189,7 @@ const Navigation = () => {
           {/* Right - Contact Button (Desktop) */}
           <div className="hidden lg:flex items-center flex-shrink-0">
             <Link to="/contact">
-              <Button className="bg-gradient-to-r from-blue-300 to-blue-400 hover:from-blue-400 hover:to-blue-500 text-white px-3 lg:px-4 xl:px-6 py-2 lg:py-3 text-xs lg:text-sm font-bold uppercase tracking-wide rounded-full shadow-lg hover:shadow-xl transition-all duration-300 btn-contact-shimmer leading-none"
+              <Button className="bg-gradient-to-r from-blue-300 to-blue-400 hover:from-blue-400 hover:to-blue-500 text-white px-4 xl:px-6 py-2 lg:py-3 text-sm font-bold uppercase tracking-wide rounded-full shadow-lg hover:shadow-xl transition-all duration-300 btn-contact-shimmer leading-none"
                       style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>
                 CONTACT
               </Button>
@@ -202,13 +212,11 @@ const Navigation = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && createPortal(
           <div 
-            className="fixed bg-slate-900/95 backdrop-blur-2xl z-[60]" 
+            className="fixed inset-0 bg-slate-900/98 backdrop-blur-xl z-[100]" 
             style={{ 
-              top: '80px', 
-              left: '0', 
-              right: '0', 
-              bottom: '0',
-              overflowY: 'auto'
+              top: '100px',
+              overflowY: 'auto',
+              WebkitOverflowScrolling: 'touch'
             }}
           >
             <div className="h-full overflow-y-auto p-4 pb-20">
@@ -219,6 +227,7 @@ const Navigation = () => {
                     to={service.href}
                     className="text-white hover:text-blue-200 transition-all duration-300 py-4 px-4 text-center font-medium bg-white/10 rounded-lg backdrop-blur-sm border border-white/20 min-h-[44px] flex items-center justify-center"
                     onClick={() => setIsMobileMenuOpen(false)}
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
                   >
                     {service.name}
                   </Link>
@@ -228,6 +237,7 @@ const Navigation = () => {
                     to="/contact"
                     className="bg-gradient-to-r from-blue-300 to-blue-400 hover:from-blue-400 hover:to-blue-500 text-white w-full py-4 text-base font-bold uppercase tracking-wide rounded-lg min-h-[44px] flex items-center justify-center transition-all duration-300"
                     onClick={() => setIsMobileMenuOpen(false)}
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
                   >
                     Contact
                   </Link>
