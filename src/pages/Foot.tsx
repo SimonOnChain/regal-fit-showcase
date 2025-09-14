@@ -94,7 +94,7 @@ const Foot = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6"></div>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Des installations certifiées FIFA pour vos matchs et tournois
+              Le Football à 5 est un sport qui se joue avec deux équipes de 5 joueurs sur des terrains complètement fermés avec une particularité: un gazon synthétique imitant parfaitement le gazon naturel. Les aires de jeux au MOTIV'CLUB sont certifiés FIFA. Trois terrains de Foot à 5 avec gazon synthétique deviendront le centre de vos exploits. Il est à noté que de nombreux tournois régionaux se déroulent dans notre établissement.
             </p>
           </div>
           
@@ -137,54 +137,6 @@ const Foot = () => {
         </div>
       </section>
 
-      {/* Detail Cards Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="p-8 bg-white/70 border border-blue-300/30 rounded-lg shadow-lg animate-fade-in">
-              <div className="text-center">
-                <div className="mb-6 text-blue-600">
-                  <Trophy className="h-12 w-12 mx-auto" />
-                </div>
-                <h3 className="text-2xl font-serif font-bold text-slate-800 mb-4">
-                  Terrains Certifiés FIFA
-                </h3>
-                <p className="text-slate-700 leading-relaxed">
-                  Trois terrains avec gazon synthétique de qualité professionnelle
-                </p>
-              </div>
-            </Card>
-
-            <Card className="p-8 bg-white/70 border border-blue-300/30 rounded-lg shadow-lg animate-fade-in" style={{ animationDelay: "0.15s" }}>
-              <div className="text-center">
-                <div className="mb-6 text-blue-600">
-                  <Users className="h-12 w-12 mx-auto" />
-                </div>
-                <h3 className="text-2xl font-serif font-bold text-slate-800 mb-4">
-                  Tournois Régionaux
-                </h3>
-                <p className="text-slate-700 leading-relaxed">
-                  Participez à nos nombreux tournois et compétitions organisés
-                </p>
-              </div>
-            </Card>
-
-            <Card className="p-8 bg-white/70 border border-blue-300/30 rounded-lg shadow-lg animate-fade-in" style={{ animationDelay: "0.3s" }}>
-              <div className="text-center">
-                <div className="mb-6 text-blue-600">
-                  <Target className="h-12 w-12 mx-auto" />
-                </div>
-                <h3 className="text-2xl font-serif font-bold text-slate-800 mb-4">
-                  Réservation Facile
-                </h3>
-                <p className="text-slate-700 leading-relaxed">
-                  Réservez vos créneaux facilement pour vos matchs et entraînements
-                </p>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>
