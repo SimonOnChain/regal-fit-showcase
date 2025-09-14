@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Crown, Menu, X, ChevronDown } from "lucide-react";
 
@@ -15,18 +15,31 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Lock body scroll when mobile menu is open
+  // Lock body scroll and keep overlay aligned under the navbar
   useEffect(() => {
+    const updateTop = () => setOverlayTop(navRef.current?.getBoundingClientRect().height ?? 100);
+
     if (isMobileMenuOpen) {
       const prev = document.body.style.overflow;
       document.body.style.overflow = 'hidden';
+      updateTop();
+      window.addEventListener('resize', updateTop);
+      window.addEventListener('scroll', updateTop, { passive: true } as any);
       return () => {
         document.body.style.overflow = prev;
+        window.removeEventListener('resize', updateTop);
+        window.removeEventListener('scroll', updateTop);
       };
     }
+
+    // menu closed - ensure value is correct as user scrolls
+    updateTop();
   }, [isMobileMenuOpen]);
 
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const navRef = useRef<HTMLElement | null>(null);
+  const [overlayTop, setOverlayTop] = useState<number>(100);
 
   const mainNavItems = [
     { name: "Le Concept", href: "/" },
@@ -84,7 +97,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={`nav-royal fixed top-0 left-0 right-0 z-50 ${isScrolled ? 'scrolled' : ''}`}>
+    <nav ref={navRef} className={`nav-royal fixed top-0 left-0 right-0 z-50 ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container mx-auto px-4 py-4 md:px-6 md:py-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           
@@ -172,8 +185,8 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden fixed inset-x-0 top-[80px] md:top-[90px] lg:top-[100px] bottom-0 bg-slate-900/30 backdrop-blur-xl z-40 animate-slide-down overscroll-contain">
-            <div className="h-full overflow-y-auto overscroll-contain p-4 pt-6 pb-20">
+          <div className="lg:hidden fixed inset-x-0 bottom-0 bg-slate-900/30 backdrop-blur-xl z-40 animate-slide-down overscroll-contain" style={{ top: overlayTop }}>
+            <div className="overflow-y-auto overscroll-contain p-4 pb-20" style={{ height: `calc(100vh - ${overlayTop}px)` }}>
               <div className="grid grid-cols-1 gap-3 max-w-md mx-auto mt-6 sm:mt-8">
                 {allServices.map((service, index) => (
                   <a
