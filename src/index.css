@@ -419,27 +419,6 @@
   }
 
   /* Dropdown Menu Styles */
-  .dropdown-menu {
-    @apply bg-slate-800/95 border border-white/20 rounded-lg shadow-2xl backdrop-blur-md;
-    background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(51, 65, 85, 0.95) 100%);
-    animation: fadeSlideDown 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    min-width: 200px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  }
-
-  .dropdown-item {
-    @apply text-white/90 hover:text-white transition-all duration-200 cursor-pointer rounded-md;
-    padding: 14px 18px;
-    margin: 4px 8px;
-    font-weight: 500;
-  }
-
-  .dropdown-item:hover {
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(96, 165, 250, 0.2));
-    transform: translateX(4px);
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
-  }
-
   @keyframes fadeSlideDown {
     from { 
       opacity: 0; 

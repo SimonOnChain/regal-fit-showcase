@@ -153,16 +153,25 @@ const Navigation = () => {
                       </button>
                       {activeDropdown === item.name && (
                         <div 
-                          className="dropdown-menu absolute top-full left-0 mt-1 w-48 py-2 z-[100] animate-slide-down"
+                          className="absolute top-full left-0 mt-2 w-56 bg-slate-800/95 backdrop-blur-md border border-white/20 rounded-lg shadow-2xl z-[100] py-2"
                           onMouseEnter={() => handleDropdownStay(item.name)}
                           onMouseLeave={handleDropdownLeave}
+                          style={{
+                            background: 'linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(51, 65, 85, 0.95) 100%)',
+                            boxShadow: '0 10px 40px rgba(0, 0, 0, 0.3)',
+                            animation: 'fadeSlideDown 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards'
+                          }}
                         >
                           {item.dropdown.map((dropdownItem) => (
                             <Link
                               key={dropdownItem.name}
                               to={dropdownItem.href}
-                              className="dropdown-item block px-4 py-3 hover:bg-blue-500/20 transition-all duration-200"
+                              className="block px-6 py-3 text-white/90 hover:text-white hover:bg-blue-500/30 transition-all duration-200 rounded-md mx-2 font-medium"
                               onClick={() => setActiveDropdown(null)}
+                              style={{
+                                fontSize: '14px',
+                                fontFamily: 'Montserrat, sans-serif'
+                              }}
                             >
                               {dropdownItem.name}
                             </Link>
