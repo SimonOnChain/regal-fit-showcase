@@ -24,6 +24,7 @@ const Navigation = () => {
       href: "#",
       dropdown: [
         { name: "Fitness", href: "/fitness" },
+        { name: "CrossFit", href: "/fitness#crossfit" },
         { name: "Foot à 5", href: "/foot" },
         { name: "Aqua", href: "/aqua" },
         { name: "Spa", href: "/spa" },

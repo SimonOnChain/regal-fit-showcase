@@ -53,7 +53,7 @@ const menuItems = [
       linear-gradient(180deg, rgba(139, 69, 19, 1), rgba(0, 0, 0, 1))
     `,
     textUpdated:
-      'Machines dernière génération, coaching personnalisé et espace cardio premium. Sculptez votre corps dans un environnement d\'exception.',
+      'Machines dernière génération, coaching personnalisé, espace cardio premium et CrossFit 500m². Sculptez votre corps dans un environnement d\'exception.',
   },
   {
     id: 'aqua',
