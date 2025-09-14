@@ -86,71 +86,9 @@ const Aqua = () => {
         </div>
       </section>
 
-      {/* Aqua Gallery Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
-              Nos Activités Aquatiques
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6"></div>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Des installations aquatiques premium pour votre bien-être
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {displayedImages.map((image, index) => (
-              <Card 
-                key={index} 
-                className="group overflow-hidden hover-scale cursor-pointer bg-white/70 border-blue-300/30 animate-fade-in rounded-lg shadow-lg"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="relative">
-                  <img 
-                    src={image.src} 
-                    alt={image.caption}
-                    className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900 via-transparent to-transparent opacity-60" />
-                  <div className="absolute inset-0 bg-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white font-semibold text-lg">
-                      {image.caption}
-                    </span>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-          
-          {!showAllPhotos && aquaImages.length > 4 && (
-            <div className="text-center mt-12">
-              <Button 
-                variant="outline" 
-                onClick={() => setShowAllPhotos(true)}
-                className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
-              >
-                Voir Plus
-              </Button>
-            </div>
-          )}
-        </div>
-      </section>
-
       {/* Modern Aqua Activities Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
-              Nos Activités Aquatiques
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6"></div>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Le Football à 5 est un sport qui se joue avec deux équipes de 5 joueurs sur des terrains complètement fermés avec une particularité: un gazon synthétique imitant parfaitement le gazon naturel. Les aires de jeux au MOTIV'CLUB sont certifiés FIFA. Trois terrains de Foot à 5 avec gazon synthétique deviendront le centre de vos exploits. Il est à noté que de nombreux tournois régionaux se déroulent dans notre établissement.
-            </p>
-          </div>
-          
           <div className="space-y-32 max-w-7xl mx-auto">
             {/* Row 1: Natation - Image Left, Text Right */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
