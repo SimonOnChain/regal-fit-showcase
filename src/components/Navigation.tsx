@@ -79,9 +79,9 @@ const Navigation = () => {
           
           {/* Left - Logo & Branding */}
           <div className="flex items-center flex-shrink-0">
-            <div className="flex items-center space-x-4 fade-slide-in">
-              <Crown className="h-10 w-10 text-white" />
-              <span className="text-2xl font-extrabold uppercase tracking-wider text-white" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 900 }}>
+            <div className="flex items-center space-x-3 fade-slide-in">
+              <Crown className="h-8 w-8 md:h-10 md:w-10 text-white flex-shrink-0" />
+              <span className="text-lg md:text-2xl font-bold uppercase tracking-wide text-white leading-none" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>
                 Royal Fitness
               </span>
             </div>
@@ -99,8 +99,8 @@ const Navigation = () => {
                       onMouseLeave={handleDropdownLeave}
                     >
                       <button
-                        className={`nav-link-premium text-white hover:text-blue-200 transition-all duration-300 font-bold text-sm uppercase tracking-widest px-3 py-2 fade-slide-in stagger-${index + 1} flex items-center gap-1`}
-                        style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 800 }}
+                        className={`nav-link-premium text-white hover:text-blue-200 transition-all duration-300 font-semibold text-xs md:text-sm uppercase tracking-wide px-2 md:px-3 py-2 fade-slide-in stagger-${index + 1} flex items-center gap-1 leading-none`}
+                        style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600 }}
                       >
                         {item.name}
                         <ChevronDown className="h-4 w-4 transition-transform duration-200" 
@@ -127,8 +127,8 @@ const Navigation = () => {
                   ) : (
                     <a
                       href={item.href}
-                      className={`nav-link-premium text-white hover:text-blue-200 transition-all duration-300 font-bold text-sm uppercase tracking-widest px-3 py-2 fade-slide-in stagger-${index + 1}`}
-                      style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 800 }}
+                      className={`nav-link-premium text-white hover:text-blue-200 transition-all duration-300 font-semibold text-xs md:text-sm uppercase tracking-wide px-2 md:px-3 py-2 fade-slide-in stagger-${index + 1} leading-none`}
+                      style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600 }}
                     >
                       {item.name}
                     </a>
@@ -140,8 +140,8 @@ const Navigation = () => {
 
           {/* Right - Contact Button (Desktop) */}
           <div className="hidden lg:flex items-center flex-shrink-0">
-            <Button className="bg-gradient-to-r from-blue-300 to-blue-400 hover:from-blue-400 hover:to-blue-500 text-white px-10 py-4 text-base font-extrabold uppercase tracking-widest rounded-full shadow-lg hover:shadow-xl transition-all duration-300 btn-contact-shimmer"
-                    style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 900 }}>
+            <Button className="bg-gradient-to-r from-blue-300 to-blue-400 hover:from-blue-400 hover:to-blue-500 text-white px-6 md:px-8 py-3 md:py-4 text-sm md:text-base font-bold uppercase tracking-wide rounded-full shadow-lg hover:shadow-xl transition-all duration-300 btn-contact-shimmer leading-none"
+                    style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>
               <a href="/contact">CONTACT</a>
             </Button>
           </div>
@@ -161,23 +161,25 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-6 pb-4 border-t border-white/20 animate-slide-down">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-              {allServices.map((service, index) => (
-                <a
-                  key={service.name}
-                  href={service.href}
-                  className="text-white hover:text-blue-200 transition-all duration-300 py-4 px-4 text-center font-medium bg-white/10 rounded-lg backdrop-blur-sm border border-white/20 min-h-[44px] flex items-center justify-center"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {service.name}
-                </a>
-              ))}
-            </div>
-            <div className="mt-6 text-center">
-              <Button className="bg-gradient-to-r from-blue-300 to-blue-400 hover:from-blue-400 hover:to-blue-500 text-white w-full py-4 text-base font-bold uppercase tracking-wide rounded-lg min-h-[44px]">
-                <a href="/contact">Contact</a>
-              </Button>
+          <div className="lg:hidden fixed inset-0 top-[100px] bg-slate-900/95 backdrop-blur-md z-40 animate-slide-down">
+            <div className="h-full overflow-y-auto p-6">
+              <div className="grid grid-cols-1 gap-3 max-w-md mx-auto">
+                {allServices.map((service, index) => (
+                  <a
+                    key={service.name}
+                    href={service.href}
+                    className="text-white hover:text-blue-200 transition-all duration-300 py-4 px-4 text-center font-medium bg-white/10 rounded-lg backdrop-blur-sm border border-white/20 min-h-[44px] flex items-center justify-center"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {service.name}
+                  </a>
+                ))}
+                <div className="mt-4">
+                  <Button className="bg-gradient-to-r from-blue-300 to-blue-400 hover:from-blue-400 hover:to-blue-500 text-white w-full py-4 text-base font-bold uppercase tracking-wide rounded-lg min-h-[44px]">
+                    <a href="/contact">Contact</a>
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         )}
