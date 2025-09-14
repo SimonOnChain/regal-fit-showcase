@@ -174,7 +174,7 @@ const Navigation = () => {
         {isMobileMenuOpen && (
           <div className="lg:hidden fixed inset-x-0 top-[80px] md:top-[90px] lg:top-[100px] bottom-0 bg-slate-900/30 backdrop-blur-xl z-40 animate-slide-down overscroll-contain">
             <div className="h-full overflow-y-auto overscroll-contain p-4 pt-6 pb-20">
-              <div className="grid grid-cols-1 gap-3 max-w-md mx-auto">
+              <div className="grid grid-cols-1 gap-3 max-w-md mx-auto mt-6 sm:mt-8">
                 {allServices.map((service, index) => (
                   <a
                     key={service.name}
