@@ -74,7 +74,6 @@ const Contact = () => {
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-800/70 to-blue-900/80"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-t from-blue-600 via-blue-500/90 to-blue-400/70" />
         
         {/* Hero Content */}
         <div className="relative z-10 flex items-center h-full max-w-7xl mx-auto px-6">
