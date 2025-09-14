@@ -82,7 +82,11 @@ const Navigation = () => {
     { name: "Nos Tarifs", href: "/tarifs" },
   ];
 
-  // Improved dropdown state management
+  // Fixed dropdown state management
+  const handleDropdownToggle = (itemName: string) => {
+    setActiveDropdown(activeDropdown === itemName ? null : itemName);
+  };
+
   const handleDropdownEnter = (itemName: string) => {
     setActiveDropdown(itemName);
   };
@@ -97,6 +101,20 @@ const Navigation = () => {
   const handleDropdownStay = (itemName: string) => {
     setActiveDropdown(itemName);
   };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setActiveDropdown(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav ref={navRef} className={`nav-royal fixed top-0 left-0 right-0 z-50 ${isScrolled ? 'scrolled' : ''}`}>
@@ -121,10 +139,11 @@ const Navigation = () => {
                   {item.dropdown ? (
                     <div 
                       className="relative"
-                      onMouseEnter={() => handleDropdownEnter(item.name)}
-                      onMouseLeave={handleDropdownLeave}
                     >
                       <button
+                        onClick={() => handleDropdownToggle(item.name)}
+                        onMouseEnter={() => handleDropdownEnter(item.name)}
+                        onMouseLeave={handleDropdownLeave}
                         className="nav-link-premium text-white hover:text-blue-200 transition-all duration-300 font-medium text-[11px] lg:text-xs xl:text-sm uppercase tracking-tight lg:tracking-normal px-1.5 lg:px-2 xl:px-3 py-2 fade-slide-in flex items-center gap-1 leading-none whitespace-nowrap"
                         style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}
                       >
@@ -190,8 +209,8 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && createPortal(
-          <div className="fixed inset-x-0 bottom-0 bg-slate-900/90 backdrop-blur-2xl z-[60] animate-slide-down overscroll-contain" style={{ top: overlayTop }}>
-            <div className="overflow-y-auto overscroll-contain p-4 pb-20" style={{ height: `calc(100vh - ${overlayTop}px)` }}>
+          <div className="fixed inset-0 bg-slate-900/95 backdrop-blur-2xl z-[60] animate-slide-down" style={{ top: overlayTop }}>
+            <div className="overflow-y-auto h-full p-4 pb-20">
               <div className="grid grid-cols-1 gap-3 max-w-md mx-auto mt-6 sm:mt-8">
                 {allServices.map((service, index) => (
                   <Link
