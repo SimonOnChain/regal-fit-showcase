@@ -11,6 +11,7 @@ import Aqua from "./pages/Aqua";
 import Spa from "./pages/Spa";
 import Kids from "./pages/Kids";
 import MoSnack from "./pages/MoSnack";
+import CrossFit from "./pages/CrossFit";
 import Plannings from "./pages/Plannings";
 import Tarifs from "./pages/Tarifs";
 import Contact from "./pages/Contact";
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/spa" element={<Spa />} />
           <Route path="/kids" element={<Kids />} />
           <Route path="/mosnack" element={<MoSnack />} />
+          <Route path="/crossfit" element={<CrossFit />} />
           <Route path="/plannings" element={<Plannings />} />
           <Route path="/tarifs" element={<Tarifs />} />
           <Route path="/contact" element={<Contact />} />

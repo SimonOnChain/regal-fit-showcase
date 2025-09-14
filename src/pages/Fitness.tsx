@@ -263,7 +263,7 @@ const Fitness = () => {
       </section>
 
       {/* CrossFit Section */}
-      <section className="relative py-20 bg-gradient-to-b from-blue-600 to-blue-700 overflow-hidden">
+      <section id="crossfit" className="relative py-20 bg-gradient-to-b from-blue-600 to-blue-700 overflow-hidden">
         {/* Subtle background pattern */}
         <div className="absolute inset-0">
           <div className="absolute top-10 right-20 w-32 h-32 bg-blue-400/20 rounded-full blur-xl animate-float"></div>

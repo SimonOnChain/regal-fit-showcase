@@ -90,6 +90,23 @@ const menuItems = [
      'Trois terrains FIFA avec gazon synthétique, tournois régionaux et installations de qualité professionnelle.',
  },
   {
+    id: 'crossfit',
+    title: 'CrossFit',
+    description:
+      'Espace de 500m² dédié au CrossFit avec entraînement intense alliant musculation et cardio pour développer force, endurance et souplesse.',
+    icon: <Crown className="w-4 h-4" />,
+    cta: 'Découvrir le CrossFit',
+    image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80',
+    route: '/crossfit',
+    gradient: `
+      radial-gradient(circle at 30% 30%, rgba(220, 38, 127, 0.5) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 70%, rgba(190, 24, 93, 0.4) 0%, transparent 45%),
+      linear-gradient(225deg, rgba(157, 23, 77, 1), rgba(0, 0, 0, 1))
+    `,
+    textUpdated:
+      'Espace dédié 500m², entraînement haute intensité et équipements spécialisés. Repoussez vos limites avec le CrossFit.',
+  },
+  {
     id: 'spa',
     title: 'Spa',
     description:
@@ -199,7 +216,7 @@ export const ExpandingMenu = () => {
 
   // Split items into two rows of 5 each for better responsive layout
   const firstRow = menuItems.slice(0, 5)
-  const secondRow = menuItems.slice(5, 9)
+  const secondRow = menuItems.slice(5, 10)
 
   return (
     <div className="flex flex-col w-full max-w-7xl space-y-4">
