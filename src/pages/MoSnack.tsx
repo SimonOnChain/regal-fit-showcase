@@ -58,7 +58,7 @@ const MoSnack = () => {
       <Navigation />
       
       {/* Hero Section - Just the title centered */}
-      <section className="relative h-screen overflow-hidden">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
@@ -67,10 +67,11 @@ const MoSnack = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-blue-600 via-blue-500/70 via-blue-400/40 via-blue-300/20 to-transparent"></div>
         
-        {/* Centered Title Over Image */}
-        <div className="relative z-10 flex items-center justify-center h-full max-w-7xl mx-auto px-6">
+        {/* Centered Title Only */}
+        <div className="relative z-10 flex items-center h-full max-w-7xl mx-auto px-6">
           <h1 className="text-8xl md:text-9xl font-extrabold uppercase tracking-wider text-white animate-fade-in"
               style={{ 
                 fontFamily: 'Montserrat, sans-serif',
