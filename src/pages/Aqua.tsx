@@ -138,55 +138,97 @@ const Aqua = () => {
         </div>
       </section>
 
-      {/* Detail Cards Section */}
-      <section className="py-16">
+      {/* Modern Aqua Activities Section */}
+      <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="p-8 bg-white/70 border border-blue-300/30 rounded-lg shadow-lg animate-fade-in">
-              <div className="text-center">
-                <div className="mb-6 text-blue-600">
-                  <Waves className="h-12 w-12 mx-auto" />
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
+              Nos Activités Aquatiques
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6"></div>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Le Football à 5 est un sport qui se joue avec deux équipes de 5 joueurs sur des terrains complètement fermés avec une particularité: un gazon synthétique imitant parfaitement le gazon naturel. Les aires de jeux au MOTIV'CLUB sont certifiés FIFA. Trois terrains de Foot à 5 avec gazon synthétique deviendront le centre de vos exploits. Il est à noté que de nombreux tournois régionaux se déroulent dans notre établissement.
+            </p>
+          </div>
+          
+          <div className="space-y-32 max-w-7xl mx-auto">
+            {/* Row 1: Natation - Image Left, Text Right */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-blue-600/30 rounded-3xl blur-xl transform rotate-3 group-hover:rotate-6 transition-transform duration-700"></div>
+                <div className="relative overflow-hidden rounded-3xl shadow-2xl group-hover:shadow-blue-500/25 transition-all duration-700">
+                  <img
+                    src={aquaService}
+                    alt="Natation - Piscines Semi-Olympiques"
+                    className="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 via-transparent to-transparent"></div>
+                  <div className="absolute top-6 left-6">
+                    <div className="bg-blue-600/90 backdrop-blur-sm text-white px-6 py-3 rounded-full font-bold text-lg shadow-lg">
+                      NATATION
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-serif font-bold text-slate-800 mb-4">
-                  Natation
-                </h3>
-                <p className="text-slate-700 leading-relaxed">
-                  Deux piscines semi-olympiques chauffées pour tous niveaux
-                </p>
               </div>
-            </Card>
+              <div className="space-y-8 lg:pl-8">
+                <div className="space-y-4">
+                  <h3 className="text-4xl md:text-5xl font-bold text-slate-800 uppercase tracking-wide"
+                      style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                    NATATION
+                  </h3>
+                  <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full"></div>
+                </div>
+                <p className="text-lg md:text-xl text-slate-700 leading-relaxed">
+                  Le MOTIV' CLUB met a votre disposition deux piscines semi olympique chauffées et traitées par la dernière technologie Ultra-Violet. 
+                  La natation est un sport bénéfique pour la santé qui développe l'endurance mais aussi un sport relaxant et antistress. Vous ressentirez une sensation de légéreté en vous laissez porter par l'eau. La natation est un anti stress qui favorise un sommeil profond et réparateur.
+                </p>
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-bold uppercase tracking-wide transition-all duration-300 rounded-full shadow-lg hover:shadow-xl hover:scale-105"
+                        style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                  <a href="/contact">DÉCOUVRIR</a>
+                </Button>
+              </div>
+            </div>
 
-            <Card className="p-8 bg-white/70 border border-blue-300/30 rounded-lg shadow-lg animate-fade-in" style={{ animationDelay: "0.15s" }}>
-              <div className="text-center">
-                <div className="mb-6 text-blue-600">
-                  <Heart className="h-12 w-12 mx-auto" />
+            {/* Row 2: Aqua gym - Text Left, Image Right */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div className="space-y-8 lg:pr-8 lg:order-1">
+                <div className="space-y-4">
+                  <h3 className="text-4xl md:text-5xl font-bold text-slate-800 uppercase tracking-wide"
+                      style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                    AQUA GYM
+                  </h3>
+                  <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full"></div>
                 </div>
-                <h3 className="text-2xl font-serif font-bold text-slate-800 mb-4">
-                  Aquagym
-                </h3>
-                <p className="text-slate-700 leading-relaxed">
-                  Cours collectifs aquatiques dans une atmosphère conviviale
+                <p className="text-lg md:text-xl text-slate-700 leading-relaxed">
+                  Le MOTIV' CLUB proposent des cours collectifs aquatiques pour renforcer vos muscles et améliorer vos capacités cardio-vasculaires, le tout sans impact pour les tendons et articulations.
+                  Grâce à deux piscines semi-olympique chauffées votre sensation d'effort est divisée de moitié, alors que vous travaillez plus ! Vous soulagerez votre musculature qui se trouve libérée de l'apesanteur. La force de l'eau fait travailler tous les muscles du corps en préservant les articulations. 
+                  Bien plus qu'un sport, les cours d'aqua-gym sont un moyen naturel et efficace pour vous ressourcer et vous vider la tête de manière efficace et confortable.
                 </p>
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-bold uppercase tracking-wide transition-all duration-300 rounded-full shadow-lg hover:shadow-xl hover:scale-105"
+                        style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                  <a href="/contact">DÉCOUVRIR</a>
+                </Button>
               </div>
-            </Card>
-
-            <Card className="p-8 bg-white/70 border border-blue-300/30 rounded-lg shadow-lg animate-fade-in" style={{ animationDelay: "0.3s" }}>
-              <div className="text-center">
-                <div className="mb-6 text-blue-600">
-                  <Users className="h-12 w-12 mx-auto" />
+              <div className="relative group lg:order-2">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-blue-600/30 rounded-3xl blur-xl transform -rotate-3 group-hover:-rotate-6 transition-transform duration-700"></div>
+                <div className="relative overflow-hidden rounded-3xl shadow-2xl group-hover:shadow-blue-500/25 transition-all duration-700">
+                  <img
+                    src="https://images.pexels.com/photos/863988/pexels-photo-863988.jpeg"
+                    alt="Aqua Gym - Cours Collectifs"
+                    className="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 via-transparent to-transparent"></div>
+                  <div className="absolute top-6 left-6">
+                    <div className="bg-blue-600/90 backdrop-blur-sm text-white px-6 py-3 rounded-full font-bold text-lg shadow-lg">
+                      AQUA GYM
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-serif font-bold text-slate-800 mb-4">
-                  Bien-être
-                </h3>
-                <p className="text-slate-700 leading-relaxed">
-                  Détente et remise en forme dans un environnement aquatique optimal
-                </p>
               </div>
-            </Card>
+            </div>
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
