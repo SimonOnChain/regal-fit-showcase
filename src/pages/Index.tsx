@@ -57,6 +57,7 @@ const Index = () => {
       <AnimatedSection className="relative py-20 overflow-hidden bg-blue-100">
         {/* Modern Blue Background with Gradient */}
         <div className="absolute inset-0 bg-blue-100"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-blue-600 via-blue-500/70 via-blue-400/40 via-blue-300/20 to-transparent"></div>
         
         {/* Geometric Background Elements */}
         <div className="absolute inset-0">
@@ -165,7 +166,8 @@ const Index = () => {
       </AnimatedSection>
 
       {/* Excellence Training Section */}
-      <AnimatedSection className="py-20 bg-blue-100">
+      <AnimatedSection className="py-20 bg-blue-100 relative overflow-hidden">
+        <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-blue-600 via-blue-500/70 via-blue-400/40 via-blue-300/20 to-transparent"></div>
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Image */}
@@ -265,6 +267,7 @@ const Index = () => {
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-blue-100/60 via-blue-200/40 to-blue-300/60" />
+        <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-blue-600 via-blue-500/70 via-blue-400/40 via-blue-300/20 to-transparent"></div>
         
         <div className="relative z-10 container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
@@ -322,7 +325,8 @@ const Index = () => {
       </AnimatedSection>
 
       {/* Services Section */}
-      <AnimatedSection className="py-20 bg-blue-100">
+      <AnimatedSection className="py-20 bg-blue-100 relative overflow-hidden">
+        <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-blue-600 via-blue-500/70 via-blue-400/40 via-blue-300/20 to-transparent"></div>
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-slate-800 mb-4 animate-fade-in">
