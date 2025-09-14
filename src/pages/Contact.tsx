@@ -63,8 +63,8 @@ const Contact = () => {
       
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="relative h-screen overflow-hidden">
+      {/* Hero Section - Just the title centered */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
@@ -73,29 +73,42 @@ const Contact = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-800/70 to-blue-900/80"></div>
+        <div className="absolute inset-0 z-[1] pointer-events-none bg-gradient-to-b from-black/70 via-black/50 to-black/20"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-40 md:h-80 bg-gradient-to-t from-blue-600/40 via-blue-500/30 via-blue-400/20 to-transparent pointer-events-none"></div>
         
-        {/* Hero Content */}
+        {/* Centered Title Only */}
         <div className="relative z-10 flex items-center h-full max-w-7xl mx-auto px-6">
-          <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
-            <div className="flex items-center justify-center space-x-4 mb-4">
-              <div className="w-12 h-0.5 bg-blue-300"></div>
-              <Crown className="h-10 w-10 text-blue-300" />
-              <h1 className="text-6xl md:text-8xl font-serif font-bold text-blue-300">
-                Contact
-              </h1>
-              <Crown className="h-10 w-10 text-blue-300" />
-              <div className="w-12 h-0.5 bg-blue-300"></div>
+          <h1 className="text-8xl md:text-9xl font-extrabold uppercase tracking-wider text-white animate-fade-in"
+              style={{ 
+                fontFamily: 'Montserrat, sans-serif',
+                fontWeight: 900,
+                textShadow: '0 8px 32px rgba(0, 0, 0, 0.5)'
+              }}>
+            CONTACT
+          </h1>
+        </div>
+      </section>
+
+      {/* Description Section - Blue Background */}
+      <section className="relative py-20 bg-gradient-to-b from-blue-600 to-blue-700 overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 right-20 w-32 h-32 bg-blue-400/20 rounded-full blur-xl animate-float"></div>
+          <div className="absolute bottom-16 left-16 w-24 h-24 bg-blue-300/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '1s' }}></div>
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-5xl mx-auto text-center">
+            <div className="space-y-8 animate-fade-in">
+              <p className="text-xl md:text-2xl text-white leading-relaxed font-light">
+                Contactez-nous pour découvrir l'excellence Royal Fitness. Notre équipe est à votre disposition pour répondre à toutes vos questions et vous accompagner dans votre parcours bien-être.
+              </p>
+              
+              <p className="text-2xl md:text-3xl font-bold text-white animate-fade-in stagger-2"
+                 style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                Parlons de votre projet ensemble !
+              </p>
             </div>
-            <Card className="bg-white/10 backdrop-blur-sm border border-white/20 mx-auto max-w-3xl">
-              <CardContent className="p-8">
-                <p className="text-xl md:text-2xl text-white leading-relaxed font-light">
-                  Contactez-nous pour découvrir l'excellence Royal Fitness. 
-                  Notre équipe est à votre disposition pour répondre à toutes vos questions 
-                  et vous accompagner dans votre parcours bien-être.
-                </p>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
