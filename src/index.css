@@ -563,4 +563,14 @@
       gap: 12px !important;
     }
   }
+
+  /* Hide scrollbars but allow scrolling */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }

@@ -99,8 +99,8 @@ const Navigation = () => {
           </div>
 
           {/* Center - Main Navigation (Desktop) */}
-          <div className="hidden lg:flex items-center justify-center flex-1">
-            <div className="flex items-center gap-2 lg:gap-3 xl:gap-4">
+          <div className="hidden lg:flex items-center justify-center flex-1 overflow-hidden">
+            <div className="flex items-center gap-1 xl:gap-2 overflow-x-auto scrollbar-hide max-w-full">
               {mainNavItems.map((item, index) => (
                 <div key={item.name} className="relative">
                   {item.dropdown ? (
@@ -110,7 +110,7 @@ const Navigation = () => {
                       onMouseLeave={handleDropdownLeave}
                     >
                       <button
-                        className={`nav-link-premium text-white hover:text-blue-200 transition-all duration-300 font-medium text-[12px] sm:text-xs lg:text-[13px] xl:text-sm uppercase tracking-normal lg:tracking-wide px-1.5 sm:px-2 lg:px-2 xl:px-3 py-2 fade-slide-in stagger-${index + 1} flex items-center gap-1 leading-none`}
+                        className="nav-link-premium text-white hover:text-blue-200 transition-all duration-300 font-medium text-[11px] lg:text-xs xl:text-sm uppercase tracking-tight lg:tracking-normal px-1.5 lg:px-2 xl:px-3 py-2 fade-slide-in flex items-center gap-1 leading-none whitespace-nowrap"
                         style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}
                       >
                         {item.name}
@@ -138,7 +138,7 @@ const Navigation = () => {
                   ) : (
                     <a
                       href={item.href}
-                      className={`nav-link-premium text-white hover:text-blue-200 transition-all duration-300 font-medium text-[12px] sm:text-xs lg:text-[13px] xl:text-sm uppercase tracking-normal lg:tracking-wide px-1.5 sm:px-2 lg:px-2 xl:px-3 py-2 fade-slide-in stagger-${index + 1} leading-none`}
+                      className="nav-link-premium text-white hover:text-blue-200 transition-all duration-300 font-medium text-[11px] lg:text-xs xl:text-sm uppercase tracking-tight lg:tracking-normal px-1.5 lg:px-2 xl:px-3 py-2 fade-slide-in leading-none whitespace-nowrap"
                       style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}
                     >
                       {item.name}
@@ -172,7 +172,7 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden fixed inset-x-0 top-[80px] md:top-[90px] lg:top-[100px] bottom-0 bg-slate-900/95 backdrop-blur-md z-40 animate-slide-down overscroll-contain">
+          <div className="lg:hidden fixed inset-x-0 top-[80px] md:top-[90px] lg:top-[100px] bottom-0 bg-slate-900/30 backdrop-blur-xl z-40 animate-slide-down overscroll-contain">
             <div className="h-full overflow-y-auto p-6 pt-24 pb-8">
               <div className="grid grid-cols-1 gap-3 max-w-md mx-auto">
                 {allServices.map((service, index) => (
