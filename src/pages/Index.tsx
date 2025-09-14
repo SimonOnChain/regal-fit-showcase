@@ -323,7 +323,7 @@ const Index = () => {
 
       {/* Services Section */}
       <AnimatedSection className="py-20 bg-blue-100">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-slate-800 mb-4 animate-fade-in">
               Nos Services Premium
