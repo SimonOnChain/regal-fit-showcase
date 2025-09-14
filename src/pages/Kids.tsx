@@ -197,14 +197,15 @@ const Kids = () => {
               </p>
             </CardContent>
           </Card>
-      </section>
+
+
           <Card 
             className="group bg-white/70 border-blue-300/30 overflow-hidden hover:shadow-lg transition-all duration-500 hover:-translate-y-2 animate-fade-in rounded-lg shadow-lg"
             style={{ animationDelay: "0.2s" }}
           >
             <div className="relative h-64 overflow-hidden">
               <img
-                src="/src/assets/image.png"
+                src="/src/assets/kids-club-3.jpg"
                 alt="Kids Club - Règlement Intérieur"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -228,7 +229,7 @@ const Kids = () => {
           >
             <div className="relative h-64 overflow-hidden">
               <img
-                src="/src/assets/image.png"
+                src="/src/assets/kids-club-4.jpg"
                 alt="Kids Club - Espace Détente"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
