@@ -221,7 +221,7 @@ export const ExpandingMenu = () => {
   return (
     <div className="flex flex-col w-full max-w-7xl space-y-2 md:space-y-4">
       {/* First Row */}
-      <div className="flex w-full h-[150px] xs:h-[180px] sm:h-[220px] md:h-[280px] lg:h-[400px] gap-1 sm:gap-2 md:gap-3">
+      <div className="flex w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[400px] gap-1 sm:gap-2 md:gap-3">
         {firstRow.map((item, index) => (
             <MenuItem
               key={item.id}
@@ -240,7 +240,7 @@ export const ExpandingMenu = () => {
       </div>
       
       {/* Second Row */}
-      <div className="flex w-full h-[150px] xs:h-[180px] sm:h-[220px] md:h-[280px] lg:h-[400px] gap-1 sm:gap-2 md:gap-3">
+      <div className="flex w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[400px] gap-1 sm:gap-2 md:gap-3">
         {secondRow.map((item, index) => (
             <MenuItem
               key={item.id}
@@ -326,7 +326,7 @@ const MenuItem = ({ item, index, isActive, onHover, onNavigate }: MenuItemProps)
       
       {isActive && (
         <p
-          className="absolute w-[120px] xs:w-[140px] sm:w-[180px] md:w-[220px] lg:w-[311px] left-[12px] xs:left-[15px] sm:left-[20px] md:left-[25px] lg:left-[41px] bottom-[35px] xs:bottom-[40px] sm:bottom-[45px] md:bottom-[55px] lg:bottom-[81px] text-[8px] xs:text-[9px] sm:text-xs md:text-sm leading-[10px] xs:leading-[11px] sm:leading-[14px] md:leading-[18px] lg:leading-[24.3px] text-[rgba(240,240,240,0.9)] font-medium"
+          className="absolute w-[180px] sm:w-[220px] md:w-[250px] lg:w-[311px] left-[15px] sm:left-[20px] md:left-[25px] lg:left-[41px] bottom-[45px] sm:bottom-[50px] md:bottom-[60px] lg:bottom-[81px] text-xs sm:text-sm leading-[16px] sm:leading-[18px] md:leading-[20px] lg:leading-[24.3px] text-[rgba(240,240,240,0.9)] font-medium"
           style={{
             opacity: isActive ? 1 : 0,
             transition: isActive
@@ -341,7 +341,7 @@ const MenuItem = ({ item, index, isActive, onHover, onNavigate }: MenuItemProps)
       {isActive && (
         <button
           onClick={() => onNavigate(item.id)}
-          className="absolute left-[25px] xs:left-[30px] sm:left-[35px] md:left-[40px] lg:left-[65px] bottom-[12px] xs:bottom-[15px] sm:bottom-[18px] md:bottom-[22px] lg:bottom-[41px] text-white text-[7px] xs:text-[8px] sm:text-xs md:text-sm font-medium hover:text-white/80 transition-colors cursor-pointer min-h-[20px] xs:min-h-[24px] sm:min-h-[28px] flex items-center"
+          className="absolute left-[35px] sm:left-[40px] md:left-[45px] lg:left-[65px] bottom-[15px] sm:bottom-[20px] md:bottom-[25px] lg:bottom-[41px] text-white text-xs sm:text-sm font-medium hover:text-white/80 transition-colors cursor-pointer min-h-[32px] flex items-center"
           style={{
             opacity: isActive ? 1 : 0,
             transition: isActive
