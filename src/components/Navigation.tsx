@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Crown, Menu, X, ChevronDown } from "lucide-react";
 
@@ -190,19 +191,23 @@ const Navigation = () => {
             <div className="overflow-y-auto overscroll-contain p-4 pb-20" style={{ height: `calc(100vh - ${overlayTop}px)` }}>
               <div className="grid grid-cols-1 gap-3 max-w-md mx-auto mt-6 sm:mt-8">
                 {allServices.map((service, index) => (
-                  <a
+                  <Link
                     key={service.name}
-                    href={service.href}
+                    to={service.href}
                     className="text-white hover:text-blue-200 transition-all duration-300 py-4 px-4 text-center font-medium bg-white/10 rounded-lg backdrop-blur-sm border border-white/20 min-h-[44px] flex items-center justify-center"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {service.name}
-                  </a>
+                  </Link>
                 ))}
                 <div className="mt-4">
-                  <Button className="bg-gradient-to-r from-blue-300 to-blue-400 hover:from-blue-400 hover:to-blue-500 text-white w-full py-4 text-base font-bold uppercase tracking-wide rounded-lg min-h-[44px]">
-                    <a href="/contact">Contact</a>
-                  </Button>
+                  <Link 
+                    to="/contact"
+                    className="bg-gradient-to-r from-blue-300 to-blue-400 hover:from-blue-400 hover:to-blue-500 text-white w-full py-4 text-base font-bold uppercase tracking-wide rounded-lg min-h-[44px] flex items-center justify-center transition-all duration-300"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Contact
+                  </Link>
                 </div>
               </div>
             </div>
