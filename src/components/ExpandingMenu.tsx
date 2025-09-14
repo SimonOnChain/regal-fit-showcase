@@ -326,7 +326,7 @@ const MenuItem = ({ item, index, isActive, onHover, onNavigate }: MenuItemProps)
       
       {isActive && (
         <p
-          className="absolute w-[180px] sm:w-[220px] md:w-[250px] lg:w-[311px] left-[15px] sm:left-[20px] md:left-[25px] lg:left-[41px] bottom-[45px] sm:bottom-[50px] md:bottom-[60px] lg:bottom-[81px] text-xs sm:text-sm leading-[16px] sm:leading-[18px] md:leading-[20px] lg:leading-[24.3px] text-[rgba(240,240,240,0.9)] font-medium"
+          className="hidden sm:block absolute w-[180px] sm:w-[220px] md:w-[250px] lg:w-[311px] left-[15px] sm:left-[20px] md:left-[25px] lg:left-[41px] bottom-[45px] sm:bottom-[50px] md:bottom-[60px] lg:bottom-[81px] text-xs sm:text-sm leading-[16px] sm:leading-[18px] md:leading-[20px] lg:leading-[24.3px] text-[rgba(240,240,240,0.9)] font-medium"
           style={{
             opacity: isActive ? 1 : 0,
             transition: isActive
@@ -337,6 +337,7 @@ const MenuItem = ({ item, index, isActive, onHover, onNavigate }: MenuItemProps)
           {item.textUpdated || item.description}
         </p>
       )}
+
       
       {isActive && (
         <button
