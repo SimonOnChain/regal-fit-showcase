@@ -75,13 +75,13 @@ const Navigation = () => {
   return (
     <nav className={`nav-royal fixed top-0 left-0 right-0 z-50 ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container mx-auto px-6 py-6">
-        <div className="flex items-center justify-between h-12">
+        <div className="flex items-center justify-between h-8 sm:h-10 md:h-12">
           
           {/* Left - Logo & Branding */}
           <div className="flex items-center flex-shrink-0">
             <div className="flex items-center space-x-4 fade-slide-in">
-              <Crown className="h-10 w-10 text-white" />
-              <span className="text-2xl font-extrabold uppercase tracking-wider text-white" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 900 }}>
+              <Crown className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 text-white" />
+              <span className="text-sm sm:text-lg md:text-xl lg:text-2xl font-extrabold uppercase tracking-wider text-white" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 900 }}>
                 Royal Fitness
               </span>
             </div>
@@ -99,16 +99,16 @@ const Navigation = () => {
                       onMouseLeave={handleDropdownLeave}
                     >
                       <button
-                        className={`nav-link-premium text-white hover:text-blue-200 transition-all duration-300 font-bold text-sm uppercase tracking-widest px-3 py-2 fade-slide-in stagger-${index + 1} flex items-center gap-1`}
+                        className={`nav-link-premium text-white hover:text-blue-200 transition-all duration-300 font-bold text-xs sm:text-sm uppercase tracking-widest px-2 sm:px-3 py-2 fade-slide-in stagger-${index + 1} flex items-center gap-1`}
                         style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 800 }}
                       >
                         {item.name}
-                        <ChevronDown className="h-4 w-4 transition-transform duration-200" 
+                        <ChevronDown className="h-3 w-3 sm:h-4 sm:w-4 transition-transform duration-200" 
                           style={{ transform: activeDropdown === item.name ? 'rotate(180deg)' : 'rotate(0deg)' }} />
                       </button>
                       {activeDropdown === item.name && (
                         <div 
-                          className="dropdown-menu absolute top-full left-0 mt-1 w-48 py-2 z-50 animate-slide-down"
+                          className="dropdown-menu absolute top-full left-0 mt-1 w-40 sm:w-48 py-2 z-50 animate-slide-down"
                           onMouseEnter={() => handleDropdownStay(item.name)}
                           onMouseLeave={handleDropdownLeave}
                         >
@@ -116,7 +116,7 @@ const Navigation = () => {
                             <a
                               key={dropdownItem.name}
                               href={dropdownItem.href}
-                              className="dropdown-item block px-4 py-3 hover:bg-blue-500/20 transition-all duration-200"
+                              className="dropdown-item block px-3 sm:px-4 py-2 sm:py-3 hover:bg-blue-500/20 transition-all duration-200 text-sm"
                             >
                               {dropdownItem.name}
                             </a>
@@ -127,7 +127,7 @@ const Navigation = () => {
                   ) : (
                     <a
                       href={item.href}
-                      className={`nav-link-premium text-white hover:text-blue-200 transition-all duration-300 font-bold text-sm uppercase tracking-widest px-3 py-2 fade-slide-in stagger-${index + 1}`}
+                      className={`nav-link-premium text-white hover:text-blue-200 transition-all duration-300 font-bold text-xs sm:text-sm uppercase tracking-widest px-2 sm:px-3 py-2 fade-slide-in stagger-${index + 1}`}
                       style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 800 }}
                     >
                       {item.name}
@@ -140,7 +140,7 @@ const Navigation = () => {
 
           {/* Right - Contact Button (Desktop) */}
           <div className="hidden lg:flex items-center flex-shrink-0">
-            <Button className="bg-gradient-to-r from-blue-300 to-blue-400 hover:from-blue-400 hover:to-blue-500 text-white px-10 py-4 text-base font-extrabold uppercase tracking-widest rounded-full shadow-lg hover:shadow-xl transition-all duration-300 btn-contact-shimmer"
+            <Button className="bg-gradient-to-r from-blue-300 to-blue-400 hover:from-blue-400 hover:to-blue-500 text-white px-6 lg:px-8 xl:px-10 py-3 lg:py-4 text-sm lg:text-base font-extrabold uppercase tracking-widest rounded-full shadow-lg hover:shadow-xl transition-all duration-300 btn-contact-shimmer"
                     style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 900 }}>
               <a href="/contact">CONTACT</a>
             </Button>
@@ -161,20 +161,20 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-6 pb-4 border-t border-white/20 animate-slide-down">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+          <div className="lg:hidden fixed inset-x-0 top-[100px] bottom-0 bg-slate-800/95 backdrop-blur-md border-t border-white/20 animate-slide-down overflow-y-auto z-40">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-6">
               {allServices.map((service, index) => (
                 <a
                   key={service.name}
                   href={service.href}
-                  className="text-white hover:text-blue-200 transition-all duration-300 py-4 px-4 text-center font-medium bg-white/10 rounded-lg backdrop-blur-sm border border-white/20 min-h-[44px] flex items-center justify-center"
+                  className="text-white hover:text-blue-200 transition-all duration-300 py-4 px-4 text-center font-medium bg-white/10 rounded-lg backdrop-blur-sm border border-white/20 min-h-[44px] flex items-center justify-center text-sm"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {service.name}
                 </a>
               ))}
             </div>
-            <div className="mt-6 text-center">
+            <div className="p-6 pt-0">
               <Button className="bg-gradient-to-r from-blue-300 to-blue-400 hover:from-blue-400 hover:to-blue-500 text-white w-full py-4 text-base font-bold uppercase tracking-wide rounded-lg min-h-[44px]">
                 <a href="/contact">Contact</a>
               </Button>

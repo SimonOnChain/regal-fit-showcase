@@ -461,6 +461,13 @@
 
   /* Mobile Responsive Improvements */
   @media (max-width: 768px) {
+    /* Prevent body scroll when mobile menu is open */
+    body.mobile-menu-open {
+      overflow: hidden;
+      position: fixed;
+      width: 100%;
+    }
+    
     /* Mobile Typography */
     h1 {
       font-size: 3rem !important;
