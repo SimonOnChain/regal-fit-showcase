@@ -134,30 +134,31 @@ const Navigation = () => {
                       </button>
                       {activeDropdown === item.name && (
                         <div 
-                          className="dropdown-menu absolute top-full left-0 mt-1 w-48 py-2 z-50 animate-slide-down"
+                          className="dropdown-menu absolute top-full left-0 mt-1 w-48 py-2 z-[100] animate-slide-down"
                           onMouseEnter={() => handleDropdownStay(item.name)}
                           onMouseLeave={handleDropdownLeave}
                         >
                           {item.dropdown.map((dropdownItem) => (
-                            <a
+                            <Link
                               key={dropdownItem.name}
-                              href={dropdownItem.href}
+                              to={dropdownItem.href}
                               className="dropdown-item block px-4 py-3 hover:bg-blue-500/20 transition-all duration-200"
+                              onClick={() => setActiveDropdown(null)}
                             >
                               {dropdownItem.name}
-                            </a>
+                            </Link>
                           ))}
                         </div>
                       )}
                     </div>
                   ) : (
-                    <a
-                      href={item.href}
+                    <Link
+                      to={item.href}
                       className="nav-link-premium text-white hover:text-blue-200 transition-all duration-300 font-medium text-[11px] lg:text-xs xl:text-sm uppercase tracking-tight lg:tracking-normal px-1.5 lg:px-2 xl:px-3 py-2 fade-slide-in leading-none whitespace-nowrap"
                       style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   )}
                 </div>
               ))}
@@ -166,10 +167,12 @@ const Navigation = () => {
 
           {/* Right - Contact Button (Desktop) */}
           <div className="hidden lg:flex items-center flex-shrink-0">
-            <Button className="bg-gradient-to-r from-blue-300 to-blue-400 hover:from-blue-400 hover:to-blue-500 text-white px-6 md:px-8 py-3 md:py-4 text-sm md:text-base font-bold uppercase tracking-wide rounded-full shadow-lg hover:shadow-xl transition-all duration-300 btn-contact-shimmer leading-none"
-                    style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>
-              <a href="/contact">CONTACT</a>
-            </Button>
+            <Link to="/contact">
+              <Button className="bg-gradient-to-r from-blue-300 to-blue-400 hover:from-blue-400 hover:to-blue-500 text-white px-6 md:px-8 py-3 md:py-4 text-sm md:text-base font-bold uppercase tracking-wide rounded-full shadow-lg hover:shadow-xl transition-all duration-300 btn-contact-shimmer leading-none"
+                      style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>
+                CONTACT
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
