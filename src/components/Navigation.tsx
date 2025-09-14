@@ -152,7 +152,7 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-foreground"
+              className="text-white hover:text-blue-200 min-h-[44px] min-w-[44px]"
             >
               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -161,21 +161,21 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-6 pb-4 border-t border-border/50 animate-slide-in-right">
-            <div className="grid grid-cols-2 gap-4 mt-6">
+          <div className="lg:hidden mt-6 pb-4 border-t border-white/20 animate-slide-down">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
               {allServices.map((service, index) => (
                 <a
                   key={service.name}
                   href={service.href}
-                  className={`text-foreground hover:text-accent transition-all duration-300 py-3 text-center font-medium scale-hover animate-stagger-fade-in stagger-${index % 6 + 1}`}
+                  className="text-white hover:text-blue-200 transition-all duration-300 py-4 px-4 text-center font-medium bg-white/10 rounded-lg backdrop-blur-sm border border-white/20 min-h-[44px] flex items-center justify-center"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {service.name}
                 </a>
               ))}
             </div>
-            <div className="mt-6 text-center animate-fade-in stagger-6">
-              <Button className="btn-gold w-full gold-glow-hover py-3 text-base font-medium">
+            <div className="mt-6 text-center">
+              <Button className="bg-gradient-to-r from-blue-300 to-blue-400 hover:from-blue-400 hover:to-blue-500 text-white w-full py-4 text-base font-bold uppercase tracking-wide rounded-lg min-h-[44px]">
                 <a href="/contact">Contact</a>
               </Button>
             </div>

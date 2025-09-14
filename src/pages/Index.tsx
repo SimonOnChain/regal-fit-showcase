@@ -26,7 +26,7 @@ const Index = () => {
         
         <div className="relative z-10 flex items-center justify-center h-full">
           <div className="text-center animate-fade-in">
-            <div className="text-6xl md:text-8xl font-extrabold uppercase tracking-wider"
+            <div className="text-4xl sm:text-6xl md:text-8xl font-extrabold uppercase tracking-wider hero-title-mobile"
                  style={{ 
                    color: 'hsl(210 60% 70%)',
                    textShadow: '0 8px 16px rgba(255, 255, 255, 0.2)',
@@ -36,7 +36,7 @@ const Index = () => {
                  }}>
               ROYAL
             </div>
-            <div className="text-6xl md:text-8xl font-extrabold uppercase tracking-wider"
+            <div className="text-4xl sm:text-6xl md:text-8xl font-extrabold uppercase tracking-wider hero-title-mobile"
                  style={{ 
                    color: 'hsl(210 60% 70%)',
                    textShadow: '0 8px 16px rgba(255, 255, 255, 0.2)',
@@ -79,8 +79,8 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
-            <div className="space-y-8">
-              <h2 className="text-5xl md:text-7xl font-bold uppercase tracking-wide text-white relative"
+            <div className="space-y-6 md:space-y-8">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold uppercase tracking-wide text-white relative"
                   style={{ fontFamily: 'Montserrat, sans-serif' }}>
                 <span className="relative z-10 text-slate-800">
                 LE CONCEPT
@@ -92,36 +92,36 @@ const Index = () => {
               <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full animate-pulse"></div>
               
               <div className="space-y-6 text-slate-700">
-                <p className="text-lg md:text-xl leading-relaxed hover:text-slate-900 transition-colors duration-300 relative group">
+                <p className="text-base md:text-lg lg:text-xl leading-relaxed hover:text-slate-900 transition-colors duration-300 relative group">
                   <span className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-blue-600 rounded-full transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
-                  <span className="pl-6">
+                  <span className="pl-4 md:pl-6">
                   Le concept du ROYAL FITNESS redéfinit l'expérience du bien-être en alliant excellence, sophistication et innovation dans un environnement d'exception.
                   </span>
                 </p>
                 
-                <p className="text-lg md:text-xl leading-relaxed hover:text-slate-900 transition-colors duration-300 relative group">
+                <p className="text-base md:text-lg lg:text-xl leading-relaxed hover:text-slate-900 transition-colors duration-300 relative group">
                   <span className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-blue-600 rounded-full transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
-                  <span className="pl-6">
+                  <span className="pl-4 md:pl-6">
                   Découvrez une gamme complète de services premium incluant fitness, aqua-training, spa de luxe, football professionnel, et des programmes spécialisés pour enfants. Notre équipe de coachs certifiés et expérimentés vous accompagne dans votre quête d'excellence.
                   </span>
                 </p>
                 
-                <p className="text-lg md:text-xl leading-relaxed hover:text-slate-900 transition-colors duration-300 relative group">
+                <p className="text-base md:text-lg lg:text-xl leading-relaxed hover:text-slate-900 transition-colors duration-300 relative group">
                   <span className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-blue-600 rounded-full transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
-                  <span className="pl-6">
+                  <span className="pl-4 md:pl-6">
                   Que vous visiez l'amélioration de votre mobilité, la croissance musculaire, ou simplement le bien-être intégral, nous avons l'expertise et les équipements de pointe pour vous mener vers vos objectifs.
                   </span>
                 </p>
                 
-                <p className="text-lg md:text-xl leading-relaxed hover:text-slate-900 transition-colors duration-300 relative group">
+                <p className="text-base md:text-lg lg:text-xl leading-relaxed hover:text-slate-900 transition-colors duration-300 relative group">
                   <span className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-blue-600 rounded-full transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
-                  <span className="pl-6">
+                  <span className="pl-4 md:pl-6">
                   Prêt à élever votre parcours fitness ? Rejoignez-nous et découvrez le frisson d'atteindre de nouveaux sommets !
                   </span>
                 </p>
               </div>
               
-              <button className="relative group bg-blue-600 text-white px-10 py-5 text-lg font-bold uppercase tracking-wide rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 transform shadow-2xl hover:shadow-blue-500/25"
+              <button className="relative group bg-blue-600 text-white px-6 md:px-10 py-4 md:py-5 text-base md:text-lg font-bold uppercase tracking-wide rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 transform shadow-2xl hover:shadow-blue-500/25 min-h-[44px] w-full sm:w-auto"
                       style={{ fontFamily: 'Montserrat, sans-serif' }}>
                 <span className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                 <span className="absolute inset-0 border-2 border-blue-400 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -177,26 +177,26 @@ const Index = () => {
             
             {/* Right Content */}
             <div className="space-y-8">
-              <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-wide text-slate-800"
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-wide text-slate-800"
                   style={{ fontFamily: 'Montserrat, sans-serif' }}>
                 EXCELLENCE TRAINING
               </h2>
               
               <div className="space-y-6 text-slate-700">
-                <p className="text-lg md:text-xl leading-relaxed">
+                <p className="text-base md:text-lg lg:text-xl leading-relaxed">
                   Notre approche personnalisée garantit des résultats exceptionnels grâce à nos équipements de dernière génération et nos coachs certifiés.
                 </p>
                 
-                <p className="text-lg md:text-xl leading-relaxed">
+                <p className="text-base md:text-lg lg:text-xl leading-relaxed">
                   Bénéficiez d'un accompagnement sur mesure dans un environnement premium conçu pour maximiser vos performances et votre bien-être.
                 </p>
                 
-                <p className="text-lg md:text-xl leading-relaxed">
+                <p className="text-base md:text-lg lg:text-xl leading-relaxed">
                   Découvrez une expérience fitness unique où chaque détail est pensé pour votre réussite et votre épanouissement personnel.
                 </p>
               </div>
               
-              <button className="bg-blue-600 border-2 border-blue-600 text-white px-8 py-4 text-lg font-bold uppercase tracking-wide hover:bg-blue-700 hover:border-blue-700 transition-all duration-300"
+              <button className="bg-blue-600 border-2 border-blue-600 text-white px-6 md:px-8 py-4 text-base md:text-lg font-bold uppercase tracking-wide hover:bg-blue-700 hover:border-blue-700 transition-all duration-300 min-h-[44px] w-full sm:w-auto"
                       style={{ fontFamily: 'Montserrat, sans-serif' }}>
                 <a href="/contact">Nous contacter</a>
               </button>
@@ -219,11 +219,11 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <AnimatedCard className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-xl p-8 shadow-xl hover:bg-white/15 transition-all duration-300" delay={100}>
               <div className="space-y-4">
-                <div className="text-5xl md:text-6xl font-bold text-white"
+                <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white"
                      style={{ fontFamily: 'Montserrat, sans-serif' }}>
                   +97%
                 </div>
-                <p className="text-xl text-white/90 font-medium">
+                <p className="text-base md:text-lg lg:text-xl text-white/90 font-medium">
                   Clients satisfaits
                 </p>
               </div>
@@ -231,11 +231,11 @@ const Index = () => {
             
             <AnimatedCard className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-xl p-8 shadow-xl hover:bg-white/15 transition-all duration-300" delay={200}>
               <div className="space-y-4">
-                <div className="text-5xl md:text-6xl font-bold text-white"
+                <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white"
                      style={{ fontFamily: 'Montserrat, sans-serif' }}>
                   +124
                 </div>
-                <p className="text-xl text-white/90 font-medium">
+                <p className="text-base md:text-lg lg:text-xl text-white/90 font-medium">
                   Cours collectifs
                 </p>
               </div>
@@ -243,11 +243,11 @@ const Index = () => {
             
             <AnimatedCard className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-xl p-8 shadow-xl hover:bg-white/15 transition-all duration-300" delay={300}>
               <div className="space-y-4">
-                <div className="text-5xl md:text-6xl font-bold text-white"
+                <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white"
                      style={{ fontFamily: 'Montserrat, sans-serif' }}>
                   +15
                 </div>
-                <p className="text-xl text-white/90 font-medium">
+                <p className="text-base md:text-lg lg:text-xl text-white/90 font-medium">
                   Années d'expérience
                 </p>
               </div>
@@ -273,18 +273,18 @@ const Index = () => {
                 {/* Left Content */}
                 <div className="space-y-8">
                   <div className="space-y-4">
-                    <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-wide text-slate-800"
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-wide text-slate-800"
                         style={{ fontFamily: 'Montserrat, sans-serif' }}>
                       ROYAL FITNESS
                     </h2>
-                    <div className="bg-blue-500 text-white px-6 py-2 text-xl font-bold uppercase tracking-wide inline-block"
+                    <div className="bg-blue-500 text-white px-4 md:px-6 py-2 text-lg md:text-xl font-bold uppercase tracking-wide inline-block"
                          style={{ fontFamily: 'Montserrat, sans-serif' }}>
                       1800 DH/AN
                     </div>
                   </div>
                   
                   <div className="border-2 border-slate-700 p-6">
-                    <h3 className="text-2xl md:text-3xl font-bold uppercase text-slate-800 mb-4"
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase text-slate-800 mb-4"
                         style={{ fontFamily: 'Montserrat, sans-serif' }}>
                       RESTEZ EN FORME
                     </h3>
@@ -297,20 +297,20 @@ const Index = () => {
                 
                 {/* Right Content */}
                 <div className="space-y-6 text-slate-700">
-                  <h3 className="text-2xl font-bold uppercase text-slate-800"
+                  <h3 className="text-xl md:text-2xl font-bold uppercase text-slate-800"
                       style={{ fontFamily: 'Montserrat, sans-serif' }}>
                     ROYAL FITNESS
                   </h3>
                   
-                  <p className="text-lg leading-relaxed">
+                  <p className="text-base md:text-lg leading-relaxed">
                     Le Royal Fitness est un programme d'entraînement physique complet et efficace qui élève l'amélioration de la condition physique globale. Adapté à tous vos niveaux, les entraînements expérimentés et personnels supervisent chaque session pour maximiser vos résultats.
                   </p>
                   
-                  <p className="text-lg leading-relaxed">
+                  <p className="text-base md:text-lg leading-relaxed">
                     Rejoignez notre club de fitness et découvrez les bénéfices incroyables de ce programme d'entraînement unique et stimulant.
                   </p>
                   
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg font-bold uppercase tracking-wide transition-colors duration-300"
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 md:px-8 py-4 text-base md:text-lg font-bold uppercase tracking-wide transition-colors duration-300 min-h-[44px] w-full sm:w-auto"
                           style={{ fontFamily: 'Montserrat, sans-serif' }}>
                     <a href="/contact">DÉCOUVRIR</a>
                   </button>
@@ -325,10 +325,10 @@ const Index = () => {
       <AnimatedSection className="py-20 bg-blue-100">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4 animate-fade-in">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-slate-800 mb-4 animate-fade-in">
               Nos Services Premium
             </h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto animate-fade-in stagger-2">
+            <p className="text-base md:text-lg lg:text-xl text-slate-600 max-w-2xl mx-auto animate-fade-in stagger-2">
               Une gamme complète de services dans un environnement d'exception
             </p>
           </div>

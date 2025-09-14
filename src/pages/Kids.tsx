@@ -54,7 +54,7 @@ const Kids = () => {
         
         {/* Centered Title Only */}
         <div className="relative z-10 flex items-center h-full max-w-7xl mx-auto px-6">
-          <h1 className="text-8xl md:text-9xl font-extrabold uppercase tracking-wider text-white animate-fade-in"
+          <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-extrabold uppercase tracking-wider text-white animate-fade-in hero-title-mobile"
               style={{ 
                 fontFamily: 'Montserrat, sans-serif',
                 fontWeight: 900,
@@ -76,7 +76,7 @@ const Kids = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             <div className="space-y-8 animate-fade-in">
-              <p className="text-xl md:text-2xl text-white leading-relaxed font-light">
+              <p className="text-base md:text-lg lg:text-xl xl:text-2xl text-white leading-relaxed font-light">
                 Notre club de fitness propose une large gamme d'activités pour les enfants, 
                 notamment la natation, la gym et le foot. La natation est un sport complet qui 
                 permet de développer la coordination, la force et l'endurance tout en s'amusant. 
@@ -84,7 +84,7 @@ const Kids = () => {
                 développer leur condition physique.
               </p>
               
-              <p className="text-2xl md:text-3xl font-bold text-white animate-fade-in stagger-2"
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white animate-fade-in stagger-2"
                  style={{ fontFamily: 'Montserrat, sans-serif' }}>
                 Un lieu pour s'amuser, progresser, et s'épanouir !
               </p>
@@ -97,23 +97,23 @@ const Kids = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-slate-800 mb-4">
               Nos Activités Enfants
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6"></div>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg lg:text-xl text-slate-600 max-w-2xl mx-auto">
               Des programmes adaptés pour le développement physique et personnel de votre enfant
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
             {kidsActivities.map((activity, index) => (
               <Card 
                 key={activity.title} 
-                className="group bg-white/70 border-blue-300/30 overflow-hidden hover:shadow-lg transition-all duration-500 hover:-translate-y-2 animate-fade-in rounded-lg shadow-lg"
+                className="group bg-white/70 border-blue-300/30 overflow-hidden hover:shadow-lg transition-all duration-500 hover:-translate-y-1 md:hover:-translate-y-2 animate-fade-in rounded-lg shadow-lg"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
                   <img
                     src={activity.image}
                     alt={activity.title}
@@ -123,11 +123,11 @@ const Kids = () => {
                   <div className="absolute inset-0 bg-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
                 
-                <CardContent className="p-6">
-                  <h3 className="text-2xl font-serif font-bold text-slate-800 mb-4 border-b border-blue-300/30 pb-2">
+                <CardContent className="p-4 md:p-6">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-serif font-bold text-slate-800 mb-3 md:mb-4 border-b border-blue-300/30 pb-2">
                     {activity.title}
                   </h3>
-                  <p className="text-slate-700 leading-relaxed">
+                  <p className="text-sm md:text-base text-slate-700 leading-relaxed">
                     {activity.description}
                   </p>
                 </CardContent>
@@ -141,46 +141,46 @@ const Kids = () => {
     <section className="py-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-slate-800 mb-4">
             Kids Club
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6"></div>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg lg:text-xl text-slate-600 max-w-2xl mx-auto">
             Découvrez nos espaces dédiés aux enfants avec des équipements sécurisés et des activités adaptées
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
           {/* Kids Club Images - Modern Grid */}
-          <div className="group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-fade-in">
+          <div className="group overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl hover:shadow-xl md:hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 md:hover:-translate-y-2 animate-fade-in">
             <img
               src="/src/assets/kids-club-1.jpg"
               alt="Kids Club Play Area"
-              className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+              className="w-full h-48 sm:h-64 md:h-80 object-cover transition-transform duration-700 group-hover:scale-110"
             />
           </div>
 
-          <div className="group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+          <div className="group overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl hover:shadow-xl md:hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 md:hover:-translate-y-2 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             <img
               src="/src/assets/kids-club-2.jpg"
               alt="Kids Club Activities"
-              className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+              className="w-full h-48 sm:h-64 md:h-80 object-cover transition-transform duration-700 group-hover:scale-110"
             />
           </div>
 
-          <div className="group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <div className="group overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl hover:shadow-xl md:hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 md:hover:-translate-y-2 animate-fade-in" style={{ animationDelay: "0.2s" }}>
             <img
               src="/src/assets/kids-club-3.jpg"
               alt="Kids Club Information"
-              className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+              className="w-full h-48 sm:h-64 md:h-80 object-cover transition-transform duration-700 group-hover:scale-110"
             />
           </div>
 
-          <div className="group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+          <div className="group overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl hover:shadow-xl md:hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 md:hover:-translate-y-2 animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <img
               src="/src/assets/kids-club-4.jpg"
               alt="Kids Club Space"
-              className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+              className="w-full h-48 sm:h-64 md:h-80 object-cover transition-transform duration-700 group-hover:scale-110"
             />
           </div>
         </div>

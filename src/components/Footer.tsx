@@ -66,33 +66,33 @@ const Footer = () => {
       </div>
       
       <div className="container mx-auto px-6 py-20 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           
           {/* Brand Section */}
-          <div className="lg:col-span-1 space-y-8">
+          <div className="sm:col-span-2 lg:col-span-1 space-y-6 md:space-y-8">
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <div className="p-2 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg">
                   <Dumbbell className="h-8 w-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-slate-800 tracking-tight">Royal Fitness</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-slate-800 tracking-tight">Royal Fitness</h3>
                   <p className="text-sm text-slate-600 font-medium">Excellence & Performance</p>
                 </div>
               </div>
               
-              <p className="text-slate-700 leading-relaxed text-sm">
+              <p className="text-slate-700 leading-relaxed text-sm md:text-base">
                 Votre destination premium pour l'excellence fitness. Équipements de pointe, 
                 coaching expert et environnement d'exception.
               </p>
             </div>
             
             {/* Contact Info */}
-            <div className="space-y-4">
+            <div className="space-y-3 md:space-y-4">
               <h4 className="text-slate-800 font-semibold text-sm uppercase tracking-wider border-b border-blue-300 pb-2">
                 Contact
               </h4>
-              <div className="space-y-3">
+              <div className="space-y-2 md:space-y-3">
                 <div className="flex items-center space-x-3 text-slate-700 hover:text-slate-900 transition-colors">
                   <MapPin className="h-4 w-4 text-blue-600 flex-shrink-0" />
                   <div className="text-sm">
@@ -120,16 +120,16 @@ const Footer = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="lg:col-span-1 space-y-6">
+          <div className="space-y-4 md:space-y-6">
             <h4 className="text-slate-800 font-semibold text-sm uppercase tracking-wider border-b border-blue-300 pb-2">
               Navigation
             </h4>
-            <div className="grid grid-cols-1 gap-2">
+            <div className="grid grid-cols-1 gap-1 md:gap-2">
               {navigationLinks.map((link, index) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-slate-700 hover:text-slate-900 hover:translate-x-1 transition-all duration-200 text-sm py-1 group"
+                  className="text-slate-700 hover:text-slate-900 hover:translate-x-1 transition-all duration-200 text-sm py-2 md:py-1 group min-h-[32px] flex items-center"
                 >
                   <span className="border-b border-transparent group-hover:border-blue-600 transition-colors">
                     {link.name}
@@ -140,19 +140,19 @@ const Footer = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-2 space-y-6">
+          <div className="sm:col-span-2 space-y-4 md:space-y-6">
             <h4 className="text-slate-800 font-semibold text-sm uppercase tracking-wider border-b border-blue-300 pb-2">
               Contactez-nous
             </h4>
             
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                 <Input
                   name="firstName"
                   placeholder="Prénom"
                   value={formData.firstName}
                   onChange={handleInputChange}
-                  className="bg-white/70 border-blue-300 text-slate-800 placeholder:text-slate-500 focus:border-blue-500 focus:ring-blue-500/20 transition-all"
+                  className="bg-white/70 border-blue-300 text-slate-800 placeholder:text-slate-500 focus:border-blue-500 focus:ring-blue-500/20 transition-all min-h-[44px] text-base"
                   required
                 />
                 <Input
@@ -160,7 +160,7 @@ const Footer = () => {
                   placeholder="Nom"
                   value={formData.lastName}
                   onChange={handleInputChange}
-                  className="bg-white/70 border-blue-300 text-slate-800 placeholder:text-slate-500 focus:border-blue-500 focus:ring-blue-500/20 transition-all"
+                  className="bg-white/70 border-blue-300 text-slate-800 placeholder:text-slate-500 focus:border-blue-500 focus:ring-blue-500/20 transition-all min-h-[44px] text-base"
                   required
                 />
               </div>
@@ -171,7 +171,7 @@ const Footer = () => {
                 placeholder="Email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="bg-white/70 border-blue-300 text-slate-800 placeholder:text-slate-500 focus:border-blue-500 focus:ring-blue-500/20 transition-all"
+                className="bg-white/70 border-blue-300 text-slate-800 placeholder:text-slate-500 focus:border-blue-500 focus:ring-blue-500/20 transition-all min-h-[44px] text-base"
                 required
               />
               
@@ -181,7 +181,7 @@ const Footer = () => {
                 placeholder="Téléphone"
                 value={formData.phone}
                 onChange={handleInputChange}
-                className="bg-white/70 border-blue-300 text-slate-800 placeholder:text-slate-500 focus:border-blue-500 focus:ring-blue-500/20 transition-all"
+                className="bg-white/70 border-blue-300 text-slate-800 placeholder:text-slate-500 focus:border-blue-500 focus:ring-blue-500/20 transition-all min-h-[44px] text-base"
               />
               
               <Textarea
@@ -190,13 +190,13 @@ const Footer = () => {
                 value={formData.message}
                 onChange={handleInputChange}
                 rows={4}
-                className="bg-white/70 border-blue-300 text-slate-800 placeholder:text-slate-500 focus:border-blue-500 focus:ring-blue-500/20 resize-none transition-all"
+                className="bg-white/70 border-blue-300 text-slate-800 placeholder:text-slate-500 focus:border-blue-500 focus:ring-blue-500/20 resize-none transition-all min-h-[88px] text-base"
                 required
               />
               
               <Button 
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
+                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-4 text-base transition-all duration-300 shadow-lg hover:shadow-blue-500/25 min-h-[44px]"
               >
                 Envoyer le message
               </Button>
@@ -205,26 +205,26 @@ const Footer = () => {
         </div>
         
         {/* Social Media & Bottom Section */}
-        <div className="mt-16 pt-8 border-t border-slate-700/50">
+        <div className="mt-12 md:mt-16 pt-6 md:pt-8 border-t border-slate-700/50">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex items-center space-x-6">
+            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
               <span className="text-slate-600 text-sm font-medium">Suivez-nous:</span>
               <div className="flex space-x-4">
                 <a 
                   href="#" 
-                  className="w-10 h-10 bg-white/70 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300 group border border-blue-300"
+                  className="w-11 h-11 bg-white/70 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300 group border border-blue-300"
                 >
                   <Instagram className="h-5 w-5 text-slate-600 group-hover:text-white" />
                 </a>
                 <a 
                   href="#" 
-                  className="w-10 h-10 bg-white/70 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300 group border border-blue-300"
+                  className="w-11 h-11 bg-white/70 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300 group border border-blue-300"
                 >
                   <Facebook className="h-5 w-5 text-slate-600 group-hover:text-white" />
                 </a>
                 <a 
                   href="#" 
-                  className="w-10 h-10 bg-white/70 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300 group border border-blue-300"
+                  className="w-11 h-11 bg-white/70 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300 group border border-blue-300"
                 >
                   <Music className="h-5 w-5 text-slate-600 group-hover:text-white" />
                 </a>
