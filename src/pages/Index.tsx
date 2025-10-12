@@ -6,6 +6,8 @@ import ContactForm from "@/components/ContactForm";
 import { AnimatedSection, AnimatedCard } from "@/hooks/useInView";
 import { Sparkles, Dumbbell, Waves } from "lucide-react";
 import fitnessHero from "@/assets/motiv.jpg";
+import fitnessHero1 from "@/assets/motiv.jpg";
+import fitnessHero2 from "@/assets/motiv.jpg";
 
 const Index = () => {
 
