@@ -5,7 +5,7 @@ import { ExpandingMenu } from "@/components/ExpandingMenu";
 import ContactForm from "@/components/ContactForm";
 import { AnimatedSection, AnimatedCard } from "@/hooks/useInView";
 import { Sparkles, Dumbbell, Waves } from "lucide-react";
-import fitnessHero from "@/assets/fitness-service.jpg";
+import fitnessHero from "@/assets/motiv.jpg";
 
 const Index = () => {
 
