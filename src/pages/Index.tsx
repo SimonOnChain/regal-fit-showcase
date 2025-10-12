@@ -134,11 +134,11 @@ const Index = () => {
             {/* Right Modern Visual */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative w-full max-w-lg h-96">
-                {/* Aerial view image */}
+                {/* Gym interior image */}
                 <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl">
                   <img
-                    src="https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                    alt="Vue aérienne du Royal Fitness"
+                    src="https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                    alt="Intérieur du Royal Fitness"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent"></div>
