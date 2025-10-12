@@ -134,30 +134,19 @@ const Index = () => {
             {/* Right Modern Visual */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative w-full max-w-lg h-96">
-                {/* Modern geometric design */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-200/20 to-blue-100/10 rounded-2xl backdrop-blur-sm border border-blue-300/20"></div>
-                
-                {/* Floating geometric elements */}
-                <div className="absolute top-8 right-8 w-16 h-16 bg-gradient-to-br from-blue-400/20 to-blue-500/20 rounded-xl rotate-12 animate-float"></div>
-                <div className="absolute bottom-12 left-8 w-12 h-12 border-2 border-blue-400/40 rounded-lg rotate-45 animate-pulse"></div>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-blue-300/20 to-blue-400/20 rounded-full animate-spin-slow"></div>
-                
-                {/* Central content */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center space-y-4">
-                    <div className="w-20 h-20 mx-auto bg-gradient-to-br from-blue-300/30 to-blue-200/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                      <div className="w-8 h-8 bg-blue-600 rounded-lg animate-pulse"></div>
-                    </div>
-                    <div className="space-y-2">
-                      <div className="h-2 w-32 bg-blue-400/40 rounded-full mx-auto animate-pulse"></div>
-                      <div className="h-2 w-24 bg-blue-300/30 rounded-full mx-auto animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-                    </div>
-                  </div>
+                {/* Aerial view image */}
+                <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl">
+                  <img
+                    src="https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                    alt="Vue aérienne du Royal Fitness"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent"></div>
                 </div>
-                
+
                 {/* Corner accents */}
-                <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-blue-400/40 rounded-tl-lg"></div>
-                <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-blue-400/40 rounded-br-lg"></div>
+                <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-blue-400/60 rounded-tl-lg"></div>
+                <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-blue-400/60 rounded-br-lg"></div>
               </div>
             </div>
           </div>
