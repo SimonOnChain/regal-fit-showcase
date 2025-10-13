@@ -6,8 +6,6 @@ import ContactForm from "@/components/ContactForm";
 import { AnimatedSection, AnimatedCard } from "@/hooks/useInView";
 import { Sparkles, Dumbbell, Waves } from "lucide-react";
 import fitnessHero from "@/assets/motiv.jpg";
-import fitnessHero1 from "@/assets/motiv.jpg";
-import fitnessHero2 from "@/assets/motiv.jpg";
 
 const Index = () => {
 
@@ -93,21 +91,33 @@ const Index = () => {
               {/* Modern accent line */}
               <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full animate-pulse"></div>
               
-              <div className="space-y-6">
-                <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-blue-400/30">
-                  <div className="relative pt-[56.25%]">
-                    <iframe
-                      className="absolute top-0 left-0 w-full h-full"
-                      src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                      title="Royal Fitness Présentation"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-                </div>
-
-                <p className="text-base md:text-lg text-center text-slate-600 italic">
-                  Découvrez notre centre en vidéo
+              <div className="space-y-6 text-slate-700">
+                <p className="text-base md:text-lg lg:text-xl leading-relaxed hover:text-slate-900 transition-colors duration-300 relative group">
+                  <span className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-blue-600 rounded-full transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
+                  <span className="pl-4 md:pl-6">
+                  Le concept du ROYAL FITNESS redéfinit l'expérience du bien-être en alliant excellence, sophistication et innovation dans un environnement d'exception.
+                  </span>
+                </p>
+                
+                <p className="text-base md:text-lg lg:text-xl leading-relaxed hover:text-slate-900 transition-colors duration-300 relative group">
+                  <span className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-blue-600 rounded-full transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
+                  <span className="pl-4 md:pl-6">
+                  Découvrez une gamme complète de services premium incluant fitness, aqua-training, spa de luxe, football professionnel, et des programmes spécialisés pour enfants. Notre équipe de coachs certifiés et expérimentés vous accompagne dans votre quête d'excellence.
+                  </span>
+                </p>
+                
+                <p className="text-base md:text-lg lg:text-xl leading-relaxed hover:text-slate-900 transition-colors duration-300 relative group">
+                  <span className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-blue-600 rounded-full transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
+                  <span className="pl-4 md:pl-6">
+                  Que vous visiez l'amélioration de votre mobilité, la croissance musculaire, ou simplement le bien-être intégral, nous avons l'expertise et les équipements de pointe pour vous mener vers vos objectifs.
+                  </span>
+                </p>
+                
+                <p className="text-base md:text-lg lg:text-xl leading-relaxed hover:text-slate-900 transition-colors duration-300 relative group">
+                  <span className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-blue-600 rounded-full transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
+                  <span className="pl-4 md:pl-6">
+                  Prêt à élever votre parcours fitness ? Rejoignez-nous et découvrez le frisson d'atteindre de nouveaux sommets !
+                  </span>
                 </p>
               </div>
               
