@@ -284,26 +284,19 @@ const Index = () => {
                   </div>
                 </div>
                 
-                {/* Right Content */}
-                <div className="space-y-6 text-slate-700">
-                  <h3 className="text-xl md:text-2xl font-bold uppercase text-slate-800"
-                      style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                    ROYAL FITNESS
-                  </h3>
-                  
-                  <p className="text-base md:text-lg leading-relaxed">
-                    Le Royal Fitness est un programme d'entraînement physique complet et efficace qui élève l'amélioration de la condition physique globale. Adapté à tous vos niveaux, les entraînements expérimentés et personnels supervisent chaque session pour maximiser vos résultats.
-                  </p>
-                  
-                  <p className="text-base md:text-lg leading-relaxed">
-                    Rejoignez notre club de fitness et découvrez les bénéfices incroyables de ce programme d'entraînement unique et stimulant.
-                  </p>
-                  
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 md:px-8 py-4 text-base md:text-lg font-bold uppercase tracking-wide transition-colors duration-300 min-h-[44px] w-full sm:w-auto"
-                          style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                    <a href="/contact">DÉCOUVRIR</a>
-                  </button>
-                </div>
+            {/* Right Content - Video */}
+            <div className="space-y-6">
+              <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-blue-400/30">
+                <video 
+                  className="w-full h-auto"
+                  controls
+                  preload="metadata"
+                >
+                  <source src="/src/assets/royal-fitness-video.mp4" type="video/mp4" />
+                  Votre navigateur ne supporte pas la lecture de vidéos.
+                </video>
+              </div>
+            </div>
               </div>
             </div>
           </div>
