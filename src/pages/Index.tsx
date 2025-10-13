@@ -6,6 +6,7 @@ import ContactForm from "@/components/ContactForm";
 import { AnimatedSection, AnimatedCard } from "@/hooks/useInView";
 import { Sparkles, Dumbbell, Waves } from "lucide-react";
 import fitnessHero from "@/assets/motiv.jpg";
+import royalFitnessAerial from "@/assets/royal-fitness-aerial.jpg";
 
 const Index = () => {
 
@@ -137,8 +138,8 @@ const Index = () => {
                 {/* Gym interior image */}
                 <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl">
                   <img
-                    src="https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                    alt="Intérieur du Royal Fitness"
+                    src={royalFitnessAerial}
+                    alt="Vue aérienne du Royal Fitness"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent"></div>
