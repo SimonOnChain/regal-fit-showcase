@@ -29,6 +29,7 @@ import partner10 from "@/assets/partner-10.avif";
 
 const Tarifs = () => {
   const [spaModalOpen, setSpaModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const pricingPlans = [
     {
@@ -85,6 +86,8 @@ const Tarifs = () => {
 
   const openSpaModal = () => setSpaModalOpen(true);
   const closeSpaModal = () => setSpaModalOpen(false);
+  const openImageModal = (image: string) => setSelectedImage(image);
+  const closeImageModal = () => setSelectedImage(null);
 
   return (
     <div className="min-h-screen bg-blue-100 relative overflow-hidden">
@@ -147,17 +150,13 @@ const Tarifs = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* First Spa Menu Image - Left */}
-            <Card className="group overflow-hidden hover-scale cursor-pointer transition-all duration-500 bg-white/90 border border-blue-300/30 rounded-2xl shadow-xl hover:shadow-2xl animate-fade-in">
+            <Card 
+              className="group overflow-hidden hover-scale cursor-pointer transition-all duration-500 bg-white/90 border border-blue-300/30 rounded-2xl shadow-xl hover:shadow-2xl animate-fade-in"
+              onClick={() => openImageModal(spaTarifs2)}
+            >
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-blue-100/30 rounded-2xl"></div>
                 <div className="p-8">
-                  <div className="text-center mb-6">
-                    <h3 className="text-3xl font-serif font-bold text-slate-800 mb-2">
-                      Coiffure & Esthétique
-                    </h3>
-                    <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto"></div>
-                  </div>
-                  
                   <div className="relative overflow-hidden rounded-xl shadow-lg group-hover:shadow-xl transition-shadow duration-500">
                     <img 
                       src={spaTarifs2} 
@@ -180,17 +179,14 @@ const Tarifs = () => {
             </Card>
 
             {/* Second Spa Menu Image - Right */}
-            <Card className="group overflow-hidden hover-scale cursor-pointer transition-all duration-500 bg-white/90 border border-blue-300/30 rounded-2xl shadow-xl hover:shadow-2xl animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <Card 
+              className="group overflow-hidden hover-scale cursor-pointer transition-all duration-500 bg-white/90 border border-blue-300/30 rounded-2xl shadow-xl hover:shadow-2xl animate-fade-in" 
+              style={{ animationDelay: "0.2s" }}
+              onClick={() => openImageModal(spaTarifs1)}
+            >
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-blue-100/30 rounded-2xl"></div>
                 <div className="p-8">
-                  <div className="text-center mb-6">
-                    <h3 className="text-3xl font-serif font-bold text-slate-800 mb-2">
-                      Services Spa Premium
-                    </h3>
-                    <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto"></div>
-                  </div>
-                  
                   <div className="relative overflow-hidden rounded-xl shadow-lg group-hover:shadow-xl transition-shadow duration-500">
                     <img 
                       src={spaTarifs1} 
@@ -392,6 +388,21 @@ const Tarifs = () => {
                   className="w-full h-auto rounded-lg border border-gold/30"
                 />
               </div>
+            </div>
+          </DialogContent>
+        </Dialog>
+      )}
+
+      {/* Image Popup Modal */}
+      {selectedImage && (
+        <Dialog open={!!selectedImage} onOpenChange={closeImageModal}>
+          <DialogContent className="max-w-5xl max-h-[95vh] overflow-hidden bg-white p-2">
+            <div className="relative w-full h-full flex items-center justify-center">
+              <img 
+                src={selectedImage} 
+                alt="Tarifs Spa"
+                className="w-full h-auto object-contain rounded-lg"
+              />
             </div>
           </DialogContent>
         </Dialog>
