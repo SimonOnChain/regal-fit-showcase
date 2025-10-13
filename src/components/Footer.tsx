@@ -179,7 +179,7 @@ const Footer = () => {
             
             <div className="text-center md:text-right">
               <p className="text-slate-600 text-sm">
-                © 2024 Royal Fitness MOTIV'CLUB. Tous droits réservés.
+                © 2025 MOTIV' CLUB
               </p>
               <p className="text-slate-500 text-xs mt-1">
                 Conçu pour l'excellence fitness
