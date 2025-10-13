@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Users, Award, Target } from "lucide-react";
 import tarifsHero from "@/assets/tarifs-hero.jpg";
-import motivBg from "@/assets/motiv.jpg";
+import motivBg from "@/assets/motiv-reception.jpg";
 import tarifJournee from "@/assets/tarif-journee.jpg";
 import tarifSemaine from "@/assets/tarif-semaine.jpg";
 import tarifMois from "@/assets/tarif-mois.jpg";
