@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Users, Award, Target } from "lucide-react";
 import tarifsHero from "@/assets/tarifs-hero.jpg";
+import motivBg from "@/assets/motiv.jpg";
 import tarifJournee from "@/assets/tarif-journee.jpg";
 import tarifSemaine from "@/assets/tarif-semaine.jpg";
 import tarifMois from "@/assets/tarif-mois.jpg";
@@ -103,12 +104,11 @@ const Tarifs = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url(${tarifsHero})`,
+            backgroundImage: `url(${motivBg})`,
           }}
         />
-        <div className="absolute inset-0 bg-gradient-royal"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-royal/80 via-navy/70 to-royal/80"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-blue-600 via-blue-500/70 via-blue-400/40 via-blue-300/20 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-blue-100 via-blue-100/60 via-blue-100/30 to-transparent" />
         
         <div className="relative z-10 flex items-center h-full max-w-7xl mx-auto px-6">
           <h1 className="text-8xl md:text-9xl font-extrabold uppercase tracking-wider text-white animate-fade-in"
@@ -122,80 +122,32 @@ const Tarifs = () => {
         </div>
       </section>
 
-      {/* Description Section - Blue Background */}
-      <section className="relative py-20 bg-gradient-to-b from-blue-600 to-blue-700 overflow-hidden">
-        {/* Subtle background pattern */}
+
+      {/* Pricing Cards Grid */}
+      <section className="relative py-20 bg-blue-100 overflow-hidden">
+        {/* Background elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-10 right-20 w-32 h-32 bg-blue-400/20 rounded-full blur-xl animate-float"></div>
-          <div className="absolute bottom-16 left-16 w-24 h-24 bg-blue-300/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-10 right-10 w-32 h-32 bg-blue-200/30 rounded-full blur-xl animate-float"></div>
+          <div className="absolute bottom-20 left-20 w-24 h-24 bg-blue-300/20 rounded-full blur-lg animate-pulse"></div>
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-5xl mx-auto text-center">
-            <div className="space-y-8 animate-fade-in">
-              <p className="text-xl md:text-2xl text-white leading-relaxed font-light">
-                L'adhésion a ses privilèges : accès illimité, réduction SPA, et bien plus. 
-                Contactez-nous pour organiser une visite ou échanger avec nous aujourd'hui.
-              </p>
-              
-              <p className="text-2xl md:text-3xl font-bold text-white animate-fade-in stagger-2"
-                 style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                Découvrez nos formules premium !
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Cards Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
               Nos Formules
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6"></div>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Découvrez nos services spa premium avec des tarifs préférentiels pour nos abonnés
+            <p className="text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed">
+              L'adhésion a ses privilèges : les membres bénéficient d'un accès illimité à nos installations et à nos cours collectifs ainsi qu'une réduction sur toutes nos prestations SPA.
+            </p>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto mt-4">
+              Contactez-nous pour organiser une visite de notre établissement ou échangez avec nous dès aujourd'hui.
             </p>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* First Spa Menu Image */}
+            {/* First Spa Menu Image - Left */}
             <Card className="group overflow-hidden hover-scale cursor-pointer transition-all duration-500 bg-white/90 border border-blue-300/30 rounded-2xl shadow-xl hover:shadow-2xl animate-fade-in">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-blue-100/30 rounded-2xl"></div>
-                <div className="p-8">
-                  <div className="text-center mb-6">
-                    <h3 className="text-3xl font-serif font-bold text-slate-800 mb-2">
-                      Services Spa Premium
-                    </h3>
-                    <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto"></div>
-                  </div>
-                  
-                  <div className="relative overflow-hidden rounded-xl shadow-lg group-hover:shadow-xl transition-shadow duration-500">
-                    <img 
-                      src="/src/assets/image.png" 
-                      alt="Menu Spa Services"
-                      className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  </div>
-                  
-                  <div className="mt-6 text-center">
-                    <div className="inline-block bg-blue-600/10 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                      -15% pour les abonnés fitness
-                    </div>
-                    <p className="text-slate-600 text-sm leading-relaxed">
-                      Hammams, massages, soins du visage et packs wellness dans un environnement luxueux
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </Card>
-
-            {/* Second Spa Menu Image */}
-            <Card className="group overflow-hidden hover-scale cursor-pointer transition-all duration-500 bg-white/90 border border-blue-300/30 rounded-2xl shadow-xl hover:shadow-2xl animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-blue-100/30 rounded-2xl"></div>
                 <div className="p-8">
@@ -208,7 +160,7 @@ const Tarifs = () => {
                   
                   <div className="relative overflow-hidden rounded-xl shadow-lg group-hover:shadow-xl transition-shadow duration-500">
                     <img 
-                      src="/src/assets/image.png" 
+                      src={spaTarifs2} 
                       alt="Menu Coiffure et Esthétique"
                       className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
                     />
@@ -221,6 +173,39 @@ const Tarifs = () => {
                     </div>
                     <p className="text-slate-600 text-sm leading-relaxed">
                       Coiffure professionnelle, épilation, onglerie et soins esthétiques de qualité
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            {/* Second Spa Menu Image - Right */}
+            <Card className="group overflow-hidden hover-scale cursor-pointer transition-all duration-500 bg-white/90 border border-blue-300/30 rounded-2xl shadow-xl hover:shadow-2xl animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-blue-100/30 rounded-2xl"></div>
+                <div className="p-8">
+                  <div className="text-center mb-6">
+                    <h3 className="text-3xl font-serif font-bold text-slate-800 mb-2">
+                      Services Spa Premium
+                    </h3>
+                    <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto"></div>
+                  </div>
+                  
+                  <div className="relative overflow-hidden rounded-xl shadow-lg group-hover:shadow-xl transition-shadow duration-500">
+                    <img 
+                      src={spaTarifs1} 
+                      alt="Menu Spa Services"
+                      className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
+                  
+                  <div className="mt-6 text-center">
+                    <div className="inline-block bg-blue-600/10 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                      -15% pour les abonnés fitness
+                    </div>
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      Hammams, massages, soins du visage et packs wellness dans un environnement luxueux
                     </p>
                   </div>
                 </div>
