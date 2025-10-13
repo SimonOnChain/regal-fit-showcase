@@ -19,6 +19,7 @@ import aquaImage from '@/assets/aqua-service.jpg'
 import spaImage from '@/assets/spa-service.jpg'
 import kidsImage from '@/assets/kids-service.jpg'
 import snackImage from '@/assets/snack-service.jpg'
+import galleryImage from '@/assets/gallery-service.jpg'
 
 const menuItems = [
   {
@@ -164,7 +165,7 @@ const menuItems = [
       'Découvrez nos installations royales à travers notre galerie photo exclusive et laissez-vous séduire par notre univers.',
     icon: <Camera className="w-4 h-4" />,
     cta: 'Visiter la galerie',
-    image: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=800&q=80',
+    image: galleryImage,
     route: '/gallery',
     gradient: `
       radial-gradient(ellipse at 70% 20%, rgba(169, 169, 169, 0.5) 0%, transparent 60%),
