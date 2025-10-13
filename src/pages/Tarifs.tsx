@@ -306,9 +306,7 @@ const Tarifs = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
-              Témoignages
-            </h2>
+
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto"></div>
           </div>
           
