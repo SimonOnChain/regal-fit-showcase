@@ -27,10 +27,6 @@ const MoSnack = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
 
   const foodImages = [
-    { src: snackFood1, caption: "Sandwich Gourmet", category: "food" },
-    { src: snackFood2, caption: "Salade Fraîche", category: "food" },
-    { src: snackFood3, caption: "Bowl Healthy", category: "food" },
-    { src: snackAmbience1, caption: "Ambiance Conviviale", category: "ambience" },
     { src: mosnackSteakPoulet, caption: "Steak de Poulet", category: "food" },
     { src: mosnackBreakfastExpress, caption: "Petit Déjeuner Express", category: "food" },
     { src: mosnackBreakfastParisien, caption: "Petit Déjeuner Parisien", category: "food" },
@@ -40,6 +36,10 @@ const MoSnack = () => {
     { src: mosnackInterior4, caption: "Vue sur la Terrasse", category: "ambience" },
     { src: mosnackTerrace, caption: "Terrasse Extérieure", category: "ambience" },
     { src: mosnackExterior, caption: "Façade Mo'Snack", category: "ambience" },
+    { src: snackFood1, caption: "Sandwich Gourmet", category: "food" },
+    { src: snackFood2, caption: "Salade Fraîche", category: "food" },
+    { src: snackFood3, caption: "Bowl Healthy", category: "food" },
+    { src: snackAmbience1, caption: "Ambiance Conviviale", category: "ambience" },
     { src: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg", caption: "Smoothies Premium", category: "drinks" },
     { src: "https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg", caption: "Salades Fraîches", category: "food" },
     { src: "https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg", caption: "Boissons Énergisantes", category: "drinks" },
