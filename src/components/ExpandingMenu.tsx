@@ -22,6 +22,7 @@ import snackImage from '@/assets/snack-service.jpg'
 import galleryImage from '@/assets/gallery-service.jpg'
 import footImage from '@/assets/foot-service.jpg'
 import crossfitImage from '@/assets/crossfit-service.jpg'
+import conceptImage from '@/assets/concept-service.jpg'
 
 const menuItems = [
   {
@@ -31,7 +32,7 @@ const menuItems = [
       'Royal Fitness redéfinit l\'expérience du bien-être en alliant excellence, sophistication et innovation dans un environnement d\'exception.',
     icon: <Crown className="w-4 h-4" />,
     cta: 'Découvrir notre philosophie',
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80',
+    image: conceptImage,
     route: '/',
     gradient: `
       radial-gradient(circle at 70% 30%, rgba(72, 61, 139, 0.6) 0%, transparent 50%),
