@@ -21,6 +21,7 @@ import kidsImage from '@/assets/kids-service.jpg'
 import snackImage from '@/assets/snack-service.jpg'
 import galleryImage from '@/assets/gallery-service.jpg'
 import footImage from '@/assets/foot-service.jpg'
+import crossfitImage from '@/assets/crossfit-service.jpg'
 
 const menuItems = [
   {
@@ -98,7 +99,7 @@ const menuItems = [
       'Espace de 500m² dédié au CrossFit avec entraînement intense alliant musculation et cardio pour développer force, endurance et souplesse.',
     icon: <Crown className="w-4 h-4" />,
     cta: 'Découvrir le CrossFit',
-    image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80',
+    image: crossfitImage,
     route: '/crossfit',
     gradient: `
       radial-gradient(circle at 30% 30%, rgba(220, 38, 127, 0.5) 0%, transparent 50%),
