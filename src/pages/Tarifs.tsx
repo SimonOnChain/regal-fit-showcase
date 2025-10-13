@@ -309,10 +309,7 @@ const Tarifs = () => {
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
               Témoignages
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6"></div>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Découvrez ce que nos membres pensent de leur expérience Royal Fitness
-            </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto"></div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
