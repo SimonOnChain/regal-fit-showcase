@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Crown, MapPin, Instagram, Facebook, Phone, Mail, Clock, Dumbbell, Music } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
+import motivLogo from "@/assets/motiv-logo.png";
 const Footer = () => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -93,6 +94,14 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="sm:col-span-2 lg:col-span-1 space-y-6 md:space-y-8">
             
+            {/* Logo */}
+            <div className="flex justify-center lg:justify-start">
+              <img 
+                src={motivLogo} 
+                alt="MOTIV' CLUB - Fitness, Foot, Aqua & Spa" 
+                className="h-20 w-auto object-contain"
+              />
+            </div>
             
             {/* Contact Info */}
             <div className="space-y-3 md:space-y-4">
@@ -104,23 +113,8 @@ const Footer = () => {
                   <MapPin className="h-4 w-4 text-blue-600 flex-shrink-0" />
                   <div className="text-sm">
                     <p className="font-medium">MOTIV'CLUB</p>
-                    <p>1841 Av. des FAR, Plaisance - MEKNES</p>
+                    <p>1841، Avenue des F.A.R, Meknès 50000, Maroc</p>
                   </div>
-                </div>
-                
-                <div className="flex items-center space-x-3 text-slate-700 hover:text-slate-900 transition-colors">
-                  <Phone className="h-4 w-4 text-blue-600 flex-shrink-0" />
-                  <span className="text-sm">0535 521 528</span>
-                </div>
-                
-                <div className="flex items-center space-x-3 text-slate-700 hover:text-slate-900 transition-colors">
-                  <Mail className="h-4 w-4 text-blue-600 flex-shrink-0" />
-                  <span className="text-sm">contact@royalfitness.ma</span>
-                </div>
-                
-                <div className="flex items-center space-x-3 text-slate-700">
-                  <Clock className="h-4 w-4 text-blue-600 flex-shrink-0" />
-                  <span className="text-sm">Lun-Dim: 6h00 - 23h00</span>
                 </div>
               </div>
             </div>
