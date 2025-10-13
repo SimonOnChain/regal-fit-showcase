@@ -22,14 +22,32 @@ import mosnackExterior from "@/assets/mosnack-exterior.png";
 import mosnackBreakfastExpress from "@/assets/mosnack-breakfast-express.png";
 import mosnackInterior4 from "@/assets/mosnack-interior-4.png";
 import mosnackBreakfastParisien from "@/assets/mosnack-breakfast-parisien.png";
+import mosnackSteakPoulet2 from "@/assets/mosnack-steak-poulet-2.png";
+import mosnackSeating from "@/assets/mosnack-seating.jpg";
+import mosnackLounge from "@/assets/mosnack-lounge.jpg";
+import mosnackDining from "@/assets/mosnack-dining.png";
+import mosnackTerraceView from "@/assets/mosnack-terrace-view.png";
+import mosnackExteriorBlue from "@/assets/mosnack-exterior-blue.png";
+import mosnackBreakfastExpress2 from "@/assets/mosnack-breakfast-express-2.png";
+import mosnackInteriorWindows from "@/assets/mosnack-interior-windows.png";
+import mosnackBreakfastParisien2 from "@/assets/mosnack-breakfast-parisien-2.png";
 
 const MoSnack = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
 
   const foodImages = [
     { src: mosnackSteakPoulet, caption: "Steak de Poulet", category: "food" },
+    { src: mosnackSteakPoulet2, caption: "Steak de Poulet Grillé", category: "food" },
     { src: mosnackBreakfastExpress, caption: "Petit Déjeuner Express", category: "food" },
+    { src: mosnackBreakfastExpress2, caption: "Petit Déjeuner Express Complet", category: "food" },
     { src: mosnackBreakfastParisien, caption: "Petit Déjeuner Parisien", category: "food" },
+    { src: mosnackBreakfastParisien2, caption: "Petit Déjeuner Parisien Traditionnel", category: "food" },
+    { src: mosnackSeating, caption: "Espace Cosy avec Banquettes", category: "ambience" },
+    { src: mosnackLounge, caption: "Salle de Détente Moderne", category: "ambience" },
+    { src: mosnackDining, caption: "Espace Restauration Élégant", category: "ambience" },
+    { src: mosnackInteriorWindows, caption: "Vue Intérieure Lumineuse", category: "ambience" },
+    { src: mosnackTerraceView, caption: "Terrasse Extérieure Vue d'Ensemble", category: "ambience" },
+    { src: mosnackExteriorBlue, caption: "Façade Mo'Snack Bleue", category: "ambience" },
     { src: mosnackInterior1, caption: "Espace Cosy", category: "ambience" },
     { src: mosnackInterior2, caption: "Salle de Détente", category: "ambience" },
     { src: mosnackInterior3, caption: "Espace Restauration", category: "ambience" },
