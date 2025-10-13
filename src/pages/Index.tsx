@@ -7,6 +7,7 @@ import { AnimatedSection, AnimatedCard } from "@/hooks/useInView";
 import { Sparkles, Dumbbell, Waves } from "lucide-react";
 import fitnessHero from "@/assets/motiv.jpg";
 import royalFitnessAerial from "@/assets/royal-fitness-aerial.jpg";
+import gymInterior from "@/assets/gym-interior.jpg";
 
 const Index = () => {
 
@@ -161,7 +162,7 @@ const Index = () => {
             {/* Left Image */}
             <div className="flex justify-center lg:justify-start">
               <div className="w-full h-96 lg:h-[500px] bg-cover bg-center rounded-lg overflow-hidden"
-                   style={{ backgroundImage: `url(${fitnessHero})` }}>
+                   style={{ backgroundImage: `url(${gymInterior})` }}>
               </div>
             </div>
             
