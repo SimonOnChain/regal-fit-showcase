@@ -4,7 +4,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Crown, MapPin, Instagram, Facebook, Phone, Mail, Clock, Dumbbell, Music } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
-
 const Footer = () => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -13,23 +12,26 @@ const Footer = () => {
     phone: "",
     message: ""
   });
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
+    const {
+      name,
+      value
+    } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
     toast({
       title: "Message envoyé !",
-      description: "Nous vous recontacterons très prochainement.",
+      description: "Nous vous recontacterons très prochainement."
     });
     setFormData({
       firstName: "",
@@ -39,30 +41,50 @@ const Footer = () => {
       message: ""
     });
   };
-
-  const navigationLinks = [
-    { name: "Le Concept", href: "/" },
-    { name: "Galeries Photos", href: "/gallery" },
-    { name: "Fitness", href: "/fitness" },
-    { name: "Foot", href: "/foot" },
-    { name: "Aqua", href: "/aqua" },
-    { name: "Spa", href: "/spa" },
-    { name: "Kids", href: "/kids" },
-    { name: "Mo'Snack", href: "/mosnack" },
-    { name: "Plannings", href: "/plannings" },
-    { name: "Nos tarifs", href: "/tarifs" },
-    { name: "Contact", href: "/contact" }
-  ];
-
-  return (
-    <footer className="relative bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200 border-t border-blue-300/50">
+  const navigationLinks = [{
+    name: "Le Concept",
+    href: "/"
+  }, {
+    name: "Galeries Photos",
+    href: "/gallery"
+  }, {
+    name: "Fitness",
+    href: "/fitness"
+  }, {
+    name: "Foot",
+    href: "/foot"
+  }, {
+    name: "Aqua",
+    href: "/aqua"
+  }, {
+    name: "Spa",
+    href: "/spa"
+  }, {
+    name: "Kids",
+    href: "/kids"
+  }, {
+    name: "Mo'Snack",
+    href: "/mosnack"
+  }, {
+    name: "Plannings",
+    href: "/plannings"
+  }, {
+    name: "Nos tarifs",
+    href: "/tarifs"
+  }, {
+    name: "Contact",
+    href: "/contact"
+  }];
+  return <footer className="relative bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200 border-t border-blue-300/50">
       {/* Modern geometric background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-400/30 to-transparent"></div>
         <div className="absolute top-10 right-10 w-32 h-32 bg-blue-300/20 rounded-full blur-xl"></div>
         <div className="absolute bottom-20 left-20 w-24 h-24 bg-blue-400/15 rounded-lg rotate-45"></div>
         <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-blue-400 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-blue-400 rounded-full animate-pulse" style={{
+        animationDelay: '1s'
+      }}></div>
       </div>
       
       <div className="container mx-auto px-6 py-20 relative z-10">
@@ -70,22 +92,7 @@ const Footer = () => {
           
           {/* Brand Section */}
           <div className="sm:col-span-2 lg:col-span-1 space-y-6 md:space-y-8">
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <div className="p-2 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg">
-                  <Dumbbell className="h-8 w-8 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-slate-800 tracking-tight">Royal Fitness</h3>
-                  <p className="text-sm text-slate-600 font-medium">Excellence & Performance</p>
-                </div>
-              </div>
-              
-              <p className="text-slate-700 leading-relaxed text-sm md:text-base">
-                Votre destination premium pour l'excellence fitness. Équipements de pointe, 
-                coaching expert et environnement d'exception.
-              </p>
-            </div>
+            
             
             {/* Contact Info */}
             <div className="space-y-3 md:space-y-4">
@@ -125,17 +132,11 @@ const Footer = () => {
               Navigation
             </h4>
             <div className="grid grid-cols-1 gap-1 md:gap-2">
-              {navigationLinks.map((link, index) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-slate-700 hover:text-slate-900 hover:translate-x-1 transition-all duration-200 text-sm py-2 md:py-1 group min-h-[32px] flex items-center"
-                >
+              {navigationLinks.map((link, index) => <a key={link.name} href={link.href} className="text-slate-700 hover:text-slate-900 hover:translate-x-1 transition-all duration-200 text-sm py-2 md:py-1 group min-h-[32px] flex items-center">
                   <span className="border-b border-transparent group-hover:border-blue-600 transition-colors">
                     {link.name}
                   </span>
-                </a>
-              ))}
+                </a>)}
             </div>
           </div>
 
@@ -147,57 +148,17 @@ const Footer = () => {
             
             <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-                <Input
-                  name="firstName"
-                  placeholder="Prénom"
-                  value={formData.firstName}
-                  onChange={handleInputChange}
-                  className="bg-white/70 border-blue-300 text-slate-800 placeholder:text-slate-500 focus:border-blue-500 focus:ring-blue-500/20 transition-all min-h-[44px] text-base"
-                  required
-                />
-                <Input
-                  name="lastName"
-                  placeholder="Nom"
-                  value={formData.lastName}
-                  onChange={handleInputChange}
-                  className="bg-white/70 border-blue-300 text-slate-800 placeholder:text-slate-500 focus:border-blue-500 focus:ring-blue-500/20 transition-all min-h-[44px] text-base"
-                  required
-                />
+                <Input name="firstName" placeholder="Prénom" value={formData.firstName} onChange={handleInputChange} className="bg-white/70 border-blue-300 text-slate-800 placeholder:text-slate-500 focus:border-blue-500 focus:ring-blue-500/20 transition-all min-h-[44px] text-base" required />
+                <Input name="lastName" placeholder="Nom" value={formData.lastName} onChange={handleInputChange} className="bg-white/70 border-blue-300 text-slate-800 placeholder:text-slate-500 focus:border-blue-500 focus:ring-blue-500/20 transition-all min-h-[44px] text-base" required />
               </div>
               
-              <Input
-                name="email"
-                type="email"
-                placeholder="Email"
-                value={formData.email}
-                onChange={handleInputChange}
-                className="bg-white/70 border-blue-300 text-slate-800 placeholder:text-slate-500 focus:border-blue-500 focus:ring-blue-500/20 transition-all min-h-[44px] text-base"
-                required
-              />
+              <Input name="email" type="email" placeholder="Email" value={formData.email} onChange={handleInputChange} className="bg-white/70 border-blue-300 text-slate-800 placeholder:text-slate-500 focus:border-blue-500 focus:ring-blue-500/20 transition-all min-h-[44px] text-base" required />
               
-              <Input
-                name="phone"
-                type="tel"
-                placeholder="Téléphone"
-                value={formData.phone}
-                onChange={handleInputChange}
-                className="bg-white/70 border-blue-300 text-slate-800 placeholder:text-slate-500 focus:border-blue-500 focus:ring-blue-500/20 transition-all min-h-[44px] text-base"
-              />
+              <Input name="phone" type="tel" placeholder="Téléphone" value={formData.phone} onChange={handleInputChange} className="bg-white/70 border-blue-300 text-slate-800 placeholder:text-slate-500 focus:border-blue-500 focus:ring-blue-500/20 transition-all min-h-[44px] text-base" />
               
-              <Textarea
-                name="message"
-                placeholder="Votre message..."
-                value={formData.message}
-                onChange={handleInputChange}
-                rows={4}
-                className="bg-white/70 border-blue-300 text-slate-800 placeholder:text-slate-500 focus:border-blue-500 focus:ring-blue-500/20 resize-none transition-all min-h-[88px] text-base"
-                required
-              />
+              <Textarea name="message" placeholder="Votre message..." value={formData.message} onChange={handleInputChange} rows={4} className="bg-white/70 border-blue-300 text-slate-800 placeholder:text-slate-500 focus:border-blue-500 focus:ring-blue-500/20 resize-none transition-all min-h-[88px] text-base" required />
               
-              <Button 
-                type="submit"
-                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-4 text-base transition-all duration-300 shadow-lg hover:shadow-blue-500/25 min-h-[44px]"
-              >
+              <Button type="submit" className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-4 text-base transition-all duration-300 shadow-lg hover:shadow-blue-500/25 min-h-[44px]">
                 Envoyer le message
               </Button>
             </form>
@@ -210,22 +171,13 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
               <span className="text-slate-600 text-sm font-medium">Suivez-nous:</span>
               <div className="flex space-x-4">
-                <a 
-                  href="#" 
-                  className="w-11 h-11 bg-white/70 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300 group border border-blue-300"
-                >
+                <a href="#" className="w-11 h-11 bg-white/70 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300 group border border-blue-300">
                   <Instagram className="h-5 w-5 text-slate-600 group-hover:text-white" />
                 </a>
-                <a 
-                  href="#" 
-                  className="w-11 h-11 bg-white/70 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300 group border border-blue-300"
-                >
+                <a href="#" className="w-11 h-11 bg-white/70 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300 group border border-blue-300">
                   <Facebook className="h-5 w-5 text-slate-600 group-hover:text-white" />
                 </a>
-                <a 
-                  href="#" 
-                  className="w-11 h-11 bg-white/70 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300 group border border-blue-300"
-                >
+                <a href="#" className="w-11 h-11 bg-white/70 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300 group border border-blue-300">
                   <Music className="h-5 w-5 text-slate-600 group-hover:text-white" />
                 </a>
               </div>
@@ -242,8 +194,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
