@@ -15,6 +15,16 @@ import spaTarifs2 from "@/assets/spa-tarifs-2.jpg";
 import testimonial1 from "@/assets/testimonial-1.jpg";
 import testimonial2 from "@/assets/testimonial-2.jpg";
 import testimonial3 from "@/assets/testimonial-3.jpg";
+import partner1 from "@/assets/partner-1.avif";
+import partner2 from "@/assets/partner-2.avif";
+import partner3 from "@/assets/partner-3.avif";
+import partner4 from "@/assets/partner-4.avif";
+import partner5 from "@/assets/partner-5.avif";
+import partner6 from "@/assets/partner-6.avif";
+import partner7 from "@/assets/partner-7.avif";
+import partner8 from "@/assets/partner-8.avif";
+import partner9 from "@/assets/partner-9.avif";
+import partner10 from "@/assets/partner-10.avif";
 
 const Tarifs = () => {
   const [spaModalOpen, setSpaModalOpen] = useState(false);
@@ -247,7 +257,7 @@ const Tarifs = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
             <div className="flex justify-center items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in group">
               <img 
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
+                src={partner1}
                 alt="Partner 1"
                 className="max-h-16 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
               />
@@ -255,7 +265,7 @@ const Tarifs = () => {
             
             <div className="flex justify-center items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in group" style={{ animationDelay: "0.1s" }}>
               <img 
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
+                src={partner2}
                 alt="Partner 2"
                 className="max-h-16 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
               />
@@ -263,7 +273,7 @@ const Tarifs = () => {
             
             <div className="flex justify-center items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in group" style={{ animationDelay: "0.2s" }}>
               <img 
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
+                src={partner3}
                 alt="Partner 3"
                 className="max-h-16 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
               />
@@ -271,7 +281,7 @@ const Tarifs = () => {
             
             <div className="flex justify-center items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in group" style={{ animationDelay: "0.3s" }}>
               <img 
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
+                src={partner4}
                 alt="Partner 4"
                 className="max-h-16 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
               />
@@ -279,7 +289,7 @@ const Tarifs = () => {
             
             <div className="flex justify-center items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in group" style={{ animationDelay: "0.4s" }}>
               <img 
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
+                src={partner5}
                 alt="Partner 5"
                 className="max-h-16 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
               />
@@ -287,7 +297,7 @@ const Tarifs = () => {
             
             <div className="flex justify-center items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in group" style={{ animationDelay: "0.5s" }}>
               <img 
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
+                src={partner6}
                 alt="Partner 6"
                 className="max-h-16 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
               />
@@ -295,7 +305,7 @@ const Tarifs = () => {
             
             <div className="flex justify-center items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in group" style={{ animationDelay: "0.6s" }}>
               <img 
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
+                src={partner7}
                 alt="Partner 7"
                 className="max-h-16 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
               />
@@ -303,7 +313,7 @@ const Tarifs = () => {
             
             <div className="flex justify-center items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in group" style={{ animationDelay: "0.7s" }}>
               <img 
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
+                src={partner8}
                 alt="Partner 8"
                 className="max-h-16 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
               />
@@ -311,8 +321,16 @@ const Tarifs = () => {
             
             <div className="flex justify-center items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in group" style={{ animationDelay: "0.8s" }}>
               <img 
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
+                src={partner9}
                 alt="Partner 9"
+                className="max-h-16 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+              />
+            </div>
+            
+            <div className="flex justify-center items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in group" style={{ animationDelay: "0.9s" }}>
+              <img 
+                src={partner10}
+                alt="Partner 10"
                 className="max-h-16 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
               />
             </div>
