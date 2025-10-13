@@ -165,15 +165,6 @@ const Tarifs = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </div>
-                  
-                  <div className="mt-6 text-center">
-                    <div className="inline-block bg-blue-600/10 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                      Services premium disponibles
-                    </div>
-                    <p className="text-slate-600 text-sm leading-relaxed">
-                      Coiffure professionnelle, épilation, onglerie et soins esthétiques de qualité
-                    </p>
-                  </div>
                 </div>
               </div>
             </Card>
@@ -194,15 +185,6 @@ const Tarifs = () => {
                       className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  </div>
-                  
-                  <div className="mt-6 text-center">
-                    <div className="inline-block bg-blue-600/10 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                      -15% pour les abonnés fitness
-                    </div>
-                    <p className="text-slate-600 text-sm leading-relaxed">
-                      Hammams, massages, soins du visage et packs wellness dans un environnement luxueux
-                    </p>
                   </div>
                 </div>
               </div>
