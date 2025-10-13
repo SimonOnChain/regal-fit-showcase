@@ -13,6 +13,15 @@ import mosnackMenu from "@/assets/mosnack-menu.png";
 import mosnackBrochettes from "@/assets/mosnack-brochettes.png";
 import mosnackFilet from "@/assets/mosnack-filet.png";
 import mosnackBrochettes2 from "@/assets/mosnack-brochettes-2.png";
+import mosnackSteakPoulet from "@/assets/mosnack-steak-poulet.png";
+import mosnackInterior1 from "@/assets/mosnack-interior-1.JPG?url";
+import mosnackInterior2 from "@/assets/mosnack-interior-2.JPG?url";
+import mosnackInterior3 from "@/assets/mosnack-interior-3.png";
+import mosnackTerrace from "@/assets/mosnack-terrace.png";
+import mosnackExterior from "@/assets/mosnack-exterior.png";
+import mosnackBreakfastExpress from "@/assets/mosnack-breakfast-express.png";
+import mosnackInterior4 from "@/assets/mosnack-interior-4.png";
+import mosnackBreakfastParisien from "@/assets/mosnack-breakfast-parisien.png";
 
 const MoSnack = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -22,6 +31,15 @@ const MoSnack = () => {
     { src: snackFood2, caption: "Salade Fraîche", category: "food" },
     { src: snackFood3, caption: "Bowl Healthy", category: "food" },
     { src: snackAmbience1, caption: "Ambiance Conviviale", category: "ambience" },
+    { src: mosnackSteakPoulet, caption: "Steak de Poulet", category: "food" },
+    { src: mosnackBreakfastExpress, caption: "Petit Déjeuner Express", category: "food" },
+    { src: mosnackBreakfastParisien, caption: "Petit Déjeuner Parisien", category: "food" },
+    { src: mosnackInterior1, caption: "Espace Cosy", category: "ambience" },
+    { src: mosnackInterior2, caption: "Salle de Détente", category: "ambience" },
+    { src: mosnackInterior3, caption: "Espace Restauration", category: "ambience" },
+    { src: mosnackInterior4, caption: "Vue sur la Terrasse", category: "ambience" },
+    { src: mosnackTerrace, caption: "Terrasse Extérieure", category: "ambience" },
+    { src: mosnackExterior, caption: "Façade Mo'Snack", category: "ambience" },
     { src: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg", caption: "Smoothies Premium", category: "drinks" },
     { src: "https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg", caption: "Salades Fraîches", category: "food" },
     { src: "https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg", caption: "Boissons Énergisantes", category: "drinks" },
