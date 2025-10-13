@@ -373,12 +373,12 @@ const Tarifs = () => {
       {/* Image Popup Modal */}
       {selectedImage && (
         <Dialog open={!!selectedImage} onOpenChange={closeImageModal}>
-          <DialogContent className="max-w-5xl max-h-[95vh] overflow-hidden bg-white p-2">
-            <div className="relative w-full h-full flex items-center justify-center">
+          <DialogContent className="max-w-[95vw] max-h-[95vh] overflow-auto bg-white p-4">
+            <div className="relative w-full min-h-full">
               <img 
                 src={selectedImage} 
                 alt="Tarifs Spa"
-                className="w-full h-auto object-contain rounded-lg"
+                className="w-auto h-auto max-w-none rounded-lg"
               />
             </div>
           </DialogContent>
