@@ -8,6 +8,7 @@ import { Sparkles, Dumbbell, Waves } from "lucide-react";
 import fitnessHero from "@/assets/motiv.jpg";
 import royalFitnessAerial from "@/assets/royal-fitness-aerial.jpg";
 import gymInterior from "@/assets/gym-interior.jpg";
+import heroLogo from "@/assets/hero-logo.png";
 
 const Index = () => {
 
@@ -28,26 +29,11 @@ const Index = () => {
         
         <div className="relative z-10 flex items-center justify-center h-full">
           <div className="text-center animate-fade-in">
-            <div className="text-4xl sm:text-6xl md:text-8xl font-extrabold uppercase tracking-wider hero-title-mobile"
-                 style={{ 
-                   color: 'white',
-                   textShadow: '0 8px 16px rgba(255, 255, 255, 0.2)',
-                   fontFamily: 'Montserrat, sans-serif',
-                   fontWeight: 900,
-                   lineHeight: '0.9'
-                 }}>
-              MOTIV
-            </div>
-            <div className="text-4xl sm:text-6xl md:text-8xl font-extrabold uppercase tracking-wider hero-title-mobile"
-                 style={{ 
-                   color: 'white',
-                   textShadow: '0 8px 16px rgba(255, 255, 255, 0.2)',
-                   fontFamily: 'Montserrat, sans-serif',
-                   fontWeight: 900,
-                   lineHeight: '0.9'
-                 }}>
-              CLUB
-            </div>
+            <img 
+              src={heroLogo} 
+              alt="Padel by Motiv' Club" 
+              className="w-full max-w-2xl md:max-w-4xl mx-auto px-6"
+            />
           </div>
         </div>
       </section>
