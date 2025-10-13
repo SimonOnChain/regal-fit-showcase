@@ -20,6 +20,7 @@ import spaImage from '@/assets/spa-service.jpg'
 import kidsImage from '@/assets/kids-service.jpg'
 import snackImage from '@/assets/snack-service.jpg'
 import galleryImage from '@/assets/gallery-service.jpg'
+import footImage from '@/assets/foot-service.jpg'
 
 const menuItems = [
   {
@@ -80,7 +81,7 @@ const menuItems = [
      'Terrains certifiés FIFA avec gazon synthétique pour vos matchs et tournois dans des installations professionnelles.',
    icon: <Crown className="w-4 h-4" />,
    cta: 'Découvrir nos terrains',
-   image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80',
+   image: footImage,
    route: '/foot',
    gradient: `
      radial-gradient(circle at 30% 30%, rgba(34, 197, 94, 0.5) 0%, transparent 50%),
