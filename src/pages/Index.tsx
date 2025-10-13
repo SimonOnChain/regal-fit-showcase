@@ -36,7 +36,7 @@ const Index = () => {
                    fontWeight: 900,
                    lineHeight: '0.9'
                  }}>
-              ROYAL
+              MOTIV
             </div>
             <div className="text-4xl sm:text-6xl md:text-8xl font-extrabold uppercase tracking-wider hero-title-mobile"
                  style={{ 
@@ -46,7 +46,7 @@ const Index = () => {
                    fontWeight: 900,
                    lineHeight: '0.9'
                  }}>
-              FITNESS
+              CLUB
             </div>
           </div>
         </div>
@@ -97,7 +97,7 @@ const Index = () => {
                 <p className="text-base md:text-lg lg:text-xl leading-relaxed hover:text-slate-900 transition-colors duration-300 relative group">
                   <span className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-blue-600 rounded-full transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
                   <span className="pl-4 md:pl-6">
-                  Le concept du ROYAL FITNESS redéfinit l'expérience du bien-être en alliant excellence, sophistication et innovation dans un environnement d'exception.
+                  Le concept du MOTIV CLUB redéfinit l'expérience du bien-être en alliant excellence, sophistication et innovation dans un environnement d'exception.
                   </span>
                 </p>
                 
@@ -140,7 +140,7 @@ const Index = () => {
                 <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl">
                   <img
                     src={royalFitnessAerial}
-                    alt="Vue aérienne du Royal Fitness"
+                    alt="Vue aérienne du Motiv Club"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent"></div>
@@ -279,11 +279,11 @@ const Index = () => {
                 <div className="space-y-6 text-slate-700">
                   <h3 className="text-xl md:text-2xl font-bold uppercase text-slate-800"
                       style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                    ROYAL FITNESS
+                    MOTIV CLUB
                   </h3>
                   
                   <p className="text-base md:text-lg leading-relaxed">
-                    Le Royal Fitness est un programme d'entraînement physique complet et efficace qui élève l'amélioration de la condition physique globale. Adapté à tous vos niveaux, les entraînements expérimentés et personnels supervisent chaque session pour maximiser vos résultats.
+                    Le Motiv Club est un programme d'entraînement physique complet et efficace qui élève l'amélioration de la condition physique globale. Adapté à tous vos niveaux, les entraînements expérimentés et personnels supervisent chaque session pour maximiser vos résultats.
                   </p>
                   
                   <p className="text-base md:text-lg leading-relaxed">
