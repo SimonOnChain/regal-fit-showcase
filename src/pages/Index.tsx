@@ -259,29 +259,18 @@ const Index = () => {
           <div className="max-w-5xl mx-auto">
             <div className="backdrop-blur-lg bg-white/30 border border-blue-300/30 rounded-2xl p-8 md:p-12 shadow-2xl">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                {/* Left Content */}
-                <div className="space-y-8">
-                  <div className="space-y-4">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-wide text-slate-800"
-                        style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                      ROYAL FITNESS
-                    </h2>
-                    <div className="bg-blue-500 text-white px-4 md:px-6 py-2 text-lg md:text-xl font-bold uppercase tracking-wide inline-block"
-                         style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                      1800 DH/AN
-                    </div>
-                  </div>
-                  
-                  <div className="border-2 border-slate-700 p-6">
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase text-slate-800 mb-4"
-                        style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                      RESTEZ EN FORME
-                    </h3>
-                  </div>
-                  
-                  <div className="text-slate-800 text-lg">
-                    <p className="font-bold">0535 521 528</p>
-                  </div>
+                {/* Left Content - Video */}
+                <div className="w-full">
+                  <video 
+                    className="w-full h-auto rounded-lg shadow-2xl"
+                    controls
+                    autoPlay
+                    muted
+                    loop
+                  >
+                    <source src={new URL('@/assets/royal-fitness-promo.mp4', import.meta.url).href} type="video/mp4" />
+                    Votre navigateur ne supporte pas la lecture de vidéos.
+                  </video>
                 </div>
                 
                 {/* Right Content */}
