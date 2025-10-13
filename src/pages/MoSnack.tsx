@@ -144,7 +144,7 @@ const MoSnack = () => {
                   <img 
                     src={mosnackBrochettes} 
                     alt="Brochettes de viande hachée"
-                    className="w-full h-80 object-cover"
+                    className="w-full h-full object-cover"
                   />
                 </div>
 
@@ -152,7 +152,7 @@ const MoSnack = () => {
                   <img 
                     src={mosnackFilet} 
                     alt="Filet de viande"
-                    className="w-full h-80 object-cover"
+                    className="w-full h-full object-cover"
                   />
                 </div>
 
@@ -160,7 +160,7 @@ const MoSnack = () => {
                   <img 
                     src={mosnackBrochettes2} 
                     alt="Plat signature"
-                    className="w-full h-80 object-cover"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
