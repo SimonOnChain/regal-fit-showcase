@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CardContent } from "@/components/ui/card";
-import snackHero from "@/assets/snack-hero.jpg";
+import snackHero from "@/assets/mosnack-hero.jpg";
 import snackFood1 from "@/assets/snack-food-1.jpg";
 import snackFood2 from "@/assets/snack-food-2.jpg";
 import snackFood3 from "@/assets/snack-food-3.jpg";
