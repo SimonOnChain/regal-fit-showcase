@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Star, Users, Award, Target } from "lucide-react";
+import { Users, Award, Target } from "lucide-react";
 import tarifsHero from "@/assets/tarifs-hero.jpg";
 import tarifJournee from "@/assets/tarif-journee.jpg";
 import tarifSemaine from "@/assets/tarif-semaine.jpg";
@@ -12,9 +12,9 @@ import tarifMois from "@/assets/tarif-mois.jpg";
 import tarifAnnuel from "@/assets/tarif-annuel.jpg";
 import spaTarifs1 from "@/assets/spa-tarifs-1.jpg";
 import spaTarifs2 from "@/assets/spa-tarifs-2.jpg";
-import testimonial1 from "@/assets/testimonial-1.jpg";
-import testimonial2 from "@/assets/testimonial-2.jpg";
-import testimonial3 from "@/assets/testimonial-3.jpg";
+import testimonialRida from "@/assets/testimonial-rida.avif";
+import testimonialSanae from "@/assets/testimonial-sanae.avif";
+import testimonialIlyas from "@/assets/testimonial-ilyas.avif";
 import partner1 from "@/assets/partner-1.avif";
 import partner2 from "@/assets/partner-2.avif";
 import partner3 from "@/assets/partner-3.avif";
@@ -66,19 +66,19 @@ const Tarifs = () => {
 
   const testimonials = [
     {
-      name: "Sarah Benali",
-      image: testimonial1,
-      text: "Royal Fitness a transformé ma routine. L'ambiance est exceptionnelle et l'équipe très professionnelle. Je recommande vivement!"
+      name: "Rida",
+      image: testimonialRida,
+      text: "Je suis fan de musculation. A ce niveau je n'ai jamais vu un matériel aussi performant nulle part ailleurs. Un Bravo aussi aux Coachs qui sont vraiment au top. Bravo le MOTIV'CLUB."
     },
     {
-      name: "Ahmed Tazi",
-      image: testimonial2,
-      text: "Depuis que je suis membre, j'ai atteint tous mes objectifs fitness. Les coachs sont fantastiques et les équipements de qualité."
+      name: "Sanae",
+      image: testimonialSanae,
+      text: "Les cours collectifs sont formidables. Des entrainements dynamiques avec des coachs très motivés et tellement plein d'énergie !!.Les cours au MOTIV'CLUB sont aussi bon pour le mental que pour le \"BODY\". On se défoule tellement ! Le MOTIV'CLUB c'est comme une grande famille et je suis fière d'en faire partie !"
     },
     {
-      name: "Fatima Alami",
-      image: testimonial3,
-      text: "Un club d'exception! L'espace spa est un vrai plus. Je me sens privilégiée d'être membre de cette communauté royale."
+      name: "Ilyas",
+      image: testimonialIlyas,
+      text: "Franchement au MOTIV'CLUB je me sens chez moi. C'est vraiment très familiale et le personnel est vraiment cool. Côté équipements je n'ai jamais vu un tel matos !!!"
     }
   ];
 
@@ -365,12 +365,6 @@ const Tarifs = () => {
                     alt={testimonial.name}
                     className="w-20 h-20 rounded-full mx-auto object-cover border-4 border-blue-600"
                   />
-                </div>
-                
-                <div className="flex justify-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-blue-600 fill-current" />
-                  ))}
                 </div>
                 
                 <p className="text-slate-700 italic mb-4 leading-relaxed">
