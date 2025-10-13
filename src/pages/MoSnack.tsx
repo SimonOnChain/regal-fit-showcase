@@ -126,52 +126,43 @@ const MoSnack = () => {
 
           {/* Grid Layout: Menu on left, 3 food images on right */}
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {/* Menu Image - Takes full height on left */}
               <div className="animate-fade-in">
-                <Card className="overflow-hidden h-full shadow-xl hover-scale cursor-pointer">
+                <div className="bg-white rounded-lg overflow-hidden shadow-xl">
                   <img 
                     src={mosnackMenu} 
                     alt="Menu Mo'Snack"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
-                </Card>
+                </div>
               </div>
 
-              {/* Food Images Grid on right */}
-              <div className="grid grid-cols-1 gap-8">
-                <Card className="group overflow-hidden hover-scale cursor-pointer shadow-lg animate-fade-in" style={{ animationDelay: '0.1s' }}>
-                  <div className="relative">
-                    <img 
-                      src={mosnackBrochettes} 
-                      alt="Brochettes de viande hachée"
-                      className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  </div>
-                </Card>
+              {/* Food Images Stack on right */}
+              <div className="grid grid-cols-1 gap-6">
+                <div className="overflow-hidden rounded-lg shadow-lg animate-fade-in" style={{ animationDelay: '0.1s' }}>
+                  <img 
+                    src={mosnackBrochettes} 
+                    alt="Brochettes de viande hachée"
+                    className="w-full h-80 object-cover"
+                  />
+                </div>
 
-                <Card className="group overflow-hidden hover-scale cursor-pointer shadow-lg animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                  <div className="relative">
-                    <img 
-                      src={mosnackFilet} 
-                      alt="Filet de viande"
-                      className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  </div>
-                </Card>
+                <div className="overflow-hidden rounded-lg shadow-lg animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                  <img 
+                    src={mosnackFilet} 
+                    alt="Filet de viande"
+                    className="w-full h-80 object-cover"
+                  />
+                </div>
 
-                <Card className="group overflow-hidden hover-scale cursor-pointer shadow-lg animate-fade-in" style={{ animationDelay: '0.3s' }}>
-                  <div className="relative">
-                    <img 
-                      src={mosnackBrochettes2} 
-                      alt="Plat signature"
-                      className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  </div>
-                </Card>
+                <div className="overflow-hidden rounded-lg shadow-lg animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                  <img 
+                    src={mosnackBrochettes2} 
+                    alt="Plat signature"
+                    className="w-full h-80 object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>
