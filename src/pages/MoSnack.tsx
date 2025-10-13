@@ -9,6 +9,10 @@ import snackFood1 from "@/assets/snack-food-1.jpg";
 import snackFood2 from "@/assets/snack-food-2.jpg";
 import snackFood3 from "@/assets/snack-food-3.jpg";
 import snackAmbience1 from "@/assets/snack-ambience-1.jpg";
+import mosnackMenu from "@/assets/mosnack-menu.png";
+import mosnackBrochettes from "@/assets/mosnack-brochettes.png";
+import mosnackFilet from "@/assets/mosnack-filet.png";
+import mosnackBrochettes2 from "@/assets/mosnack-brochettes-2.png";
 
 const MoSnack = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -102,6 +106,73 @@ const MoSnack = () => {
                  style={{ fontFamily: 'Montserrat, sans-serif' }}>
                 Venez vite déguster nos délicieux plats !
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Menu & Featured Dishes Section */}
+      <section className="py-20 bg-gradient-to-b from-blue-50 to-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
+              Notre Menu
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6"></div>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Des plats sains et savoureux préparés avec soin
+            </p>
+          </div>
+
+          {/* Grid Layout: Menu on left, 3 food images on right */}
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Menu Image - Takes full height on left */}
+              <div className="animate-fade-in">
+                <Card className="overflow-hidden h-full shadow-xl hover-scale cursor-pointer">
+                  <img 
+                    src={mosnackMenu} 
+                    alt="Menu Mo'Snack"
+                    className="w-full h-full object-cover"
+                  />
+                </Card>
+              </div>
+
+              {/* Food Images Grid on right */}
+              <div className="grid grid-cols-1 gap-8">
+                <Card className="group overflow-hidden hover-scale cursor-pointer shadow-lg animate-fade-in" style={{ animationDelay: '0.1s' }}>
+                  <div className="relative">
+                    <img 
+                      src={mosnackBrochettes} 
+                      alt="Brochettes de viande hachée"
+                      className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  </div>
+                </Card>
+
+                <Card className="group overflow-hidden hover-scale cursor-pointer shadow-lg animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                  <div className="relative">
+                    <img 
+                      src={mosnackFilet} 
+                      alt="Filet de viande"
+                      className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  </div>
+                </Card>
+
+                <Card className="group overflow-hidden hover-scale cursor-pointer shadow-lg animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                  <div className="relative">
+                    <img 
+                      src={mosnackBrochettes2} 
+                      alt="Plat signature"
+                      className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  </div>
+                </Card>
+              </div>
             </div>
           </div>
         </div>
