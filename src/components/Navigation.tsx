@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Crown, Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -105,10 +106,11 @@ const Navigation = () => {
           {/* Left - Logo & Branding */}
           <div className="flex items-center flex-shrink-0">
             <Link to="/" className="flex items-center space-x-2 sm:space-x-3 fade-slide-in">
-              <Crown className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-white flex-shrink-0" />
-              <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold uppercase tracking-wide text-white leading-none" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>
-                Royal Fitness
-              </span>
+              <img 
+                src={logo} 
+                alt="Padel by Motiv' Club" 
+                className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto flex-shrink-0"
+              />
             </Link>
           </div>
 
