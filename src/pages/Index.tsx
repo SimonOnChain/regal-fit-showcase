@@ -32,7 +32,7 @@ const Index = () => {
             <img 
               src={heroLogo} 
               alt="Padel by Motiv' Club" 
-              className="w-full max-w-md md:max-w-2xl mx-auto px-6"
+              className="w-full max-w-md md:max-w-xl mx-auto px-6"
             />
           </div>
         </div>
