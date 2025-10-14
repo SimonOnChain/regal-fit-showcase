@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import fitnessService from "@/assets/fitness-service.jpg";
+import crossfitHero from "@/assets/crossfit-hero.jpg";
 
 const CrossFit = () => {
   return (
@@ -21,7 +21,7 @@ const CrossFit = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src={fitnessService}
+            src={crossfitHero}
             alt="CrossFit Center"
             className="w-full h-full object-cover"
           />
