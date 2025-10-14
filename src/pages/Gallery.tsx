@@ -135,23 +135,17 @@ const Gallery = () => {
         </div>
       </section>
 
-      {/* Description Section - Blue Background */}
-      <section className="relative py-20 bg-gradient-to-b from-blue-600 to-blue-700 overflow-hidden">
-        {/* Subtle background pattern */}
-        <div className="absolute inset-0">
-          <div className="absolute top-10 right-20 w-32 h-32 bg-blue-400/20 rounded-full blur-xl animate-float"></div>
-          <div className="absolute bottom-16 left-16 w-24 h-24 bg-blue-300/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '1s' }}></div>
-        </div>
-        
+      {/* Description Section */}
+      <section className="relative py-20 bg-white overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             <div className="space-y-8 animate-fade-in">
-              <p className="text-xl md:text-2xl text-white leading-relaxed font-light">
+              <p className="text-xl md:text-2xl text-slate-700 leading-relaxed font-light">
                 Explorez nos espaces premium à travers notre galerie photo complète. 
                 Découvrez chaque coin de Royal Fitness et laissez-vous séduire par notre univers d'exception.
               </p>
               
-              <p className="text-2xl md:text-3xl font-bold text-white animate-fade-in stagger-2"
+              <p className="text-2xl md:text-3xl font-bold text-slate-800 animate-fade-in stagger-2"
                  style={{ fontFamily: 'Montserrat, sans-serif' }}>
                 Une visite virtuelle de nos installations !
               </p>
@@ -226,7 +220,7 @@ const Gallery = () => {
             {displayedImages.map((image, index) => (
               <Dialog key={index}>
                 <DialogTrigger asChild>
-                  <Card className="group overflow-hidden hover-scale cursor-pointer bg-white/70 border-blue-300/30 animate-fade-in rounded-lg shadow-lg" style={{ animationDelay: `${index * 0.1}s` }}>
+                  <Card className="group overflow-hidden hover-scale cursor-pointer bg-white border-blue-300/30 animate-fade-in rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300" style={{ animationDelay: `${index * 0.1}s` }}>
                     <div className="relative">
                       <img 
                         src={image.src} 
