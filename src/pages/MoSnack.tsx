@@ -108,7 +108,7 @@ const MoSnack = () => {
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-blue-600 via-blue-500/70 via-blue-400/40 via-blue-300/20 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-blue-100 via-blue-100/70 via-blue-100/40 via-blue-100/20 to-transparent"></div>
         
         {/* Centered Title Only */}
         <div className="relative z-10 flex items-center h-full max-w-7xl mx-auto px-6">
@@ -123,8 +123,8 @@ const MoSnack = () => {
         </div>
       </section>
 
-      {/* Description Section - Blue Background */}
-      <section className="relative py-20 bg-gradient-to-b from-blue-600 to-blue-700 overflow-hidden">
+      {/* Description Section - Light Blue Background */}
+      <section className="relative py-20 bg-blue-100 overflow-hidden">
         {/* Subtle background pattern */}
         <div className="absolute inset-0">
           <div className="absolute top-10 right-20 w-32 h-32 bg-blue-400/20 rounded-full blur-xl animate-float"></div>
@@ -134,11 +134,11 @@ const MoSnack = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             <div className="space-y-8 animate-fade-in">
-              <p className="text-xl md:text-2xl text-white leading-relaxed font-light">
+              <p className="text-xl md:text-2xl text-slate-700 leading-relaxed font-light">
                 Venez découvrir notre snack au sein de notre club de fitness ! Nous proposons une cuisine saine et savoureuse pour vous aider à maintenir une alimentation équilibrée tout en profitant de moments de détente et de convivialité. Le Mo'Snack est le choix idéal pour ceux qui cherchent à prendre soin de leur santé tout en se régalant. Nous avons une sélection de plats frais et savoureux, préparés avec des ingrédients de qualité et sans additifs ni conservateurs.
               </p>
               
-              <p className="text-2xl md:text-3xl font-bold text-white animate-fade-in stagger-2"
+              <p className="text-2xl md:text-3xl font-bold text-slate-800 animate-fade-in stagger-2"
                  style={{ fontFamily: 'Montserrat, sans-serif' }}>
                 Venez vite déguster nos délicieux plats !
               </p>
