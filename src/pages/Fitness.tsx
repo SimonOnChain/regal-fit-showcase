@@ -50,7 +50,7 @@ const Fitness = () => {
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-transparent"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-white via-white/70 via-white/40 via-white/20 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-blue-600 via-blue-600/70 via-blue-600/40 via-blue-600/20 to-transparent"></div>
         
         {/* Centered Title Only */}
         <div className="relative z-10 flex items-center h-full max-w-7xl mx-auto px-6">
@@ -65,16 +65,16 @@ const Fitness = () => {
         </div>
       </section>
 
-      {/* Description Section - White Background */}
-      <section className="relative py-20 bg-white overflow-hidden">
+      {/* Description Section - Blue Background */}
+      <section className="relative py-20 bg-gradient-to-b from-blue-600 to-blue-700 overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             <div className="space-y-8 animate-fade-in">
-              <p className="text-xl md:text-2xl text-slate-700 leading-relaxed font-light">
+              <p className="text-xl md:text-2xl text-white leading-relaxed font-light">
                 Découvrez notre espace fitness premium avec équipements de pointe, cours collectifs variés et coaching personnalisé pour atteindre vos objectifs. Nos machines dernière génération et nos coachs experts vous accompagnent dans votre transformation physique.
               </p>
               
-              <p className="text-2xl md:text-3xl font-bold text-slate-800 animate-fade-in stagger-2"
+              <p className="text-2xl md:text-3xl font-bold text-white animate-fade-in stagger-2"
                  style={{ fontFamily: 'Montserrat, sans-serif' }}>
                 Dépassez vos limites dans un environnement d'exception !
               </p>
