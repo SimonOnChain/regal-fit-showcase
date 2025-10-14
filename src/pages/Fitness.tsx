@@ -50,7 +50,6 @@ const Fitness = () => {
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-transparent"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-white via-white/70 via-white/40 via-white/20 to-transparent"></div>
         
         {/* Centered Title Only */}
         <div className="relative z-10 flex items-center h-full max-w-7xl mx-auto px-6">
@@ -65,8 +64,8 @@ const Fitness = () => {
         </div>
       </section>
 
-      {/* Description Section - White Background */}
-      <section className="relative py-20 bg-white overflow-hidden">
+      {/* Description Section - Light Blue Background */}
+      <section className="relative py-20 bg-blue-100 overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             <div className="space-y-8 animate-fade-in">
