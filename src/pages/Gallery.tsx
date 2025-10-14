@@ -136,7 +136,7 @@ const Gallery = () => {
       </section>
 
       {/* Description Section */}
-      <section className="relative py-20 bg-white overflow-hidden">
+      <section className="relative py-20 bg-blue-100 overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             <div className="space-y-8 animate-fade-in">
