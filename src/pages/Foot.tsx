@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Trophy, Users, Target, Clock, MapPin, Phone } from "lucide-react";
+import footHero from "@/assets/foot-hero.jpg";
 import footballField1 from "@/assets/football-field-1.jpg";
 import footballField2 from "@/assets/football-field-2.jpg";
 import footballMatch from "@/assets/football-match.jpg";
@@ -39,7 +40,7 @@ const Foot = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src={footballField1}
+            src={footHero}
             alt="Football Field"
             className="w-full h-full object-cover"
           />
