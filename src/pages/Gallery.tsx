@@ -8,6 +8,7 @@ import { Camera, Eye, Image } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 // Import all gallery images
+import galleryHero from "@/assets/gallery-hero.jpg";
 import fitnessService from "@/assets/fitness-service.jpg";
 import musculation from "@/assets/musculation.jpg";
 import cardioZone from "@/assets/cardio-zone.jpg";
@@ -117,7 +118,7 @@ const Gallery = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url(${fitnessService})`,
+            backgroundImage: `url(${galleryHero})`,
           }}
         />
         <div className="absolute inset-0 bg-gradient-royal"></div>
