@@ -127,7 +127,7 @@ const Contact = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             
             {/* Contact Details */}
             <Card className="group bg-white/70 border-blue-300/30 overflow-hidden hover:shadow-lg transition-all duration-500 hover:-translate-y-2 animate-fade-in rounded-lg shadow-lg">
@@ -296,24 +296,6 @@ const Contact = () => {
                   </Button>
                 </form>
               </CardContent>
-            </Card>
-
-            {/* Visual Card */}
-            <Card className="group bg-white/70 border-blue-300/30 overflow-hidden hover:shadow-lg transition-all duration-500 hover:-translate-y-2 animate-fade-in rounded-lg shadow-lg" style={{ animationDelay: "0.4s" }}>
-              <div className="relative h-full">
-                <img
-                  src={fitnessService}
-                  alt="Royal Fitness Club"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-transparent to-transparent"></div>
-                <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-white text-2xl font-serif font-bold mb-2">Royal Fitness</h3>
-                  <p className="text-white/90 text-sm">
-                    Votre destination premium pour l'excellence fitness
-                  </p>
-                </div>
-              </div>
             </Card>
           </div>
         </div>
