@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import kidsHeroBg from "@/assets/kids-hero-bg.jpg";
+import kidsHero from "@/assets/kids-hero.jpg";
 import kidsNatation from "@/assets/kids-natation.jpg";
 import kidsGym from "@/assets/kids-gym.jpg";
 import kidsFootball from "@/assets/kids-football.jpg";
@@ -44,7 +44,7 @@ const Kids = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src={kidsHeroBg}
+            src={kidsHero}
             alt="Kids Academy Activities"
             className="w-full h-full object-cover"
           />
