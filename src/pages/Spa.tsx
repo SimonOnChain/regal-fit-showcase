@@ -7,7 +7,7 @@ import spaSoins from "@/assets/spa-soins.jpg";
 import spaCoiffure from "@/assets/spa-coiffure.jpg";
 import spaWedding from "@/assets/spa-wedding.jpg";
 import spaEsthetique from "@/assets/spa-esthetique.jpg";
-import spaHeroBg from "@/assets/spa-hero-bg.jpg";
+import spaHero from "@/assets/spa-hero.jpg";
 
 const Spa = () => {
   const spaServices = [
@@ -61,7 +61,7 @@ const Spa = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src={spaHeroBg}
+            src={spaHero}
             alt="Luxury Spa Interior"
             className="w-full h-full object-cover"
           />
