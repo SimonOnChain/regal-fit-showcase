@@ -7,6 +7,7 @@ import { Crown, Mail, Phone, MapPin, Instagram, Facebook, Clock } from "lucide-r
 import { useToast } from "@/hooks/use-toast";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import contactHero from "@/assets/contact-hero.jpg";
 import fitnessService from "@/assets/fitness-service.jpg";
 
 const Contact = () => {
@@ -68,7 +69,7 @@ const Contact = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src={fitnessService}
+            src={contactHero}
             alt="Royal Fitness Contact"
             className="w-full h-full object-cover"
           />
