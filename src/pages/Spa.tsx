@@ -67,7 +67,7 @@ const Spa = () => {
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-transparent"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-white via-white/70 via-white/40 via-white/20 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-blue-100 via-blue-100/70 via-blue-100/40 via-blue-100/20 to-transparent"></div>
         
         {/* Centered Title Only */}
         <div className="relative z-10 flex items-center justify-center h-full max-w-7xl mx-auto px-6">
