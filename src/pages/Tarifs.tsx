@@ -27,6 +27,7 @@ import partner7 from "@/assets/partner-7.avif";
 import partner8 from "@/assets/partner-8.avif";
 import partner9 from "@/assets/partner-9.avif";
 import partner10 from "@/assets/partner-10.avif";
+import crossFit from "@/assets/cross7.jpg";
 const Tarifs = () => {
   const [spaModalOpen, setSpaModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -136,8 +137,8 @@ const Tarifs = () => {
                   <CarouselItem>
                     <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
                       <img
-                        src="https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                        alt="Royal Fitness Interior"
+                        src={crossFit}
+                        alt="Royal Fitness CrossFit Area"
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
