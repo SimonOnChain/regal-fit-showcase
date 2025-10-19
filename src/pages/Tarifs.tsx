@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Users, Award, Target } from "lucide-react";
 import tarifsHero from "@/assets/tarifs-hero.jpg";
 import motivBg from "@/assets/motiv-reception.jpg";
@@ -114,18 +115,111 @@ const Tarifs = () => {
       </section>
 
 
-      {/* Pricing Cards Grid */}
+      {/* Gym Membership Pricing Section */}
+      <section className="relative py-20 bg-gradient-to-b from-blue-50 to-blue-100 overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
+              Tarifs Fitness
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6"></div>
+            <p className="text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed">
+              Choisissez la formule qui vous convient
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
+            {/* Carousel Section */}
+            <div className="relative animate-fade-in">
+              <Carousel className="w-full">
+                <CarouselContent>
+                  <CarouselItem>
+                    <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
+                      <img
+                        src="https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Royal Fitness Interior"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
+                      <img
+                        src="https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Royal Fitness Equipment"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
+                      <img
+                        src="https://images.pexels.com/photos/3076509/pexels-photo-3076509.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Royal Fitness Cardio Zone"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
+                      <img
+                        src="https://images.pexels.com/photos/3253501/pexels-photo-3253501.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Royal Fitness Training Area"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    </div>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious className="left-4" />
+                <CarouselNext className="right-4" />
+              </Carousel>
+            </div>
+
+            {/* Pricing List Section */}
+            <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              {pricingPlans.map((plan, index) => (
+                <div
+                  key={plan.id}
+                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-blue-200 hover:border-blue-400 group"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">
+                        {plan.title}
+                      </h3>
+                      <p className="text-slate-600">{plan.description}</p>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-4xl font-bold text-blue-600">
+                        {plan.price.split(' ')[0]}
+                      </div>
+                      <div className="text-lg text-slate-500 font-semibold">DH</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Spa Pricing Section */}
       <section className="relative py-20 bg-blue-100 overflow-hidden">
         {/* Background elements */}
         <div className="absolute inset-0">
           <div className="absolute top-10 right-10 w-32 h-32 bg-blue-200/30 rounded-full blur-xl animate-float"></div>
           <div className="absolute bottom-20 left-20 w-24 h-24 bg-blue-300/20 rounded-full blur-lg animate-pulse"></div>
         </div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
-              Nos Formules
+              Tarifs Spa
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6"></div>
             <p className="text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed">
